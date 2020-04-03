@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/answer_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/answer_1"
+        android:text="Answer _0"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/answer_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/answer_2"
+        android:text="Answer _1"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/answer_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/answer_3"
+        android:text="Answer _2"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/answer_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_2"
+        android:text="Answer _3"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/answer_0"
+        android:text="Question"/>
+
+    <TextView
+        android:id="@+id/details"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/answer_3"
+        android:text="Details"/>
+
+    <TextView
+        android:id="@+id/tryagain"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_above="@id/details"
+        android:text="Details"/>
+
+</RelativeLayout>

@@ -1,0 +1,264 @@
+{
+  "njrealtorexam": [
+
+    {
+        "id":1,
+        "correct":0,
+        "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly.",
+        "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
+        "answers": [
+            "It is up to the customer.",
+            "No, most people in this area don't use them.",
+            "Yes. You should never buy a property without an attorney.",
+            "I can help you with everything the lawyer would do and save you money."
+        ]
+    },
+
+    {
+        "id":2,
+        "correct":3,
+        "details":" You can never receive any money from anyone except your employing broker. Even if a client or customer wants to give you a monetary gift to show you their gratitude, it must be given to the broker who will process it through the proper channels and then pay it to you. ",
+        "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
+        "answers": [
+            "Bill, who promised you the commission",
+            "Broker A",
+            " The seller ",
+            " The co-operating broker "
+        ]
+    },
+
+    {
+        "id":3,
+        "correct":3,
+        "details":" Franchise offices must let the public know that each office is under separate ownership and may differ from other offices under the same franchise name. ",
+        "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
+        "answers": [
+            "We are members of NAR.",
+            "This office is a Full-Service agency serving the public for 23 years.",
+            "Each office is independently owned and operated.",
+            " Ad must state the number of offices in the franchise. "
+        ]
+    },
+
+    {
+        "id":4,
+        "correct":3,
+        "details":" A married couple do not have to choose tenants by entireties, but they are the only property owners that can assume this form of ownership. Like joint tenants, there is the right of survivorship. In tenancy by the entireties, when one party dies the remaining party gets full ownership. In joint tenancy, when one dies, the remaining partner(s) absorb the ownership. It can not be passed by inheritance, as in tenancy in common. ",
+        "question":" Which type of ownership can only be held by a husband and wife? ",
+        "answers": [
+            " Tenancy in Severality ",
+            " Tenancy in Common ",
+            " Tenancy by the Entireties ",
+            " Joint Tenants "
+        ]
+    },
+
+    {
+        "id":5,
+        "correct":3,
+        "details":" Condemnation is the process in which the property can be taken for the greater good of the community. Eminent domain is the government's right to do so. ",
+        "question":" Your municipality is building a new shopping mall. In order to safely control traffic entering and leaving the mall, they will need to remove all the homes on your block to build an access road. They will pay fair compensation for the taking. What is this process called?",
+        "answers": [
+            " Eminent Domain ",
+            " Condemnation ",
+            " Seizure ",
+            "Escheat "
+        ]
+    },
+
+    {
+        "id":6,
+        "correct":3,
+        "details":" If the mortgagee falls behind in their payments to the mortgagor, the acceleration clause gives the lender the ability to call the entire balance of the loan due and payable. In the event the buyer cannot repay the loan or make payment arrangements acceptable to the lender, the lender may start foreclosure proceedings. ",
+        "question":" What is the function of an acceleration clause in a mortgage document?",
+        "answers": [
+            " It gives the borrower the ability to pay a loan off early. ",
+            " It authorizes bi-weekly payments. ",
+            " It allows the loan to be assumed by another qualified buyer. ",
+            " It gives the bank the ability to call the entire loan balance due upon default. "
+        ]
+    },
+
+    {
+        "id":7,
+        "correct":3,
+        "details":" A client is someone who hires you to perform a duty for them and usually signs a business agreement. An example is a seller who hires a real estate agent to sell his property and signs a listing agreement with a commission clause. A customer is someone who is looking to purchase something for money and therefore no additional fee is needed. An example of a customer would be a buyer who comes to your office and wants you to show her the properties you have listed. ",
+        "question":" What is the difference between a client and a customer? ",
+        "answers": [
+            " A client is someone you have a contract with to perform services for a fee and a customer is someone looking to buy something for no additional fee. ",
+            " A client is looking to buy something for no additional fee. You have a contract with a customer to perform duties for a fee. ",
+            " A client is someone who provides money and a customer owes money. ",
+            " A client has not yet begun a business relationship and a customer has already paid a fee for service. "
+        ]
+    },
+
+    {
+        "id":8,
+        "correct":3,
+        "details":" All of the above are true regarding commissions. Once a broker receives the commission earned, they must disperse the agent's portion of commission as soon as possible and within 10 days of receipt. The procuring cause refers to the person who caused the sale to take place. Just because you showed someone a property does not mean that you automatically earned your commission and they may end up buying it from another agent. But if you can prove that you were integral in convincing the buyer to purchase that particular property and they made the decision while working with you, you may be able to prove procuring cause and collect the commission. And most listing agreements contain a broker protection clause which usually gives 90 days protection after a listing expires. This provision protects the brokers commission if a buyer was shown the property, and expressed an interest, but decided after the listing expired to purchase the property. As long as an interested buyer list was given to the seller before the listing expired, the broker will be protected and be paid the commission. If any of those buyers successfully negotiate and complete a sale on that property, the seller will pay the commission to the former listing broker. This is to stop sellers from taking the buyer aside and knowing the listing will expire, offering them a reduced price if they buy the house directly from the seller after the listing expires. This clause becomes void if the seller lists the property with a new broker. ",
+        "question":" Which of the following is true regarding commissions? ",
+        "answers": [
+            "They are due and payable to the agent within 10 days of the broker's receipt of funds. ",
+            " The agent who is the procuring cause will earn the commission when the sale is completed. ",
+            " A listing broker will earn his commission if a sale is completed within the 90-day broker protection period, even if the property is listed with another broker. ",
+            " All of the above. "
+        ]
+    },
+
+    {
+        "id":9,
+        "correct":3,
+        "details":" Usury laws are in place to protect the public from predatory lending practices. The state of New Jersey limits the interest rate to 17 percent if the seller is selling investment property. If the seller were selling his primary home, however, he could charge you up to 30 percent! Regulation Z provides the buyer with written disclosures of the total cost of borrowing money from a lending institution. ",
+        "question":" You have been pre-qualified so you can start looking at houses for sale, but the lenders tell you that due to poor credit they cannot help you. You continue to look anyway hoping for a miracle, and you find a home for sale with seller financing. The house is an investment property for sale by owner. Your down payment is sufficient but the seller considers you a bad risk due to your credit history. Finally, he agrees to hold a mortgage but at a 19 percent interest rate. What, if anything would protect you from such high interest rates? ",
+        "answers": [
+            " Regulation Z ",
+            " Anti-discrimination laws ",
+            " Usury laws ",
+            " Novation "
+        ]
+    },
+
+    {
+        "id":10,
+        "correct":3,
+        "details":" A latent defect is an issue that you cannot see and could not be discovered upon reasonable inspection before a sale. In some cases, it is hidden by repairs or remodeling. For example, a house that had a fire in the attic, causing damage to the interior and exterior of the roof. A quick fix could be slapping plywood over the interior and new shingles over the exterior roof. The structural damage underneath would be hidden from sight, and a buyer could end up with serious problems down the road without ever knowing the home was deteriorating beneath the patchwork. It can be possible that the seller bought the property in that condition and was not aware of the potential hazard. ",
+        "question":" What is a latent defect? ",
+        "answers": [
+            " Something wrong with the property that the seller has disclosed. ",
+            " A defect that the seller has not disclosed. ",
+            " A defect that is hidden and cannot be seen. ",
+            " A problem dealing with lead- based paint."
+        ]
+    },
+
+    {
+        "id":11,
+        "correct":3,
+        "details":" A contract is not legal if the intent of the contract is illegal and cannot be enforced, as in a duel contract. An example would be if the buyer is paying the seller undisclosed cash on the side or when the seller puts a lower sale price on a duel contract in order to pay less state tax (based on the sale price of the property) while keeping the contract with the original terms secretly between buyer and seller only. The illegal contract constitutes fraud and the contract is void. A voidable contract is one that can be voided by one party to the contract while remaining binding on the other party. If a mental health counselor used his position of authority to sell real estate to his client, the contract may be voidable based on undue influence or duress. The contract would be binding on the counselor but could be voided by the client.",
+        "question":" When a contract is made for an illegal purpose, such as deflating the purchase price to pay lower taxes, the contract becomes:  ",
+        "answers": [
+            " Express ",
+            " Void ",
+            " Implied ",
+            " Voidable "
+        ]
+    },
+
+    {
+        "id":12,
+        "correct":3,
+        "details":" The buyer in an option contract is the optionee. The optionee can decide against purchasing the property at any time during the agreed-upon option period, in this case 30 days. The option is binding on the seller, or optionor, and he cannot back out or make any changes to the terms. The buyer, however, agrees to forfeit the deposit money if she choose not to purchase, as the seller held the property off the market for the 30 days. Because the seller is bound to perform and sell the property if the buyer decides to exercise her option and the buyer has the choice to buy or not buy, the contract is a unilateral contract, forcing only one party to perform. ",
+        "question":" A seller is approached by a buyer who is interested in an option contact on the seller's property. They agree to a sale price, consideration and a thirty day option term. Which of the following is true regarding an option contract? ",
+        "answers": [
+            " It is a unilateral contract. ",
+            " The buyer is the optionor. ",
+            " The seller can change his terms anytime during the 30 days. ",
+            " If the buyer cancels his option anytime during the 30 days the seller must immediately return the buyers deposit money. "
+        ]
+    },
+
+    {
+        "id":13,
+        "correct":3,
+        "details":" All of the above are just some of the ways that the commission can keep tabs on the conduct of licensees. The commission was formed to protect the public, and takes complaints from customers and clients seriously. ",
+        "question":" If a client or customer were dissatisfied with the service they received from their salesperson, they could send a written complaint to the Real Estate Commission. Once the complaint is filed, what are the investigatory powers of the commission? ",
+        "answers": [
+            " Issue subpoenas. ",
+            " Administer oaths. ",
+            " Conduct hearings ",
+            " All of the above "
+        ]
+    },
+
+    {
+        "id":14,
+        "correct":3,
+        "details":" An estate for years might sound like a long- term lease but actually it can represent any amount of time as long as it has a definite beginning and ending. It can be for an overnight stay or for two years. A periodic tenancy may sound like it would better describe your vacation, but a periodic tenancy is for a period of time, like a week to week or month to month, that carries on until one of the parties gives notice to terminate the lease. ",
+        "question":" You and your family are renting a house at the Jersey Shore this summer. The landlord gave you a lease to sign explaining the terms such as move in and move out times and dates, amount of rent and other stipulations. What kind of tenancy does your rental fall under? ",
+        "answers": [
+            " Periodic tenancy ",
+            " Tenancy at will ",
+            " Estate for years ",
+            " Tenancy at sufferance "
+        ]
+    },
+
+    {
+        "id":15,
+        "correct":3,
+        "details":" To alienate title is simply to remove yourself from possession of the title, which is what happens when you no longer hold title to the property and have transferred ownership ",
+        "question":" What does it mean to alienate title? ",
+        "answers": [
+            " To have a lien placed against it. ",
+            " Sell the property and change ownership. ",
+            " To order an abstract of title. ",
+            ". To disagree with the language in the title. "
+        ]
+    },
+
+    {
+        "id":16,
+        "correct":3,
+        "details":" Businesses with 15 or more employees must follow this civil rights law for people with disabilities. It covers many aspects of accommodating people who may need different assistance than others to just get around and complete ordinary tasks. Enacted in 1990, it covers transportation, communications, construction and other areas to improve the lives of others. ",
+        "question":" Businesses with what number of employees must be compliant with the standards of the American with Disabilities Act? ",
+        "answers": [
+            " Less than 100 ",
+            " More than 14 ",
+            " More than 49 ",
+            " All businesses must be ADA compliant. "
+        ]
+    },
+
+    {
+        "id":17,
+        "correct":3,
+        "details":" A person from a minority racial or ethnic group with bad credit can be turned down - for having bad credit. Anyone can be turned down for having credit that would show them to be a risk. A single mother would be protected as long as she meets the other legal requirements. The gentleman on social security and the family with the voucher are protected for the same reason, and you cannot discriminate as to the source of the income. ",
+        "question":" A licensed real estate broker can refuse to rent to the following tenants: ",
+        "answers": [
+            " A person from a minority ethnic group with substandard credit ",
+            " A single mother ",
+            " An older gentleman on social security ",
+            " A family with a section 8 voucher for the rental amount. "
+        ]
+    },
+
+    {
+        "id":18,
+        "correct":3,
+        "details":" Although a market analysis contains some of the information found in an appraisal, only a certified appraiser can prepare an appraisal which contains a more detailed approach and a highly calculated valuation. You can never call your presentation an appraisal. ",
+        "question":" Knowing that you have been a licensed real estate agent for some time, your neighbor asks you if you could give her an idea of what her house may be worth. She is retiring and has been thinking of downsizing. You are glad to assist her, so you go into your local multiple listing service and search for comparable homes. You chose a few homes that have the most features in common with her home. Features would include size of the house and lot, number of bedrooms and baths, condition, location, age and any other information that would be helpful. You prepare a report that shows her how these homes compare to hers and how you arrived at the value based on these comparisons. What is the report that you present called? ",
+        "answers": [
+            " A cost approach valuation ",
+            " An appraisal ",
+            " A market analysis ",
+            " A supply and demand report "
+        ]
+    },
+
+    {
+        "id":19,
+        "correct":3,
+        "details":" The house sold for $380,000 and the total commission of 6 percent of the sale price is $22,800. It is a co-op deal so that amount is split between the two brokers in the amount of $11,400 each. Your broker is going to pay you 65 percent of the $11,400 which will give you $7,410, leaving the broker with the remaining $3,990. ",
+        "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
+        "answers": [
+            "$14,820 ",
+            "$7,410 ",
+            "$3,990 ",
+            "$11,400 "
+        ]
+    },
+
+    {
+        "id":20,
+        "correct":3,
+        "details":" Just attempting to do any of the listed activities without being licensed can land you in serious trouble. Foreclosures are first put to auction at the county courthouse and if not sold, they are foreclosed upon by the lender and can be sold in an online auction run by companies who employ licensed agents. An owner can collect rent from his own tenant, but he cannot hire someone to do it for him unless they are actively licensed by the state. An owner holding a mortgage for the buyer of his property can specify the terms he wants in the loan but the mortgage document would be drawn by an attorney. Should the buyer ask for your assistance in negotiating the loan with the seller, you need to be familiar with terms, rates and other facets of the transactions. A seller may want to discuss what rate he should charge and how long he should hold the loan. You need training and experience to render this assistance. If you are not sure of something you may have your broker assist, or have the attorney who will prepare the mortgage documents the advice. ",
+        "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
+        "answers": [
+            " Auctioning real estate ",
+            " Collecting rent ",
+            " Attempting to negotiate a mortgage loan ",
+            " All of the above "
+        ]
+    }
+  ]
+}
