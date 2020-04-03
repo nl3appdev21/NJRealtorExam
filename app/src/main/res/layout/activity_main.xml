@@ -7,63 +7,72 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/answer_0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/answer_1"
-        android:text="Answer _0"
-        android:layout_alignParentBottom="true"/>
-
-    <Button
-        android:id="@+id/answer_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/answer_2"
-        android:text="Answer _1"
-        android:layout_alignParentBottom="true"/>
-
-    <Button
-        android:id="@+id/answer_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/answer_3"
-        android:text="Answer _2"
-        android:layout_alignParentBottom="true"/>
-
-    <Button
-        android:id="@+id/answer_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/answer_2"
-        android:text="Answer _3"
-        android:layout_alignParentBottom="true"/>
-
     <TextView
         android:id="@+id/question"
         android:gravity="center"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="21sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/answer_0"
         android:text="Question"/>
+
+    <Button
+        android:id="@+id/answer_0"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:text="Answer _0"/>
+
+    <Button
+        android:id="@+id/answer_1"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_0"
+        android:text="Answer _1"/>
+
+    <Button
+        android:id="@+id/answer_2"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_1"
+        android:text="Answer _2"/>
+
+    <Button
+        android:id="@+id/answer_3"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_2"
+        android:text="Answer _3" />
 
     <TextView
         android:id="@+id/details"
         android:gravity="center"
-        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:textStyle="bold"
+        android:textSize="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/answer_3"
-        android:text="Details"/>
+        android:layout_below="@id/answer_3"
+        android:text=" Show Me The Details !!! "/>
 
     <TextView
         android:id="@+id/tryagain"
         android:gravity="center"
+        android:layout_margin="12dp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
         android:layout_above="@id/details"
-        android:text="Details"/>
+        android:text=" Wrong Answer ! "/>
 
 </RelativeLayout>
