@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //  **
-
         Button btn0 = findViewById(R.id.answer_0);
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     tv_details.setVisibility(View.VISIBLE);
                     btn_next.setVisibility(View.VISIBLE);
                 }else{
-                    Log.d("Skip","false");
+                    tv_tryagain.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -79,9 +77,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(questionManager.checkAnswer(1)){
-                    Log.d("Skip","true");
+                    tv_details.setVisibility(View.VISIBLE);
+                    btn_next.setVisibility(View.VISIBLE);
                 }else{
-                    Log.d("Skip","false");
+                    tv_tryagain.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -90,9 +89,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(questionManager.checkAnswer(2)){
-                    Log.d("Skip","true");
+                    tv_details.setVisibility(View.VISIBLE);
+                    btn_next.setVisibility(View.VISIBLE);
                 }else{
-                    Log.d("Skip","false");
+                    tv_tryagain.setVisibility(View.VISIBLE);
                 }
             }
         });        btn0 = findViewById(R.id.answer_3);
@@ -100,14 +100,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(questionManager.checkAnswer(3)){
-                    Log.d("Skip","true");
+                    tv_details.setVisibility(View.VISIBLE);
+                    btn_next.setVisibility(View.VISIBLE);
                 }else{
-                    Log.d("Skip","false");
+                    tv_tryagain.setVisibility(View.VISIBLE);
                 }
             }
         });
-
-        //  **
 
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);

@@ -77,8 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:layout_above="@id/details"
-        android:text=" Wrong Answer ! "/>
+        android:layout_below="@id/details"
+        android:text=" Lamont U Big Dummy, Try Again ! "/>
 
     <Button
         android:id="@+id/main_menu"
