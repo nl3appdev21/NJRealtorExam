@@ -16,7 +16,7 @@ public class QuestionManager {
     List<QuestionItem> questionitems;
     int currentQuestion = 0;
     int correct = 0, wrong = 0;
-    int currentIndex = 0;
+    int currentIndex = -1;
 
     public QuestionManager(Context context){
         loadAllQuestion(context);
@@ -31,9 +31,8 @@ public class QuestionManager {
     }
 
     public QuestionItem getNext(){
-
-        QuestionItem q = questionitems.get(currentIndex);
         currentIndex++;
+        QuestionItem q = questionitems.get(currentIndex);
         return q;
     }
 
@@ -50,6 +49,12 @@ public class QuestionManager {
             e.printStackTrace();
         }
         return json;
+    }
+
+    public boolean checkAnswer (int answerIndex){
+        QuestionItem qi = questionitems.get(currentIndex);
+        boolean result = qi.correct == answerIndex;
+        return result;
     }
 
 }

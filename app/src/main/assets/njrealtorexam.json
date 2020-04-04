@@ -1,15 +1,15 @@
 [
   {
     "id":0,
-    "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
-    "answers":[
-      "It is up to the customer.",
-      "No, most people in this area don't use them.",
-      "Yes. You should never buy a property without an attorney.",
-      "I can help you with everything the lawyer would do and save you money."
-    ],
-    "correct":0,
-    "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly."
+  "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
+  "answers":[
+  "It is up to the customer.",
+  "No, most people in this area don't use them.",
+  "Yes. You should never buy a property without an attorney.",
+  "I can help you with everything the lawyer would do and save you money."
+],
+  "correct":0,
+  "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly."
   },
   {
     "id":1,

@@ -27,8 +27,13 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_question;
+    private TextView tv_details;
+    private TextView tv_tryagain;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
+    private Button btn_next;
+    private Button btn_mainmenu;
     private QuestionManager questionManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +46,73 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1 = findViewById(R.id.answer_1);
         btn_answer2 = findViewById(R.id.answer_2);
         btn_answer3 = findViewById(R.id.answer_3);
+        tv_details = findViewById(R.id.details);
+        tv_tryagain = findViewById(R.id.tryagain);
+        btn_mainmenu = findViewById(R.id.main_menu);
+        btn_next = findViewById(R.id.next);
+
+        final Button btn_next = findViewById(R.id.next);
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                QuestionItem questionItem = questionManager.getNext();
+                setQuestionScreen(questionItem);
+            }
+        });
+
+        //  **
+
+        Button btn0 = findViewById(R.id.answer_0);
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(questionManager.checkAnswer(0)){
+                    tv_details.setVisibility(View.VISIBLE);
+                    btn_next.setVisibility(View.VISIBLE);
+                }else{
+                    Log.d("Skip","false");
+                }
+            }
+        });
+        btn0 = findViewById(R.id.answer_1);
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(questionManager.checkAnswer(1)){
+                    Log.d("Skip","true");
+                }else{
+                    Log.d("Skip","false");
+                }
+            }
+        });
+        btn0 = findViewById(R.id.answer_2);
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(questionManager.checkAnswer(2)){
+                    Log.d("Skip","true");
+                }else{
+                    Log.d("Skip","false");
+                }
+            }
+        });        btn0 = findViewById(R.id.answer_3);
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(questionManager.checkAnswer(3)){
+                    Log.d("Skip","true");
+                }else{
+                    Log.d("Skip","false");
+                }
+            }
+        });
+
+        //  **
 
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
+
+
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
