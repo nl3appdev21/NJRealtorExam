@@ -26,62 +26,32 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv_question;
-    Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
-
-    List<QuestionItem> questionitems;
-    int currentQuestion = 0;
-
-    int correct = 0, wrong = 0;
+    private TextView tv_question;
+    private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
+    private QuestionManager questionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        questionManager = new QuestionManager(this);
         tv_question = findViewById(R.id.question);
         btn_answer0 = findViewById(R.id.answer_0);
         btn_answer1 = findViewById(R.id.answer_1);
         btn_answer2 = findViewById(R.id.answer_2);
         btn_answer3 = findViewById(R.id.answer_3);
 
-        loadAllQuestion();
-        setQuestionScreen(2);
-
+        QuestionItem questionItem = questionManager.getNext();
+        setQuestionScreen(questionItem);
     }
 
-    private void setQuestionScreen(int number) {
-        tv_question.setText(questionitems.get(number).question);
-        btn_answer0.setText(questionitems.get(number).answers[0]);
-        btn_answer1.setText(questionitems.get(number).answers[1]);
-        btn_answer2.setText(questionitems.get(number).answers[2]);
-        btn_answer3.setText(questionitems.get(number).answers[3]);
-
+    private void setQuestionScreen(QuestionItem questionItem) {
+        tv_question.setText(questionItem.question);
+        btn_answer0.setText(questionItem.answers[0]);
+        btn_answer1.setText(questionItem.answers[1]);
+        btn_answer2.setText(questionItem.answers[2]);
+        btn_answer3.setText(questionItem.answers[3]);
     }
 
-
-    private void loadAllQuestion() {  //  question or questions
-        String jsonStr = loadJSONFromNjexams("njrealtorexam.json");
-        Gson gson = new Gson();
-        Type type = new TypeToken<List<QuestionItem>>() {}.getType();
-        questionitems = gson.fromJson(jsonStr, type);
-        Log.d("Skip",questionitems.get(2).question);
-        Log.d("Skip",questionitems.get(2).answers[1]);
-
-    }
-
-    private String loadJSONFromNjexams(String file) {     //  ?????
-        String json = "";
-        try {
-            InputStream is = getAssets().open(file);     //  ??????
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return json;
-    }
 }
