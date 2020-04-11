@@ -36,6 +36,14 @@ public class QuestionManager {
         return q;
     }
 
+    public QuestionItem getCurrentQuestion(){
+        if(currentIndex >= 0){
+            return questionitems.get(currentIndex);
+        }else{
+            return null;
+        }
+    }
+
     private String loadJSONFromNjexams(String file,Context context) {     //  ?????
         String json = "";
         try {
