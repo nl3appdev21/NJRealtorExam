@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_menuPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:src="@mipmap/mobillab12"
+        android:layout_margin="21dp"
+        android:layout_marginTop="12sp"/>
+
+    <Button
+        android:id="@+id/btn_flashCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flash Cards"
+        android:layout_margin="8dp"
+        android:textSize="21dp" />
+
+    <Button
+        android:id="@+id/btn_takeTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Test"
+        android:layout_margin="8dp"
+        android:textSize="21dp" />
+
+</LinearLayout>

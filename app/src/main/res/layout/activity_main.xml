@@ -121,16 +121,6 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/main_menu"
-        android:layout_margin="4dp"
-        android:textStyle="italic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:background="@drawable/rounded_button"
-        android:text=" Main Menu " />
-
-    <Button
         android:id="@+id/next"
         android:layout_margin="4dp"
         android:textStyle="italic"
@@ -139,5 +129,15 @@
         android:visibility="invisible"
         android:background="@drawable/rounded_button"
         android:text=" Next Question " />
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/rounded_button"
+        android:text=" Goto Menu " />
 
 </LinearLayout>

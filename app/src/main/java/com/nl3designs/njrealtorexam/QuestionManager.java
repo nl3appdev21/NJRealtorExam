@@ -32,8 +32,13 @@ public class QuestionManager {
 
     public QuestionItem getNext(){
         currentIndex++;
-        QuestionItem q = questionitems.get(currentIndex);
-        return q;
+
+        if(currentIndex < questionitems.size()) {
+            QuestionItem q = questionitems.get(currentIndex);
+            return q;
+        } else {
+            return null;
+        }
     }
 
     public QuestionItem getCurrentQuestion(){

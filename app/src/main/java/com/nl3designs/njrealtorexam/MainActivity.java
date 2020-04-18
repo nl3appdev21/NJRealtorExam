@@ -2,7 +2,10 @@ package com.nl3designs.njrealtorexam;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_correct;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_next;
-    private Button btn_mainmenu;
+    private Button btn_menu;
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static final int QUESTION_MODE = 0;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int tries = 0;
     int correct = 0;
     int incorrect = 0;
+    public static String results = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
-        btn_mainmenu = findViewById(R.id.main_menu);
+        btn_menu = findViewById(R.id.menu);
         btn_next = findViewById(R.id.next);
         iv_questionimage = findViewById(R.id.questionImage);
         changePictureMode(QUESTION_MODE);
@@ -54,7 +58,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
-                setQuestionScreen(questionItem);
+                if (questionItem != null) {
+                    setQuestionScreen(questionItem);
+                } else {
+                    // showEndScreen();
+                    showLeaderBoard();
+                }
             }
         });
 
@@ -104,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 scoreCount();
             }
         });        btn0 = findViewById(R.id.answer_3);
+
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,6 +126,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 tries += 1;
                 scoreCount();
+            }
+        });
+
+
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoMenu();
             }
         });
 
@@ -161,6 +179,33 @@ public class MainActivity extends AppCompatActivity {
         tv_tries.setText(" # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
 
+    }
+
+    private void showEndScreen(){
+        Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
+
+        intent.putExtra("tries", tries);
+        intent.putExtra("correct", correct);
+
+        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
+        startActivity(intent);
+    }
+
+    private void showLeaderBoard(){
+        Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
+
+        String result = (" Suge 215 score is: " + " # Tries: " + tries + " , # correct: " + correct + "\n");
+        results+=result;
+        intent.putExtra("results", results);
+
+        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
+        startActivity(intent);
+
+    }
+
+    private void gotoMenu() {
+        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+        startActivity(intent);
     }
 
 }
