@@ -8,8 +8,8 @@ public class StorageManager {
 
     public StorageManager(Context context){
         pref = context.getSharedPreferences("skipBox",Context.MODE_PRIVATE);
-        //SharedPreferences.Editor editor = pref.edit();
-        //editor.clear().apply();
+        //  SharedPreferences.Editor editor = pref.edit();
+        //  editor.clear().apply();
     }
 
     public void save(String text, String tag){

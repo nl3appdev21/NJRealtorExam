@@ -195,10 +195,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void showLeaderBoard(){
+    private void showLeaderBoard(){    //  load leader board !
         Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
 
-        String result = (" Suge 215 score is: " + " # Tries: " + tries + " , # correct: " + correct + "\n");
+        String result = ( "Name" + ";" + tries + ";" + correct + ",");
         results+=result;
         storageManager.save(results,"results");
         intent.putExtra("results", results);
