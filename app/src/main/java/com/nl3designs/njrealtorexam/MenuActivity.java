@@ -35,6 +35,15 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        BtnActivity = findViewById(R.id.btn_leaderBoard);
+
+        BtnActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLeaderBoard();
+            }
+        });
+
     }
 
     private void startFlashCards() {
@@ -48,4 +57,11 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
+    private void showLeaderBoard() {
+
+        Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
+        startActivity(intent);
+    }
+
 }

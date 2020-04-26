@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible"
-            android:text=" Show Me The Details !!! "/>
+            android:text=" Show Me The Details ! "/>
 
         <TextView
             android:id="@+id/tryagain"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible"
-            android:text=" Lamont U Big Dummy, Try Again ! "/>
+            android:text=" Sorry, please try again ! "/>
 
     </FrameLayout>
 
@@ -55,38 +55,42 @@
 
     <Button
         android:id="@+id/answer_0"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
+        android:background="@color/LtBlue_08"
         android:text="Answer _0"/>
 
     <Button
         android:id="@+id/answer_1"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
+        android:background="@color/LtBlue_08"
         android:text="Answer _1"/>
 
     <Button
         android:id="@+id/answer_2"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
+        android:background="@color/LtBlue_08"
         android:text="Answer _2"/>
 
     <Button
         android:id="@+id/answer_3"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
+        android:background="@color/LtBlue_08"
         android:text="Answer _3" />
 
     <LinearLayout

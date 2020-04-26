@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:text="Take Test"
         android:layout_margin="8dp"
+        android:background="@drawable/rounded_button"
         android:textSize="21dp" />
 
     <Button
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Goto Menu"
         android:layout_margin="8dp"
+        android:background="@drawable/rounded_button"
         android:textSize="21dp" />
 
 </LinearLayout>

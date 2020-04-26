@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/userResults"
@@ -17,5 +17,16 @@
         android:layout_height="wrap_content">
 
     </TextView>
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/rounded_button"
+        android:text=" Goto Menu " />
+
 
 </LinearLayout>
