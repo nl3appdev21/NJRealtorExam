@@ -27,7 +27,6 @@ public class FlashActivity extends AppCompatActivity {
         });
 
         btn = findViewById(R.id.btn_takeTest);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +43,6 @@ public class FlashActivity extends AppCompatActivity {
     private void startTest() {
 
         Intent intent = new Intent(FlashActivity.this, MainActivity.class);
-        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
         startActivity(intent);
     }
-
 }

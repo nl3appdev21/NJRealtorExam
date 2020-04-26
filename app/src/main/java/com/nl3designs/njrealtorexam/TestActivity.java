@@ -16,9 +16,7 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-
         btn = findViewById(R.id.btn_menu);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,5 +29,4 @@ public class TestActivity extends AppCompatActivity {
     private void gotoMenu() {
         finish();
     }
-
 }

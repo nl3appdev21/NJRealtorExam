@@ -22,7 +22,7 @@ public class QuestionManager {
         loadAllQuestion(context);
     }
 
-    private void loadAllQuestion(Context context) {  //  question or questions
+    private void loadAllQuestion(Context context) {
         String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
@@ -49,10 +49,10 @@ public class QuestionManager {
         }
     }
 
-    private String loadJSONFromNjexams(String file,Context context) {     //  ?????
+    private String loadJSONFromNjexams(String file,Context context) {
         String json = "";
         try {
-            InputStream is = context.getAssets().open(file);     //  ??????
+            InputStream is = context.getAssets().open(file);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

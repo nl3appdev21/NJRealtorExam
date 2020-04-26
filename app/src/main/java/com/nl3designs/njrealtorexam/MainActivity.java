@@ -31,11 +31,16 @@ public class MainActivity extends AppCompatActivity {
     int correct = 0;
     int incorrect = 0;
     public static String results = "";
+    StorageManager storageManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        storageManager = new StorageManager(this);
+        if(results.equals("")){
+            results = storageManager.load("results");
+        }
 
         questionManager = new QuestionManager(this);
         tv_question = findViewById(R.id.question);
@@ -62,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     setQuestionScreen(questionItem);
                 } else {
                     // showEndScreen();
+                    questionManager.currentIndex = 0;
                     showLeaderBoard();
                 }
             }
@@ -129,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tries", tries);
         intent.putExtra("correct", correct);
 
-        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
         startActivity(intent);
     }
 
@@ -196,9 +200,9 @@ public class MainActivity extends AppCompatActivity {
 
         String result = (" Suge 215 score is: " + " # Tries: " + tries + " , # correct: " + correct + "\n");
         results+=result;
+        storageManager.save(results,"results");
         intent.putExtra("results", results);
 
-        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
         startActivity(intent);
 
     }
@@ -207,5 +211,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
     }
-
 }

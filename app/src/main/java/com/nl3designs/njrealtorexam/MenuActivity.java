@@ -40,15 +40,12 @@ public class MenuActivity extends AppCompatActivity {
     private void startFlashCards() {
 
         Intent intent = new Intent(MenuActivity.this, FlashActivity.class);
-        //  Intent intent = new Intent(MenuActivity.this, FlashActivity.class);
         startActivity(intent);
     }
 
     private void startTest() {
 
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
-        //  Intent intent = new Intent(MenuActivity.this, TestActivity.class);
         startActivity(intent);
     }
-
 }
