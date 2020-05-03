@@ -9,8 +9,8 @@ public class StorageManager {
 
     public StorageManager(Context context){
         pref = context.getSharedPreferences("skipBox",Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();  //  ??  use to clear  ??
-        editor.clear().apply();  //  ??  use to clear  ??
+        //  SharedPreferences.Editor editor = pref.edit();  //  ??  use to clear lb array  ??
+        //  editor.clear().apply();  //  ??  use to clear lb array ??
     }
 
     public void save(String text, String tag){

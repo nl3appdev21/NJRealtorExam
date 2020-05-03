@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int pictureMode = QUESTION_MODE;
     int tries = 0;
     int correct = 0;
-    int passTest = 0;  //  ??
+    int passTest = 21;  //  ?? change from 0 to 21
     int numCorrect = 0;  //  new new
     public static String results = "";
     StorageManager storageManager;
