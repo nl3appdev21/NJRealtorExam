@@ -3,6 +3,7 @@ package com.nl3designs.njrealtorexam;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class TestCompleteActivity extends AppCompatActivity {
@@ -14,6 +15,8 @@ public class TestCompleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
+
+        Log.d("skip","test-comp");  //  ??
 
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);

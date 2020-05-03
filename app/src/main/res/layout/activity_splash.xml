@@ -11,7 +11,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="42dp"
     android:layout_weight="1"
-    android:src="@mipmap/mobillab12"/>
+    android:src="@mipmap/njreal01"/>
 
 <Button
     android:id="@+id/btn_stop"

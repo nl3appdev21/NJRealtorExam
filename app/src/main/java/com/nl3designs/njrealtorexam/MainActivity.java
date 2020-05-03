@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
+    //  private TextView tv_passTest;  //  ??
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_next;
     private Button btn_menu;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private int pictureMode = QUESTION_MODE;
     int tries = 0;
     int correct = 0;
-    int incorrect = 0;
+    int passTest = 0;  //  ??
+    int numCorrect = 0;  //  new new
     public static String results = "";
     StorageManager storageManager;
 
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.d("skip","main");  //  ??
+
         storageManager = new StorageManager(this);
         if(results.equals("")){
             results = storageManager.load("results");
@@ -181,6 +186,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void scoreCount() {
+
+        numCorrect = correct;  //  new new
+
+        Log.d("skip","main score count");  //  ??
+        Log.d("skip numCorrect is:  ", String.valueOf(numCorrect));  //  ??
+
+        if(numCorrect >= 4){  //  ??
+            Log.d("skip","you pass");  //  ??
+        }  //  ??
+
         tv_tries.setText(" # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
 
@@ -191,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
 
         intent.putExtra("tries", tries);
         intent.putExtra("correct", correct);
+        //  ??  intent.putExtra("passTest",passTest);  //  ??
 
         startActivity(intent);
     }
@@ -198,13 +214,13 @@ public class MainActivity extends AppCompatActivity {
     private void showLeaderBoard(){    //  load leader board !
         Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
 
-        String result = ( "Name" + ";" + tries + ";" + correct + ",");
+        //  ??  String result = ( "Name" + ";" + tries + ";" + correct + ";" + "passTest" + ",");  //  ??  added pass
+        String result = ( "Name" + ";" + tries + ";" + correct + ";" + passTest + ",");  //  ??  added pass
         results+=result;
         storageManager.save(results,"results");
         intent.putExtra("results", results);
 
         startActivity(intent);
-
     }
 
     private void gotoMenu() {

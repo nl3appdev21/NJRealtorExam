@@ -24,12 +24,12 @@ public class SplashActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  ??  mySound.stop();
+                mySound.stop();
                 startGames();
             }
         });
 
-        //  ??  mySound = MediaPlayer.create(this,R.raw.flh1);  ??
+        mySound = MediaPlayer.create(this,R.raw.black);
         mySound.start();
 
         myTimer = new CountDownTimer( 24000,700 ) {
@@ -38,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
             }
 
             public   void   onFinish () {
-                //  ??  mySound.stop();
+                mySound.stop();
                 startGames();
             }
         }.start ();
