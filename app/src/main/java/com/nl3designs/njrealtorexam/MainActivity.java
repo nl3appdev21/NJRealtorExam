@@ -1,8 +1,10 @@
 package com.nl3designs.njrealtorexam;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -79,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     // showEndScreen();
                     questionManager.currentIndex = 0;
-                    showLeaderBoard();
+
+                    //  new beta code for dialog bow
+                    showDialog();
+
+                    //  showLeaderBoard();
                 }
             }
         });
@@ -217,6 +223,46 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    //  new beta code
+
+    //  note change code to run in place of or before leader board
+
+    /*
+    private void startGame(){
+        if (selectedItem == null){
+            //  return;
+            showDialog();
+        } else {
+            Intent myIntent = new Intent(this, MainActivity.class);
+            myIntent.putExtra("gameId", String.valueOf(selectedItem.id));
+            startActivity(myIntent);
+        }
+    }
+    */
+
+    //  note change code to run in place of or before leader board
+
+    private void showDialog() {
+        new AlertDialog.Builder(this
+        )
+                .setTitle(" Test Results ")
+                .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
+
+                // Specifying a listener allows you to take an action before dismissing the dialog.
+                // The dialog is automatically dismissed when a dialog button is clicked.
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Continue with delete operation
+                    }
+                })
+
+                // A null listener allows the button to dismiss the dialog and take no further action.
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+
+    //  new beta code
 
     private void showLeaderBoard(){    //  load leader board !
         Intent intent = new Intent(MainActivity.this, LeaderBoard.class);

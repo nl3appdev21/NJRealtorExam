@@ -20,6 +20,9 @@ public class MenuActivity extends AppCompatActivity {
 
         Log.d("skip","menu");  //  ??
 
+        //  beta
+        /* --
+
         BtnActivity = findViewById(R.id.btn_flashCards);
 
         BtnActivity.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +31,9 @@ public class MenuActivity extends AppCompatActivity {
                 startFlashCards();
             }
         });
+
+        -- */
+        //  beta
 
         BtnActivity = findViewById(R.id.btn_takeTest);
 
@@ -38,6 +44,9 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        //  beta
+        /* --
+
         BtnActivity = findViewById(R.id.btn_leaderBoard);
 
         BtnActivity.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +55,9 @@ public class MenuActivity extends AppCompatActivity {
                 showLeaderBoard();
             }
         });
+
+        -- */
+        //  beta
 
     }
 
