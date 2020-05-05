@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_question;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
+
     //  private TextView tv_passTest;  //  ??
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_next;
@@ -27,13 +30,15 @@ public class MainActivity extends AppCompatActivity {
     public static final int QUESTION_MODE = 0;
     public static final int PASS_MODE = 1;
     public static final int FAIL_MODE = 2;
-    private int pictureMode = QUESTION_MODE;
+    // private int pictureMode = QUESTION_MODE;
     int tries = 0;
     int correct = 0;
     int passTest = 21;  //  ?? change from 0 to 21
     int numCorrect = 0;  //  new new
+    HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         if(results.equals("")){
             results = storageManager.load("results");
         }
+
+        setupImageMap();
 
         questionManager = new QuestionManager(this);
         tv_question = findViewById(R.id.question);
@@ -60,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         btn_menu = findViewById(R.id.menu);
         btn_next = findViewById(R.id.next);
         iv_questionimage = findViewById(R.id.questionImage);
-        changePictureMode(QUESTION_MODE);
 
         final Button btn_next = findViewById(R.id.next);
         btn_next.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
+        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));  //  ??  new new  test
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
@@ -226,5 +233,12 @@ public class MainActivity extends AppCompatActivity {
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
+    }
+
+    private void setupImageMap(){
+        imageMap.put("law",R.mipmap.law);
+        imageMap.put("commision",R.mipmap.math);
+        imageMap.put("advirtising",R.mipmap.advirtising);
+        imageMap.put("ownership",R.mipmap.ownership2);
     }
 }

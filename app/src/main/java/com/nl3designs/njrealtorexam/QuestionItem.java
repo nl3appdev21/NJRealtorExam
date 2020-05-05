@@ -8,6 +8,7 @@ public class QuestionItem {
     int correct;
     String details;
     String question;
+    String catagory;
     String[] answers;
 
     public QuestionItem(){}

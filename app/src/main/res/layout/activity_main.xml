@@ -15,8 +15,7 @@
         <ImageView
             android:id="@+id/questionImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:layout_height="225dp"
             android:src="@mipmap/mobillab12"
             android:layout_marginTop="12sp"/>
 

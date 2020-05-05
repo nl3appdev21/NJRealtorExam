@@ -9,7 +9,7 @@
         android:id="@+id/iv_flashCardImage"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:src="@mipmap/flashcards"
         android:layout_margin="2dp"
         android:layout_marginTop="0sp"/>
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:visibility="visible"
-        android:src="@mipmap/test00"
+        android:src="@mipmap/realestate"
         android:layout_margin="2dp"
         android:layout_marginTop="2sp"/>
 

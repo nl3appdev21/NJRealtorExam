@@ -1,6 +1,7 @@
 [
   {
     "id":0,
+    "catagory":"law",
   "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
   "answers":[
   "It is up to the customer.",
@@ -13,6 +14,7 @@
   },
   {
     "id":1,
+    "catagory":"commision",
     "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
     "answers":[
       "Bill, who promised you the commission",
@@ -25,6 +27,7 @@
   },
   {
     "id":2,
+    "catagory":"advirtising",
     "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
     "answers":[
       "We are members of NAR.",
@@ -37,6 +40,7 @@
   },
   {
     "id":3,
+    "catagory":"ownership",
     "question":" Which type of ownership can only be held by a husband and wife? ",
     "answers":[
       " Tenancy in Severality ",
@@ -49,6 +53,7 @@
   },
   {
     "id":4,
+    "catagory":"law",
     "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
     "answers":[
       " Auctioning real estate ",
