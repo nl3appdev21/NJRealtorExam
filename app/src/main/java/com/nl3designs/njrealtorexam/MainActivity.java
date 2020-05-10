@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //  new beta code for dialog bow
                     showDialog();  //  ?? beta call dialog box
+                    testComplete();  //  new code for eot !
                     //  showLeaderBoard();  //  ??  beta call  leader board
                     //  new beta code for dialog bow
                 }
@@ -240,6 +241,28 @@ public class MainActivity extends AppCompatActivity {
 
     //  new beta code
 
+    private void testComplete(){    //  test complete
+
+        Log.d("skip","testcomplete");
+
+        Intent intent = new Intent(MainActivity.this, TestComplete.class);
+        startActivity(intent);
+
+        /*
+
+        //  ??  String result = ( "Name" + ";" + tries + ";" + correct + ";" + "passTest" + ",");  //  ??  added pass
+        String result = ( "Name" + ";" + tries + ";" + correct + ";" + passTest + ",");  //  ??  added pass
+        results+=result;
+        storageManager.save(results,"results");
+        intent.putExtra("results", results);
+
+        startActivity(intent);
+
+        */
+    }
+
+    /*
+
     private void showLeaderBoard(){    //  load leader board !
         Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
 
@@ -251,6 +274,8 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    */
 
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);

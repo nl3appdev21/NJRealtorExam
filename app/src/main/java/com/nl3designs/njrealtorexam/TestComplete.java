@@ -12,13 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TestComplete extends AppCompatActivity {
 
-    TextView mTextField;
-    MediaPlayer mySound;
-    CountDownTimer myTimer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        /*
         setContentView(R.layout.activity_splash);
         Button btn = findViewById(R.id.btn_stop);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +47,12 @@ public class TestComplete extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         mySound.release();
+
+        */
+
     }
+
+    /*
 
     private void startGames(){
         myTimer.cancel();
@@ -56,4 +60,6 @@ public class TestComplete extends AppCompatActivity {
         startActivity(myIntent);
         finish();
     }
+
+    */
 }
