@@ -70,15 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
         final Button btn_next = findViewById(R.id.next);
         btn_next.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                btn_next.setVisibility(View.INVISIBLE);
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
                 if (questionItem != null) {
                     setQuestionScreen(questionItem);
                 } else {
                     //  new beta code
-                    // showEndScreen();
+                    showEndScreen();
                     questionManager.currentIndex = 0;
 
                     //  new beta code for dialog bow
@@ -94,11 +96,11 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_next.setVisibility(View.VISIBLE);
                 if(questionManager.checkAnswer(0)){
                     tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -110,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_next.setVisibility(View.VISIBLE);
                 if(questionManager.checkAnswer(1)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -125,25 +127,25 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_next.setVisibility(View.VISIBLE);
                 if(questionManager.checkAnswer(2)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
                 scoreCount();
             }
-        });        btn0 = findViewById(R.id.answer_3);
-
+        });
+        btn0 = findViewById(R.id.answer_3);
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_next.setVisibility(View.VISIBLE);
                 if(questionManager.checkAnswer(3)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -159,12 +161,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        QuestionItem questionItem = questionManager.getNext();
-        setQuestionScreen(questionItem);
+        Log.d("skip","code for oncreate");
+        QuestionItem questionItem = questionManager.getNext();  //  ?????????
+        setQuestionScreen(questionItem);  //  ????????????
 
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
+        Log.d("skip","setquestionscreen");
         iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));  //  ??  new new  test
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
@@ -183,38 +187,26 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case PASS_MODE:
-                iv_questionimage.setVisibility(View.INVISIBLE);
+                Log.d("skip", "pass show happy face");
+                iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
+                iv_questionimage.setVisibility(View.VISIBLE);
+                //  ??  iv_questionimage.setVisibility(View.INVISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.VISIBLE);
+                tv_details.setVisibility(View.INVISIBLE);
+                //  ??  tv_details.setVisibility(View.VISIBLE);
 
                 break;
 
             case FAIL_MODE:
-                iv_questionimage.setVisibility(View.INVISIBLE);
-                tv_tryagain.setVisibility(View.VISIBLE);
+                Log.d("skip", "fail show sad face");
+                iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
+                iv_questionimage.setVisibility(View.VISIBLE);
+                //  ??  iv_questionimage.setVisibility(View.INVISIBLE);
+                tv_tryagain.setVisibility(View.INVISIBLE); // was visible
                 tv_details.setVisibility(View.INVISIBLE);
 
                 break;
         }
-
-        //  ??
-
-        QuestionItem questionItem = questionManager.getNext();
-        if (questionItem != null) {
-            setQuestionScreen(questionItem);
-        } else {
-            //  new beta code
-            // showEndScreen();
-            questionManager.currentIndex = 0;
-
-            //  new beta code for dialog bow
-            showDialog();  //  ?? beta call dialog box
-            testComplete();  //  new code for eot !
-            //  showLeaderBoard();  //  ??  beta call  leader board
-            //  new beta code for dialog bow
-        }
-
-        //  ??
 
     }
 
@@ -230,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*
     private void showEndScreen(){
         Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
 
@@ -240,7 +231,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-    */
 
     private void showDialog() {
         new AlertDialog.Builder(this
@@ -264,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
     //  new beta code
 
     private void testComplete() {    //  test complete
+        iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
         startActivity(intent);
     }
@@ -278,5 +269,8 @@ public class MainActivity extends AppCompatActivity {
         imageMap.put("commision",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);
         imageMap.put("ownership",R.mipmap.ownership2);
+        imageMap.put("sad",R.mipmap.sadface);
+        imageMap.put("happy",R.mipmap.happyface);
+
     }
 }
