@@ -20,21 +20,6 @@ public class MenuActivity extends AppCompatActivity {
 
         Log.d("skip","menu");  //  ??
 
-        //  beta
-        /* --
-
-        BtnActivity = findViewById(R.id.btn_flashCards);
-
-        BtnActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startFlashCards();
-            }
-        });
-
-        -- */
-        //  beta
-
         BtnActivity = findViewById(R.id.btn_takeTest);
 
         BtnActivity.setOnClickListener(new View.OnClickListener() {
@@ -59,12 +44,6 @@ public class MenuActivity extends AppCompatActivity {
         -- */
         //  beta
 
-    }
-
-    private void startFlashCards() {
-
-        Intent intent = new Intent(MenuActivity.this, FlashActivity.class);
-        startActivity(intent);
     }
 
     private void startTest() {
