@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btn_next.setVisibility(View.INVISIBLE);
+                disableAnswerBtn(false);
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
                 if (questionItem != null) {
@@ -92,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn0 = findViewById(R.id.answer_0);
-        btn0.setOnClickListener(new View.OnClickListener() {
+        btn_answer0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btn_next.setVisibility(View.VISIBLE);
+                disableAnswerBtn(true);
                 if(questionManager.checkAnswer(0)){
                     tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
@@ -108,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 scoreCount();
             }
         });
-        btn0 = findViewById(R.id.answer_1);
-        btn0.setOnClickListener(new View.OnClickListener() {
+        btn_answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btn_next.setVisibility(View.VISIBLE);
+                disableAnswerBtn(true);
                 if(questionManager.checkAnswer(1)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
@@ -123,11 +124,11 @@ public class MainActivity extends AppCompatActivity {
                 scoreCount();
             }
         });
-        btn0 = findViewById(R.id.answer_2);
-        btn0.setOnClickListener(new View.OnClickListener() {
+        btn_answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btn_next.setVisibility(View.VISIBLE);
+                disableAnswerBtn(true);
                 if(questionManager.checkAnswer(2)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
@@ -138,11 +139,11 @@ public class MainActivity extends AppCompatActivity {
                 scoreCount();
             }
         });
-        btn0 = findViewById(R.id.answer_3);
-        btn0.setOnClickListener(new View.OnClickListener() {
+        btn_answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btn_next.setVisibility(View.VISIBLE);
+                disableAnswerBtn(true);
                 if(questionManager.checkAnswer(3)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
@@ -230,6 +231,13 @@ public class MainActivity extends AppCompatActivity {
         //  ??  intent.putExtra("passTest",passTest);  //  ??
 
         startActivity(intent);
+    }
+
+    private void disableAnswerBtn(boolean disable){
+        btn_answer0.setEnabled(!disable);
+        btn_answer1.setEnabled(!disable);
+        btn_answer2.setEnabled(!disable);
+        btn_answer3.setEnabled(!disable);
     }
 
     private void showDialog() {
