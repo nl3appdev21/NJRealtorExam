@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                     questionManager.currentIndex = 0;
 
                     //  new beta code for dialog bow
-                    showDialog();
-                    //  showLeaderBoard();
+                    showDialog();  //  ?? beta call dialog box
+                    //  showLeaderBoard();  //  ??  beta call  leader board
                     //  new beta code for dialog bow
                 }
             }
