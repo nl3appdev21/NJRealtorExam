@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,10 +16,9 @@ public class TestComplete extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_testcomplete);
 
         //  ??  new code
-
-        setContentView(R.layout.activity_testcomplete);
         Button btnm = findViewById(R.id.btn_menu);
         btnm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +28,6 @@ public class TestComplete extends AppCompatActivity {
         });
 
         //  ??  new code
-        setContentView(R.layout.activity_testcomplete);
         Button btnr = findViewById(R.id.btn_retest);
         btnr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +39,6 @@ public class TestComplete extends AppCompatActivity {
     }
 
     private void takeTest(){
-
         Intent intent = new Intent(TestComplete.this, MainActivity.class);
         startActivity(intent);
     }

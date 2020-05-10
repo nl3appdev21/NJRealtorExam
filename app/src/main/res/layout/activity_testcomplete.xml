@@ -11,7 +11,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="42dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/closing"/>
+        android:src="@mipmap/sadface"/>
+
+    <Button
+        android:id="@+id/btn_retest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_gravity="center"
+        android:text="Take Test Again"/>
 
     <Button
         android:id="@+id/btn_menu"
@@ -20,14 +28,5 @@
         android:layout_marginBottom="21dp"
         android:layout_gravity="center"
         android:text="Goto Menu"/>
-
-    <Button
-        android:id="@+id/btn_retest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        android:text="Click To Re-Test"/>
 
 </LinearLayout>

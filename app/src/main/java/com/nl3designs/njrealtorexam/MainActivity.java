@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     //  private TextView tv_passTest;  //  ??
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
-    private Button btn_next;
+    //  ??  private Button btn_next;
     private Button btn_menu;
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     // private int pictureMode = QUESTION_MODE;
     int tries = 0;
     int correct = 0;
-    int passTest = 21;  //  ?? beta passtest code change from 0 to 21
+    //  ??  int passTest = 21;  //  ?? beta passtest code change from 0 to 21
     int numCorrect = 0;  //  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         btn_menu = findViewById(R.id.menu);
-        btn_next = findViewById(R.id.next);
+        //  ??  btn_next = findViewById(R.id.next);
         iv_questionimage = findViewById(R.id.questionImage);
 
         final Button btn_next = findViewById(R.id.next);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    btn_next.setVisibility(View.VISIBLE);
+                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 if(questionManager.checkAnswer(1)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    btn_next.setVisibility(View.VISIBLE);
+                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 if(questionManager.checkAnswer(2)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    btn_next.setVisibility(View.VISIBLE);
+                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 if(questionManager.checkAnswer(3)){
                     changePictureMode(PASS_MODE);
                     correct += 1;
-                    btn_next.setVisibility(View.VISIBLE);
+                    //  ??  btn_next.setVisibility(View.VISIBLE);
                 }else{
                     changePictureMode(FAIL_MODE);
                 }
@@ -196,6 +196,26 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
         }
+
+        //  ??
+
+        QuestionItem questionItem = questionManager.getNext();
+        if (questionItem != null) {
+            setQuestionScreen(questionItem);
+        } else {
+            //  new beta code
+            // showEndScreen();
+            questionManager.currentIndex = 0;
+
+            //  new beta code for dialog bow
+            showDialog();  //  ?? beta call dialog box
+            testComplete();  //  new code for eot !
+            //  showLeaderBoard();  //  ??  beta call  leader board
+            //  new beta code for dialog bow
+        }
+
+        //  ??
+
     }
 
     private void scoreCount() {
@@ -210,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
     private void showEndScreen(){
         Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
 
@@ -219,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+    */
 
     private void showDialog() {
         new AlertDialog.Builder(this
@@ -241,41 +263,10 @@ public class MainActivity extends AppCompatActivity {
 
     //  new beta code
 
-    private void testComplete(){    //  test complete
-
-        Log.d("skip","testcomplete");
-
+    private void testComplete() {    //  test complete
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
         startActivity(intent);
-
-        /*
-
-        //  ??  String result = ( "Name" + ";" + tries + ";" + correct + ";" + "passTest" + ",");  //  ??  added pass
-        String result = ( "Name" + ";" + tries + ";" + correct + ";" + passTest + ",");  //  ??  added pass
-        results+=result;
-        storageManager.save(results,"results");
-        intent.putExtra("results", results);
-
-        startActivity(intent);
-
-        */
     }
-
-    /*
-
-    private void showLeaderBoard(){    //  load leader board !
-        Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
-
-        //  ??  String result = ( "Name" + ";" + tries + ";" + correct + ";" + "passTest" + ",");  //  ??  added pass
-        String result = ( "Name" + ";" + tries + ";" + correct + ";" + passTest + ",");  //  ??  added pass
-        results+=result;
-        storageManager.save(results,"results");
-        intent.putExtra("results", results);
-
-        startActivity(intent);
-    }
-
-    */
 
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
