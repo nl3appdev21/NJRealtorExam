@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //  new beta code for dialog bow
                     showDialog();
-
                     //  showLeaderBoard();
+                    //  new beta code for dialog bow
                 }
             }
         });

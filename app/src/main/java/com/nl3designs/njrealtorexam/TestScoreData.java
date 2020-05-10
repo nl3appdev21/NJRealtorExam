@@ -6,11 +6,11 @@ public class TestScoreData {
     String name;
     int tries;
     int correct;
-    //  String passTest;  //  ??
-    int passTest;
+    //  String passTest;  //  ??  int or srting output  **
+    int passTest;  //  ??  int or srting output  **
 
-    public TestScoreData(String name, int tries, int correct, int passTest){
-                //  ??  (String name, int tries, int correct, String passTest){
+    public TestScoreData(String name, int tries, int correct, int passTest){  //  ??  int or srting output  **
+                //  ??  (String name, int tries, int correct, String passTest){  //  ??  int or srting output  **
 
         this.name = name;
         this.tries = tries;

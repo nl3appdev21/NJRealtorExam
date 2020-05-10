@@ -18,8 +18,6 @@ public class StorageManager {
         editor.putString(tag,text);
         editor.apply();
 
-        Log.d("skip","stor-mgt");  //  ??
-
     }
 
     public String load(String tag){

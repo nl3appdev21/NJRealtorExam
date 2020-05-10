@@ -5,11 +5,11 @@ import android.util.Log;
 public class QuestionItem {
 
     int id;
+    String catagory;
+    String question;
+    String[] answers;
     int correct;
     String details;
-    String question;
-    String catagory;
-    String[] answers;
 
     public QuestionItem(){}
 

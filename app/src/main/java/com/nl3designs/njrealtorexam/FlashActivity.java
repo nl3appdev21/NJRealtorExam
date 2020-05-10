@@ -53,8 +53,6 @@ public class FlashActivity extends AppCompatActivity {
 
         }
 
-        //  ??  new new ??
-
         btn = findViewById(R.id.btn_menu);
 
         btn.setOnClickListener(new View.OnClickListener() {
