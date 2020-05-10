@@ -2,10 +2,12 @@ package com.nl3designs.njrealtorexam;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -75,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 btn_next.setVisibility(View.INVISIBLE);
                 disableAnswerBtn(false);
+                btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Amber_01));
+                btn_answer1.setBackgroundColor(Color.BLUE);
+                btn_answer2.setBackgroundColor(Color.BLUE);
+                btn_answer3.setBackgroundColor(Color.BLUE);
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
                 if (questionItem != null) {
@@ -100,9 +106,11 @@ public class MainActivity extends AppCompatActivity {
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(0)){
                     tv_details.setText(questionManager.getCurrentQuestion().details);
+                    btn_answer0.setBackgroundColor(Color.GREEN);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
+                    btn_answer0.setBackgroundColor(Color.RED);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -115,9 +123,11 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(1)){
+                    btn_answer0.setBackgroundColor(Color.GREEN);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
+                    btn_answer0.setBackgroundColor(Color.RED);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -130,9 +140,11 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(2)){
+                    btn_answer0.setBackgroundColor(Color.GREEN);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
+                    btn_answer0.setBackgroundColor(Color.RED);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -145,9 +157,11 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(3)){
+                    btn_answer0.setBackgroundColor(Color.GREEN);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
+                    btn_answer0.setBackgroundColor(Color.RED);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
