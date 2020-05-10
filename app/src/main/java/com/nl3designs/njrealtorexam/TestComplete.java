@@ -16,50 +16,38 @@ public class TestComplete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //  ??  new code
 
-        /*
-        setContentView(R.layout.activity_splash);
-        Button btn = findViewById(R.id.btn_stop);
-        btn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_testcomplete);
+        Button btnm = findViewById(R.id.btn_menu);
+        btnm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mySound.stop();
-                startGames();
+                gotoMenu();
             }
         });
 
-        mySound = MediaPlayer.create(this,R.raw.black);
-        mySound.start();
-
-        myTimer = new CountDownTimer( 24000,700 ) {
-
-            public   void   onTick ( long   millisUntilFinished ) {
+        //  ??  new code
+        setContentView(R.layout.activity_testcomplete);
+        Button btnr = findViewById(R.id.btn_retest);
+        btnr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takeTest();
             }
-
-            public   void   onFinish () {
-                mySound.stop();
-                startGames();
-            }
-        }.start ();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mySound.release();
-
-        */
+        });
 
     }
 
-    /*
+    private void takeTest(){
 
-    private void startGames(){
-        myTimer.cancel();
-        Intent myIntent = new Intent(this, MenuActivity.class);
-        startActivity(myIntent);
-        finish();
+        Intent intent = new Intent(TestComplete.this, MainActivity.class);
+        startActivity(intent);
     }
 
-    */
+    private void gotoMenu(){
+        Intent intent = new Intent(TestComplete.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
 }
