@@ -18,8 +18,6 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Log.d("skip","menu");  //  ??
-
         BtnActivity = findViewById(R.id.btn_takeTest);
 
         BtnActivity.setOnClickListener(new View.OnClickListener() {
@@ -29,32 +27,11 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        //  beta
-        /* --
-
-        BtnActivity = findViewById(R.id.btn_leaderBoard);
-
-        BtnActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showLeaderBoard();
-            }
-        });
-
-        -- */
-        //  beta
-
     }
 
     private void startTest() {
 
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    private void showLeaderBoard() {
-
-        Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
         startActivity(intent);
     }
 

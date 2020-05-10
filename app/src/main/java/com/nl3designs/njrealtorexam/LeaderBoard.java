@@ -16,18 +16,16 @@ public class LeaderBoard extends AppCompatActivity {
 
     ListView lv_userResults;
     private Button btn_menu;
-    ListView listView;   //  ??
-    List<TestScoreData> myData = new ArrayList<TestScoreData>();  //   ??
+    ListView listView;
+    List<TestScoreData> myData = new ArrayList<TestScoreData>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        Log.d("skip","leaderboard");  //  ??
-
         // new lb code
-        listView = findViewById(R.id.userResults);  //  ??
+        listView = findViewById(R.id.userResults);
         DataAdapter adapter = new DataAdapter(this,myData);
         listView.setAdapter(adapter); // loads items into adapter
         // new lb code
@@ -59,7 +57,6 @@ public class LeaderBoard extends AppCompatActivity {
     }
 
     private void setupData(String result) {
-        Log.d("skip","setupdata");  //  ??
         String[] resultData = result.split(";");
         myData.add(new TestScoreData(resultData[0], Integer.parseInt(resultData[1]), Integer.parseInt(resultData[2]), Integer.parseInt(resultData[3])));
     }

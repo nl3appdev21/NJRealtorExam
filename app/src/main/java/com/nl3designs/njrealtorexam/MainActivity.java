@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     // private int pictureMode = QUESTION_MODE;
     int tries = 0;
     int correct = 0;
-    int passTest = 21;  //  ?? change from 0 to 21
+    int passTest = 21;  //  ?? beta passtest code change from 0 to 21
     int numCorrect = 0;  //  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Log.d("skip","main");  //  ??
 
         storageManager = new StorageManager(this);
         if(results.equals("")){
@@ -79,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 if (questionItem != null) {
                     setQuestionScreen(questionItem);
                 } else {
+                    //  new beta code
                     // showEndScreen();
                     questionManager.currentIndex = 0;
 
@@ -202,12 +201,8 @@ public class MainActivity extends AppCompatActivity {
 
         numCorrect = correct;  //  new new
 
-        Log.d("skip","main score count");  //  ??
-        Log.d("skip numCorrect is:  ", String.valueOf(numCorrect));  //  ??
-
-        if(numCorrect >= 4){  //  ??
-            Log.d("skip","you pass");  //  ??
-        }  //  ??
+        if(numCorrect >= 4){
+        }
 
         tv_tries.setText(" # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
@@ -223,25 +218,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-
-    //  new beta code
-
-    //  note change code to run in place of or before leader board
-
-    /*
-    private void startGame(){
-        if (selectedItem == null){
-            //  return;
-            showDialog();
-        } else {
-            Intent myIntent = new Intent(this, MainActivity.class);
-            myIntent.putExtra("gameId", String.valueOf(selectedItem.id));
-            startActivity(myIntent);
-        }
-    }
-    */
-
-    //  note change code to run in place of or before leader board
 
     private void showDialog() {
         new AlertDialog.Builder(this
