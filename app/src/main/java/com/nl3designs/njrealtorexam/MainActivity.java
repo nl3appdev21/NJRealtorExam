@@ -24,20 +24,21 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
+    int myQuestionAnswer = -0;
 
-    //  private TextView tv_passTest;  //  ??
+    //  private TextView tv_passTest;  //  ??  ??  ??
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
-    //  ??  private Button btn_next;
+    //  private Button btn_next;  //  ??  ??  ??
     private Button btn_menu;
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static final int QUESTION_MODE = 0;
     public static final int PASS_MODE = 1;
     public static final int FAIL_MODE = 2;
-    // private int pictureMode = QUESTION_MODE;
+    //  private int pictureMode = QUESTION_MODE;  //  ??  ??  ??
     int tries = 0;
     int correct = 0;
-    //  ??  int passTest = 21;  //  ?? beta passtest code change from 0 to 21
+    //  int passTest = 21;  //  ?? beta passtest code change from 0 to 21  ??  ??  ??
     int numCorrect = 0;  //  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
@@ -77,24 +78,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 btn_next.setVisibility(View.INVISIBLE);
                 disableAnswerBtn(false);
-                btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Amber_01));
-                btn_answer1.setBackgroundColor(Color.BLUE);
-                btn_answer2.setBackgroundColor(Color.BLUE);
-                btn_answer3.setBackgroundColor(Color.BLUE);
+                btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
+                btn_answer1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
+                btn_answer2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
+                btn_answer3.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
+                myQuestionAnswer = -0;
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
-                if (questionItem != null) {
+                if (questionItem != null) {  //  ??  not null  ??
                     setQuestionScreen(questionItem);
                 } else {
-                    //  new beta code
                     showEndScreen();
                     questionManager.currentIndex = 0;
 
-                    //  new beta code for dialog bow
                     showDialog();  //  ?? beta call dialog box
-                    testComplete();  //  new code for eot !
-                    //  showLeaderBoard();  //  ??  beta call  leader board
-                    //  new beta code for dialog bow
+                    testComplete();  //  new code for end of test
                 }
             }
         });
@@ -105,12 +103,20 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(0)){
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," pp ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
+                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," ff ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.RED);
+                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -123,11 +129,19 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(1)){
-                    btn_answer0.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," pp ans-1 correct answer number is: " + myQuestionAnswer);
+                    btn_answer1.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    btn_answer0.setBackgroundColor(Color.RED);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," ff ans-1 correct answer number is: " + myQuestionAnswer);
+                    btn_answer1.setBackgroundColor(Color.RED);
+                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -140,11 +154,19 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(2)){
-                    btn_answer0.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," pp ans-2 correct answer number is: " + myQuestionAnswer);
+                    btn_answer2.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    btn_answer0.setBackgroundColor(Color.RED);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," ff ans-2 correct answer number is: " + myQuestionAnswer);
+                    btn_answer2.setBackgroundColor(Color.RED);
+                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -157,11 +179,19 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(3)){
-                    btn_answer0.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," pp ans-3 correct answer number is: " + myQuestionAnswer);
+                    btn_answer3.setBackgroundColor(Color.GREEN);
+                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    btn_answer0.setBackgroundColor(Color.RED);
+                    //  ??  ??
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    Log.d("skip"," ff ans-3 correct answer number is: " + myQuestionAnswer);
+                    btn_answer3.setBackgroundColor(Color.RED);
+                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -184,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setQuestionScreen(QuestionItem questionItem) {
         Log.d("skip","setquestionscreen");
-        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));  //  ??  new new  test
+        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));  //  ??  new new  test  ??  ??  ??
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
@@ -193,6 +223,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changePictureMode(int mode){
+
         switch (mode) {
             case QUESTION_MODE:
                 iv_questionimage.setVisibility(View.VISIBLE);
@@ -203,21 +234,18 @@ public class MainActivity extends AppCompatActivity {
 
             case PASS_MODE:
                 Log.d("skip", "pass show happy face");
-                iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
+                iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test  ??  ??  ??
                 iv_questionimage.setVisibility(View.VISIBLE);
-                //  ??  iv_questionimage.setVisibility(View.INVISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
-                //  ??  tv_details.setVisibility(View.VISIBLE);
 
                 break;
 
             case FAIL_MODE:
                 Log.d("skip", "fail show sad face");
-                iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
+                iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test  ??  ??  ??
                 iv_questionimage.setVisibility(View.VISIBLE);
-                //  ??  iv_questionimage.setVisibility(View.INVISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE); // was visible
+                tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
 
                 break;
@@ -227,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void scoreCount() {
 
-        numCorrect = correct;  //  new new
+        numCorrect = correct;  //  new new  ??  ??  ??
 
         if(numCorrect >= 4){
         }
@@ -242,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
 
         intent.putExtra("tries", tries);
         intent.putExtra("correct", correct);
-        //  ??  intent.putExtra("passTest",passTest);  //  ??
+        //  ??  intent.putExtra("passTest",passTest);  //  ??  ??  ??  ??
 
         startActivity(intent);
     }
@@ -273,9 +301,7 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    //  new beta code
-
-    private void testComplete() {    //  test complete
+    private void testComplete() {
         iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
         startActivity(intent);
