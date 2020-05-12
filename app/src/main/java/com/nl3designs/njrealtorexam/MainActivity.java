@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_correct;
     int myQuestionAnswer = -0;
 
-    //  private TextView tv_passTest;  //  ??  ??  ??
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
-    //  private Button btn_next;  //  ??  ??  ??
     private Button btn_menu;
     private Button[] btnArray = new Button[4];
     private ImageView iv_questionimage;
@@ -36,11 +34,10 @@ public class MainActivity extends AppCompatActivity {
     public static final int QUESTION_MODE = 0;
     public static final int PASS_MODE = 1;
     public static final int FAIL_MODE = 2;
-    //  private int pictureMode = QUESTION_MODE;  //  ??  ??  ??
     int tries = 0;
     int correct = 0;
-    //  int passTest = 21;  //  ?? beta passtest code change from 0 to 21  ??  ??  ??
     int numCorrect = 0;  //  new new
+    int numQuestions = 0; //  ??  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
@@ -73,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         btn_menu = findViewById(R.id.menu);
-        //  ??  btn_next = findViewById(R.id.next);
         iv_questionimage = findViewById(R.id.questionImage);
 
         final Button btn_next = findViewById(R.id.next);
@@ -230,6 +226,11 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1.setText(questionItem.answers[1]);
         btn_answer2.setText(questionItem.answers[2]);
         btn_answer3.setText(questionItem.answers[3]);
+
+        //  ??  new code to get size or num of questions  ??
+        numQuestions = questionManager.questionitems.size();
+        Log.d("skip", " ??  number of questions " + numQuestions);
+
     }
 
     private void changePictureMode(int mode){
@@ -265,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void scoreCount() {
 
-        numCorrect = correct;  //  new new  ??  ??  ??
+        //  ??  numCorrect = correct;  //  new new  ??  ??  ??
         if(numCorrect >= 4){
         }
 
@@ -278,11 +279,18 @@ public class MainActivity extends AppCompatActivity {
 
         //  ??  do end math  ??
 
-        double numofQuestions = 5.0;  //  ??  ??  get lenght from json  ??  ??
+        numCorrect = correct;  //  new new  ??  ??
+        double numofQuestions = numQuestions;  //  ??  ??  get lenght from json  ??  ??
         int testScore;
         Log.d("skip","numcorrect = " + numCorrect);
         testScore = (int)(((numCorrect/numofQuestions)*100));  //  ??  cast to int  ??
         Log.d("skip","testScore is = " + testScore + " %");
+
+        if(testScore < 70) {
+            Log.d("skip", "you failed !  " + testScore + " %");
+        }else{
+            Log.d("skip", "you passed !!!!!!  " + testScore + " %");
+        }
 
         //  ??  do end math  ??
 
@@ -290,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
 
         intent.putExtra("tries", tries);
         intent.putExtra("correct", correct);
-        //  ??  intent.putExtra("passTest",passTest);  //  ??  ??  ??  ??
+        //  ??  intent.putExtra("passTest",passTest);  //  ??  ??
 
         startActivity(intent);
     }
