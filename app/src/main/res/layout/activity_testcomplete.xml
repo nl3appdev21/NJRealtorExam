@@ -13,6 +13,9 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/sadface"/>
 
+    <!--  ??  add textview here for counts  ??  -->
+    <!--  ??  add textview here for counts  ??  -->
+
     <Button
         android:id="@+id/btn_retest"
         android:layout_width="wrap_content"

@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     //  private Button btn_next;  //  ??  ??  ??
     private Button btn_menu;
+    private Button[] btnArray = new Button[4];
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static final int QUESTION_MODE = 0;
@@ -63,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1 = findViewById(R.id.answer_1);
         btn_answer2 = findViewById(R.id.answer_2);
         btn_answer3 = findViewById(R.id.answer_3);
+        btnArray[0] = btn_answer0;
+        btnArray[1] = btn_answer1;
+        btnArray[2] = btn_answer2;
+        btnArray[3] = btn_answer3;
         tv_details = findViewById(R.id.details);
         tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
@@ -116,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     Log.d("skip"," ff ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.RED);
+                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
                     //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
@@ -141,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     Log.d("skip"," ff ans-1 correct answer number is: " + myQuestionAnswer);
                     btn_answer1.setBackgroundColor(Color.RED);
+                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
                     //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
@@ -166,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     Log.d("skip"," ff ans-2 correct answer number is: " + myQuestionAnswer);
                     btn_answer2.setBackgroundColor(Color.RED);
+                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+
                     //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
@@ -191,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     Log.d("skip"," ff ans-3 correct answer number is: " + myQuestionAnswer);
                     btn_answer3.setBackgroundColor(Color.RED);
+                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
                     //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
@@ -256,7 +266,6 @@ public class MainActivity extends AppCompatActivity {
     private void scoreCount() {
 
         numCorrect = correct;  //  new new  ??  ??  ??
-
         if(numCorrect >= 4){
         }
 
@@ -266,6 +275,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showEndScreen(){
+
+        //  ??  do end math  ??
+
+        double numofQuestions = 5.0;  //  ??  ??  get lenght from json  ??  ??
+        int testScore;
+        Log.d("skip","numcorrect = " + numCorrect);
+        testScore = (int)(((numCorrect/numofQuestions)*100));  //  ??  cast to int  ??
+        Log.d("skip","testScore is = " + testScore + " %");
+
+        //  ??  do end math  ??
+
         Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
 
         intent.putExtra("tries", tries);
