@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
     public static final int FAIL_MODE = 2;
     int tries = 0;
     int correct = 0;
+    int testScore = 0;
     int numCorrect = 0;  //  new new
     int numQuestions = 0; //  ??  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1 = findViewById(R.id.answer_1);
         btn_answer2 = findViewById(R.id.answer_2);
         btn_answer3 = findViewById(R.id.answer_3);
-        btnArray[0] = btn_answer0;
-        btnArray[1] = btn_answer1;
-        btnArray[2] = btn_answer2;
-        btnArray[3] = btn_answer3;
+        btnArray[0] = btn_answer0;  //  ??  use array to set wrong answer backround to red  ??
+        btnArray[1] = btn_answer1;  //  ??  use array to set wrong answer backround to red  ??
+        btnArray[2] = btn_answer2;  //  ??  use array to set wrong answer backround to red  ??
+        btnArray[3] = btn_answer3;  //  ??  use array to set wrong answer backround to red  ??
         tv_details = findViewById(R.id.details);
         tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
@@ -266,33 +266,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void scoreCount() {
 
-        //  ??  numCorrect = correct;  //  new new  ??  ??  ??
-        if(numCorrect >= 4){
-        }
-
         tv_tries.setText(" # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
 
     }
 
-    private void showEndScreen(){
+    private void disableAnswerBtn(boolean disable){
+        btn_answer0.setEnabled(!disable);
+        btn_answer1.setEnabled(!disable);
+        btn_answer2.setEnabled(!disable);
+        btn_answer3.setEnabled(!disable);
+    }
 
-        //  ??  do end math  ??
+    //  ??  do end math  ??
+    //  ??  do end math  ??
+    //  ??  do end math  ??
+
+    private void showEndScreen(){
 
         numCorrect = correct;  //  new new  ??  ??
         double numofQuestions = numQuestions;  //  ??  ??  get lenght from json  ??  ??
-        int testScore;
         Log.d("skip","numcorrect = " + numCorrect);
         testScore = (int)(((numCorrect/numofQuestions)*100));  //  ??  cast to int  ??
         Log.d("skip","testScore is = " + testScore + " %");
-
-        if(testScore < 70) {
-            Log.d("skip", "you failed !  " + testScore + " %");
-        }else{
-            Log.d("skip", "you passed !!!!!!  " + testScore + " %");
-        }
-
-        //  ??  do end math  ??
 
         Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
 
@@ -303,37 +299,62 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void disableAnswerBtn(boolean disable){
-        btn_answer0.setEnabled(!disable);
-        btn_answer1.setEnabled(!disable);
-        btn_answer2.setEnabled(!disable);
-        btn_answer3.setEnabled(!disable);
-    }
+    private void testComplete() {  //  ??  ??  got to end of test  ??  ??
 
-    private void showDialog() {
-        new AlertDialog.Builder(this
-        )
-                .setTitle(" Test Results ")
-                .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
+        if(testScore < 70) {
+            Log.d("skip", "you failed !  " + testScore + " %");
+            iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
+        }else{
+            Log.d("skip", "you passed !!!!!!  " + testScore + " %");
+            iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
+        }
 
-                // Specifying a listener allows you to take an action before dismissing the dialog.
-                // The dialog is automatically dismissed when a dialog button is clicked.
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Continue with delete operation
-                    }
-                })
-
-                // A null listener allows the button to dismiss the dialog and take no further action.
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
-    }
-
-    private void testComplete() {
-        iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
         startActivity(intent);
     }
+
+    private void showDialog() {
+
+        if(testScore < 70) {
+            new AlertDialog.Builder(this)
+                    .setTitle(" Test Results ")
+                    .setMessage(" Sorry you did not passed, you can retake the test ")
+
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Continue with delete operation
+                        }
+                    })
+
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+
+        if(testScore > 70) {
+            new AlertDialog.Builder(this)
+                    .setTitle(" Test Results ")
+                    .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
+
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Continue with delete operation
+                        }
+                    })
+
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+    }
+
+    //  ??  do end math  ??
+    //  ??  do end math  ??
+    //  ??  do end math  ??
 
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
@@ -341,6 +362,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupImageMap(){
+        imageMap.put("oldtype",R.mipmap.njreal01);  //  ??  ??  set all tyes in  both old and new file  ??  ??
         imageMap.put("law",R.mipmap.law);
         imageMap.put("commision",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);

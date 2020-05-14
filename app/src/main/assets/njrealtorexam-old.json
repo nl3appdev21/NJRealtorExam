@@ -1,20 +1,20 @@
 [
   {
     "id":0,
-    "catagory":"x",
-  "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
-  "answers":[
-  "It is up to the customer.",
-  "No, most people in this area don't use them.",
-  "Yes. You should never buy a property without an attorney.",
-  "I can help you with everything the lawyer would do and save you money."
-],
-  "correct":0,
-  "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly."
+    "catagory":"oldtype",
+    "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
+    "answers":[
+      "It is up to the customer.",
+      "No, most people in this area don't use them.",
+      "Yes. You should never buy a property without an attorney.",
+      "I can help you with everything the lawyer would do and save you money."
+    ],
+    "correct":0,
+    "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly."
   },
   {
     "id":1,
-    "catagory":"x",
+    "catagory":"oldtype",
     "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
     "answers":[
       "Bill, who promised you the commission",
@@ -27,6 +27,7 @@
   },
   {
     "id":2,
+    "catagory":"oldtype",
     "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
     "answers":[
       "We are members of NAR.",
@@ -39,6 +40,7 @@
   },
   {
     "id":3,
+    "catagory":"oldtype",
     "question":" Which type of ownership can only be held by a husband and wife? ",
     "answers":[
       " Tenancy in Severality ",
@@ -51,6 +53,7 @@
   },
   {
     "id":4,
+    "catagory":"oldtype",
     "question":" Your municipality is building a new shopping mall. In order to safely control traffic entering and leaving the mall, they will need to remove all the homes on your block to build an access road. They will pay fair compensation for the taking. What is this process called?",
     "answers":[
       " Eminent Domain ",
@@ -63,6 +66,7 @@
   },
   {
     "id":5,
+    "catagory":"oldtype",
     "question":" What is the function of an acceleration clause in a mortgage document?",
     "answers":[
       " It gives the borrower the ability to pay a loan off early. ",
@@ -75,6 +79,7 @@
   },
   {
     "id":6,
+    "catagory":"oldtype",
     "question":" What is the difference between a client and a customer? ",
     "answers":[
       " A client is someone you have a contract with to perform services for a fee and a customer is someone looking to buy something for no additional fee. ",
@@ -87,6 +92,7 @@
   },
   {
     "id":7,
+    "catagory":"oldtype",
     "question":" Which of the following is true regarding commissions? ",
     "answers":[
       "They are due and payable to the agent within 10 days of the broker's receipt of funds. ",
@@ -99,6 +105,7 @@
   },
   {
     "id":8,
+    "catagory":"oldtype",
     "question":" You have been pre-qualified so you can start looking at houses for sale, but the lenders tell you that due to poor credit they cannot help you. You continue to look anyway hoping for a miracle, and you find a home for sale with seller financing. The house is an investment property for sale by owner. Your down payment is sufficient but the seller considers you a bad risk due to your credit history. Finally, he agrees to hold a mortgage but at a 19 percent interest rate. What, if anything would protect you from such high interest rates? ",
     "answers":[
       " Regulation Z ",
@@ -111,6 +118,7 @@
   },
   {
     "id":9,
+    "catagory":"oldtype",
     "question":" What is a latent defect? ",
     "answers":[
       " Something wrong with the property that the seller has disclosed. ",
@@ -123,6 +131,7 @@
   },
   {
     "id":10,
+    "catagory":"oldtype",
     "question":" When a contract is made for an illegal purpose, such as deflating the purchase price to pay lower taxes, the contract becomes:  ",
     "answers":[
       " Express ",
@@ -135,6 +144,7 @@
   },
   {
     "id":11,
+    "catagory":"oldtype",
     "question":" A seller is approached by a buyer who is interested in an option contact on the seller's property. They agree to a sale price, consideration and a thirty day option term. Which of the following is true regarding an option contract? ",
     "answers":[
       " It is a unilateral contract. ",
@@ -147,6 +157,7 @@
   },
   {
     "id":12,
+    "catagory":"oldtype",
     "question":" If a client or customer were dissatisfied with the service they received from their salesperson, they could send a written complaint to the Real Estate Commission. Once the complaint is filed, what are the investigatory powers of the commission? ",
     "answers":[
       " Issue subpoenas. ",
@@ -159,6 +170,7 @@
   },
   {
     "id":13,
+    "catagory":"oldtype",
     "question":" You and your family are renting a house at the Jersey Shore this summer. The landlord gave you a lease to sign explaining the terms such as move in and move out times and dates, amount of rent and other stipulations. What kind of tenancy does your rental fall under? ",
     "answers":[
       " Periodic tenancy ",
@@ -171,6 +183,7 @@
   },
   {
     "id":14,
+    "catagory":"oldtype",
     "question":" What does it mean to alienate title? ",
     "answers":[
       " To have a lien placed against it. ",
@@ -183,6 +196,7 @@
   },
   {
     "id":15,
+    "catagory":"oldtype",
     "question":" Businesses with what number of employees must be compliant with the standards of the American with Disabilities Act? ",
     "answers":[
       " Less than 100 ",
@@ -195,6 +209,7 @@
   },
   {
     "id":16,
+    "catagory":"oldtype",
     "question":" A licensed real estate broker can refuse to rent to the following tenants: ",
     "answers":[
       " A person from a minority ethnic group with substandard credit ",
@@ -207,6 +222,7 @@
   },
   {
     "id":17,
+    "catagory":"oldtype",
     "question":" Knowing that you have been a licensed real estate agent for some time, your neighbor asks you if you could give her an idea of what her house may be worth. She is retiring and has been thinking of downsizing. You are glad to assist her, so you go into your local multiple listing service and search for comparable homes. You chose a few homes that have the most features in common with her home. Features would include size of the house and lot, number of bedrooms and baths, condition, location, age and any other information that would be helpful. You prepare a report that shows her how these homes compare to hers and how you arrived at the value based on these comparisons. What is the report that you present called? ",
     "answers":[
       " A cost approach valuation ",
@@ -219,6 +235,7 @@
   },
   {
     "id":18,
+    "catagory":"oldtype",
     "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
     "answers":[
       "$14,820 ",
@@ -231,6 +248,7 @@
   },
   {
     "id":19,
+    "catagory":"oldtype",
     "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
     "answers":[
       " Auctioning real estate ",

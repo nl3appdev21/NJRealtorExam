@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="42dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/sadface"/>
+        android:src="@mipmap/mobillab12"/>
 
     <!--  ??  add textview here for counts  ??  -->
     <!--  ??  add textview here for counts  ??  -->
