@@ -23,7 +23,7 @@ public class TestComplete extends AppCompatActivity {
         Log.d("skip","new new test-comp");  //  ??
         Log.d("skip","new new test-comp");  //  ??
 
-
+    /*
         //  ??  do end of test  ??
         //  ??  do end of test  ??
         //  ??  do end of test  ??
@@ -103,7 +103,7 @@ public class TestComplete extends AppCompatActivity {
         //  ??  do end of test  ??
         //  ??  do end of test  ??
         //  ??  do end of test  ??
-
+     */
 
         //  ??  new code
         Button btnr = findViewById(R.id.btn_takeTest);
