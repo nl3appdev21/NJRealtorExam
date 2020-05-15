@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
-    int myQuestionAnswer = -0;
 
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_menu;
@@ -38,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     int correct = 0;
     int testScore = 0;
     int numCorrect = 0;  //  new new
-    int numQuestions = 0; //  ??  new new
+    int numQuestions = 0; //  new new
+    int myQuestionAnswer = -0;  //  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
@@ -281,6 +281,16 @@ public class MainActivity extends AppCompatActivity {
     //  ??  do end math  ??
     //  ??  do end math  ??
     //  ??  do end math  ??
+
+    /*  ??
+    int tries = 0;
+    int correct = 0;
+    int testScore = 0;
+    int numCorrect = 0;  //  new new
+    int numQuestions = 0; //  new new
+    int myQuestionAnswer = -0;  //  new new
+
+    ??  */
 
     private void showEndScreen(){
 
