@@ -16,6 +16,7 @@
     <TextView
         android:id="@+id/tv_testResults1"
         android:text=" you ? "
+        android:paddingLeft="10dp"
         android:layout_marginTop="21dp"
         android:layout_marginBottom="2dp"
         android:layout_marginHorizontal="12dp"
@@ -28,6 +29,7 @@
     <TextView
         android:id="@+id/tv_testResults2"
         android:text=" score 00 % "
+        android:paddingLeft="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="21dp"
         android:layout_marginHorizontal="12dp"
