@@ -28,7 +28,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        mySound = MediaPlayer.create(this,R.raw.black);
+        mySound = MediaPlayer.create(this,R.raw.doorbell);
+        //  mySound = MediaPlayer.create(this,R.raw.black);
         mySound.start();
 
         myTimer = new CountDownTimer( 24000,700 ) {

@@ -9,9 +9,9 @@
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="42dp"
+    android:layout_margin="21dp"
     android:scaleType="centerCrop"
-    android:src="@mipmap/splash1"/>
+    android:src="@mipmap/gate00"/>
 
 <Button
     android:id="@+id/btn_stop"
