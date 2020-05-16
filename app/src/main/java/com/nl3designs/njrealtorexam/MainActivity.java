@@ -187,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
+
         iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
@@ -254,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
         imageMap.put("oldtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
         imageMap.put("mortgage",R.mipmap.mortgage);
         imageMap.put("law",R.mipmap.law);
-        imageMap.put("commision",R.mipmap.math);
+        imageMap.put("commission",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);
         imageMap.put("ownership",R.mipmap.ownership2);
         imageMap.put("sad",R.mipmap.sadface);
