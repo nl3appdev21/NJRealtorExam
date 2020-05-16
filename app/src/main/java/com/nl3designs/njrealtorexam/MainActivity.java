@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
-
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_menu;
     private Button[] btnArray = new Button[4];
@@ -33,11 +32,22 @@ public class MainActivity extends AppCompatActivity {
     public static final int QUESTION_MODE = 0;
     public static final int PASS_MODE = 1;
     public static final int FAIL_MODE = 2;
-    int tries = 0;
-    int correct = 0;
-    int testScore = 0;
+    //  new code
+    //  public static final int xxtries = 0;  //  new code
+    //  public static final int xxcorrect = 0;  //  new code
+    //  public static final int xxnumQuestions = 0;  //  new code
+
+    int tries = 0;  //  new code
+    int correct = 0;  //  new code
+    int numQuestions = 0;  //  new code
+
+    //  old code del 4 lines
+    //  int tries = 0;
+    //  int correct = 0;
+    //  int testScore = 0;
+    //  int numQuestions = 0; //  new new
+
     int numCorrect = 0;  //  new new
-    int numQuestions = 0; //  new new
     int myQuestionAnswer = -0;  //  new new
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
@@ -89,11 +99,10 @@ public class MainActivity extends AppCompatActivity {
                 if (questionItem != null) {  //  ??  not null  ??
                     setQuestionScreen(questionItem);
                 } else {
-                    showEndScreen();
+                    //  old code del  **  showEndScreen();
                     questionManager.currentIndex = 0;
-
-                    showDialog();  //  ?? beta call dialog box
-                    testComplete();  //  new code for end of test
+                    //  old code del  **  showDialog();  //  ?? beta call dialog box
+                    testComplete();  //  new code will be end of test
                 }
             }
         });
@@ -118,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("skip"," ff ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+                    tv_details.setText(questionManager.getCurrentQuestion().details);  //  new line of code
                     //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
@@ -215,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("skip","code for oncreate");
         QuestionItem questionItem = questionManager.getNext();  //  ?????????
         setQuestionScreen(questionItem);  //  ????????????
-
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
@@ -227,10 +236,9 @@ public class MainActivity extends AppCompatActivity {
         btn_answer2.setText(questionItem.answers[2]);
         btn_answer3.setText(questionItem.answers[3]);
 
-        //  ??  new code to get size or num of questions  ??
+        //  ??  new code to get size or num of questions  ?????????????????????????????????????????????????
         numQuestions = questionManager.questionitems.size();
         Log.d("skip", " ??  number of questions " + numQuestions);
-
     }
 
     private void changePictureMode(int mode){
@@ -240,7 +248,6 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
-
                 break;
 
             case PASS_MODE:
@@ -249,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
-
                 break;
 
             case FAIL_MODE:
@@ -258,17 +264,13 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
-
                 break;
         }
-
     }
 
     private void scoreCount() {
-
         tv_tries.setText(" # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
-
     }
 
     private void disableAnswerBtn(boolean disable){
@@ -290,8 +292,6 @@ public class MainActivity extends AppCompatActivity {
     int numQuestions = 0; //  new new
     int myQuestionAnswer = -0;  //  new new
 
-    ??  */
-
     private void showEndScreen(){
 
         numCorrect = correct;  //  new new  ??  ??
@@ -309,20 +309,28 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+   */
+
     private void testComplete() {  //  ??  ??  got to end of test  ??  ??
 
-        if(testScore < 70) {
-            Log.d("skip", "you failed !  " + testScore + " %");
-            iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
-        }else{
-            Log.d("skip", "you passed !!!!!!  " + testScore + " %");
-            iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
-        }
+        // if(testScore < 70) {
+        //     Log.d("skip", "you failed !  " + testScore + " %");
+        //     iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
+        // }else{
+        //     Log.d("skip", "you passed !!!!!!  " + testScore + " %");
+        //     iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
+        // }
 
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
+
+        intent.putExtra("tries", tries);
+        intent.putExtra("correct", correct);
+        intent.putExtra("numQuestions", numQuestions);
+
         startActivity(intent);
     }
 
+    /*
     private void showDialog() {
 
         if(testScore < 70) {
@@ -365,6 +373,8 @@ public class MainActivity extends AppCompatActivity {
     //  ??  do end math  ??
     //  ??  do end math  ??
     //  ??  do end math  ??
+
+    */
 
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);

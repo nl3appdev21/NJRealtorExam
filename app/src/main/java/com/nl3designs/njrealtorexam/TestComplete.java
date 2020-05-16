@@ -15,6 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TestComplete extends AppCompatActivity {
 
+    int tries;
+    int correct;
+    int numQuestions;
+    int testScore;
+    double numOfQuestions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +28,23 @@ public class TestComplete extends AppCompatActivity {
 
         Log.d("skip","new new test-comp");  //  ??
         Log.d("skip","new new test-comp");  //  ??
+
+        Intent intent = getIntent();
+
+        tries = getIntent().getIntExtra("tries",0);
+        correct = getIntent().getIntExtra("correct",0);
+        numQuestions = getIntent().getIntExtra("numQuestions",0);
+
+        Log.d("skip","new test-comp, tries = " + tries);
+        Log.d("skip","new test-comp, correct = " + correct);
+        Log.d("skip","new test-comp, numQuestions = " + numQuestions);
+
+        //  getscore();
+
+        //  showbox();
+
+        //  testcomplete()
+
 
     /*
         //  ??  do end of test  ??
