@@ -32,23 +32,10 @@ public class MainActivity extends AppCompatActivity {
     public static final int QUESTION_MODE = 0;
     public static final int PASS_MODE = 1;
     public static final int FAIL_MODE = 2;
-    //  new code
-    //  public static final int xxtries = 0;  //  new code
-    //  public static final int xxcorrect = 0;  //  new code
-    //  public static final int xxnumQuestions = 0;  //  new code
-
-    int tries = 0;  //  new code
-    int correct = 0;  //  new code
-    int numQuestions = 0;  //  new code
-
-    //  old code del 4 lines
-    //  int tries = 0;
-    //  int correct = 0;
-    //  int testScore = 0;
-    //  int numQuestions = 0; //  new new
-
-    int numCorrect = 0;  //  new new
-    int myQuestionAnswer = -0;  //  new new
+    int tries = 0;
+    int correct = 0;
+    int numQuestions = 0;
+    int myQuestionAnswer = -0;
     HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
@@ -99,10 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 if (questionItem != null) {  //  ??  not null  ??
                     setQuestionScreen(questionItem);
                 } else {
-                    //  old code del  **  showEndScreen();
                     questionManager.currentIndex = 0;
-                    //  old code del  **  showDialog();  //  ?? beta call dialog box
-                    testComplete();  //  new code will be end of test
+                    testComplete();  //  new code run end of test
                 }
             }
         });
@@ -113,22 +98,16 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(0)){
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," pp ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," ff ans-0 correct answer number is: " + myQuestionAnswer);
                     btn_answer0.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);  //  new line of code
-                    //  ??  ??
+                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -141,20 +120,14 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(1)){
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," pp ans-1 correct answer number is: " + myQuestionAnswer);
                     btn_answer1.setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," ff ans-1 correct answer number is: " + myQuestionAnswer);
                     btn_answer1.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -167,21 +140,14 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(2)){
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," pp ans-2 correct answer number is: " + myQuestionAnswer);
                     btn_answer2.setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," ff ans-2 correct answer number is: " + myQuestionAnswer);
                     btn_answer2.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-
-                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -194,20 +160,14 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn(true);
                 if(questionManager.checkAnswer(3)){
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," pp ans-3 correct answer number is: " + myQuestionAnswer);
                     btn_answer3.setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
-                    //  ??  ??
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    Log.d("skip"," ff ans-3 correct answer number is: " + myQuestionAnswer);
                     btn_answer3.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    //  ??  ??
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -221,24 +181,20 @@ public class MainActivity extends AppCompatActivity {
                 gotoMenu();
             }
         });
-
-        Log.d("skip","code for oncreate");
-        QuestionItem questionItem = questionManager.getNext();  //  ?????????
-        setQuestionScreen(questionItem);  //  ????????????
+        QuestionItem questionItem = questionManager.getNext();
+        setQuestionScreen(questionItem);
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
-        Log.d("skip","setquestionscreen");
-        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));  //  ??  new new  test  ??  ??  ??
+        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
         btn_answer2.setText(questionItem.answers[2]);
         btn_answer3.setText(questionItem.answers[3]);
 
-        //  ??  new code to get size or num of questions  ?????????????????????????????????????????????????
+        // new code to get size or num of questions
         numQuestions = questionManager.questionitems.size();
-        Log.d("skip", " ??  number of questions " + numQuestions);
     }
 
     private void changePictureMode(int mode){
@@ -251,16 +207,14 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case PASS_MODE:
-                Log.d("skip", "pass show happy face");
-                iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test  ??  ??  ??
+                iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
                 break;
 
             case FAIL_MODE:
-                Log.d("skip", "fail show sad face");
-                iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test  ??  ??  ??
+                iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
@@ -280,46 +234,7 @@ public class MainActivity extends AppCompatActivity {
         btn_answer3.setEnabled(!disable);
     }
 
-    //  ??  do end math  ??
-    //  ??  do end math  ??
-    //  ??  do end math  ??
-
-    /*  ??
-    int tries = 0;
-    int correct = 0;
-    int testScore = 0;
-    int numCorrect = 0;  //  new new
-    int numQuestions = 0; //  new new
-    int myQuestionAnswer = -0;  //  new new
-
-    private void showEndScreen(){
-
-        numCorrect = correct;  //  new new  ??  ??
-        double numofQuestions = numQuestions;  //  ??  ??  get lenght from json  ??  ??
-        Log.d("skip","numcorrect = " + numCorrect);
-        testScore = (int)(((numCorrect/numofQuestions)*100));  //  ??  cast to int  ??
-        Log.d("skip","testScore is = " + testScore + " %");
-
-        Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
-
-        intent.putExtra("tries", tries);
-        intent.putExtra("correct", correct);
-        //  ??  intent.putExtra("passTest",passTest);  //  ??  ??
-
-        startActivity(intent);
-    }
-
-   */
-
-    private void testComplete() {  //  ??  ??  got to end of test  ??  ??
-
-        // if(testScore < 70) {
-        //     Log.d("skip", "you failed !  " + testScore + " %");
-        //     iv_questionimage.setImageResource(R.mipmap.sadface);  //  ??  new new  test
-        // }else{
-        //     Log.d("skip", "you passed !!!!!!  " + testScore + " %");
-        //     iv_questionimage.setImageResource(R.mipmap.happyface);  //  ??  new new  test
-        // }
+    private void testComplete() {  // new code for end of test
 
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
 
@@ -330,59 +245,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
-    private void showDialog() {
-
-        if(testScore < 70) {
-            new AlertDialog.Builder(this)
-                    .setTitle(" Test Results ")
-                    .setMessage(" Sorry you did not passed, you can retake the test ")
-
-                    // Specifying a listener allows you to take an action before dismissing the dialog.
-                    // The dialog is automatically dismissed when a dialog button is clicked.
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Continue with delete operation
-                        }
-                    })
-
-                    // A null listener allows the button to dismiss the dialog and take no further action.
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        }
-
-        if(testScore > 70) {
-            new AlertDialog.Builder(this)
-                    .setTitle(" Test Results ")
-                    .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
-
-                    // Specifying a listener allows you to take an action before dismissing the dialog.
-                    // The dialog is automatically dismissed when a dialog button is clicked.
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Continue with delete operation
-                        }
-                    })
-
-                    // A null listener allows the button to dismiss the dialog and take no further action.
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        }
-    }
-
-    //  ??  do end math  ??
-    //  ??  do end math  ??
-    //  ??  do end math  ??
-
-    */
-
     private void gotoMenu() {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
     }
 
     private void setupImageMap(){
-        imageMap.put("oldtype",R.mipmap.njreal01);  //  ??  ??  set all tyes in  both old and new file  ??  ??
+        imageMap.put("oldtype",R.mipmap.njreal01);  // ?? set all tyes in both old and new file ??
         imageMap.put("law",R.mipmap.law);
         imageMap.put("commision",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);

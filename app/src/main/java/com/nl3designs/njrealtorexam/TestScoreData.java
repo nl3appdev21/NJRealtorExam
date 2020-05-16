@@ -16,6 +16,5 @@ public class TestScoreData {
         this.tries = tries;
         this.correct = correct;
         this.passTest = passTest;
-
     }
 }

@@ -6,26 +6,22 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/passFail"
+        android:id="@+id/iv_passFail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="42dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/realestate"/>
 
-    <!--  ??  add textview here for counts  ??  -->
-
-        <TextView
-            android:id="@+id/testResults"
-            android:text="you failed with 99 of 99 correct, your sore is = 99 % "
-            android:layout_marginTop="21dp"
-            android:layout_marginBottom="21dp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    <!--  ??  add textview here for counts  ??  -->
+    <TextView
+        android:id="@+id/tv_testResults"
+        android:text="you failed with 99 of 99 correct, your sore is = 99 % "
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="21dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btn_takeTest"

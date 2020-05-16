@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -21,114 +22,30 @@ public class TestComplete extends AppCompatActivity {
     int testScore;
     double numOfQuestions;
 
+    ImageView iv_passFail;
+    TextView tv_testResults;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
 
-        Log.d("skip","new new test-comp");  //  ??
-        Log.d("skip","new new test-comp");  //  ??
+        iv_passFail = findViewById(R.id.iv_passFail);
+        tv_testResults = findViewById(R.id.tv_testResults);
 
         Intent intent = getIntent();
+        TextView results = (TextView) findViewById(R.id.tv_testResults);
+        ImageView passfail = (ImageView) findViewById(R.id.passFail);
 
         tries = getIntent().getIntExtra("tries",0);
         correct = getIntent().getIntExtra("correct",0);
         numQuestions = getIntent().getIntExtra("numQuestions",0);
+        numOfQuestions = numQuestions;
 
-        Log.d("skip","new test-comp, tries = " + tries);
-        Log.d("skip","new test-comp, correct = " + correct);
-        Log.d("skip","new test-comp, numQuestions = " + numQuestions);
+        getScore();
+        showDialogBox();
+        testComplete();
 
-        //  getscore();
-
-        //  showbox();
-
-        //  testcomplete()
-
-
-    /*
-        //  ??  do end of test  ??
-        //  ??  do end of test  ??
-        //  ??  do end of test  ??
-
-
-        private void showEndScreen(){
-
-            numCorrect = correct;  //  new new  ??  ??
-            double numofQuestions = numQuestions;  //  ??  ??  get lenght from json  ??  ??
-            Log.d("skip","numcorrect = " + numCorrect);
-            testScore = (int)(((numCorrect/numofQuestions)*100));  //  ??  cast to int  ??
-            Log.d("skip","testScore is = " + testScore + " %");
-
-            Intent intent = new Intent(MainActivity.this, TestCompleteActivity.class);
-
-            intent.putExtra("tries", tries);
-            intent.putExtra("correct", correct);
-            //  ??  intent.putExtra("passTest",passTest);  //  ??  ??
-
-            startActivity(intent);
-        }
-
-        private void testComplete() {  //  ??  ??  got to end of test  ??  ??
-
-            if(testScore < 70) {
-                Log.d("skip", "you failed !  " + testScore + " %");
-                iv_questionimage.setImageResource(R.mipmap.sadface);  //  ????????????????????
-            }else{
-                Log.d("skip", "you passed !!!!!!  " + testScore + " %");
-                iv_questionimage.setImageResource(R.mipmap.happyface);  //  ????????????????????
-            }
-
-            Intent intent = new Intent(MainActivity.this, TestComplete.class);
-            startActivity(intent);
-        }
-
-        private void showDialog() {
-
-            if(testScore < 70) {
-                new AlertDialog.Builder(this)
-                        .setTitle(" Test Results ")
-                        .setMessage(" Sorry you did not passed, you can retake the test ")
-
-                        // Specifying a listener allows you to take an action before dismissing the dialog.
-                        // The dialog is automatically dismissed when a dialog button is clicked.
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Continue with delete operation
-                            }
-                        })
-
-                        // A null listener allows the button to dismiss the dialog and take no further action.
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
-            }
-
-            if(testScore > 70) {
-                new AlertDialog.Builder(this)
-                        .setTitle(" Test Results ")
-                        .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
-
-                        // Specifying a listener allows you to take an action before dismissing the dialog.
-                        // The dialog is automatically dismissed when a dialog button is clicked.
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Continue with delete operation
-                            }
-                        })
-
-                        // A null listener allows the button to dismiss the dialog and take no further action.
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
-            }
-        }
-
-
-        //  ??  do end of test  ??
-        //  ??  do end of test  ??
-        //  ??  do end of test  ??
-     */
-
-        //  ??  new code
         Button btnr = findViewById(R.id.btn_takeTest);
         btnr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,7 +54,6 @@ public class TestComplete extends AppCompatActivity {
             }
         });
 
-        //  ??  new code
         Button btnm = findViewById(R.id.btn_menu);
         btnm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,6 +61,56 @@ public class TestComplete extends AppCompatActivity {
                 gotoMenu();
             }
         });
+    }
+
+    private void getScore() {
+
+        testScore = (int)(((correct/numOfQuestions)*100));  //  ??  cast to int  ??
+        //  Log.d("skip","testScore is = " + testScore + "%");
+    }
+
+    private void showDialogBox() {
+
+        if(testScore < 70) {
+            new AlertDialog.Builder(this)
+                    .setTitle(" Test Results ")
+                    .setMessage(" Sorry you did not passed, you can retake the test ")
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Continue with delete operation
+                        }
+                    })
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }else{
+            new AlertDialog.Builder(this)
+                    .setTitle(" Test Results ")
+                    .setMessage(" Congrates you passed, you are smarter than a 6th grader !!! ")
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Continue with delete operation
+                        }
+                    })
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+    }
+
+    private void testComplete(){
+
+        if(testScore < 70) {
+            iv_passFail.setImageResource(R.mipmap.sadface);
+            tv_testResults.setText("  sorry you got " + correct + " of " + numQuestions + " correct " + ", your score is: " + testScore + "%");
+        }else{
+            iv_passFail.setImageResource(R.mipmap.happyface);
+            tv_testResults.setText("  congrats you got " + correct + " of " + numQuestions + " correct " + ", your passing score is: " + testScore + "%");
+        }
     }
 
     private void takeTest(){

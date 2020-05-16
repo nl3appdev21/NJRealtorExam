@@ -18,8 +18,6 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        Log.d("skip","test-act");  //  ??
-
         btn = findViewById(R.id.btn_menu);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +25,6 @@ public class TestActivity extends AppCompatActivity {
                 gotoMenu();
             }
         });
-
     }
 
     private void gotoMenu() {
