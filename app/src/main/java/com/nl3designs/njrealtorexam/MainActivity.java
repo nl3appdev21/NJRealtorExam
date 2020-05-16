@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 btn_next.setVisibility(View.INVISIBLE);
                 disableAnswerBtn(false);
+                // use colors from my colors file !!!
                 btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
                 btn_answer1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
                 btn_answer2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));

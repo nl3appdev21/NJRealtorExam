@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class TestComplete extends AppCompatActivity {
 
@@ -109,11 +110,17 @@ public class TestComplete extends AppCompatActivity {
         if(testScore < 70) {
             iv_passFail.setImageResource(R.mipmap.sadface);
             tv_testResults1.setText("  sorry you got " + correct + " of " + numQuestions + " correct ");
-            tv_testResults2.setText("  your score is: " + testScore + "%");
+            tv_testResults2.setText("  your score is: " + testScore + "%" + " , retake test");
+            tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
+            tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
         }else{
-            iv_passFail.setImageResource(R.mipmap.happyface);
+            iv_passFail.setImageResource(R.mipmap.youpassed);
             tv_testResults1.setText("  congrats you got " + correct + " of " + numQuestions + " correct ");
             tv_testResults2.setText("  your passing score is: " + testScore + "%");
+            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
+            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
+            tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
+            tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
         }
     }
 
