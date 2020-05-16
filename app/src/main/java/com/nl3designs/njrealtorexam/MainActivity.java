@@ -251,6 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupImageMap(){
         imageMap.put("oldtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
+        imageMap.put("mortgage",R.mipmap.mortgage);
         imageMap.put("law",R.mipmap.law);
         imageMap.put("commision",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);
