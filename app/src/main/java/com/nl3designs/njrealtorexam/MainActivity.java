@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1 = findViewById(R.id.answer_1);
         btn_answer2 = findViewById(R.id.answer_2);
         btn_answer3 = findViewById(R.id.answer_3);
-        btnArray[0] = btn_answer0;  //  ??  use array to set wrong answer backround to red  ??
-        btnArray[1] = btn_answer1;  //  ??  use array to set wrong answer backround to red  ??
-        btnArray[2] = btn_answer2;  //  ??  use array to set wrong answer backround to red  ??
-        btnArray[3] = btn_answer3;  //  ??  use array to set wrong answer backround to red  ??
+        btnArray[0] = btn_answer0;  // array to set wrong answer backround to red
+        btnArray[1] = btn_answer1;  // array to set wrong answer backround to red
+        btnArray[2] = btn_answer2;  // array to set wrong answer backround to red
+        btnArray[3] = btn_answer3;  // array to set wrong answer backround to red
         tv_details = findViewById(R.id.details);
         tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
@@ -83,11 +83,11 @@ public class MainActivity extends AppCompatActivity {
                 myQuestionAnswer = -0;
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();
-                if (questionItem != null) {  //  ??  not null  ??
+                if (questionItem != null) {  // if not null
                     setQuestionScreen(questionItem);
                 } else {
                     questionManager.currentIndex = 0;
-                    testComplete();  //  new code run end of test
+                    testComplete();  // new code runs end-of-test
                 }
             }
         });
@@ -193,8 +193,7 @@ public class MainActivity extends AppCompatActivity {
         btn_answer2.setText(questionItem.answers[2]);
         btn_answer3.setText(questionItem.answers[3]);
 
-        // new code to get size or num of questions
-        numQuestions = questionManager.questionitems.size();
+        numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
     }
 
     private void changePictureMode(int mode){
@@ -234,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
         btn_answer3.setEnabled(!disable);
     }
 
-    private void testComplete() {  // new code for end of test
+    private void testComplete() {  // new code for end-of-test
 
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
 
@@ -251,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupImageMap(){
-        imageMap.put("oldtype",R.mipmap.njreal01);  // ?? set all tyes in both old and new file ??
+        imageMap.put("oldtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
         imageMap.put("law",R.mipmap.law);
         imageMap.put("commision",R.mipmap.math);
         imageMap.put("advirtising",R.mipmap.advirtising);

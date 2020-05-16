@@ -28,7 +28,6 @@ public class LeaderBoard extends AppCompatActivity {
         listView = findViewById(R.id.userResults);
         DataAdapter adapter = new DataAdapter(this,myData);
         listView.setAdapter(adapter); // loads items into adapter
-        // new lb code
 
         lv_userResults = findViewById(R.id.userResults);
         String result = getIntent().getStringExtra("results");
@@ -40,9 +39,8 @@ public class LeaderBoard extends AppCompatActivity {
             }
         }
 
-        //  lv_userResults.setText(String.valueOf(results));
+        //  lv_userResults.setText(String.valueOf(results));  ?? keep
         btn_menu = findViewById(R.id.menu);
-
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

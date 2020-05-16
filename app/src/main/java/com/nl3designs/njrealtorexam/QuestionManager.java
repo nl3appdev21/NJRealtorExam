@@ -14,8 +14,8 @@ import java.util.List;
 public class QuestionManager {
 
     List<QuestionItem> questionitems;
-    int currentQuestion = 0;
-    int correct = 0, wrong = 0;
+    // int currentQuestion = 0;  // not used
+    // int correct = 0, wrong = 0;  // not used
     int currentIndex = -1;
 
     public QuestionManager(Context context){
@@ -69,5 +69,4 @@ public class QuestionManager {
         boolean result = qi.correct == answerIndex;
         return result;
     }
-
 }

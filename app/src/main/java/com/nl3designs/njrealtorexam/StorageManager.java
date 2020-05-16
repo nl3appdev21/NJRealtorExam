@@ -12,8 +12,8 @@ public class StorageManager {
 
         //  ??  use to clear lb array  ??
 
-        //  SharedPreferences.Editor editor = pref.edit();  //  ??  use to clear lb array  ??
-        //  editor.clear().apply();  //  ??  use to clear lb array ??
+        //  SharedPreferences.Editor editor = pref.edit();
+        //  editor.clear().apply();
 
         //  ??  use to clear lb array  ??
     }
@@ -22,7 +22,6 @@ public class StorageManager {
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(tag,text);
         editor.apply();
-
     }
 
     public String load(String tag){

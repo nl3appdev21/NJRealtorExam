@@ -28,13 +28,13 @@ public class DataAdapter extends ArrayAdapter {
         TextView name = convertView.findViewById(R.id.name);
         TextView tries = convertView.findViewById(R.id.tries);
         TextView correct = convertView.findViewById(R.id.correct);
-        TextView passTest = convertView.findViewById(R.id.passTest);  //  ??
+        TextView passTest = convertView.findViewById(R.id.passTest);
 
         TestScoreData info = myData.get(position);
-        name.setText(info.name);  // position is index
-        tries.setText(String.valueOf(info.tries));  // position is index
-        correct.setText(String.valueOf(info.correct));  // position is index
-        passTest.setText(String.valueOf(info.passTest));  //  ??
+        name.setText(info.name);
+        tries.setText(String.valueOf(info.tries));
+        correct.setText(String.valueOf(info.correct));
+        passTest.setText(String.valueOf(info.passTest));
 
         if(position%2==0){
             //  name.setBackgroundColor(0xffff0000);  // set backround color to red for odd index num

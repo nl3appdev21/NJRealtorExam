@@ -14,8 +14,18 @@
         android:src="@mipmap/realestate"/>
 
     <TextView
-        android:id="@+id/tv_testResults"
-        android:text="you failed with 99 of 99 correct, your sore is = 99 % "
+        android:id="@+id/tv_testResults1"
+        android:text=" you ? "
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="21dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_testResults2"
+        android:text=" score 00 % "
         android:layout_marginTop="21dp"
         android:layout_marginBottom="21dp"
         android:layout_gravity="center"
