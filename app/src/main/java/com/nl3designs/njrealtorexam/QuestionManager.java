@@ -23,7 +23,7 @@ public class QuestionManager {
     }
 
     private void loadAllQuestion(Context context) {
-        String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_old.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
