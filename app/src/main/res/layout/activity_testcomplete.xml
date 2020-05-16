@@ -17,25 +17,29 @@
         android:id="@+id/tv_testResults1"
         android:text=" you ? "
         android:layout_marginTop="21dp"
-        android:layout_marginBottom="21dp"
-        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_gravity="center_horizontal"
         android:textStyle="bold"
+        android:textSize="21dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/tv_testResults2"
         android:text=" score 00 % "
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="21dp"
-        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_gravity="center_horizontal"
         android:textStyle="bold"
+        android:textSize="21dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btn_takeTest"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
         android:layout_gravity="center"
@@ -43,7 +47,7 @@
 
     <Button
         android:id="@+id/btn_menu"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
         android:layout_gravity="center"
