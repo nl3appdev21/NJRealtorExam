@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;
+import java.util.HashMap;;
 
 public class MainActivity extends AppCompatActivity {
 
