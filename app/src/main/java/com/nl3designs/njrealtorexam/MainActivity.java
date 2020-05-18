@@ -19,6 +19,7 @@ import java.util.HashMap;;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean aic = false;
     private TextView tv_question;
     private TextView tv_details;
     private TextView tv_tryagain;
@@ -74,8 +75,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Log.d("skip", " a0 aic = " + aic);
                 btn_next.setVisibility(View.INVISIBLE);
-                disableAnswerBtn(false);
+                //  aic = true;  //  ?????????????????????????????????????????????????????????????????????
+                // disableAnswerBtn(false);
+                Log.d("skip", " a00 aic = " + aic);
                 // use colors from my colors file !!!
                 btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
                 btn_answer1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
@@ -93,88 +97,141 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_answer0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn_next.setVisibility(View.VISIBLE);
-                disableAnswerBtn(true);
-                if(questionManager.checkAnswer(0)){
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer0.setBackgroundColor(Color.GREEN);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
-                    changePictureMode(PASS_MODE);
-                    correct += 1;
-                }else{
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer0.setBackgroundColor(Color.RED);
-                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
-                    changePictureMode(FAIL_MODE);
+
+
+
+        if (!aic) {  //  ???????????????????????????????????
+
+
+            btn_answer0.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("skip", " a1 aic = " + aic);
+                    btn_next.setVisibility(View.VISIBLE);
+                    aic = true;
+                    // disableAnswerBtn(true);
+                    Log.d("skip", " a2 aic = " + aic);
+                    if (questionManager.checkAnswer(0)) {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer0.setBackgroundColor(Color.GREEN);
+                        tv_details.setText(questionManager.getCurrentQuestion().details);
+                        changePictureMode(PASS_MODE);
+                        correct += 1;
+                    } else {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer0.setBackgroundColor(Color.RED);
+                        btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+                        tv_details.setText(questionManager.getCurrentQuestion().details);
+                        changePictureMode(FAIL_MODE);
+                    }
+                    tries += 1;
+                    scoreCount();
                 }
-                tries += 1;
-                scoreCount();
-            }
-        });
-        btn_answer1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn_next.setVisibility(View.VISIBLE);
-                disableAnswerBtn(true);
-                if(questionManager.checkAnswer(1)){
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer1.setBackgroundColor(Color.GREEN);
-                    changePictureMode(PASS_MODE);
-                    correct += 1;
-                }else{
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer1.setBackgroundColor(Color.RED);
-                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    changePictureMode(FAIL_MODE);
+            });
+
+
+        }  // ??????????????????????????????????????????????
+
+
+
+
+        if (!aic) {  //  ???????????????????????????????????
+
+
+            btn_answer1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("skip", " a3 aic = " + aic);
+                    btn_next.setVisibility(View.VISIBLE);
+                    aic = true;
+                    // disableAnswerBtn(true);
+                    Log.d("skip", " a4 aic = " + aic);
+                    if (questionManager.checkAnswer(1)) {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer1.setBackgroundColor(Color.GREEN);
+                        changePictureMode(PASS_MODE);
+                        correct += 1;
+                    } else {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer1.setBackgroundColor(Color.RED);
+                        btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+                        changePictureMode(FAIL_MODE);
+                    }
+                    tries += 1;
+                    scoreCount();
                 }
-                tries += 1;
-                scoreCount();
-            }
-        });
-        btn_answer2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn_next.setVisibility(View.VISIBLE);
-                disableAnswerBtn(true);
-                if(questionManager.checkAnswer(2)){
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer2.setBackgroundColor(Color.GREEN);
-                    changePictureMode(PASS_MODE);
-                    correct += 1;
-                }else{
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer2.setBackgroundColor(Color.RED);
-                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    changePictureMode(FAIL_MODE);
+            });
+
+
+        }
+
+
+
+        if (!aic) {  //  ???????????????????????????????????
+
+
+            btn_answer2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("skip", " a5 aic = " + aic);
+                    btn_next.setVisibility(View.VISIBLE);
+                    aic = true;
+                    // disableAnswerBtn(true);
+                    Log.d("skip", " a6 aic = " + aic);
+                    if (questionManager.checkAnswer(2)) {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer2.setBackgroundColor(Color.GREEN);
+                        changePictureMode(PASS_MODE);
+                        correct += 1;
+                    } else {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer2.setBackgroundColor(Color.RED);
+                        btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+                        changePictureMode(FAIL_MODE);
+                    }
+                    tries += 1;
+                    scoreCount();
                 }
-                tries += 1;
-                scoreCount();
-            }
-        });
-        btn_answer3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn_next.setVisibility(View.VISIBLE);
-                disableAnswerBtn(true);
-                if(questionManager.checkAnswer(3)){
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer3.setBackgroundColor(Color.GREEN);
-                    changePictureMode(PASS_MODE);
-                    correct += 1;
-                }else{
-                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    btn_answer3.setBackgroundColor(Color.RED);
-                    btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
-                    changePictureMode(FAIL_MODE);
+            });
+
+
+        }
+
+
+
+        if (!aic) {  //  ???????????????????????????????????
+
+
+            btn_answer3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("skip", " a7 aic = " + aic);
+                    btn_next.setVisibility(View.VISIBLE);
+                    aic = true;
+                    // disableAnswerBtn(true);
+                    Log.d("skip", " a8 aic = " + aic);
+                    if (questionManager.checkAnswer(3)) {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer3.setBackgroundColor(Color.GREEN);
+                        changePictureMode(PASS_MODE);
+                        correct += 1;
+                    } else {
+                        myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                        btn_answer3.setBackgroundColor(Color.RED);
+                        btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
+                        changePictureMode(FAIL_MODE);
+                    }
+                    tries += 1;
+                    scoreCount();
                 }
-                tries += 1;
-                scoreCount();
-            }
-        });
+            });
+
+
+        }
+
+
+
+
 
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -205,6 +262,9 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
+
+                aic = false;
+
                 break;
 
             case PASS_MODE:
@@ -212,6 +272,9 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
+
+                aic = true;
+
                 break;
 
             case FAIL_MODE:
@@ -219,6 +282,9 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setVisibility(View.VISIBLE);
                 tv_tryagain.setVisibility(View.INVISIBLE);
                 tv_details.setVisibility(View.INVISIBLE);
+
+                aic = true;
+
                 break;
         }
     }
@@ -229,10 +295,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void disableAnswerBtn(boolean disable){
-        btn_answer0.setEnabled(!disable);
-        btn_answer1.setEnabled(!disable);
-        btn_answer2.setEnabled(!disable);
-        btn_answer3.setEnabled(!disable);
+
+        Log.d("skip", " 00 aic = " + aic);
+        // btn_answer0.setEnabled(!disable);
+        // btn_answer1.setEnabled(!disable);
+        // btn_answer2.setEnabled(!disable);
+        // btn_answer3.setEnabled(!disable);
+
     }
 
     private void testComplete() {  // new code for end-of-test
