@@ -27,7 +27,6 @@ public class QuestionManager {
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
-
     }
 
     public QuestionItem getNext(){

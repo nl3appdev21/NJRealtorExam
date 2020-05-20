@@ -105,16 +105,16 @@
   },
   {
     "id":8,
-    "catagory":"law",
-    "question":" You have been pre-qualified so you can start looking at houses for sale, but the lenders tell you that due to poor credit they cannot help you. You continue to look anyway hoping for a miracle, and you find a home for sale with seller financing. The house is an investment property for sale by owner. Your down payment is sufficient but the seller considers you a bad risk due to your credit history. Finally, he agrees to hold a mortgage but at a 19 percent interest rate. What, if anything would protect you from such high interest rates? ",
+    "catagory":"newtype",
+    "question":" The Lyons family bought a house with a lot size of .50 of an acre. This is the equivalent to: ",
     "answers":[
-      " Regulation Z ",
-      " Anti-discrimination laws ",
-      " Usury laws ",
-      " Novation "
+      " 46,560 ft. ",
+      " 21,780 ft. ",
+      " 11,000 ft. ",
+      " 5,250 ft. "
     ],
-    "correct":2,
-    "details":" Usury laws are in place to protect the public from predatory lending practices. The state of New Jersey limits the interest rate to 17 percent if the seller is selling investment property. If the seller were selling his primary home, however, he could charge you up to 30 percent! Regulation Z provides the buyer with written disclosures of the total cost of borrowing money from a lending institution. "
+    "correct":1,
+    "details":" 1 acre = 43,560 ft, 43,560 * .50 = 21,780 ft "
   },
   {
     "id":9,
@@ -222,19 +222,32 @@
   },
   {
     "id":17,
-    "catagory":"commission",
-    "question":" Knowing that you have been a licensed real estate agent for some time, your neighbor asks you if you could give her an idea of what her house may be worth. She is retiring and has been thinking of downsizing. You are glad to assist her, so you go into your local multiple listing service and search for comparable homes. You chose a few homes that have the most features in common with her home. Features would include size of the house and lot, number of bedrooms and baths, condition, location, age and any other information that would be helpful. You prepare a report that shows her how these homes compare to hers and how you arrived at the value based on these comparisons. What is the report that you present called? ",
+    "catagory":"newtype",
+    "question":" When can a landlord choose to not rent to someone with children? ",
     "answers":[
-      " A cost approach valuation ",
-      " An appraisal ",
-      " A market analysis ",
-      " A supply and demand report "
+      " Never. Children are protected under Fair Housing Act. ",
+      " If the unit has evidence of lead paint. ",
+      " A lease of an owner occupied, 3-family home. ",
+      " Someone on temporary lease. "
     ],
-    "correct":2,
-    "details":" Although a market analysis contains some of the information found in an appraisal, only a certified appraiser can prepare an appraisal which contains a more detailed approach and a highly calculated valuation. You can never call your presentation an appraisal. "
+    "correct":0,
+    "details":" The children are generally protected under Chapter 151B (Fair Housing Act) except when an occupant request a temporary lease. "
   },
   {
     "id":18,
+    "catagory":"newtype",
+    "question":" A seller provides written permission allowing his listing broker (who has a fiduciary obligation to the seller) to work with the buyer. This relationship is known as: ",
+    "answers":[
+      " Dual Agency. ",
+      " Sub Agency. ",
+      " Special Agency. ",
+      " Implied Agency. "
+    ],
+    "correct":1,
+    "details":" Sub agency required that the listing broker obtain written permission from the seller and that the fiduciary duties are to the seller. "
+  },
+  {
+    "id":19,
     "catagory":"commission",
     "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
     "answers":[
@@ -247,7 +260,7 @@
     "details":" The house sold for $380,000 and the total commission of 6 percent of the sale price is $22,800. It is a co-op deal so that amount is split between the two brokers in the amount of $11,400 each. Your broker is going to pay you 65 percent of the $11,400 which will give you $7,410, leaving the broker with the remaining $3,990. "
   },
   {
-    "id":19,
+    "id":20,
     "catagory":"law",
     "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
     "answers":[
