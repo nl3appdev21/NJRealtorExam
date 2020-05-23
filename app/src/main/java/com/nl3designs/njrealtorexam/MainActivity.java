@@ -223,8 +223,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void scoreCount() {
 
-        tv_tries.setText(" / " + String.valueOf(tries));
-        tv_correct.setText(" Correct " + String.valueOf(correct));
+        tv_tries.setText(String.valueOf(tries)+"/"+numQuestions);
+        tv_correct.setText(String.valueOf(correct));
 
     }
 

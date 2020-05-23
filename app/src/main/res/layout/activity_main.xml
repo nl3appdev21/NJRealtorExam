@@ -25,6 +25,7 @@
             android:layout_height="100dp"
             android:layout_gravity="left"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/rectangle_box"
             android:orientation="vertical">
 
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                tools:text="12/20"
+                android:text="1/5"
                 android:layout_gravity="center"
                 android:textColor="@color/White"/>
 
@@ -41,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                tools:text="Questions"
+                android:text="Questions"
                 android:layout_gravity="center"
                 android:textColor="@color/White"/>
         </LinearLayout>
@@ -51,6 +52,7 @@
             android:layout_height="100dp"
             android:layout_gravity="right"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/rectangle_box"
             android:orientation="vertical">
 
@@ -59,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                tools:text="12"
+                android:text="0"
                 android:layout_gravity="center"
                 android:textColor="@color/White"/>
 
@@ -67,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                tools:text="Correct"
+                android:text="Correct"
                 android:layout_gravity="center"
                 android:textColor="@color/White"/>
         </LinearLayout>
@@ -81,6 +83,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginHorizontal="12dp"
         android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question"/>
@@ -137,39 +140,6 @@
         android:background="@color/LtBlue_08"
         android:text="Answer _3" />
 
-    <!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tries"
-            android:text=""
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/correct"
-            android:text=""
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-
-    </LinearLayout>
-    -->
-
     <Button
         android:id="@+id/next"
         android:layout_margin="4dp"
@@ -186,7 +156,7 @@
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         android:background="@drawable/rounded_button"
         android:text=" Goto Menu " />
 
