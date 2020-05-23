@@ -17,29 +17,60 @@
             android:id="@+id/questionImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/mobillab12"
+            android:src="@mipmap/math"
             android:layout_marginTop="12sp"/>
 
-        <TextView
-            android:id="@+id/details"
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left"
             android:gravity="center"
-            android:layout_margin="12dp"
-            android:textStyle="bold"
-            android:textSize="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:text=" Show Me The Details ! "/>
+            android:background="@drawable/rectangle_box"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tryagain"
+            <TextView
+                android:id="@+id/tries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                tools:text="12/20"
+                android:layout_gravity="center"
+                android:textColor="@color/White"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                tools:text="Questions"
+                android:layout_gravity="center"
+                android:textColor="@color/White"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="right"
             android:gravity="center"
-            android:layout_margin="12dp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:text=" Sorry, please try again ! "/>
+            android:background="@drawable/rectangle_box"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                tools:text="12"
+                android:layout_gravity="center"
+                android:textColor="@color/White"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                tools:text="Correct"
+                android:layout_gravity="center"
+                android:textColor="@color/White"/>
+        </LinearLayout>
 
     </FrameLayout>
 
@@ -106,6 +137,7 @@
         android:background="@color/LtBlue_08"
         android:text="Answer _3" />
 
+    <!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -136,6 +168,7 @@
         </TextView>
 
     </LinearLayout>
+    -->
 
     <Button
         android:id="@+id/next"

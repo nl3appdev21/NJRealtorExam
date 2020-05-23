@@ -21,8 +21,6 @@ import java.util.HashMap;;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_question;
-    private TextView tv_details;
-    private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
@@ -63,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         btnArray[1] = btn_answer1;  // array to set wrong answer backround to red
         btnArray[2] = btn_answer2;  // array to set wrong answer backround to red
         btnArray[3] = btn_answer3;  // array to set wrong answer backround to red
-        tv_details = findViewById(R.id.details);
-        tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         btn_menu = findViewById(R.id.menu);
@@ -100,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     btn_answer0.setBackgroundColor(Color.GREEN);
                     btn_answer0.setTextColor(Color.BLACK);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
@@ -108,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                     btn_answer0.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
                     btnArray[myQuestionAnswer].setTextColor(Color.BLACK);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -213,30 +207,24 @@ public class MainActivity extends AppCompatActivity {
         switch (mode) {
             case QUESTION_MODE:
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
 
             case PASS_MODE:
                 iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
 
             case FAIL_MODE:
                 iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
         }
     }
 
     private void scoreCount() {
 
-        tv_tries.setText(" # of tries = " + String.valueOf(tries));
-        tv_correct.setText(" # correct = " + String.valueOf(correct));
+        tv_tries.setText(" / " + String.valueOf(tries));
+        tv_correct.setText(" Correct " + String.valueOf(correct));
 
     }
 
