@@ -11,8 +11,19 @@
         android:layout_height="250dp"
         android:visibility="visible"
         android:src="@mipmap/realestate"
-        android:layout_margin="2dp"
-        android:layout_marginTop="2sp"/>
+        android:layout_marginBottom="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_directions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text=" show me the directions !"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:padding="12dp"
+        android:layout_marginBottom="21dp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn_testInstructions"
@@ -22,6 +33,7 @@
         android:textStyle="bold"
         android:textSize="21dp"
         android:layout_margin="8dp"
+        android:visibility="visible"
         android:background="@drawable/rounded_button" />
 
     <Button
