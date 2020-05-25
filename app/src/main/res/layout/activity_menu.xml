@@ -15,12 +15,23 @@
         android:layout_marginTop="2sp"/>
 
     <Button
+        android:id="@+id/btn_testInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Instructions"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_button" />
+
+    <Button
         android:id="@+id/btn_takeTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Take Test"
+        android:textStyle="bold"
+        android:textSize="21dp"
         android:layout_margin="8dp"
-        android:background="@drawable/rounded_button"
-        android:textSize="12dp" />
+        android:background="@drawable/rounded_button" />
 
 </LinearLayout>

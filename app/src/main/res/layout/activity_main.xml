@@ -97,7 +97,7 @@
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center_vertical"
         android:background="@color/LtBlue_08"
         android:text="Answer _0"/>
 
@@ -110,7 +110,7 @@
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center_vertical"
         android:background="@color/LtBlue_08"
         android:text="Answer _1"/>
 
@@ -123,7 +123,7 @@
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center_vertical"
         android:background="@color/LtBlue_08"
         android:text="Answer _2"/>
 
@@ -136,28 +136,37 @@
         android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center_vertical"
         android:background="@color/LtBlue_08"
         android:text="Answer _3" />
 
-    <Button
-        android:id="@+id/next"
-        android:layout_margin="4dp"
-        android:textStyle="italic"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:background="@drawable/rounded_button"
-        android:text=" Next Question " />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/menu"
-        android:layout_margin="4dp"
-        android:textStyle="italic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:background="@drawable/rounded_button"
-        android:text=" Goto Menu " />
+        <Button
+            android:id="@+id/next"
+            android:layout_margin="10dp"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:visibility="invisible"
+            android:background="@drawable/rounded_button"
+            android:text=" Next Question " />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_margin="10dp"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:visibility="visible"
+            android:background="@drawable/rounded_button"
+            android:text=" Goto Menu " />
+
+     </LinearLayout>
 
 </LinearLayout>
