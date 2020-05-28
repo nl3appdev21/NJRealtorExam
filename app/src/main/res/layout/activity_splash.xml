@@ -21,6 +21,7 @@
     android:textStyle="bold"
     android:textSize="21dp"
     android:layout_gravity="center"
-    android:text="Click 2 Goto Menu"/>
+    android:text="Click 2 Goto Menu"
+    android:background="@drawable/rounded_gray_button" />
 
 </LinearLayout>
