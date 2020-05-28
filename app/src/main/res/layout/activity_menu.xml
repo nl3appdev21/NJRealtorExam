@@ -18,7 +18,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text=" show me the directions !"
+
+        android:text=" nj rs exam info \n \n
+
+ nj realtor exam directions \n \n
+
+the exam works as follows \n \n
+ 9 / 99                       99 \n
+  question                currect \n \n
+
+question \n \n
+
+	answer 1 \n
+	answer 2 \n
+	answer 3 \n
+	answer 4 \n \n
+
+next question     goto menu \n \n
+
+read question and answer it \n \n
+if correct, answer turns Green \n \n
+if wrong, correct answer turns Green \n \n
+and your answer will turn Red \n \n
+
+at the end of the test you will get \n \n
+your score and a pass or fail score "
+
         android:textStyle="bold"
         android:textSize="17dp"
         android:padding="12dp"

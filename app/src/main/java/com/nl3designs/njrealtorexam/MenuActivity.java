@@ -49,15 +49,9 @@ public class MenuActivity extends AppCompatActivity {
         TvDirections.setVisibility(View.VISIBLE);
         BtnTestInstuctions.setVisibility(View.GONE);
 
-        String dir1 = " d11 ";
-        String dir2 = " d22 ";
-        String dir3 = " d33 ";
-        String dir4 = " d44 ";
-        String dir5 = " d55 ";
-
-        TvDirections.setTextColor(Color.MAGENTA);
+        TvDirections.setTextColor(Color.WHITE);
         //  TvDirections.setText("this is a journey into /n sound, pump up the volume !");
-        TvDirections.setText( dir1 + " " + dir2 + " " + dir3 + " " + dir4 + " " + dir5 + " ! " );
+        //  TvDirections.setText( dir1 + " " + dir2 + " " + dir3 + " " + dir4 + " " + dir5 + " ! " );
     }
 
     private void startTest() {
