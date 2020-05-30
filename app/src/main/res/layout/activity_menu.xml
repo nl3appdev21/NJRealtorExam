@@ -90,8 +90,8 @@ your score and a pass or fail score "
 
      <ImageButton
          android:id="@+id/ibtn_logo"
-         android:layout_width="121dp"
-         android:layout_height="121dp"
+         android:layout_width="161dp"
+         android:layout_height="171dp"
          android:src="@mipmap/nashneon"/>
 
      </LinearLayout>

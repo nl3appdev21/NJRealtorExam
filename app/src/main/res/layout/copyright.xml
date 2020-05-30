@@ -19,12 +19,12 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
 
-        android:text=" nj rs exam info \n \n
-
-	answer 1 \n
-	answer 2 \n
-	answer 3 \n
-	answer 4 \n "
+        android:text=
+            " CREDITS \n \n
+	CONCEPT \n
+	NJ Realtor Exam :Design Concept \n
+	Nash Skip Ingram :Lead Developer \n
+	Dex The Java Ledgend :Developer \n "
 
         android:textStyle="bold"
         android:textSize="17dp"
@@ -38,12 +38,11 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
 
-        android:text=" nj rs exam info \n \n
-
-	answer 1 \n
-	answer 2 \n
-	answer 3 \n
-	answer 4 \n "
+        android:text=
+            " CR 2019 \n \n
+	NL3 Solutions \n
+	NJ Real Exam \n
+    For Support, Contact: support@nl3solutions.com \n"
 
         android:textStyle="bold"
         android:textSize="17dp"
