@@ -5,12 +5,11 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.HashMap;;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     int correct = 0;
     int numQuestions = 0;
     int myQuestionAnswer = -0;
-    HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
 
@@ -42,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         if(results.equals("")){
             results = storageManager.load("results");
         }
-
-        setupImageMap();
 
         questionManager = new QuestionManager(this);
         tv_question = findViewById(R.id.question);
@@ -71,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 myQuestionAnswer = -0;
 
                 changePictureMode(QUESTION_MODE);
-                QuestionItem questionItem = questionManager.getNext();
+                QuestionItem questionItem = questionManager.getNext();  //  ?? call to question manager ??
                 if (questionItem != null) {  // if not null
                     setQuestionScreen(questionItem);
                 } else {
@@ -80,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //  ??  what code goes here  ??
+        //  if(questionManager.ckcg( ?? )){
+        //    Log.d("skip", " this is a test of ckcg call ");
+        //  }
 
         btn_answer0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setQuestionScreen(QuestionItem questionItem) {
 
-        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));
+        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
@@ -221,8 +222,6 @@ public class MainActivity extends AppCompatActivity {
         tv_correct.setText(String.valueOf(correct));
 
     }
-
-
 
     // new code new code
     private void disableAnswerBtn() {
@@ -268,16 +267,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setupImageMap(){
-        imageMap.put("oldtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
-        imageMap.put("newtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
-        imageMap.put("mortgage",R.mipmap.mortgage);
-        imageMap.put("law",R.mipmap.law);
-        imageMap.put("commission",R.mipmap.math);
-        imageMap.put("advirtising",R.mipmap.advirtising);
-        imageMap.put("ownership",R.mipmap.ownership2);
-        imageMap.put("sad",R.mipmap.sadface);
-        imageMap.put("happy",R.mipmap.happyface);
-
-    }
 }

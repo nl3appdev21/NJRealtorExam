@@ -62,8 +62,9 @@ public class MenuActivity extends AppCompatActivity {
         IbtnCopyRight.setVisibility(View.GONE);
 
         TvDirections.setTextColor(Color.WHITE);
-        //  TvDirections.setText("this is a journey into /n sound, pump up the volume !");
-        //  TvDirections.setText( dir1 + " " + dir2 + " " + dir3 + " " + dir4 + " " + dir5 + " ! " );
+
+        // ?? make new method called hide dir and make menu screen items visable again ??
+
     }
 
     private void showCopyRight() {

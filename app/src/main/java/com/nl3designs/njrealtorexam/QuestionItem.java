@@ -1,6 +1,7 @@
 package com.nl3designs.njrealtorexam;
 
 import android.util.Log;
+//  clean up code
 
 public class QuestionItem {
 
