@@ -11,16 +11,89 @@
         android:layout_height="250dp"
         android:visibility="visible"
         android:src="@mipmap/realestate"
-        android:layout_margin="2dp"
-        android:layout_marginTop="2sp"/>
+        android:layout_marginBottom="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_directions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        android:text=" nj rs exam info \n \n
+
+ nj realtor exam directions \n \n
+
+the exam works as follows \n \n
+ 9 / 99                       99 \n
+  question                currect \n \n
+
+question \n \n
+
+	answer 1 \n
+	answer 2 \n
+	answer 3 \n
+	answer 4 \n \n
+
+next question     goto menu \n \n
+
+read question and answer it \n \n
+if correct, answer turns Green \n \n
+if wrong, correct answer turns Green \n \n
+and your answer will turn Red \n \n
+
+at the end of the test you will get \n \n
+your score and a pass or fail score "
+
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:padding="12dp"
+        android:layout_marginBottom="21dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_testInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Instructions"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btn_takeTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Take Test"
+        android:textStyle="bold"
+        android:textSize="21dp"
         android:layout_margin="8dp"
-        android:background="@drawable/rounded_button"
-        android:textSize="12dp" />
+        android:background="@drawable/rounded_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="44dp"
+        android:orientation="horizontal" >
+
+     <TextView
+         android:id="@+id/tv_montra"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical"
+         android:text=" this is my pitch "
+         android:layout_marginRight="21dp"
+         android:textColor="@color/White"
+         android:textSize="21dp"
+         android:textStyle="bold" />
+
+     <ImageButton
+         android:id="@+id/ibtn_logo"
+         android:layout_width="161dp"
+         android:layout_height="171dp"
+         android:src="@mipmap/nashneon"/>
+
+     </LinearLayout>
 
 </LinearLayout>

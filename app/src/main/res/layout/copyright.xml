@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="visible"
+        android:src="@mipmap/nashneon"
+        android:layout_marginBottom="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        android:text=
+            " CREDITS \n \n
+	CONCEPT \n
+	NJ Realtor Exam :Design Concept \n
+	Nash Skip Ingram :Lead Developer \n
+	Dex The Java Ledgend :Developer \n "
+
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:padding="12dp"
+        android:layout_marginBottom="21dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        android:text=
+            " CR 2019 \n \n
+	NL3 Solutions \n
+	NJ Real Exam \n
+    For Support, Contact: support@nl3solutions.com \n"
+
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:padding="12dp"
+        android:layout_marginBottom="21dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_back2Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Back 2 Menu"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:background="@drawable/rounded_button" />
+
+</LinearLayout>

@@ -1,12 +1,7 @@
-
 package com.nl3designs.njrealtorexam;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,13 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;;
-
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_question;
-    private TextView tv_details;
-    private TextView tv_tryagain;
     private TextView tv_tries;
     private TextView tv_correct;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
@@ -37,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     int correct = 0;
     int numQuestions = 0;
     int myQuestionAnswer = -0;
-    HashMap<String,Integer> imageMap = new HashMap<>();
     public static String results = "";
     StorageManager storageManager;
 
@@ -51,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
             results = storageManager.load("results");
         }
 
-        setupImageMap();
-
         questionManager = new QuestionManager(this);
         tv_question = findViewById(R.id.question);
         btn_answer0 = findViewById(R.id.answer_0);
@@ -63,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
         btnArray[1] = btn_answer1;  // array to set wrong answer backround to red
         btnArray[2] = btn_answer2;  // array to set wrong answer backround to red
         btnArray[3] = btn_answer3;  // array to set wrong answer backround to red
-        tv_details = findViewById(R.id.details);
-        tv_tryagain = findViewById(R.id.tryagain);
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         btn_menu = findViewById(R.id.menu);
@@ -81,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 myQuestionAnswer = -0;
 
                 changePictureMode(QUESTION_MODE);
-                QuestionItem questionItem = questionManager.getNext();
+                QuestionItem questionItem = questionManager.getNext();  //  ?? call to question manager ??
                 if (questionItem != null) {  // if not null
                     setQuestionScreen(questionItem);
                 } else {
@@ -90,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //  ??  what code goes here  ??
+        //  if(questionManager.ckcg( ?? )){
+        //    Log.d("skip", " this is a test of ckcg call ");
+        //  }
 
         btn_answer0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     btn_answer0.setBackgroundColor(Color.GREEN);
                     btn_answer0.setTextColor(Color.BLACK);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(PASS_MODE);
                     correct += 1;
                 }else{
@@ -108,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
                     btn_answer0.setBackgroundColor(Color.RED);
                     btnArray[myQuestionAnswer].setBackgroundColor(Color.GREEN);
                     btnArray[myQuestionAnswer].setTextColor(Color.BLACK);
-                    tv_details.setText(questionManager.getCurrentQuestion().details);
                     changePictureMode(FAIL_MODE);
                 }
                 tries += 1;
@@ -198,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setQuestionScreen(QuestionItem questionItem) {
 
-        iv_questionimage.setImageResource(imageMap.get(questionItem.catagory));
+        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
@@ -213,34 +202,26 @@ public class MainActivity extends AppCompatActivity {
         switch (mode) {
             case QUESTION_MODE:
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
 
             case PASS_MODE:
                 iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
 
             case FAIL_MODE:
                 iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
                 iv_questionimage.setVisibility(View.VISIBLE);
-                tv_tryagain.setVisibility(View.INVISIBLE);
-                tv_details.setVisibility(View.INVISIBLE);
                 break;
         }
     }
 
     private void scoreCount() {
 
-        tv_tries.setText(" # of tries = " + String.valueOf(tries));
-        tv_correct.setText(" # correct = " + String.valueOf(correct));
+        tv_tries.setText(String.valueOf(tries)+"/"+numQuestions);
+        tv_correct.setText(String.valueOf(correct));
 
     }
-
-
 
     // new code new code
     private void disableAnswerBtn() {
@@ -286,16 +267,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setupImageMap(){
-        imageMap.put("oldtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
-        imageMap.put("newtype",R.mipmap.njreal01);  // sets all tyes in both old and new file
-        imageMap.put("mortgage",R.mipmap.mortgage);
-        imageMap.put("law",R.mipmap.law);
-        imageMap.put("commission",R.mipmap.math);
-        imageMap.put("advirtising",R.mipmap.advirtising);
-        imageMap.put("ownership",R.mipmap.ownership2);
-        imageMap.put("sad",R.mipmap.sadface);
-        imageMap.put("happy",R.mipmap.happyface);
-
-    }
 }

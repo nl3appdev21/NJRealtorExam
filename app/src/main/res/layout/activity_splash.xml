@@ -18,7 +18,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="21dp"
+    android:textStyle="bold"
+    android:textSize="21dp"
     android:layout_gravity="center"
-    android:text="Click 2 Stop Player"/>
+    android:text="Click 2 Goto Menu"
+    android:background="@drawable/rounded_gray_button" />
 
 </LinearLayout>

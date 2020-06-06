@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- note small num rounds corners, large num round whole edge -->
+
+    <corners android:radius="13dp"/>
+    <solid android:color="@android:color/darker_gray"/>
+
+</shape>

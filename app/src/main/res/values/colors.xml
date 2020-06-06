@@ -270,29 +270,29 @@
     <color name="Brown_09">#4E342E</color>
     <color name="Brown_10">#3E2723</color>
 
-    <!-- GREY -->
-    <color name="Grey_01">#FAFAFA</color>
-    <color name="Grey_02">#F5F5F5</color>
-    <color name="Grey_03">#EEEEEE</color>
-    <color name="Grey_04">#E0E0E0</color>
-    <color name="Grey_05">#BDBDBD</color>
-    <color name="Grey_06">#9E9E9E</color>
-    <color name="Grey_07">#757575</color>
-    <color name="Grey_08">#616161</color>
-    <color name="Grey_09">#424242</color>
-    <color name="Grey_10">#212121</color>
+    <!-- Gray -->
+    <color name="Gray_01">#FAFAFA</color>
+    <color name="Gray_02">#F5F5F5</color>
+    <color name="Gray_03">#EEEEEE</color>
+    <color name="Gray_04">#E0E0E0</color>
+    <color name="Gray_05">#BDBDBD</color>
+    <color name="Gray_06">#9E9E9E</color>
+    <color name="Gray_07">#757575</color>
+    <color name="Gray_08">#616161</color>
+    <color name="Gray_09">#424242</color>
+    <color name="Gray_10">#212121</color>
 
-    <!-- BLUE GREY -->
-    <color name="BlueGrey_01">#ECEFF1</color>
-    <color name="BlueGrey_02">#CFD8DC</color>
-    <color name="BlueGrey_03">#B0BEC5</color>
-    <color name="BlueGrey_04">#90A4AE</color>
-    <color name="BlueGrey_05">#78909C</color>
-    <color name="BlueGrey_06">#607D8B</color>
-    <color name="BlueGrey_07">#546E7A</color>
-    <color name="BlueGrey_08">#455A64</color>
-    <color name="BlueGrey_09">#37474F</color>
-    <color name="BlueGrey_10">#263238</color>
+    <!-- BLUE Gray -->
+    <color name="BlueGray_01">#ECEFF1</color>
+    <color name="BlueGray_02">#CFD8DC</color>
+    <color name="BlueGray_03">#B0BEC5</color>
+    <color name="BlueGray_04">#90A4AE</color>
+    <color name="BlueGray_05">#78909C</color>
+    <color name="BlueGray_06">#607D8B</color>
+    <color name="BlueGray_07">#546E7A</color>
+    <color name="BlueGray_08">#455A64</color>
+    <color name="BlueGray_09">#37474F</color>
+    <color name="BlueGray_10">#263238</color>
 
     <!-- WHITE / BLACK -->
     <color name="White">#FFFFFF</color>
