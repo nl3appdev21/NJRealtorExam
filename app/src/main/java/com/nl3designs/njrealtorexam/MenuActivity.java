@@ -17,7 +17,7 @@ public class MenuActivity extends AppCompatActivity {
     private ImageButton IbtnCopyRight;
     private TextView TvMontra;
     private Button BtnTestInstuctions;
-    private ScrollView SvDirections;
+    private ImageView IvDirections;
     private ImageView IvImage;
 
     @Override
@@ -34,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         IvImage = findViewById(R.id.iv_testImage);
-        SvDirections = findViewById(R.id.sv_directions);
+        IvDirections = findViewById(R.id.iv_directions);
         BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
         BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
     private void showDirections() {
 
         IvImage.setVisibility(View.GONE);
-        SvDirections.setVisibility(View.VISIBLE);
+        IvDirections.setVisibility(View.VISIBLE);
         BtnTestInstuctions.setVisibility(View.GONE);
         TvMontra.setVisibility(View.GONE);
         IbtnCopyRight.setVisibility(View.GONE);
