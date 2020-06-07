@@ -15,128 +15,128 @@
             android:id="@+id/questionImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/math"
-            android:layout_marginTop="12sp"/>
+            android:layout_marginTop="12sp"
+            android:src="@mipmap/math" />
 
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="left"
-            android:gravity="center"
             android:layout_margin="5dp"
             android:background="@drawable/rectangle_box"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tries"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="1/5"
                 android:layout_gravity="center"
-                android:textColor="@color/White"/>
+                android:text="1/5"
+                android:textColor="@color/White"
+                android:textSize="25dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:text="Questions"
                 android:layout_gravity="center"
-                android:textColor="@color/White"/>
+                android:text="Questions"
+                android:textColor="@color/White"
+                android:textSize="17dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="right"
-            android:gravity="center"
             android:layout_margin="5dp"
             android:background="@drawable/rectangle_box"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="0"
                 android:layout_gravity="center"
-                android:textColor="@color/White"/>
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="25dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:text="Correct"
                 android:layout_gravity="center"
-                android:textColor="@color/White"/>
+                android:text="Correct"
+                android:textColor="@color/White"
+                android:textSize="17dp" />
         </LinearLayout>
 
     </FrameLayout>
 
     <TextView
         android:id="@+id/question"
-        android:layout_alignParentTop="false"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginHorizontal="12dp"
-        android:textStyle="bold"
-        android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question"/>
+        android:layout_alignParentTop="false"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Question"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/answer_0"
-        android:layout_margin="6dp"
-        android:paddingLeft="6dp"
-        android:paddingTop="5dp"
-        android:layout_marginHorizontal="12dp"
-        android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
         android:background="@color/LtBlue_08"
-        android:text="Answer _0"/>
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _0"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/answer_1"
-        android:layout_margin="6dp"
-        android:paddingLeft="6dp"
-        android:paddingTop="5dp"
-        android:layout_marginHorizontal="12dp"
-        android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
         android:background="@color/LtBlue_08"
-        android:text="Answer _1"/>
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _1"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/answer_2"
-        android:layout_margin="6dp"
-        android:paddingLeft="6dp"
-        android:paddingTop="5dp"
-        android:layout_marginHorizontal="12dp"
-        android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
         android:background="@color/LtBlue_08"
-        android:text="Answer _2"/>
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _2"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/answer_3"
-        android:layout_margin="6dp"
-        android:paddingLeft="6dp"
-        android:paddingTop="5dp"
-        android:layout_marginHorizontal="12dp"
-        android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
         android:background="@color/LtBlue_08"
-        android:text="Answer _3" />
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _3"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,26 +145,26 @@
 
         <Button
             android:id="@+id/next"
-            android:layout_margin="10dp"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:textSize="17dp"
-            android:visibility="invisible"
+            android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:text=" Next Question " />
+            android:text=" Next Question "
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/menu"
-            android:layout_margin="10dp"
-            android:layout_width="170dp"
+            android:layout_width="190dp"
             android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:textSize="17dp"
-            android:visibility="visible"
+            android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
-            android:text=" Goto Menu " />
+            android:text=" Goto Menu "
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
-     </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

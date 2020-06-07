@@ -60,11 +60,14 @@ public class MenuActivity extends AppCompatActivity {
         BtnTestInstuctions.setVisibility(View.GONE);
         TvMontra.setVisibility(View.GONE);
         IbtnCopyRight.setVisibility(View.GONE);
-
         TvDirections.setTextColor(Color.WHITE);
+    }
 
-        // ?? make new method called hide dir and make menu screen items visable again ??
+    @Override
+    public void onBackPressed() {
 
+        startActivity(new Intent(this,MenuActivity.class));
+        finish();
     }
 
     private void showCopyRight() {
