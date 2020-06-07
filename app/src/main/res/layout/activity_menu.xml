@@ -19,51 +19,12 @@
         android:layout_marginTop="55dp"
         android:layout_marginBottom="12sp"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sv_directions"
-        android:visibility="gone">
-
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_splash"
-                android:src="@mipmap/splash"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_question"
-                android:src="@mipmap/question"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_correct"
-                android:src="@mipmap/correctans"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_failed"
-                android:src="@mipmap/failed"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_passed"
-                android:src="@mipmap/passed"/>
-
-
-        </LinearLayout>
-
-    </ScrollView>
+            android:layout_height="250dp"
+            android:id="@+id/iv_directions"
+            android:visibility="gone"
+            android:src="@mipmap/directions"/>
 
     <Button
         android:id="@+id/btn_testInstructions"
