@@ -1,54 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 
     <ImageView
         android:id="@+id/iv_testImage"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:visibility="visible"
-        android:src="@mipmap/realestate"
+        android:src="@mipmap/cubeshome"
+        android:layout_marginTop="55dp"
         android:layout_marginBottom="12sp"/>
 
-    <TextView
-        android:id="@+id/tv_directions"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:id="@+id/sv_directions"
+        android:visibility="gone">
 
-        android:text=" nj rs exam info \n \n
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
- nj realtor exam directions \n \n
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_splash"
+                android:src="@mipmap/splash"/>
 
-the exam works as follows \n \n
- 9 / 99                       99 \n
-  question                currect \n \n
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_question"
+                android:src="@mipmap/question"/>
 
-question \n \n
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_correct"
+                android:src="@mipmap/correctans"/>
 
-	answer 1 \n
-	answer 2 \n
-	answer 3 \n
-	answer 4 \n \n
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_failed"
+                android:src="@mipmap/failed"/>
 
-next question     goto menu \n \n
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_passed"
+                android:src="@mipmap/passed"/>
 
-read question and answer it \n \n
-if correct, answer turns Green \n \n
-if wrong, correct answer turns Green \n \n
-and your answer will turn Red \n \n
 
-at the end of the test you will get \n \n
-your score and a pass or fail score "
+        </LinearLayout>
 
-        android:textStyle="bold"
-        android:textSize="17dp"
-        android:padding="12dp"
-        android:layout_marginBottom="21dp"
-        android:visibility="gone" />
+    </ScrollView>
 
     <Button
         android:id="@+id/btn_testInstructions"
@@ -71,29 +86,32 @@ your score and a pass or fail score "
         android:layout_margin="8dp"
         android:background="@drawable/rounded_button" />
 
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="44dp"
-        android:orientation="horizontal" >
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
 
      <TextView
          android:id="@+id/tv_montra"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_gravity="center_vertical"
          android:text=" this is my pitch "
          android:layout_marginRight="21dp"
          android:textColor="@color/White"
          android:textSize="21dp"
          android:textStyle="bold" />
 
-     <ImageButton
-         android:id="@+id/ibtn_logo"
-         android:layout_width="161dp"
-         android:layout_height="171dp"
-         android:src="@mipmap/nashneon"/>
+        <ImageButton
+            android:id="@+id/ibtn_logo"
+            android:layout_width="59dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/nl3a" />
 
      </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>

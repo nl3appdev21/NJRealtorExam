@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +17,7 @@ public class MenuActivity extends AppCompatActivity {
     private ImageButton IbtnCopyRight;
     private TextView TvMontra;
     private Button BtnTestInstuctions;
-    private TextView TvDirections;
+    private ScrollView SvDirections;
     private ImageView IvImage;
 
     @Override
@@ -33,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         IvImage = findViewById(R.id.iv_testImage);
-        TvDirections = findViewById(R.id.tv_directions);
+        SvDirections = findViewById(R.id.sv_directions);
         BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
         BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,15 +57,17 @@ public class MenuActivity extends AppCompatActivity {
     private void showDirections() {
 
         IvImage.setVisibility(View.GONE);
-        TvDirections.setVisibility(View.VISIBLE);
+        SvDirections.setVisibility(View.VISIBLE);
         BtnTestInstuctions.setVisibility(View.GONE);
         TvMontra.setVisibility(View.GONE);
         IbtnCopyRight.setVisibility(View.GONE);
+    }
 
-        TvDirections.setTextColor(Color.WHITE);
+    @Override
+    public void onBackPressed() {
 
-        // ?? make new method called hide dir and make menu screen items visable again ??
-
+        startActivity(new Intent(this,MenuActivity.class));
+        finish();
     }
 
     private void showCopyRight() {
