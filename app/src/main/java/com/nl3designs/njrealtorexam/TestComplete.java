@@ -108,7 +108,7 @@ public class TestComplete extends AppCompatActivity {
     private void testComplete(){
 
         if(testScore < 70) {
-            iv_passFail.setImageResource(R.mipmap.sadface);
+            iv_passFail.setImageResource(R.mipmap.whywqmark);
             tv_testResults1.setText(" sorry you got " + correct + " of " + numQuestions + " correct ");
             tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));

@@ -205,12 +205,14 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case PASS_MODE:
-                iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
+                //  iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
+                iv_questionimage.setImageResource(R.mipmap.grncheck); // new code happyface
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
 
             case FAIL_MODE:
-                iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
+                //  iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
+                iv_questionimage.setImageResource(R.mipmap.redxbtn); // new code sadface
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
         }
