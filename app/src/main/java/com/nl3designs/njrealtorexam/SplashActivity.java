@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        mySound = MediaPlayer.create(this,R.raw.jingle1);
+        mySound = MediaPlayer.create(this,R.raw.guitarjingle4);
         //  mySound = MediaPlayer.create(this,R.raw.black);
         mySound.start();
 

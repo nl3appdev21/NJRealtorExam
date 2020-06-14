@@ -26,8 +26,17 @@
             android:layout_gravity="bottom"
             android:gravity="center_horizontal"
             android:layout_margin="12dp"
-            android:paddingBottom="40dp"
+            android:paddingBottom="25dp"
             android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/quoteIncorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="19dp"
             android:textStyle="bold"
             android:visibility="gone"/>
 

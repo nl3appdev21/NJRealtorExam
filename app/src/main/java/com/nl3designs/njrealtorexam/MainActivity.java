@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_tries;
     private TextView tv_correct;
     private TextView tv_quote;
+    private TextView tv_quoteIncorrect;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_menu;
     private Button[] btnArray = new Button[4];
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         tv_quote = findViewById(R.id.quote);
+        tv_quoteIncorrect = findViewById(R.id.quoteIncorrect);
         btn_menu = findViewById(R.id.menu);
         iv_questionimage = findViewById(R.id.questionImage);
 
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 tv_quote.setVisibility(View.INVISIBLE);
+                tv_quoteIncorrect.setVisibility(View.INVISIBLE);
                 btn_next.setVisibility(View.INVISIBLE);
                 enableAnswerBtn();
                 myQuestionAnswer = -0;
@@ -249,11 +252,10 @@ public class MainActivity extends AppCompatActivity {
 
             case FAIL_MODE:
                 //  iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
-                iv_questionimage.setImageResource(R.mipmap.redxbtn);
-                tv_quote.setVisibility(View.VISIBLE);
-                tv_quote.setTextSize(15);
-                tv_quote.setText("Focus, use the force!");
-                tv_quote.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
+                iv_questionimage.setImageResource(R.mipmap.newredx);
+                tv_quoteIncorrect.setVisibility(View.VISIBLE);
+                tv_quoteIncorrect.setText("Focus, use the force!");
+                tv_quoteIncorrect.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
         }

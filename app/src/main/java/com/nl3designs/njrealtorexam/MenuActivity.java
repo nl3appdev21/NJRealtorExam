@@ -93,7 +93,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private void startFlashCards() {
 
-        Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        Intent intent = new Intent(MenuActivity.this, FlashCards.class);
         startActivity(intent);
     }
 

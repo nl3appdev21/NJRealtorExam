@@ -6,6 +6,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="NJ Realtor Exam"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textSize="45dp"
+        android:gravity="center"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,8 +48,8 @@
         android:textColor="@color/Black"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_answer"
+    <Button
+        android:id="@+id/btn_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
@@ -50,25 +60,13 @@
         android:paddingVertical="6dp"
         android:textSize="21dp"
         android:textColor="@color/Black"
-        android:text="Answer"
+        android:text="Show Answer"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_answer"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
-            android:text="show answer"
-            android:textSize="17dp"
-            android:textStyle="bold"
-            android:visibility="visible" />
 
         <Button
             android:id="@+id/btn_next"
@@ -80,7 +78,7 @@
             android:text="next question"
             android:textSize="17dp"
             android:textStyle="bold"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
     </LinearLayout>
 
