@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_question;
     private TextView tv_tries;
     private TextView tv_correct;
+    private TextView tv_quote;
     private Button btn_answer0, btn_answer1, btn_answer2, btn_answer3;
     private Button btn_menu;
     private Button[] btnArray = new Button[4];
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int FAIL_MODE = 2;
     int tries = 0;
     int correct = 0;
+    int setTextInt = 0;  //  ?? new new
     int numQuestions = 0;
     int myQuestionAnswer = -0;
     public static String results = "";
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnArray[3] = btn_answer3;  // array to set wrong answer backround to red
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
+        tv_quote = findViewById(R.id.quote);
         btn_menu = findViewById(R.id.menu);
         iv_questionimage = findViewById(R.id.questionImage);
 
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                tv_quote.setVisibility(View.INVISIBLE);
                 btn_next.setVisibility(View.INVISIBLE);
                 enableAnswerBtn();
                 myQuestionAnswer = -0;
@@ -197,7 +201,34 @@ public class MainActivity extends AppCompatActivity {
         numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
     }
 
-    private void changePictureMode(int mode){
+    private void changePictureMode(int mode){ // set picture and text for answer
+
+        setTextInt ++;
+
+        switch (setTextInt) {
+            case 1:
+                tv_quote.setText("You are the best!");
+                break;
+            case 2:
+                tv_quote.setText("Can'nt stop won't stop!");
+                break;
+            case 3:
+                tv_quote.setText("Super agent in the making!");
+                break;
+            case 4:
+                tv_quote.setText("You are a super star!");
+                break;
+            case 5:
+                tv_quote.setText("You are smart for a human!");
+                break;
+            case 6:
+                tv_quote.setText("Hay can you see my answers?");
+                break;
+            case 7:
+                Log.d("skip","reset setTextInt");
+                setTextInt = 0;
+                break;
+        }
 
         switch (mode) {
             case QUESTION_MODE:
@@ -206,13 +237,20 @@ public class MainActivity extends AppCompatActivity {
 
             case PASS_MODE:
                 //  iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
-                iv_questionimage.setImageResource(R.mipmap.goldbulb); // new code happyface
+                iv_questionimage.setImageResource(R.mipmap.goldbulb);
+                tv_quote.setVisibility(View.VISIBLE);
+                tv_quote.setTextSize(25);
+                tv_quote.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_06));
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
 
             case FAIL_MODE:
                 //  iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
-                iv_questionimage.setImageResource(R.mipmap.redxbtn); // new code sadface
+                iv_questionimage.setImageResource(R.mipmap.redxbtn);
+                tv_quote.setVisibility(View.VISIBLE);
+                tv_quote.setTextSize(15);
+                tv_quote.setText("Focus, you can do it!");
+                tv_quote.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
         }

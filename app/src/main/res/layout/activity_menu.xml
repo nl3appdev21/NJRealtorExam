@@ -9,22 +9,41 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="NJ Realtor Exam"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="32dp"
+            android:gravity="center"/>
 
     <ImageView
         android:id="@+id/iv_testImage"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="225dp"
         android:visibility="visible"
         android:src="@mipmap/cubeshome"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="12sp"/>
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="325dp"
             android:id="@+id/iv_directions"
             android:visibility="gone"
             android:src="@mipmap/directions"/>
+
+        <Button
+            android:id="@+id/btn_flashcards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flashcards"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btn_testInstructions"
@@ -33,7 +52,7 @@
         android:text="Test Instructions"
         android:textStyle="bold"
         android:textSize="21dp"
-        android:layout_margin="8dp"
+        android:layout_margin="12dp"
         android:visibility="visible"
         android:background="@drawable/rounded_button" />
 
@@ -44,13 +63,13 @@
         android:text="Take Test"
         android:textStyle="bold"
         android:textSize="21dp"
-        android:layout_margin="8dp"
+        android:layout_margin="12dp"
         android:background="@drawable/rounded_button" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="240dp"
+        android:layout_width="300dp"
         android:layout_height="42dp"
         android:layout_gravity="right|bottom"
         android:layout_marginLeft="10dp"
@@ -61,10 +80,11 @@
          android:id="@+id/tv_montra"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text=" this is my pitch "
-         android:layout_marginRight="21dp"
+         android:layout_gravity="center"
+         android:text="Solutions to your development needs."
+         android:layout_marginRight="12dp"
          android:textColor="@color/White"
-         android:textSize="21dp"
+         android:textSize="13dp"
          android:textStyle="bold" />
 
         <ImageButton
