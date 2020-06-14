@@ -225,6 +225,9 @@ public class MainActivity extends AppCompatActivity {
                 tv_quote.setText("Hay can you see my answers?");
                 break;
             case 7:
+                tv_quote.setText("The force is strong with you!");
+                break;
+            case 8:
                 Log.d("skip","reset setTextInt");
                 setTextInt = 0;
                 break;
@@ -249,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setImageResource(R.mipmap.redxbtn);
                 tv_quote.setVisibility(View.VISIBLE);
                 tv_quote.setTextSize(15);
-                tv_quote.setText("Focus, you can do it!");
+                tv_quote.setText("Focus, use the force!");
                 tv_quote.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;

@@ -17,6 +17,7 @@ public class MenuActivity extends AppCompatActivity {
     private ImageButton IbtnCopyRight;
     private TextView TvMontra;
     private Button BtnTestInstuctions;
+    private Button BtnFlashCards;
     private ImageView IvDirections;
     private ImageView IvImage;
 
@@ -24,6 +25,14 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        BtnFlashCards = findViewById(R.id.btn_flashcards);
+        BtnFlashCards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startFlashCards();
+            }
+        });
 
         BtnTakeTest = findViewById(R.id.btn_takeTest);
         BtnTakeTest.setOnClickListener(new View.OnClickListener() {
@@ -81,4 +90,11 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
+    private void startFlashCards() {
+
+        Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
