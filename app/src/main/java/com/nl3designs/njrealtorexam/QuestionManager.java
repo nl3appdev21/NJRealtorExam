@@ -51,6 +51,15 @@ public class QuestionManager {
         }
     }
 
+    public String getCurrentAnswer(){
+        if(currentIndex >= 0 && (currentIndex < questionitems.size())){
+            QuestionItem item = questionitems.get(currentIndex);
+            return item.answers[item.correct];
+        }else{
+            return null;
+        }
+    }
+
     private String loadJSONFromNjexams(String file,Context context) {
         String json = "";
         try {
