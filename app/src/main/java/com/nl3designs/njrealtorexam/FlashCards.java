@@ -16,23 +16,18 @@ import androidx.core.content.ContextCompat;
 public class FlashCards extends AppCompatActivity {
 
         private TextView tv_question;
-        private Button btn_answer, btn_answer0, btn_answer1, btn_answer2, btn_answer3;
+        private Button btn_answer;
         private Button btn_menu;
         private Button[] btnArray = new Button[4];
         private ImageView iv_questionimage;
         private QuestionManager questionManager;
         public static String results = "";
         StorageManager storageManager;
-
         private TextView tv_tries;
-        public static final int PASS_MODE = 1;  //  ????????????????????????????????
-        public static final int QUESTION_MODE = 0;  //  ??????????????????????????????
         int tries = 0;
         int numQuestions = 0;
         int myQuestionAnswer = -0;
         int myans = -0;
-        String myflashans = "";
-        String myflashans3 = "";
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +43,6 @@ public class FlashCards extends AppCompatActivity {
             numQuestions = questionManager.questionitems.size();
             tv_question = findViewById(R.id.tv_question);
             btn_answer = findViewById(R.id.btn_answer);
-            btnArray[0] = btn_answer0;
-            btnArray[1] = btn_answer1;
-            btnArray[2] = btn_answer2;
-            btnArray[3] = btn_answer3;
             tv_tries = findViewById(R.id.tries);
             btn_menu = findViewById(R.id.btn_menu);
             iv_questionimage = findViewById(R.id.questionImage);
@@ -66,17 +57,13 @@ public class FlashCards extends AppCompatActivity {
                     myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                     myans = myQuestionAnswer;
                     enableAnswerBtn();
-                    // myQuestionAnswer = -0;
-                    // myans = -0;
+                    checkForEnd();
+                    QuestionItem questionItem = questionManager.getNext();
 
-                    changePictureMode(QUESTION_MODE);  //  help help help  ?????????????????????????
-                    QuestionItem questionItem = questionManager.getNext();  //  ?? call to question manager ??
-                    Log.d("skip", " new 00 myans = " + myans);
                     if (questionItem != null) {  // if not null
                         setQuestionScreen(questionItem);
                         myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                         myans = myQuestionAnswer;
-                        Log.d("skip", " new 11 myans = " + myans);
                     } else {
                         questionManager.currentIndex = 0;
                     }
@@ -88,10 +75,6 @@ public class FlashCards extends AppCompatActivity {
                 public void onClick(View v) {
 
                     btn_next.setVisibility(View.VISIBLE);
-                    //  myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
-                    //  myans = myQuestionAnswer;
-                    Log.d("skip", " 3 this is myans = " + myans);
-                    Log.d("skip", " aa this is myans = " + myans);
                     disableAnswerBtn();
                     showAnswer();
 
@@ -114,113 +97,29 @@ public class FlashCards extends AppCompatActivity {
             btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_08));
             btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
             btn_answer.setText("show answer");
-
             tries += 1;
             iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
             scoreCount();
             tv_question.setText(questionItem.question);
 
-            // btn_answer0.setText(questionItem.answers[0]);
-            // btn_answer1.setText(questionItem.answers[1]);
-            // btn_answer2.setText(questionItem.answers[2]);
-            // btn_answer3.setText(questionItem.answers[3]);
-
-            Log.d("skip", "ans 00" + questionItem.answers[0]);
-            Log.d("skip", "ans 11" + questionItem.answers[1]);
-            Log.d("skip", "ans 22" + questionItem.answers[2]);
-            Log.d("skip", "ans 33" + questionItem.answers[3]);
-
-            switch (myans) {
-                case 0:
-                    myflashans = questionItem.answers[0];
-                    Log.d("skip", " correct = " + myans + "  -  " + " 00a myflashans = " + myflashans);
-                    // btn_answer.setText(myflashans);
-                    break;
-
-                case 1:
-                    myflashans = questionItem.answers[1];
-                    Log.d("skip", " correct = " + myans + "  -  " + " 11a myflashans = " + myflashans);
-                    //  btn_answer.setText(myflashans);
-                    break;
-
-                case 2:
-                    myflashans = questionItem.answers[2];
-                    Log.d("skip", " correct = " + myans + "  -  " + " 22a myflashans = " + myflashans);
-                    //  btn_answer.setText(myflashans);
-                    break;
-
-                case 3:
-                    myflashans = questionItem.answers[3];
-                    Log.d("skip", " correct = " + myans + "  -  " + " 33a myflashans = " + myflashans);
-                    //  btn_answer.setText(myflashans);
-                    break;
-
-            }
-
-            //  btn_answer.setText(myflashans3);
-
         }
 
     private void showAnswer(){
 
-        // btn_answer0.setText(questionItem.answers[0]);
-        // btn_answer1.setText(questionItem.answers[1]);
-        // btn_answer2.setText(questionItem.answers[2]);
-        // btn_answer3.setText(questionItem.answers[3]);
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
-
         myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
         myans = myQuestionAnswer;
-        myflashans3 = myflashans;
         btn_answer.setText(questionManager.getCurrentAnswer());
-/*
-        switch (myans) {
-            case 0:
-                // myflashans = questionItem.answers[0];
-                Log.d("skip", " correct = " + myans + "  -  " + " 00b myflashans = " + myflashans);
-                btn_answer.setText(myflashans3);
-                break;
-
-            case 1:
-                // myflashans = questionItem.answers[1];
-                Log.d("skip", " correct = " + myans + "  -  " + " 11b myflashans = " + myflashans);
-                btn_answer.setText(myflashans3);
-                break;
-
-            case 2:
-                // myflashans = questionItem.answers[2];
-                Log.d("skip", " correct = " + myans + "  -  " + " 22b myflashans = " + myflashans);
-                btn_answer.setText(myflashans3);
-                break;
-
-            case 3:
-                // myflashans = questionItem.answers[3];
-                Log.d("skip", " correct = " + myans + "  -  " + " 33b myflashans = " + myflashans);
-                btn_answer.setText(myflashans3);
-                break;
-
-        }
-        */
 
     }
 
-        private void changePictureMode(int mode){ // set picture and text for answer
+        private void checkForEnd(){
 
-            if (tries == numQuestions) {  //  ??????????????????????????????????????????
-                testComplete();
+            if (tries == numQuestions) {
+                endOfCards();
             }
 
-                switch (mode) {
-                case QUESTION_MODE:
-                    iv_questionimage.setVisibility(View.VISIBLE);
-                    break;
-
-                case PASS_MODE:
-                    iv_questionimage.setImageResource(R.mipmap.goldbulb);
-                    iv_questionimage.setVisibility(View.VISIBLE);
-                    break;
-            }
         }
 
         private void scoreCount() {
@@ -239,7 +138,7 @@ public class FlashCards extends AppCompatActivity {
             //  btn_answer.setText("Show Answer");
         }
 
-        private void testComplete() {
+        private void endOfCards() {
 
             new AlertDialog.Builder(this)
                     .setTitle("Done with flashcards")
