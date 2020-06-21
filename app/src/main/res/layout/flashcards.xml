@@ -31,16 +31,64 @@
 
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/Pink_08"
+        android:layout_marginTop="9dp"/>
+
+    <Switch android:id="@+id/randSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Randomize "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/Pink_08"
+        android:layout_marginTop="9dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/rectangle_box"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0/0"
+            android:textStyle="normal"
+            android:textColor="@color/White"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="21dp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:text="Flashcards"
+            android:textColor="@color/White"
+            android:textSize="21dp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_question"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@color/Yellow_05"
-        android:gravity="center_vertical"
+        android:gravity="top"
         android:text="Question"
         android:textSize="19dp"
         android:padding="12dp"
@@ -60,37 +108,6 @@
         android:textColor="@color/White"
         android:text="Show Answer"
         android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:background="@drawable/rectangle_box"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="1/5"
-            android:textStyle="bold"
-            android:textColor="@color/White"
-            android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="21dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:text="Flashcards"
-            android:textColor="@color/White"
-            android:textSize="21dp" />
-    </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,10 +133,10 @@
             android:layout_weight="1"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
-            android:text=" Next Question "
+            android:text=" Next Flashcard "
             android:textSize="17dp"
             android:textStyle="bold"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
     </LinearLayout>
 

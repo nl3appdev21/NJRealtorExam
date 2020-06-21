@@ -18,6 +18,7 @@ public class QuestionManager {
     List<QuestionItem> questionitems;
     int currentIndex = -1;
     Map<String,Integer> categoryMap = new HashMap<>();
+    boolean isRandom;
 
     public QuestionManager(Context context){
         loadAllQuestion(context);
@@ -30,16 +31,29 @@ public class QuestionManager {
         questionitems = gson.fromJson(jsonStr, type);
         setUpCategories();
         verifyCategories();
+        StorageManager store = new StorageManager(context);
+        String s = store.load("flashRand");
+        if(s.equals("true")){
+            isRandom = true;
+        }else{
+            isRandom = false;
+        }
     }
 
     public QuestionItem getNext(){
-        currentIndex++;
+        if(!isRandom) {
+            currentIndex++;
 
-        if(currentIndex < questionitems.size()) {
+            if (currentIndex < questionitems.size()) {
+                QuestionItem q = questionitems.get(currentIndex);
+                return q;
+            } else {
+                return null;
+            }
+        }else{
+            currentIndex = (int)(Math.random()*questionitems.size());
             QuestionItem q = questionitems.get(currentIndex);
             return q;
-        } else {
-            return null;
         }
     }
 
