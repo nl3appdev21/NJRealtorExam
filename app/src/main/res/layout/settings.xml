@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="NJ Realtor Exam"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="32dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iv_testImage"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:visibility="visible"
+            android:src="@mipmap/nicehome"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:id="@+id/iv_directions"
+            android:visibility="gone"
+            android:src="@mipmap/directions"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Pink_08"
+            android:layout_marginTop="8dp"/>
+
+        <Switch android:id="@+id/randSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:text="Randomize "/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Pink_08"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btn_flashcards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flashcards"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_button" />
+
+        <Button
+            android:id="@+id/btn_testInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Instructions"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="12dp"
+            android:visibility="visible"
+            android:background="@drawable/rounded_button" />
+
+        <Button
+            android:id="@+id/btn_takeTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Test"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_button" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_button"
+            android:text=" Goto Menu "
+            android:textSize="20dp"
+            android:visibility="visible"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_leaderBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Goto Leaderboard"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="12dp"
+            android:visibility="visible"
+            android:background="@drawable/rounded_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_montra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Solutions to your development needs."
+            android:layout_marginRight="12dp"
+            android:textColor="@color/White"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ibtn_logo"
+            android:layout_width="59dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/nl3a" />
+
+    </LinearLayout>
+
+</FrameLayout>

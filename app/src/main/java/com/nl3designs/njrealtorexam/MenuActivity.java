@@ -18,6 +18,7 @@ public class MenuActivity extends AppCompatActivity {
     private TextView TvMontra;
     private Button BtnTestInstuctions;
     private Button BtnFlashCards;
+    private Button BtnSettings;
     private ImageView IvDirections;
     private ImageView IvImage;
 
@@ -31,6 +32,14 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startFlashCards();
+            }
+        });
+
+        BtnSettings = findViewById(R.id.btn_settings);
+        BtnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSettings();
             }
         });
 
@@ -100,6 +109,12 @@ public class MenuActivity extends AppCompatActivity {
     private void startFlashCards() {
 
         Intent intent = new Intent(MenuActivity.this, FlashCards.class);
+        startActivity(intent);
+    }
+
+    private void showSettings() {
+
+        Intent intent = new Intent(MenuActivity.this, Settings.class);
         startActivity(intent);
     }
 
