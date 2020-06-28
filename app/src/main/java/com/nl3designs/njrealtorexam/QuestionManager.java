@@ -9,6 +9,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +18,7 @@ import java.util.Map;
 public class QuestionManager {
 
     List<QuestionItem> questionitems;
+    List<QuestionItem> defaultQuestionitems;
     int currentIndex = -1;
     Map<String,Integer> categoryMap = new HashMap<>();
     boolean isRandom;
@@ -40,16 +43,24 @@ public class QuestionManager {
         }
     }
 
-    public QuestionItem getNext(){
-        if(!isRandom) {
-            currentIndex++;
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
 
-            if (currentIndex < questionitems.size()) {
-                QuestionItem q = questionitems.get(currentIndex);
-                return q;
-            } else {
-                return null;
+    public QuestionItem getPrev(){
+        if(!isRandom) {
+            if(currentIndex > 0) {
+                currentIndex--;
+                // Log.d("skip", "prev currentIndex = " + currentIndex);
+
+                if (currentIndex < questionitems.size()) {
+                    QuestionItem q = questionitems.get(currentIndex);
+                    return q;
+                } else {
+                    return null;
+                }
             }
+            return  null;
         }else{
             currentIndex = (int)(Math.random()*questionitems.size());
             QuestionItem q = questionitems.get(currentIndex);
@@ -57,12 +68,39 @@ public class QuestionManager {
         }
     }
 
+    public QuestionItem getNext(){
+
+        for(QuestionItem item : questionitems){
+            Log.d("skip", "item id = " + item.id);
+        }
+
+        Log.d("skip", " ************************************* ");
+
+        currentIndex++;
+        // Log.d("skip", "next currentIndex = " + currentIndex);
+        if (currentIndex < questionitems.size()) {
+            QuestionItem q = questionitems.get(currentIndex);
+            return q;
+        } else {
+            return null;
+        }
+
+    }
+
     public QuestionItem getCurrentQuestion(){
+
         if(currentIndex >= 0 && (currentIndex < questionitems.size())){
             return questionitems.get(currentIndex);
         }else{
             return null;
         }
+    }
+
+    public void randomize () {
+        Collections.shuffle(questionitems);
+        int x = 5;
+        Log.d("skip", "call rand");
+
     }
 
     public String getCurrentAnswer(){

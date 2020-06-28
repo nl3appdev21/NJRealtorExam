@@ -27,28 +27,62 @@ public class FlashCards extends AppCompatActivity {
     StorageManager storageManager;
     private TextView tv_tries;
     int tries = 0;
+    int prevint = 0;
     int numQuestions = 0;
     int myQuestionAnswer = -0;
     int myans = -0;
+    private Button btn_prev;
+    private Button btn_next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flashcards);
-
         storageManager = new StorageManager(this);
+        questionManager = new QuestionManager(this);
+
+        boolean swState = Boolean.parseBoolean(storageManager.load("flashRand"));
+        if (swState == true) {
+            Log.d("skip", "swState = " + swState);
+            questionManager.randomize();
+        }
+
         if(results.equals("")){
             results = storageManager.load("results");
         }
 
-        questionManager = new QuestionManager(this);
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
         btn_answer = findViewById(R.id.btn_answer);
         tv_tries = findViewById(R.id.tries);
         btn_menu = findViewById(R.id.btn_menu);
+        btn_next = findViewById(R.id.btn_next);
+        btn_prev = findViewById(R.id.btn_prev);
         iv_questionimage = findViewById(R.id.questionImage);
-        final Button btn_next = findViewById(R.id.btn_next);
+
+        btn_prev.setOnClickListener(new View.OnClickListener() {  //  ??  onclick listener for next button
+
+            @Override
+            public void onClick(View v) {
+
+                // btn_next.setVisibility(View.INVISIBLE);
+                myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                myans = myQuestionAnswer;
+                enableAnswerBtn();
+                checkForEnd();
+                QuestionItem questionItem = questionManager.getPrev();
+
+                prevint = 1;
+
+                if (questionItem != null) {  // if not null
+                    setQuestionScreen(questionItem);
+                    myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
+                    myans = myQuestionAnswer;
+                } else {
+                    questionManager.currentIndex = 0;
+                }
+            }
+        });
 
         btn_next.setOnClickListener(new View.OnClickListener() {  //  ??  onclick listener for next button
 
@@ -61,6 +95,8 @@ public class FlashCards extends AppCompatActivity {
                 enableAnswerBtn();
                 checkForEnd();
                 QuestionItem questionItem = questionManager.getNext();
+
+                prevint = 0;
 
                 if (questionItem != null) {  // if not null
                     setQuestionScreen(questionItem);
@@ -93,7 +129,8 @@ public class FlashCards extends AppCompatActivity {
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
 
-        ////**************************************************
+        /*  ??  **************************************************
+
         Switch sw = findViewById(R.id.randSwitch);
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -104,6 +141,8 @@ public class FlashCards extends AppCompatActivity {
             }
         });
 
+         */
+
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
@@ -111,7 +150,19 @@ public class FlashCards extends AppCompatActivity {
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
         btn_answer.setText("show answer");
-        tries += 1;
+
+        if (questionManager.getCurrentIndex() == 0) {
+            btn_prev.setVisibility(View.INVISIBLE);
+        } else {
+            btn_prev.setVisibility(View.VISIBLE);
+        }
+
+        if (prevint == 1) {
+              tries -= 1;
+        } else {
+              tries += 1;
+        }
+
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         scoreCount();
         tv_question.setText(questionItem.question);
@@ -125,7 +176,6 @@ public class FlashCards extends AppCompatActivity {
         myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
         myans = myQuestionAnswer;
         btn_answer.setText(questionManager.getCurrentAnswer());
-
     }
 
         private void checkForEnd(){

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,23 +29,6 @@
             android:src="@mipmap/math" />
 
     </FrameLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/Pink_08"
-        android:layout_marginTop="9dp"/>
-
-    <Switch android:id="@+id/randSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Randomize "/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/Pink_08"
-        android:layout_marginTop="9dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,7 +103,19 @@
             android:layout_weight="1"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
-            android:text=" Goto Menu "
+            android:text="Goto Menu"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Prev"
             android:textSize="17dp"
             android:textStyle="bold"
             android:visibility="visible" />
@@ -133,7 +127,7 @@
             android:layout_weight="1"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
-            android:text=" Next Flashcard "
+            android:text="Next"
             android:textSize="17dp"
             android:textStyle="bold"
             android:visibility="visible" />

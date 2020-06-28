@@ -18,21 +18,22 @@ import androidx.core.content.ContextCompat;
 
 public class Settings extends AppCompatActivity {
 
-        private Button BtnTakeTest;
-        private ImageButton IbtnCopyRight;
-        private TextView TvMontra;
-        private Button BtnTestInstuctions;
-        private Button BtnFlashCards;
-        private Button BtnMenu;
-        private Button BntLeaderboard;
-        private ImageView IvDirections;
-        private ImageView IvImage;
+    private Button BtnTakeTest;
+    private ImageButton IbtnCopyRight;
+    private TextView TvMontra;
+    private Button BtnTestInstuctions;
+    private Button BtnFlashCards;
+    private Button BtnMenu;
+    private Button BntLeaderboard;
+    private ImageView IvDirections;
+    private ImageView IvImage;
+    StorageManager store;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.settings);  //  ??  ******************************************
-
+            setContentView(R.layout.settings);  //  ??  ***************************************
+            store = new StorageManager(Settings.this);
             BtnFlashCards = findViewById(R.id.btn_flashcards);
             BtnFlashCards.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -65,8 +66,6 @@ public class Settings extends AppCompatActivity {
                 }
             });
 
-            // IvImage = findViewById(R.id.iv_testImage);
-            //  IvDirections = findViewById(R.id.iv_directions);
             BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
             BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -84,21 +83,25 @@ public class Settings extends AppCompatActivity {
                 }
             });
 
+            //  ??  **************************************************
+            Switch sw = findViewById(R.id.randSwitch);
+            sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    store.save(String.valueOf(isChecked),"flashRand");
+                    Log.d("skip",String.valueOf(isChecked));
+                }
+            });
+
+            boolean swState = Boolean.parseBoolean(store.load("flashRand"));
+            sw.setChecked(swState);
+
         }
 
         private void showInstructions() {
 
             Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, Instructions.class);
             startActivity(intent);
-
-         /*
-        IvImage.setVisibility(View.GONE);
-        IvDirections.setVisibility(View.VISIBLE);
-        BtnTestInstuctions.setVisibility(View.GONE);
-        TvMontra.setVisibility(View.GONE);
-        IbtnCopyRight.setVisibility(View.GONE);
-         */
-
         }
 
         @Override

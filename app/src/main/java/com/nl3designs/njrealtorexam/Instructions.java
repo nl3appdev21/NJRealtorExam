@@ -13,7 +13,7 @@ public class Instructions extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.copyright);
+        setContentView(R.layout.testinstructions);
 
         BtnBack2Menu = findViewById(R.id.btn_back2Menu);
         BtnBack2Menu.setOnClickListener(new View.OnClickListener() {
