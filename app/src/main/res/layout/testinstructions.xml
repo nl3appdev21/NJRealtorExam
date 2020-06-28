@@ -14,35 +14,36 @@
         android:layout_marginBottom="12sp"/>
 
     <TextView
-        android:id="@+id/tv_credits"
+        android:id="@+id/tv_instructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
 
         android:text=
-            " CREDITS \n \n
-	CONCEPT \n
-	NJ Realtor Exam :Design Concept \n
-	Nash Skip Ingram :Lead Developer \n
-	Dex The Java Ledgend :Developer \n "
+            " nj rs exam instructions \n \n
 
-        android:textStyle="bold"
-        android:textSize="17dp"
-        android:padding="12dp"
-        android:layout_marginBottom="21dp"
-        android:visibility="visible" />
+you have a choice of using flashcards \n
+or you can take practice test \n
 
-    <TextView
-        android:id="@+id/tv_copyright"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
+the test works as follows \n
+  99/99          99  \n
+questions     correct \n
+question \n
+answer 1 \n
+answer 2 \n
+answer 3 \n
+answer 4 \n
 
-        android:text=
-            " copyright © 2019 \n \n
-	NL3 Solutions \n
-	NJ Real Estate Exam \n
-    For Support, Contact: support@nl3solutions.com \n"
+goto ment     next question \n
+
+read and answer question \n
+
+if correct, answer turns green \n
+if wrong answer turns red and \n
+correct answer turns green \n
+click next for next question \n
+at end you will now if you passed \n
+or if you failed and you score \n"
 
         android:textStyle="bold"
         android:textSize="17dp"

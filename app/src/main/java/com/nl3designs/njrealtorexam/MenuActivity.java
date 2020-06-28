@@ -42,13 +42,13 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        IvImage = findViewById(R.id.iv_testImage);
-        IvDirections = findViewById(R.id.iv_directions);
+        // IvImage = findViewById(R.id.iv_testImage);
+        //  IvDirections = findViewById(R.id.iv_directions);
         BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
         BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDirections();
+                showInstructions();
             }
         });
 
@@ -63,19 +63,25 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
-    private void showDirections() {
+    private void showInstructions() {
 
+        Intent intent = new Intent(MenuActivity.this, Instructions.class);
+        startActivity(intent);
+
+         /*
         IvImage.setVisibility(View.GONE);
         IvDirections.setVisibility(View.VISIBLE);
         BtnTestInstuctions.setVisibility(View.GONE);
         TvMontra.setVisibility(View.GONE);
         IbtnCopyRight.setVisibility(View.GONE);
+         */
+
     }
 
     @Override
     public void onBackPressed() {
 
-        startActivity(new Intent(this,MenuActivity.class));
+        startActivity(new Intent(this, MenuActivity.class));
         finish();
     }
 
