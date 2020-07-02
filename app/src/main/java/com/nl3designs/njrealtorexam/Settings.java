@@ -98,17 +98,17 @@ public class Settings extends AppCompatActivity {
 
         }
 
+        @Override
+        public void onBackPressed() {
+
+            startActivity(new Intent(this, MenuActivity.class));
+            finish();
+        }
+
         private void showInstructions() {
 
             Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, Instructions.class);
             startActivity(intent);
-        }
-
-        @Override
-        public void onBackPressed() {
-
-            startActivity(new Intent(this, com.nl3designs.njrealtorexam.Settings.class));
-            finish();
         }
 
         private void startMenu() {

@@ -226,4 +226,12 @@ public class FlashCards extends AppCompatActivity {
             Intent intent = new Intent(com.nl3designs.njrealtorexam.FlashCards.this, MenuActivity.class);
             startActivity(intent);
         }
-    }
+
+        @Override
+        public void onBackPressed() {
+
+            startActivity(new Intent(this, MenuActivity.class));
+            finish();
+        }
+
+}
