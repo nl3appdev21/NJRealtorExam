@@ -7,48 +7,47 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="level-name"
         android:layout_gravity="center"
         android:layout_margin="12dp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/White"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="try"
         android:layout_gravity="center"
         android:layout_margin="12dp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/White"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/correct"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="right"
         android:layout_gravity="center"
         android:layout_marginRight="12dp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/White"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/passTest"
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="right"
+        android:text="score-pass"
         android:layout_gravity="center"
         android:layout_margin="12dp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/White"
         android:textSize="24sp" />
 
 </LinearLayout>

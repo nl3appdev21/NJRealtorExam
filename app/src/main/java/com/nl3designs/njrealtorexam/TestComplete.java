@@ -22,7 +22,7 @@ public class TestComplete extends AppCompatActivity {
     int numQuestions;
     int testScore;
     double numOfQuestions;
-
+    private Button btnlb;
     ImageView iv_passFail;
     TextView tv_testResults1;
     TextView tv_testResults2;
@@ -31,7 +31,9 @@ public class TestComplete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
+        Log.d("skip", "test comp comp comp !!!");
 
+        btnlb = findViewById(R.id.btn_lb);
         iv_passFail = findViewById(R.id.iv_passFail);
         tv_testResults1 = findViewById(R.id.tv_testResults1);
         tv_testResults2 = findViewById(R.id.tv_testResults2);
@@ -39,7 +41,7 @@ public class TestComplete extends AppCompatActivity {
         Intent intent = getIntent();
         TextView results1 = (TextView) findViewById(R.id.tv_testResults1);
         TextView results2 = (TextView) findViewById(R.id.tv_testResults2);
-        ImageView passfail = (ImageView) findViewById(R.id.passFail);
+        // ImageView passfail = (ImageView) findViewById(R.id.passFail);  // ?????????????????  *******************
 
         tries = getIntent().getIntExtra("tries",0);
         correct = getIntent().getIntExtra("correct",0);
@@ -63,6 +65,14 @@ public class TestComplete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gotoMenu();
+            }
+        });
+
+        Button btnlb = findViewById(R.id.btn_lb);
+        btnlb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLb();
             }
         });
     }
@@ -108,6 +118,7 @@ public class TestComplete extends AppCompatActivity {
     private void testComplete(){
 
         if(testScore < 70) {
+            btnlb.setVisibility(View.INVISIBLE);
             iv_passFail.setImageResource(R.mipmap.redquitbtn);
             tv_testResults1.setText(" sorry you got " + correct + " of " + numQuestions + " correct ");
             tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
@@ -125,11 +136,19 @@ public class TestComplete extends AppCompatActivity {
     }
 
     private void takeTest(){
+        Log.d("skip", "retest 11111");
         Intent intent = new Intent(TestComplete.this, MainActivity.class);
         startActivity(intent);
     }
 
+    private void showLb(){
+        Log.d("skip", "lb lb 22222");
+        Intent intent = new Intent(TestComplete.this, LeaderBoard.class);
+        startActivity(intent);
+    }
+
     private void gotoMenu(){
+        Log.d("skip", "menu 33333");
         Intent intent = new Intent(TestComplete.this, MenuActivity.class);
         startActivity(intent);
     }

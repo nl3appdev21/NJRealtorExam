@@ -89,7 +89,7 @@ public class Settings extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     store.save(String.valueOf(isChecked),"flashRand");
-                    Log.d("skip",String.valueOf(isChecked));
+                    //  Log.d("skip",String.valueOf(isChecked));
                 }
             });
 

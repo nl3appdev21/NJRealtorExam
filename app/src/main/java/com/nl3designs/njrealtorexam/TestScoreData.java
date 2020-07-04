@@ -3,18 +3,21 @@ package com.nl3designs.njrealtorexam;
 import android.util.Log;
 
 public class TestScoreData {
+    int level;  //  ?? silver, gold, diamond  ??
     String name;
-    int tries;
-    int correct;
-    //  String passTest;  //  ??  int or srting output  **
-    int passTest;  //  ??  int or srting output  **
+    int tries;  //  ??  questions  ??
+    int correct;  //  ??  number correct  ??
+    int score;  //  ??  score  ??
 
-    public TestScoreData(String name, int tries, int correct, int passTest){  //  ??  int or srting output  **
-                //  ??  (String name, int tries, int correct, String passTest){  //  ??  int or srting output  **
+    public TestScoreData(int level, int tries, int correct, int score){
+    //  ??  public TestScoreData(int level,String name, int tries, int correct, int score){
 
-        this.name = name;
+            Log.d("skip", "test score data");
+
+        this.level = level;
+        //  ??  this.name = name;
         this.tries = tries;
         this.correct = correct;
-        this.passTest = passTest;
+        this.score = score;
     }
 }

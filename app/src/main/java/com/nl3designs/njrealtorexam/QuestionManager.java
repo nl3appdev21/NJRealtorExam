@@ -70,11 +70,13 @@ public class QuestionManager {
 
     public QuestionItem getNext(){
 
+        /*
         for(QuestionItem item : questionitems){
             Log.d("skip", "item id = " + item.id);
         }
 
         Log.d("skip", " ************************************* ");
+        */
 
         currentIndex++;
         // Log.d("skip", "next currentIndex = " + currentIndex);
@@ -99,8 +101,7 @@ public class QuestionManager {
     public void randomize () {
         Collections.shuffle(questionitems);
         int x = 5;
-        Log.d("skip", "call rand");
-
+        //  Log.d("skip", "call rand");
     }
 
     public String getCurrentAnswer(){

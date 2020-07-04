@@ -12,7 +12,9 @@ public class QuestionItem {
     int correct;
     String details;
 
-    public QuestionItem(){}
+    public QuestionItem(){
+        //  Log.d("skip", "question item");
+    }
 
     public String getQuestion() {
         return question;

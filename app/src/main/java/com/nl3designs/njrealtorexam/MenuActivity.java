@@ -3,6 +3,7 @@ package com.nl3designs.njrealtorexam;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button BtnTestInstuctions;
     private Button BtnFlashCards;
     private Button BtnSettings;
+    private Button BtnLb;
     private ImageView IvDirections;
     private ImageView IvImage;
 
@@ -61,6 +63,16 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        //  ??
+        BtnLb = findViewById(R.id.btn_lb);
+        BtnLb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLb();
+            }
+        });
+        //  ??
+
         IbtnCopyRight = findViewById(R.id.ibtn_logo);
         TvMontra = findViewById(R.id.tv_montra);
         IbtnCopyRight.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +96,20 @@ public class MenuActivity extends AppCompatActivity {
         TvMontra.setVisibility(View.GONE);
         IbtnCopyRight.setVisibility(View.GONE);
          */
+    }
 
+    private void showLb() {
+        Log.d("skip", "lb lb 00000");
+        Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
+        startActivity(intent);
+
+         /*
+        IvImage.setVisibility(View.GONE);
+        IvDirections.setVisibility(View.VISIBLE);
+        BtnTestInstuctions.setVisibility(View.GONE);
+        TvMontra.setVisibility(View.GONE);
+        IbtnCopyRight.setVisibility(View.GONE);
+         */
     }
 
     @Override
@@ -117,5 +142,4 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, Settings.class);
         startActivity(intent);
     }
-
 }

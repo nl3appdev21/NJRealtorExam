@@ -43,7 +43,7 @@ public class FlashCards extends AppCompatActivity {
 
         boolean swState = Boolean.parseBoolean(storageManager.load("flashRand"));
         if (swState == true) {
-            Log.d("skip", "swState = " + swState);
+            // Log.d("skip", "swState = " + swState);
             questionManager.randomize();
         }
 
@@ -166,7 +166,6 @@ public class FlashCards extends AppCompatActivity {
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         scoreCount();
         tv_question.setText(questionItem.question);
-
     }
 
     private void showAnswer(){
@@ -183,7 +182,6 @@ public class FlashCards extends AppCompatActivity {
             if (tries == numQuestions) {
                 endOfCards();
             }
-
         }
 
         private void scoreCount() {
@@ -233,5 +231,4 @@ public class FlashCards extends AppCompatActivity {
             startActivity(new Intent(this, MenuActivity.class));
             finish();
         }
-
 }

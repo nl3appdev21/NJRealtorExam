@@ -2,6 +2,7 @@ package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -19,7 +20,10 @@ public class LeaderBoard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leaderboard);
+        //  ??  setContentView(R.layout.list_item);
+        setContentView(R.layout.leaderboard_bkup);
+        //  ??  setContentView(R.layout.activity_leaderboard);
+        //  Log.d("skip", "lb");
 
         // new lb code
         listView = findViewById(R.id.userResults);
@@ -53,6 +57,9 @@ public class LeaderBoard extends AppCompatActivity {
 
     private void setupData(String result) {
         String[] resultData = result.split(";");
-        myData.add(new TestScoreData(resultData[0], Integer.parseInt(resultData[1]), Integer.parseInt(resultData[2]), Integer.parseInt(resultData[3])));
+        myData.add(new TestScoreData (Integer.parseInt(resultData[0]),
+                                     Integer.parseInt(resultData[1]),
+                                     Integer.parseInt(resultData[2]),
+                                     Integer.parseInt(resultData[3])));
     }
 }
