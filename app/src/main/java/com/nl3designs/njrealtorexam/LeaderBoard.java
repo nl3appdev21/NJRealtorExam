@@ -87,18 +87,6 @@ public class LeaderBoard extends AppCompatActivity {
         //  String[] session = leaderBoardData.split(",");
         //  String session = "," + tries + "," + correct + "," + testScore;
 
-
-
-        //  String leaderBoardData = store.load("leaderboard");
-        //  String score = ";" + tries + "," + correct + "," + testScore;
-        //  String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore;  //  ???????????????????????????????????????????
-        //  System.out.println("your score is  = " + score);
-        //  leaderBoardData+= score;
-        //  store.save(leaderBoardData,"leaderboard");
-
-
-
-
     }
 
     private void gotoMenu() {
