@@ -11,38 +11,9 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/questionImage"
-            android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:src="@mipmap/mobillab12"
-            android:layout_marginTop="12sp"/>
-
         <TextView
-            android:id="@+id/details"
-            android:gravity="center"
-            android:layout_margin="12dp"
-            android:textStyle="bold"
-            android:textSize="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:text=" Show Me The Details ! "/>
-
-        <TextView
-            android:id="@+id/tries"
-            android:text="aa"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/correct"
-            android:text="bb"
+            android:id="@+id/results"
+            android:text="55555"
             android:layout_marginLeft="21dp"
             android:layout_marginTop="6dp"
             android:layout_marginBottom="6dp"
@@ -62,6 +33,6 @@
         android:layout_height="wrap_content"
         android:visibility="visible"
         android:background="@drawable/rounded_button"
-        android:text=" Goto Menu " />
+        android:text=" Goto Menu 4444 " />
 
 </LinearLayout>

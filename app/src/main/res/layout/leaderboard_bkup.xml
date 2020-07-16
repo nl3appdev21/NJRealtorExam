@@ -27,6 +27,6 @@
         android:visibility="visible"
         android:textSize="21dp"
         android:background="@drawable/rounded_button"
-        android:text=" Goto Menu 33333 " />
+        android:text=" Goto Menu 33 " />
 
 </LinearLayout>

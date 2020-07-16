@@ -3,11 +3,11 @@ package com.nl3designs.njrealtorexam;
 import android.util.Log;
 
 public class TestScoreData {
-    int level;  //  ?? silver, gold, diamond  ??
+    int level = 2;  //  ?? silver, gold, diamond  ??
     String name;
-    int tries;  //  ??  questions  ??
-    int correct;  //  ??  number correct  ??
-    int score;  //  ??  score  ??
+    int tries = 4;  //  ??  questions  ??
+    int correct = 6;  //  ??  number correct  ??
+    int score = 8;  //  ??  score  ??
 
     public TestScoreData(int level, int tries, int correct, int score){
     //  ??  public TestScoreData(int level,String name, int tries, int correct, int score){

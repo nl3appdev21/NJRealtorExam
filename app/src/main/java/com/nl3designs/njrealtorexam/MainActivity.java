@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         storageManager = new StorageManager(this);
         if(results.equals("")){
             results = storageManager.load("results");
+            Log.d("skip", "results = " + results);
         }
 
         questionManager = new QuestionManager(this);

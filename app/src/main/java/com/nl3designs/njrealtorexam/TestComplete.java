@@ -26,11 +26,13 @@ public class TestComplete extends AppCompatActivity {
     ImageView iv_passFail;
     TextView tv_testResults1;
     TextView tv_testResults2;
+    StorageManager store;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
+        store = new StorageManager(this);
         Log.d("skip", "test comp comp comp !!!");
 
         btnlb = findViewById(R.id.btn_lb);
@@ -39,10 +41,12 @@ public class TestComplete extends AppCompatActivity {
         tv_testResults2 = findViewById(R.id.tv_testResults2);
 
         Intent intent = getIntent();
-        TextView results1 = (TextView) findViewById(R.id.tv_testResults1);
-        TextView results2 = (TextView) findViewById(R.id.tv_testResults2);
-        // ImageView passfail = (ImageView) findViewById(R.id.passFail);  // ?????????????????  *******************
+        //TextView results1 = (TextView) findViewById(R.id.tv_testResults1);
+        //TextView results2 = (TextView) findViewById(R.id.tv_testResults2);
+        // ImageView passfail = (ImageView) findViewById(R.id.passFail);  // ?????????????????
 
+        //results1.setText(String.valueOf(getIntent().getIntExtra("results1", 0)));
+        //Log.d("skip", "results1 = !!! " + results1);
         tries = getIntent().getIntExtra("tries",0);
         correct = getIntent().getIntExtra("correct",0);
         numQuestions = getIntent().getIntExtra("numQuestions",0);
@@ -133,6 +137,23 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
             tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
         }
+
+        saveScore();
+    }
+
+    private void saveScore(){
+        String leaderBoardData = store.load("leaderboard");
+        //  String score = ";" + tries + "," + correct + "," + testScore;
+        //  String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore + "\n";
+        String score = "\n" + "Skip : " + "got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+
+
+        //  ??  nash got 4 of 5 correct for 60 %   ??
+
+        // System.out.println("your score is  = " + score);
+        leaderBoardData+= score;
+        store.save(leaderBoardData,"leaderboard");
+        showLb();
     }
 
     private void takeTest(){
@@ -142,7 +163,9 @@ public class TestComplete extends AppCompatActivity {
     }
 
     private void showLb(){
+
         Log.d("skip", "lb lb 22222");
+        //  score ??
         Intent intent = new Intent(TestComplete.this, LeaderBoard.class);
         startActivity(intent);
     }

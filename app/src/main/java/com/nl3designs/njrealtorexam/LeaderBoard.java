@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,16 +17,23 @@ public class LeaderBoard extends AppCompatActivity {
     ListView lv_userResults;
     private Button btn_menu;
     ListView listView;
+    TextView results;
     List<TestScoreData> myData = new ArrayList<TestScoreData>();
+    StorageManager store;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //  ??  setContentView(R.layout.list_item);
-        setContentView(R.layout.leaderboard_bkup);
-        //  ??  setContentView(R.layout.activity_leaderboard);
+        //  setContentView(R.layout.leaderboard_bkup);
+        setContentView(R.layout.activity_leaderboard);
         //  Log.d("skip", "lb");
 
+        //  ???
+        store = new StorageManager(this);
+        getScore();
+
+        /*
         // new lb code
         listView = findViewById(R.id.userResults);
         DataAdapter adapter = new DataAdapter(this,myData);
@@ -40,6 +49,25 @@ public class LeaderBoard extends AppCompatActivity {
             }
         }
 
+
+
+
+        private void saveScore(){
+        String leaderBoardData = store.load("leaderboard");
+        //String score = ";" + tries + "," + correct + "," + testScore;
+        String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore;
+        // System.out.println("your score is  = " + score);
+        leaderBoardData+= score;
+        store.save(leaderBoardData,"leaderboard");
+        showLb();
+    }
+
+
+
+
+        */
+
+
         //  lv_userResults.setText(String.valueOf(results));  ?? keep
         btn_menu = findViewById(R.id.menu);
         btn_menu.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +76,29 @@ public class LeaderBoard extends AppCompatActivity {
                 gotoMenu();
             }
         });
+
+    }
+
+    private void getScore(){
+        String leaderBoardData = store.load("leaderboard");
+        Log.d("skip", "store 33 = " + leaderBoardData);
+        results = findViewById(R.id.results);
+        results.setText(" skip - congrats you got 22 " + leaderBoardData);
+        //  String[] session = leaderBoardData.split(",");
+        //  String session = "," + tries + "," + correct + "," + testScore;
+
+
+
+        //  String leaderBoardData = store.load("leaderboard");
+        //  String score = ";" + tries + "," + correct + "," + testScore;
+        //  String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore;  //  ???????????????????????????????????????????
+        //  System.out.println("your score is  = " + score);
+        //  leaderBoardData+= score;
+        //  store.save(leaderBoardData,"leaderboard");
+
+
+
+
     }
 
     private void gotoMenu() {
@@ -58,8 +109,8 @@ public class LeaderBoard extends AppCompatActivity {
     private void setupData(String result) {
         String[] resultData = result.split(";");
         myData.add(new TestScoreData (Integer.parseInt(resultData[0]),
-                                     Integer.parseInt(resultData[1]),
-                                     Integer.parseInt(resultData[2]),
-                                     Integer.parseInt(resultData[3])));
+                                      Integer.parseInt(resultData[1]),
+                                      Integer.parseInt(resultData[2]),
+                                      Integer.parseInt(resultData[3])));
     }
 }
