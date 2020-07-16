@@ -15,8 +15,8 @@
             android:id="@+id/results"
             android:text="55555"
             android:layout_marginLeft="21dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:visibility="visible"
         android:background="@drawable/rounded_button"
-        android:text=" Goto Menu 4444 " />
+        android:text=" Goto Menu " />
 
 </LinearLayout>
