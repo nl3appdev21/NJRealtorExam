@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_copyright"
+<ScrollView
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="121dp"
-        android:visibility="visible"
-        android:src="@mipmap/nl3a"
-        android:layout_marginBottom="12sp"/>
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fillViewport="true"
 
-    <TextView
-        android:id="@+id/tv_instructions"
+>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        android:text=
-            " nj realtor exam instructions \n \n
+        <ImageView
+            android:id="@+id/iv_copyright"
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
+            android:visibility="visible"
+            android:src="@mipmap/nl3a"
+            android:layout_marginBottom="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text=
+                " nj realtor exam instructions \n \n
 
 you have a choice of using flashcards \n
 or you can take practice test \n
@@ -45,21 +57,23 @@ click next for next question \n
 at end you will now if you passed \n
 or if you failed and you score \n"
 
-        android:textStyle="bold"
-        android:textSize="17dp"
-        android:padding="12dp"
-        android:layout_marginBottom="21dp"
-        android:visibility="visible" />
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:padding="12dp"
+            android:layout_marginBottom="21dp"
+            android:visibility="visible" />
 
-    <Button
-        android:id="@+id/btn_back2Menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Goto Menu"
-        android:textStyle="bold"
-        android:textSize="21dp"
-        android:layout_margin="8dp"
-        android:visibility="visible"
-        android:background="@drawable/rounded_button" />
+        <Button
+            android:id="@+id/btn_back2Menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Goto Menu"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="8dp"
+            android:visibility="visible"
+            android:background="@drawable/rounded_button" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/userResults"
+        android:text=" this is a test"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/DeepOrange_09"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_margin="4dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:textSize="21dp"
+        android:background="@drawable/rounded_button"
+        android:text=" Goto Menu 33 " />
+
+</LinearLayout>

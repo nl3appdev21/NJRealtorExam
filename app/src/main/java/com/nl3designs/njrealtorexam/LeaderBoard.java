@@ -83,7 +83,7 @@ public class LeaderBoard extends AppCompatActivity {
         String leaderBoardData = store.load("leaderboard");
         Log.d("skip", "store 33 = " + leaderBoardData);
         results = findViewById(R.id.results);
-        //  results.setText(" skip - congrats you got 22 " + leaderBoardData);
+        results.setText(leaderBoardData);
         //  String[] session = leaderBoardData.split(",");
         //  String session = "," + tries + "," + correct + "," + testScore;
 
