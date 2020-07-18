@@ -26,6 +26,7 @@ public class TestComplete extends AppCompatActivity {
     ImageView iv_passFail;
     TextView tv_testResults1;
     TextView tv_testResults2;
+    String agentName;
     StorageManager store;
 
     @Override
@@ -142,10 +143,12 @@ public class TestComplete extends AppCompatActivity {
     }
 
     private void saveScore(){
+
+
         String leaderBoardData = store.load("leaderboard");
         //  String score = ";" + tries + "," + correct + "," + testScore;
         //  String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore + "\n";
-        String score = "\n" + "Skip : " + "got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+        String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
 
 
         //  ??  nash got 4 of 5 correct for 60 %   ??

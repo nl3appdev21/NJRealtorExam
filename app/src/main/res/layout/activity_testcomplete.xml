@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/realestate"/>
+        android:src="@mipmap/bluecert"/>
 
     <TextView
         android:id="@+id/tv_testResults1"
