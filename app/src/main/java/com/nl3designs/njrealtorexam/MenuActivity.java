@@ -113,12 +113,14 @@ public class MenuActivity extends AppCompatActivity {
          */
     }
 
+    /*
     @Override
     public void onBackPressed() {
 
         startActivity(new Intent(this, MenuActivity.class));
         finish();
     }
+    */
 
     private void showCopyRight() {
 
