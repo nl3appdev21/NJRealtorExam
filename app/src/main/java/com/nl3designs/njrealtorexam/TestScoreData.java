@@ -15,7 +15,7 @@ public class TestScoreData {
             Log.d("skip", "test score data");
 
         this.level = level;
-        //  ??  this.name = name;
+        this.name = name;
         this.tries = tries;
         this.correct = correct;
         this.score = score;
