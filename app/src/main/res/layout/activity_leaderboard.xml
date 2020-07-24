@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/results"
-            android:text="55555"
+            android:text="your score is!"
             android:layout_marginLeft="21dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:visibility="visible"
         android:background="@drawable/rounded_button"
-        android:text=" Goto Menu 99 " />
+        android:text="Goto Menu" />
 
 
 
