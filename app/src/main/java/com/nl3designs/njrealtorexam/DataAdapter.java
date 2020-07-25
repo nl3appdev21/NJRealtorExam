@@ -46,7 +46,8 @@ public class DataAdapter extends ArrayAdapter {
         */
 
         TestScoreData info = myData.get(position);
-        level.setText(String.valueOf(info.level));
+        //level.setText(String.valueOf(info.level));
+        level.setText(String.valueOf(info.name));
         tries.setText(String.valueOf(info.tries));
         correct.setText(String.valueOf(info.correct));
         score.setText(String.valueOf(info.score));

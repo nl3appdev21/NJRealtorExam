@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ListView
-        android:id="@+id/userResults"
+        android:id="@+id/results"
         android:text=" this is a test"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="45dp"
@@ -27,6 +27,6 @@
         android:visibility="visible"
         android:textSize="21dp"
         android:background="@drawable/rounded_button"
-        android:text=" Goto Menu 33 " />
+        android:text=" Goto Menu lb-bkup " />
 
 </LinearLayout>

@@ -27,7 +27,7 @@ public class LeaderBoard extends AppCompatActivity {
         //  ??  setContentView(R.layout.list_item);
         //  setContentView(R.layout.leaderboard_bkup);
         setContentView(R.layout.activity_leaderboard);
-        //  Log.d("skip", "lb");
+        Log.d("skip", "lb 101");
 
         //  ???
         store = new StorageManager(this);
@@ -81,7 +81,7 @@ public class LeaderBoard extends AppCompatActivity {
 
     private void getScore(){
         String leaderBoardData = store.load("leaderboard");
-        Log.d("skip", "store 33 = " + leaderBoardData);
+        Log.d("skip", "lb 102");
         results = findViewById(R.id.results);
         results.setText(leaderBoardData);
         //  String[] session = leaderBoardData.split(",");
@@ -90,15 +90,17 @@ public class LeaderBoard extends AppCompatActivity {
     }
 
     private void gotoMenu() {
+        Log.d("skip", "lb 103");
         Intent intent = new Intent(LeaderBoard.this, MenuActivity.class);
         startActivity(intent);
     }
 
     private void setupData(String result) {
+        Log.d("skip", "lb 104");
         String[] resultData = result.split(";");
-        myData.add(new TestScoreData (Integer.parseInt(resultData[0]),
-                                      Integer.parseInt(resultData[1]),
-                                      Integer.parseInt(resultData[2]),
-                                      Integer.parseInt(resultData[3])));
+        myData.add(new TestScoreData(resultData[0],
+                Integer.parseInt(resultData[1]),
+                Integer.parseInt(resultData[2]),
+                Integer.parseInt(resultData[3])));
     }
 }

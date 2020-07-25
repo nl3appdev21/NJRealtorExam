@@ -100,8 +100,8 @@ public class MenuActivity extends AppCompatActivity {
 
     private void showLb() {
         Log.d("skip", "lb lb 00000");
-        //  Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
-        Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
+        Intent intent = new Intent(MenuActivity.this, LeaderBoard_Bkup.class);
+        //  ????????  Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
         startActivity(intent);
 
          /*

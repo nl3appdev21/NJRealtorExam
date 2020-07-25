@@ -195,7 +195,13 @@ public class TestComplete extends AppCompatActivity {
         Log.d("skip", " Skip the agent name is :  " + agent.getText().toString());
         //  String score = ";" + tries + "," + correct + "," + testScore;
         //  String score = "\n" + "right - " + correct + " of - " + tries + " score - " + testScore + "\n";
+
+        //   String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+
         String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+
+        score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
+
 
 
         //  ??  nash got 4 of 5 correct for 60 %   ??
@@ -216,7 +222,9 @@ public class TestComplete extends AppCompatActivity {
 
         Log.d("skip", "lb lb 22222");
         //  score ??
-        Intent intent = new Intent(TestComplete.this, LeaderBoard.class);
+
+        Intent intent = new Intent(TestComplete.this, LeaderBoard_Bkup.class);
+        //  ????????  Intent intent = new Intent(TestComplete.this, LeaderBoard.class);
         startActivity(intent);
     }
 

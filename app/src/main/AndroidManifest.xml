@@ -13,6 +13,7 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".TestComplete"></activity>
         <activity android:name=".LeaderBoard"></activity>
+        <activity android:name=".LeaderBoard_Bkup"></activity>
         <activity android:name=".MenuActivity"></activity>
         <activity android:name=".CopyRight"></activity>
         <activity android:name=".Instructions"></activity>

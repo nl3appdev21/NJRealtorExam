@@ -119,7 +119,8 @@ public class Settings extends AppCompatActivity {
 
         private void showLeaderboard() {
 
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, LeaderBoard.class);
+            //  ????????  Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, LeaderBoard.class);
+            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, LeaderBoard_Bkup.class);
             startActivity(intent);
         }
 
