@@ -25,32 +25,17 @@ public class DataAdapter extends ArrayAdapter {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
         }
 
-        /*
-        TextView name = convertView.findViewById(R.id.name);
-        TextView tries = convertView.findViewById(R.id.tries);
-        TextView correct = convertView.findViewById(R.id.correct);
-        TextView passTest = convertView.findViewById(R.id.passTest);
-        */
-
-        TextView level = convertView.findViewById(R.id.level);
-        TextView tries = convertView.findViewById(R.id.tries);
-        TextView correct = convertView.findViewById(R.id.correct);
-        TextView score = convertView.findViewById(R.id.score);
-
-        /*
+        TextView lbEntry = convertView.findViewById(R.id.leaderBoardEntry);
         TestScoreData info = myData.get(position);
-        name.setText(info.name);
-        tries.setText(String.valueOf(info.tries));
-        correct.setText(String.valueOf(info.correct));
-        passTest.setText(String.valueOf(info.passTest));
-        */
 
-        TestScoreData info = myData.get(position);
-        //level.setText(String.valueOf(info.level));
-        level.setText(String.valueOf(info.name));
-        tries.setText(String.valueOf(info.tries));
-        correct.setText(String.valueOf(info.correct));
-        score.setText(String.valueOf(info.score));
+        String newScoreString;
+
+        newScoreString = (info.name + " : got " + info.correct + " of " + info.tries + " correct, scoring " + info.score + " %");
+
+        // add case / swith statement
+
+        //  lbEntry.setText("info");
+        lbEntry.setText(newScoreString);
 
         if(position%2==0){
             //  name.setBackgroundColor(0xffff0000);  // set backround color to red for odd index num
