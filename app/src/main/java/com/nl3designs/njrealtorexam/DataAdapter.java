@@ -28,11 +28,38 @@ public class DataAdapter extends ArrayAdapter {
         TextView lbEntry = convertView.findViewById(R.id.leaderBoardEntry);
         TestScoreData info = myData.get(position);
 
+        // add case / swith statement
+        int grade = info.score;
+        String letGrade = "S";
+
+        /*
+        switch (grade) {
+            case (grade >= 90):
+                Log.d("skip", " grade is: " + grade + " you have a = " + "AA");
+                break;
+            case (grade >= 80):
+                Log.d("skip", " grade is: " + grade + " you have a = " + "BB");
+                break;
+            case (grade >= 70):
+                Log.d("skip", " grade is: " + grade + " you have a = " + "CC");
+                break;
+        }
+        */
+
+        if (grade >= 90) {
+            letGrade = "A";
+            Log.d("skip", " grade is: " + grade + " you have a = " + "AA");
+        } else if (grade >= 80) {
+            letGrade = "B";
+            Log.d("skip", " grade is: " + grade + " you have a = " + "BB");
+        } else if (grade >= 70) {
+            letGrade = "C";
+            Log.d("skip", " grade is: " + grade + " you have a = " + "CC");
+        }
+
         String newScoreString;
 
-        newScoreString = (info.name + " : got " + info.correct + " of " + info.tries + " correct, scoring " + info.score + " %");
-
-        // add case / swith statement
+        newScoreString = (info.name + " : got " + info.correct + " of " + info.tries + " correct, scoring " + info.score + " %  " + letGrade);
 
         //  lbEntry.setText("info");
         lbEntry.setText(newScoreString);
