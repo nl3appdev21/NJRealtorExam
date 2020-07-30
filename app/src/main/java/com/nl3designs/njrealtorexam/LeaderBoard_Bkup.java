@@ -6,9 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,6 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
             super.onCreate(savedInstanceState);
 
             setContentView(R.layout.leaderboard_bkup);
-            Log.d("skip", "lb 201");
 
             store = new StorageManager(this);
             getScore();
@@ -44,7 +41,6 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
         private void getScore(){
             String leaderBoardData = store.load("leaderboard");
-            Log.d("skip", "lb 202  getscore" + leaderBoardData);
             results = findViewById(R.id.results);
 
         listView = findViewById(R.id.results);
@@ -64,14 +60,12 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
         }
 
         private void gotoMenu() {
-            Log.d("skip", "lb 203");
 
             Intent intent = new Intent(com.nl3designs.njrealtorexam.LeaderBoard_Bkup.this, MenuActivity.class);
             startActivity(intent);
         }
 
         private void setupData(String result) {
-            Log.d("skip", "lb 204");
 
             String[] resultData = result.split(",");
             myData.add(new TestScoreData(resultData[0],

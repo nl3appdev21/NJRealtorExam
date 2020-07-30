@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class InputName extends AppCompatActivity {
@@ -25,7 +24,6 @@ public class InputName extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 agentName = agent.getText().toString();
-                Log.d("skip", " agent name is :  " + agent.getText().toString());
                 gotoMenu();
             }
         });
@@ -35,5 +33,4 @@ public class InputName extends AppCompatActivity {
         Intent intent = new Intent(InputName.this, MenuActivity.class);
         startActivity(intent);
     }
-
 }

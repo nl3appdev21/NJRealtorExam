@@ -1,8 +1,5 @@
 package com.nl3designs.njrealtorexam;
 
-import android.util.Log;
-//  clean up code
-
 public class QuestionItem {
 
     int id;
@@ -13,7 +10,6 @@ public class QuestionItem {
     String details;
 
     public QuestionItem(){
-        //  Log.d("skip", "question item");
     }
 
     public String getQuestion() {

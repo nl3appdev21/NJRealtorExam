@@ -5,7 +5,6 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         storageManager = new StorageManager(this);
         if(results.equals("")){
             results = storageManager.load("results");
-            Log.d("skip", "results = " + results);
         }
 
         questionManager = new QuestionManager(this);
@@ -84,11 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        //  ??  what code goes here  ??
-        //  if(questionManager.ckcg( ?? )){
-        //    Log.d("skip", " this is a test of ckcg call ");
-        //  }
 
         btn_answer0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -232,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
                 tv_quote.setText("The force is strong with you!");
                 break;
             case 8:
-                Log.d("skip","reset setTextInt");
                 setTextInt = 0;
                 break;
         }
@@ -243,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case PASS_MODE:
-                //  iv_questionimage.setImageResource(R.mipmap.happyface); // new code happyface
+
                 iv_questionimage.setImageResource(R.mipmap.goldbulb);
                 tv_quote.setVisibility(View.VISIBLE);
                 tv_quote.setTextSize(25);
@@ -252,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case FAIL_MODE:
-                //  iv_questionimage.setImageResource(R.mipmap.sadface); // new code sadface
+
                 iv_questionimage.setImageResource(R.mipmap.newredx);
                 tv_quoteIncorrect.setVisibility(View.VISIBLE);
                 tv_quoteIncorrect.setText("Focus, use the force!");

@@ -2,14 +2,10 @@ package com.nl3designs.njrealtorexam;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +16,7 @@ public class FlashCards extends AppCompatActivity {
     private TextView tv_question;
     private Button btn_answer;
     private Button btn_menu;
-    private Button[] btnArray = new Button[4];
+    //  private Button[] btnArray = new Button[4];
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static String results = "";
@@ -43,7 +39,6 @@ public class FlashCards extends AppCompatActivity {
 
         boolean swState = Boolean.parseBoolean(storageManager.load("flashRand"));
         if (swState == true) {
-            // Log.d("skip", "swState = " + swState);
             questionManager.randomize();
         }
 
@@ -65,11 +60,13 @@ public class FlashCards extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // btn_next.setVisibility(View.INVISIBLE);
                 myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                 myans = myQuestionAnswer;
                 enableAnswerBtn();
                 checkForEnd();
+
+                btn_next.setVisibility(View.INVISIBLE);
+
                 QuestionItem questionItem = questionManager.getPrev();
 
                 prevint = 1;
@@ -89,11 +86,13 @@ public class FlashCards extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // btn_next.setVisibility(View.INVISIBLE);
                 myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                 myans = myQuestionAnswer;
                 enableAnswerBtn();
                 checkForEnd();
+
+                btn_next.setVisibility(View.INVISIBLE);
+
                 QuestionItem questionItem = questionManager.getNext();
 
                 prevint = 0;
@@ -128,20 +127,6 @@ public class FlashCards extends AppCompatActivity {
 
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
-
-        /*  ??  **************************************************
-
-        Switch sw = findViewById(R.id.randSwitch);
-        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                StorageManager store = new StorageManager(FlashCards.this);
-                store.save(String.valueOf(isChecked),"flashRand");
-                Log.d("skip",String.valueOf(isChecked));
-            }
-        });
-
-         */
 
     }
 
@@ -197,7 +182,6 @@ public class FlashCards extends AppCompatActivity {
         private void enableAnswerBtn() {
 
             btn_answer.setClickable(true);
-            //  btn_answer.setText("Show Answer");
         }
 
         private void endOfCards() {

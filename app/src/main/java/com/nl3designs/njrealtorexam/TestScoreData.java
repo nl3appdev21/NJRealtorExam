@@ -12,8 +12,6 @@ public class TestScoreData {
     public TestScoreData(String name, int tries, int correct, int score){
     //  ??  public TestScoreData(int level,String name, int tries, int correct, int score){
 
-            Log.d("skip", "test score data");
-
         this.name = name;
         this.tries = tries;
         this.correct = correct;

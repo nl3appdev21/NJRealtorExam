@@ -1,14 +1,12 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,8 +51,6 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        // IvImage = findViewById(R.id.iv_testImage);
-        //  IvDirections = findViewById(R.id.iv_directions);
         BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
         BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +59,6 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        //  ??
         BtnLb = findViewById(R.id.btn_lb);
         BtnLb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +66,6 @@ public class MenuActivity extends AppCompatActivity {
                 showLb();
             }
         });
-        //  ??
 
         IbtnCopyRight = findViewById(R.id.ibtn_logo);
         TvMontra = findViewById(R.id.tv_montra);
@@ -89,38 +83,14 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, Instructions.class);
         startActivity(intent);
 
-         /*
-        IvImage.setVisibility(View.GONE);
-        IvDirections.setVisibility(View.VISIBLE);
-        BtnTestInstuctions.setVisibility(View.GONE);
-        TvMontra.setVisibility(View.GONE);
-        IbtnCopyRight.setVisibility(View.GONE);
-         */
     }
 
     private void showLb() {
-        Log.d("skip", "lb lb 00000");
         Intent intent = new Intent(MenuActivity.this, LeaderBoard_Bkup.class);
         //  ????????  Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
         startActivity(intent);
 
-         /*
-        IvImage.setVisibility(View.GONE);
-        IvDirections.setVisibility(View.VISIBLE);
-        BtnTestInstuctions.setVisibility(View.GONE);
-        TvMontra.setVisibility(View.GONE);
-        IbtnCopyRight.setVisibility(View.GONE);
-         */
     }
-
-    /*
-    @Override
-    public void onBackPressed() {
-
-        startActivity(new Intent(this, MenuActivity.class));
-        finish();
-    }
-    */
 
     private void showCopyRight() {
 

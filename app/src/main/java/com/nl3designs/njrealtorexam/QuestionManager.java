@@ -1,15 +1,11 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.Button;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -51,7 +47,6 @@ public class QuestionManager {
         if(!isRandom) {
             if(currentIndex > 0) {
                 currentIndex--;
-                // Log.d("skip", "prev currentIndex = " + currentIndex);
 
                 if (currentIndex < questionitems.size()) {
                     QuestionItem q = questionitems.get(currentIndex);
@@ -70,23 +65,13 @@ public class QuestionManager {
 
     public QuestionItem getNext(){
 
-        /*
-        for(QuestionItem item : questionitems){
-            Log.d("skip", "item id = " + item.id);
-        }
-
-        Log.d("skip", " ************************************* ");
-        */
-
         currentIndex++;
-        // Log.d("skip", "next currentIndex = " + currentIndex);
         if (currentIndex < questionitems.size()) {
             QuestionItem q = questionitems.get(currentIndex);
             return q;
         } else {
             return null;
         }
-
     }
 
     public QuestionItem getCurrentQuestion(){
@@ -100,8 +85,7 @@ public class QuestionManager {
 
     public void randomize () {
         Collections.shuffle(questionitems);
-        int x = 5;
-        //  Log.d("skip", "call rand");
+        int x = 5;    //  ???? does this number need to be changed  ????
     }
 
     public String getCurrentAnswer(){
