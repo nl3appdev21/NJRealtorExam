@@ -45,7 +45,11 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
         listView = findViewById(R.id.results);
 
-        if (leaderBoardData != null) {
+        if (!leaderBoardData.equals("")) {
+
+            //TODO: code used to test empty string, clean up
+            // Log.d("skip", " leaderboarddata = " + leaderBoardData);
+
             String[] entries = leaderBoardData.split(";");
             for (int l = 0; l < entries.length; l++) {
                 if (!entries[l].equals("")) {  // to check vale of a string, use this code
@@ -66,6 +70,9 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
         }
 
         private void setupData(String result) {
+
+            //TODO: code used to test empty string, clean up
+            //  Log.d("skip", " result = " + result);
 
             String[] resultData = result.split(",");
             myData.add(new TestScoreData(resultData[0],
