@@ -67,6 +67,7 @@
         android:layout_weight="2"
         android:layout_margin="10dp"
         android:textSize="21dp"
+        android:maxLength="14"
         android:hint="add your name 2 leaderboard">
 
     </EditText>

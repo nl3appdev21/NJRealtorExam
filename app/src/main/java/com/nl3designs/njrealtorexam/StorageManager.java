@@ -10,8 +10,9 @@ public class StorageManager {
         pref = context.getSharedPreferences("skipBox",Context.MODE_PRIVATE);
 
         //TODO: code used to use to clear lb array, clean up
-        //  SharedPreferences.Editor editor = pref.edit();  // use this code to clear lb array
-        //  editor.clear().apply();  // use this code to clear lb array
+        //  ************************************************
+        // SharedPreferences.Editor editor = pref.edit();  // use this code to clear lb array
+        // editor.clear().apply();  // use this code to clear lb array
 
     }
 

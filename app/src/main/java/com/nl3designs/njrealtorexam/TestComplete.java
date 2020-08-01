@@ -73,39 +73,6 @@ public class TestComplete extends AppCompatActivity {
         testScore = (int)(((correct/numOfQuestions)*100));  // cast testscore to int
     }
 
-    private void showDialogBox() { //  ????  old dialog box code / del or keep  ????
-
-        if(testScore < 70) {
-            new AlertDialog.Builder(this)
-                    .setTitle(" Test Results ")
-                    .setMessage(" Sorry you did not passed, you can retake the test ")
-                    // Specifying a listener allows you to take an action before dismissing the dialog.
-                    // The dialog is automatically dismissed when a dialog button is clicked.
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Continue with delete operation
-                        }
-                    })
-                    // A null listener allows the button to dismiss the dialog and take no further action.
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        }else{
-            new AlertDialog.Builder(this)
-                    .setTitle(" Test Results ")
-                    .setMessage(" Congrates you passed, you are smarter than a 6th grader! ")
-                    // Specifying a listener allows you to take an action before dismissing the dialog.
-                    // The dialog is automatically dismissed when a dialog button is clicked.
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Continue with delete operation
-                        }
-                    })
-                    // A null listener allows the button to dismiss the dialog and take no further action.
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        }
-    }
-
     private void testComplete(){
 
         if(testScore < 70) {
@@ -119,8 +86,8 @@ public class TestComplete extends AppCompatActivity {
         }else{
             agent.setVisibility(View.VISIBLE);
             iv_passFail.setImageResource(R.mipmap.bluecert);
-            tv_testResults1.setText(" congrats you got " + correct + " of " + numQuestions + " correct ");
-            tv_testResults2.setText(" your passing score is: " + testScore + "%");
+            tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults2.setText(" Your passing score is: " + testScore + "%");
             tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
             tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));

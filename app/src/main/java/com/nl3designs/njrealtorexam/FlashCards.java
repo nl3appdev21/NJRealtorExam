@@ -127,7 +127,6 @@ public class FlashCards extends AppCompatActivity {
 
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
-
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {

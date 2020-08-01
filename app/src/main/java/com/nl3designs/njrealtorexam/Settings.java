@@ -13,64 +13,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Settings extends AppCompatActivity {
 
-    private Button BtnTakeTest;
     private ImageButton IbtnCopyRight;
-    private TextView TvMontra;
-    private Button BtnTestInstuctions;
-    private Button BtnFlashCards;
-    private Button BtnMenu;
-    private Button BntLeaderboard;
-    private ImageView IvDirections;
-    private ImageView IvImage;
+    //private TextView TvMontra;
     StorageManager store;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.settings);  //  ??  ***************************************
+            setContentView(R.layout.settings);
             store = new StorageManager(Settings.this);
-            BtnFlashCards = findViewById(R.id.btn_flashcards);
-            BtnFlashCards.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startFlashCards();
-                }
-            });
-
-            BtnTakeTest = findViewById(R.id.btn_takeTest);
-            BtnTakeTest.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startTest();
-                }
-            });
-
-            BtnMenu = findViewById(R.id.btn_menu);
-            BtnMenu.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startMenu();
-                }
-            });
-
-            BntLeaderboard = findViewById(R.id.btn_leaderBoard);
-            BntLeaderboard.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showLeaderboard();
-                }
-            });
-
-            BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
-            BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showInstructions();
-                }
-            });
 
             IbtnCopyRight = findViewById(R.id.ibtn_logo);
-            TvMontra = findViewById(R.id.tv_montra);
+            //TvMontra = findViewById(R.id.tv_montra);
             IbtnCopyRight.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -88,7 +42,6 @@ public class Settings extends AppCompatActivity {
 
             boolean swState = Boolean.parseBoolean(store.load("flashRand"));
             sw.setChecked(swState);
-
         }
 
         @Override
@@ -96,37 +49,6 @@ public class Settings extends AppCompatActivity {
 
             startActivity(new Intent(this, MenuActivity.class));
             finish();
-        }
-
-        private void showInstructions() {
-
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, Instructions.class);
-            startActivity(intent);
-        }
-
-        private void startMenu() {
-
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, MenuActivity.class);
-            startActivity(intent);
-        }
-
-        private void showLeaderboard() {
-
-            //  ????????  Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, LeaderBoard.class);
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, LeaderBoard_Bkup.class);
-            startActivity(intent);
-        }
-
-        private void startTest() {
-
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, MainActivity.class);
-            startActivity(intent);
-        }
-
-        private void startFlashCards() {
-
-            Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, FlashCards.class);
-            startActivity(intent);
         }
 
         private void showCopyRight() {

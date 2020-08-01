@@ -1,8 +1,6 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,13 +32,15 @@ public class DataAdapter extends ArrayAdapter {
 
         //  set color based on  score
         if (grade >= 90) {
-            convertView.setBackgroundColor(Color.parseColor("#FFD54F"));
+            // make color gold
+            convertView.setBackgroundResource(R.mipmap.goldwinner);
+
         } else if (grade >= 80) {
-            // make color purple
-            convertView.setBackgroundColor(Color.parseColor("#CE93D8"));
+            // make color silve
+            convertView.setBackgroundResource(R.mipmap.silverwinner);
         } else if (grade >= 70) {
-            // make color green
-            convertView.setBackgroundColor(Color.parseColor("#81C784"));
+            // make color bronze
+            convertView.setBackgroundResource(R.mipmap.bronzewinner);
         }
 
         return convertView;

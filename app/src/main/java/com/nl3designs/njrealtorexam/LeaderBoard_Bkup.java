@@ -47,7 +47,7 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
         if (!leaderBoardData.equals("")) {
 
-            //TODO: code used to test empty string, clean up
+            //TODO: code to see leaderboarddata if app stops running
             // Log.d("skip", " leaderboarddata = " + leaderBoardData);
 
             String[] entries = leaderBoardData.split(";");
@@ -71,8 +71,8 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
         private void setupData(String result) {
 
-            //TODO: code used to test empty string, clean up
-            //  Log.d("skip", " result = " + result);
+            //TODO: code to see result if app stops running
+            // Log.d("skip", " result = " + result);
 
             String[] resultData = result.split(",");
             myData.add(new TestScoreData(resultData[0],
