@@ -86,7 +86,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:text="Goto 2 Menu"
+            android:text="Goto Menu"
             android:textSize="21dp"
             android:textStyle="bold"
             android:visibility="visible" />
@@ -98,7 +98,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:text="Submit 2 LB"
+            android:text="Submit Name"
             android:textSize="21dp"
             android:textStyle="bold"
             android:visibility="visible" />
