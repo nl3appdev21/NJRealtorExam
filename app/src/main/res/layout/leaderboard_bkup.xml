@@ -5,6 +5,16 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Leader Board"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textSize="32dp"
+        android:gravity="center"/>
+
     <ListView
         android:id="@+id/results"
         android:text=" this is a test"
