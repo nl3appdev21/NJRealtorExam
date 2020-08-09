@@ -41,7 +41,23 @@
             android:textStyle="bold"
             android:textSize="17dp"
             android:layout_gravity="center"
-            android:text="Randomize Flashcards "/>
+            android:text="Randomize Flashcards  "/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <Switch android:id="@+id/nextCardSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:text="Goto Next Flashcard  "/>
 
         <View
             android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.nl3designs.njrealtorexam;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,7 +17,7 @@ public class FlashCards extends AppCompatActivity {
     private TextView tv_question;
     private Button btn_answer;
     private Button btn_menu;
-    //  private Button[] btnArray = new Button[4];
+    //  ??  private Button[] btnArray = new Button[4];  ??
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static String results = "";
@@ -29,6 +30,7 @@ public class FlashCards extends AppCompatActivity {
     int myans = -0;
     private Button btn_prev;
     private Button btn_next;
+    private boolean sw1State;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +38,6 @@ public class FlashCards extends AppCompatActivity {
         setContentView(R.layout.flashcards);
         storageManager = new StorageManager(this);
         questionManager = new QuestionManager(this);
-
-        boolean swState = Boolean.parseBoolean(storageManager.load("flashRand"));
-        if (swState == true) {
-            questionManager.randomize();
-        }
-
-        if(results.equals("")){
-            results = storageManager.load("results");
-        }
 
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
@@ -54,6 +47,19 @@ public class FlashCards extends AppCompatActivity {
         btn_next = findViewById(R.id.btn_next);
         btn_prev = findViewById(R.id.btn_prev);
         iv_questionimage = findViewById(R.id.questionImage);
+
+        // rand cards switch
+        boolean swState = Boolean.parseBoolean(storageManager.load("flashRand"));
+        if (swState == true) {
+            questionManager.randomize();
+        }
+
+        // next card switch
+        sw1State = Boolean.parseBoolean(storageManager.load("nextCard"));
+
+        if(results.equals("")){
+            results = storageManager.load("results");
+        }
 
         btn_prev.setOnClickListener(new View.OnClickListener() {  //  ??  onclick listener for next button
 
@@ -114,7 +120,6 @@ public class FlashCards extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn();
                 showAnswer();
-
             }
         });
 
@@ -130,6 +135,10 @@ public class FlashCards extends AppCompatActivity {
     }
 
     private void setQuestionScreen(QuestionItem questionItem) {
+
+        if (sw1State == true) {
+            btn_next.setVisibility(View.VISIBLE);
+        }
 
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));

@@ -32,6 +32,7 @@ public class Settings extends AppCompatActivity {
                 }
             });
 
+            //  randswitch
             Switch sw = findViewById(R.id.randSwitch);
             sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -42,6 +43,18 @@ public class Settings extends AppCompatActivity {
 
             boolean swState = Boolean.parseBoolean(store.load("flashRand"));
             sw.setChecked(swState);
+
+            //  nextcardswitch
+            Switch sw1 = findViewById(R.id.nextCardSwitch);
+            sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    store.save(String.valueOf(isChecked),"nextCard");
+                }
+            });
+
+            boolean sw1State = Boolean.parseBoolean(store.load("nextCard"));
+            sw1.setChecked(sw1State);
         }
 
         @Override
@@ -56,5 +69,4 @@ public class Settings extends AppCompatActivity {
             Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, CopyRight.class);
             startActivity(intent);
         }
-
 }

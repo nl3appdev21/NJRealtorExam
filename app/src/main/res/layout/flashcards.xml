@@ -134,31 +134,4 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="42dp"
-        android:layout_gravity="right|bottom"
-        android:layout_marginLeft="10dp"
-        android:layout_margin="12dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tv_montra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Solutions to your development needs."
-            android:layout_marginRight="12dp"
-            android:textColor="@color/White"
-            android:textSize="13dp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/ibtn_logo"
-            android:layout_width="59dp"
-            android:layout_height="32dp"
-            android:src="@mipmap/nl3a" />
-
-    </LinearLayout>
-
 </LinearLayout>

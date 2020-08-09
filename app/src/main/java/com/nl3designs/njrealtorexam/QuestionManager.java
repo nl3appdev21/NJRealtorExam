@@ -1,6 +1,8 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
@@ -14,7 +16,6 @@ import java.util.Map;
 public class QuestionManager {
 
     List<QuestionItem> questionitems;
-    List<QuestionItem> defaultQuestionitems;
     int currentIndex = -1;
     Map<String,Integer> categoryMap = new HashMap<>();
     boolean isRandom;
@@ -85,7 +86,7 @@ public class QuestionManager {
 
     public void randomize () {
         Collections.shuffle(questionitems);
-        int x = 5;    //  ???? does this number need to be changed  ????
+        int x = questionitems.size();
     }
 
     public String getCurrentAnswer(){
@@ -130,7 +131,6 @@ public class QuestionManager {
         categoryMap.put("commission",R.mipmap.math);
         categoryMap.put("advirtising",R.mipmap.advirtising);
         categoryMap.put("ownership",R.mipmap.ownership2);
-
     }
 
     public boolean checkAnswer (int answerIndex){
