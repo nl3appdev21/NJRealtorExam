@@ -15,9 +15,11 @@ import androidx.core.content.ContextCompat;
 public class FlashCards extends AppCompatActivity {
 
     private TextView tv_question;
+    private TextView tv_answers;  // new code 8/9/20
     private Button btn_answer;
     private Button btn_menu;
-    //  ??  private Button[] btnArray = new Button[4];  ??
+    private String sAnswer0, sAnswer1, sAnswer02;  // new code 8/9/20
+    private String[] sArray = new String[3];  // new code 8/9/20
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static String results = "";
@@ -41,6 +43,7 @@ public class FlashCards extends AppCompatActivity {
 
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
+        tv_answers = findViewById(R.id.tv_answers);  // new code 8/9/20
         btn_answer = findViewById(R.id.btn_answer);
         tv_tries = findViewById(R.id.tries);
         btn_menu = findViewById(R.id.btn_menu);
@@ -140,8 +143,11 @@ public class FlashCards extends AppCompatActivity {
             btn_next.setVisibility(View.VISIBLE);
         }
 
+        tv_answers.setVisibility(View.GONE);  // new code 8/9/20
+
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
+
         btn_answer.setText("show answer");
 
         if (questionManager.getCurrentIndex() == 0) {
@@ -159,9 +165,21 @@ public class FlashCards extends AppCompatActivity {
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         scoreCount();
         tv_question.setText(questionItem.question);
+        sArray[0] = (questionItem.answers[0]);  //  ??
+        sArray[1] = (questionItem.answers[1]);  //  ??
+        sArray[2] = (questionItem.answers[2]);  //  ??
     }
 
     private void showAnswer(){
+
+        // new code 8/9/20
+        if (questionManager.getCurrentAnswer().matches("All of the above")){
+            tv_answers.setVisibility(View.VISIBLE);
+            Log.d("skip", " yes it is all of the above ");
+            //  tv_answers.setText(" yes it is all of the above ");
+            tv_answers.setText(sArray[0] + sArray[1] + sArray[2]);  //  ??
+        }
+        // new code 8/9/20
 
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));

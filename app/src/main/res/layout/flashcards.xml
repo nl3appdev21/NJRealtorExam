@@ -77,6 +77,23 @@
         android:textColor="@color/Black"
         android:textStyle="normal" />
 
+    <TextView
+        android:id="@+id/tv_answers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Yellow_08"
+        android:gravity="top"
+        android:text="answers"
+        android:textSize="19dp"
+        android:padding="12dp"
+        android:textColor="@color/Black"
+        android:textStyle="normal"
+        android:visibility="gone"/>
+
     <Button
         android:id="@+id/btn_answer"
         android:layout_width="match_parent"

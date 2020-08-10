@@ -258,7 +258,6 @@ public class MainActivity extends AppCompatActivity {
 
         tv_tries.setText(String.valueOf(tries)+"/"+numQuestions);
         tv_correct.setText(String.valueOf(correct));
-
     }
 
     // new code new code
@@ -304,5 +303,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
     }
-
 }
