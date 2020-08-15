@@ -27,7 +27,7 @@ public class DataAdapter extends ArrayAdapter {
         TestScoreData info = myData.get(position);
         int grade = info.score;
         String newScoreString;
-        newScoreString = (info.name + " : got " + info.correct + " of " + info.tries + " correct, scoring " + info.score + " % ");
+        newScoreString = (info.name + " : got " + info.tries + " of " + info.correct + " correct, scoring " + info.score + " % ");
         lbEntry.setText(newScoreString);
 
         //  set color based on  score

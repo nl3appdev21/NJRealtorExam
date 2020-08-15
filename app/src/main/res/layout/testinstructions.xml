@@ -16,13 +16,89 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iv_copyright"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="121dp"
-            android:visibility="visible"
-            android:src="@mipmap/nl3a"
-            android:layout_marginBottom="12sp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="NJ Realtor Exam App Instructions"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="35dp"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text=
+                " nj realtor exam settings \n \n
+
+you have a choice of using flashcards \n
+or you can take practice test \n
+
+the test works as follows \n
+
+read and answer question \n
+
+if correct, answer turns green \n
+if wrong answer turns red and \n
+correct answer turns green \n
+click next for next question \n
+at end you will now if you passed \n
+or if you failed and you score \n"
+
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:padding="12dp"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_flashcards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text=
+                " nj realtor exam flashcards \n \n
+
+you have a choice of using flashcards \n
+or you can take practice test \n
+
+the test works as follows \n
+
+read and answer question \n
+
+if correct, answer turns green \n
+if wrong answer turns red and \n
+correct answer turns green \n
+click next for next question \n
+at end you will now if you passed \n
+or if you failed and you score \n"
+
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:padding="12dp"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginTop="8dp"/>
 
         <TextView
             android:id="@+id/tv_instructions"
@@ -59,8 +135,13 @@ or if you failed and you score \n"
             android:textStyle="bold"
             android:textSize="17dp"
             android:padding="12dp"
-            android:layout_marginBottom="21dp"
             android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginTop="8dp"/>
 
         <Button
             android:id="@+id/btn_back2Menu"

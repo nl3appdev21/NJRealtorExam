@@ -8,27 +8,31 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuestionManager {
-
+public class QuestionManager{
+    private static final QuestionManager instance = new QuestionManager();
     List<QuestionItem> questionitems;
     int currentIndex = -1;
     Map<String,Integer> categoryMap = new HashMap<>();
     boolean isRandom;
 
-    public QuestionManager(Context context){
-        loadAllQuestion(context);
+    public static QuestionManager getInstance(){
+        return instance;
     }
 
-    private void loadAllQuestion(Context context) {
+    public void loadAllQuestion(Context context,String category) {
         String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
+        if(category!=null){
+            questionitems = getQuestionsForCategory(category);
+        }
         setUpCategories();
         verifyCategories();
         StorageManager store = new StorageManager(context);
@@ -38,6 +42,10 @@ public class QuestionManager {
         }else{
             isRandom = false;
         }
+    }
+
+    public void reset(){
+        currentIndex = -1;
     }
 
     public int getCurrentIndex() {
@@ -121,6 +129,16 @@ public class QuestionManager {
                 throw new IllegalArgumentException("Error Invalid Category = " + q.catagory);
             }
         }
+    }
+
+    public List<QuestionItem> getQuestionsForCategory(String category){
+        List<QuestionItem> catQuestions = new ArrayList<>();
+        for(QuestionItem q : questionitems) {
+            if(q.catagory.equals(category)){
+                catQuestions.add(q);
+            }
+        }
+        return catQuestions;
     }
 
     private void setUpCategories(){

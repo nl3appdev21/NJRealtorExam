@@ -61,7 +61,7 @@
             android:id="@+id/btn_testInstructions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Test Instructions"
+            android:text="App Instructions"
             android:textStyle="bold"
             android:textSize="21dp"
             android:layout_margin="10dp"

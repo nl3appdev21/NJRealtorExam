@@ -27,6 +27,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        QuestionManager questionManager = QuestionManager.getInstance();
+        questionManager.loadAllQuestion(this,null);
+        questionManager.reset();
+
         BtnFlashCards = findViewById(R.id.btn_flashcards);
         BtnFlashCards.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,14 +79,12 @@ public class MenuActivity extends AppCompatActivity {
                 showCopyRight();
             }
         });
-
     }
 
     private void showInstructions() {
 
         Intent intent = new Intent(MenuActivity.this, Instructions.class);
         startActivity(intent);
-
     }
 
     private void showLb() {
@@ -93,7 +95,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void showCopyRight() {
-
+        //  QuestionManager.getInstance().loadAllQuestion(this, "commission");  //  ??
         Intent intent = new Intent(MenuActivity.this, CopyRight.class);
         startActivity(intent);
     }

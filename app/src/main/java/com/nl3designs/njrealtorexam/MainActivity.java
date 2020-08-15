@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             results = storageManager.load("results");
         }
 
-        questionManager = new QuestionManager(this);
+        questionManager = QuestionManager.getInstance();
         tv_question = findViewById(R.id.question);
         btn_answer0 = findViewById(R.id.answer_0);
         btn_answer1 = findViewById(R.id.answer_1);

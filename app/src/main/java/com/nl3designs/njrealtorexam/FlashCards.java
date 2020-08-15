@@ -39,7 +39,7 @@ public class FlashCards extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flashcards);
         storageManager = new StorageManager(this);
-        questionManager = new QuestionManager(this);
+        questionManager = QuestionManager.getInstance();
 
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
@@ -177,7 +177,7 @@ public class FlashCards extends AppCompatActivity {
             tv_answers.setVisibility(View.VISIBLE);
             Log.d("skip", " yes it is all of the above ");
             //  tv_answers.setText(" yes it is all of the above ");
-            tv_answers.setText(sArray[0] + sArray[1] + sArray[2]);  //  ??
+            tv_answers.setText("1. " + sArray[0] + "\n" + "2. "+ sArray[1] + "\n" + "3. " + sArray[2] + "\n");  //  ??
         }
         // new code 8/9/20
 
