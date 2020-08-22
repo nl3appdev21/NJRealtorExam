@@ -57,7 +57,7 @@
             android:textStyle="bold"
             android:textSize="17dp"
             android:layout_gravity="center"
-            android:text="Goto Next Flashcard  "/>
+            android:text="Skip A Flashcard  "/>
 
         <View
             android:layout_width="match_parent"

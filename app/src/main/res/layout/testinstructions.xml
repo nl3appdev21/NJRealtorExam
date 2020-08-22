@@ -39,23 +39,16 @@
             android:textAlignment="center"
 
             android:text=
-                " nj realtor exam settings \n \n
+                " NJ Realtor App Settings \n \n
 
-you have a choice of using flashcards \n
-or you can take practice test \n
-
-the test works as follows \n
-
-read and answer question \n
-
-if correct, answer turns green \n
-if wrong answer turns red and \n
-correct answer turns green \n
-click next for next question \n
-at end you will now if you passed \n
-or if you failed and you score \n"
+In setting you have two switchs \n
+1 - Randomize Flashcards, will \n
+randomize the flashcards order \n
+2 - Skip A Flashcard, will let you \n
+skip a flashcard if you want too "
 
             android:textStyle="bold"
+            android:textColor="@color/White"
             android:textSize="17dp"
             android:padding="12dp"
             android:visibility="visible" />
@@ -73,23 +66,16 @@ or if you failed and you score \n"
             android:textAlignment="center"
 
             android:text=
-                " nj realtor exam flashcards \n \n
+                " NJ Realtor App Flashcards \n \n
 
-you have a choice of using flashcards \n
-or you can take practice test \n
-
-the test works as follows \n
-
-read and answer question \n
-
-if correct, answer turns green \n
-if wrong answer turns red and \n
-correct answer turns green \n
-click next for next question \n
-at end you will now if you passed \n
-or if you failed and you score \n"
+This is your basic Flashcards, you will \n
+get a question, click show answer to \n
+see the answer and next to get next \n
+card, you can use setting to change \n
+the order of the cards or skip cards"
 
             android:textStyle="bold"
+            android:textColor="@color/White"
             android:textSize="17dp"
             android:padding="12dp"
             android:visibility="visible" />
@@ -107,7 +93,7 @@ or if you failed and you score \n"
             android:textAlignment="center"
 
             android:text=
-                " nj realtor exam instructions \n \n
+                " NJ Realtor App Instructions \n \n
 
 you have a choice of using flashcards \n
 or you can take practice test \n
@@ -133,6 +119,7 @@ at end you will now if you passed \n
 or if you failed and you score \n"
 
             android:textStyle="bold"
+            android:textColor="@color/White"
             android:textSize="17dp"
             android:padding="12dp"
             android:visibility="visible" />
