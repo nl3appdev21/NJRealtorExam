@@ -11,6 +11,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Settings extends AppCompatActivity {
 
     private ImageButton IbtnCopyRight;
@@ -69,4 +72,27 @@ public class Settings extends AppCompatActivity {
             Intent intent = new Intent(com.nl3designs.njrealtorexam.Settings.this, CopyRight.class);
             startActivity(intent);
         }
+
+        //==================================================================================
+
+    private void test() {
+        List<Switch> switches = new ArrayList<>();
+        switches.add((Switch)findViewById(R.id.randSwitch));
+        switches.add((Switch)findViewById(R.id.randSwitch));
+        switches.add((Switch)findViewById(R.id.randSwitch));
+
+        for(int c=0; c<switches.size(); c++){
+            final int index = c;
+            switches.get(c).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    loadNewQuestions(index,isChecked);
+                }
+            });
+        }
+    }
+
+    private void loadNewQuestions(int qIndex, boolean notAll){
+
+    }
 }

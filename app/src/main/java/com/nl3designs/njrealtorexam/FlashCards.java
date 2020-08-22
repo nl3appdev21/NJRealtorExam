@@ -103,7 +103,6 @@ public class FlashCards extends AppCompatActivity {
                 btn_next.setVisibility(View.INVISIBLE);
 
                 QuestionItem questionItem = questionManager.getNext();
-
                 prevint = 0;
 
                 if (questionItem != null) {  // if not null
