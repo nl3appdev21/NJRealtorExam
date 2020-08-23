@@ -77,9 +77,12 @@ public class Settings extends AppCompatActivity {
 
     private void test() {
         List<Switch> switches = new ArrayList<>();
-        switches.add((Switch)findViewById(R.id.randSwitch));
-        switches.add((Switch)findViewById(R.id.randSwitch));
-        switches.add((Switch)findViewById(R.id.randSwitch));
+        switches.add((Switch)findViewById(R.id.newTypeSwitch));
+        switches.add((Switch)findViewById(R.id.mortgageSwitch));
+        switches.add((Switch)findViewById(R.id.lawSwitch));
+        switches.add((Switch)findViewById(R.id.mathSwitch));
+        switches.add((Switch)findViewById(R.id.advirtisingSwitch));
+        switches.add((Switch)findViewById(R.id.ownershipSwitch));
 
         for(int c=0; c<switches.size(); c++){
             final int index = c;
