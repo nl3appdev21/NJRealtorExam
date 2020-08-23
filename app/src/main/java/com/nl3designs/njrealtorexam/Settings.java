@@ -73,7 +73,7 @@ public class Settings extends AppCompatActivity {
             startActivity(intent);
         }
 
-        //==================================================================================
+        //TODO: code to load array for catagory switches for settings screen
 
     private void test() {
         List<Switch> switches = new ArrayList<>();
