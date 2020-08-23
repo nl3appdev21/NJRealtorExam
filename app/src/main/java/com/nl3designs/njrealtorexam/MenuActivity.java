@@ -28,8 +28,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         QuestionManager questionManager = QuestionManager.getInstance();
-        questionManager.loadAllQuestion(this,null);
-        questionManager.reset();
+        questionManager.reset();  // resets question index
 
         BtnFlashCards = findViewById(R.id.btn_flashcards);
         BtnFlashCards.setOnClickListener(new View.OnClickListener() {

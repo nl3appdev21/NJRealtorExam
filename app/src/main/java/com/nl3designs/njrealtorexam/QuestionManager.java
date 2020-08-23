@@ -11,8 +11,10 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class QuestionManager{
     private static final QuestionManager instance = new QuestionManager();
@@ -25,13 +27,21 @@ public class QuestionManager{
         return instance;
     }
 
-    public void loadAllQuestion(Context context,String category) {
+    public void loadQuestions(Context context,String category) {
+        Set<String> singleCat = new HashSet<>();
+        singleCat.add(category);
+        loadAllQuestion(context,singleCat);
+    }
+
+    // TODO : note changed last question from law to mortgage for test, replace with real mortgage
+
+    public void loadAllQuestion(Context context, Set<String> categories) {
         String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
-        if(category!=null){
-            questionitems = getQuestionsForCategory(category);
+        if(categories!=null){
+            questionitems = getQuestionsForCategories(categories);
         }
         setUpCategories();
         verifyCategories();
@@ -132,9 +142,15 @@ public class QuestionManager{
     }
 
     public List<QuestionItem> getQuestionsForCategory(String category){
+        Set<String> singleCat = new HashSet<>();
+        singleCat.add(category);
+        return getQuestionsForCategories(singleCat);
+    }
+
+    public List<QuestionItem> getQuestionsForCategories(Set<String> categories){
         List<QuestionItem> catQuestions = new ArrayList<>();
         for(QuestionItem q : questionitems) {
-            if(q.catagory.equals(category)){
+            if(categories.contains(q.catagory)){
                 catQuestions.add(q);
             }
         }

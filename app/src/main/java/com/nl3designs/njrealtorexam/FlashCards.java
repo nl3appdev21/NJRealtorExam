@@ -164,13 +164,14 @@ public class FlashCards extends AppCompatActivity {
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
         scoreCount();
         tv_question.setText(questionItem.question);
-        sArray[0] = (questionItem.answers[0]);  //  ??
-        sArray[1] = (questionItem.answers[1]);  //  ??
-        sArray[2] = (questionItem.answers[2]);  //  ??
+        sArray[0] = (questionItem.answers[0]);  // answer0 use to show for all of the above
+        sArray[1] = (questionItem.answers[1]);  // answer1 use to show for all of the above
+        sArray[2] = (questionItem.answers[2]);  // answer2 use to show for all of the above
     }
 
     private void showAnswer(){
 
+        // TODO : check json file answers "all of the above" for spaces
         // new code 8/9/20
         if (questionManager.getCurrentAnswer().matches("All of the above")){
             tv_answers.setVisibility(View.VISIBLE);
@@ -178,7 +179,6 @@ public class FlashCards extends AppCompatActivity {
             //  tv_answers.setText(" yes it is all of the above ");
             tv_answers.setText("1. " + sArray[0] + "\n" + "2. "+ sArray[1] + "\n" + "3. " + sArray[2] + "\n");  //  ??
         }
-        // new code 8/9/20
 
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
