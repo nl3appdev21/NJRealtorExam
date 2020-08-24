@@ -39,7 +39,10 @@ public class FlashCards extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flashcards);
         storageManager = new StorageManager(this);
+
+        //  new code to load questionmgt 8-23-20
         questionManager = QuestionManager.getInstance();
+        questionManager.loadQuestions(this,"");
 
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
