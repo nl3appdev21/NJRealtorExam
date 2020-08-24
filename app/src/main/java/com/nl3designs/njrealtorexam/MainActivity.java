@@ -1,5 +1,6 @@
 package com.nl3designs.njrealtorexam;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.content.Intent;
@@ -9,6 +10,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         questionManager = QuestionManager.getInstance();
+        questionManager.loadQuestions(this,"");
         tv_question = findViewById(R.id.question);
         btn_answer0 = findViewById(R.id.answer_0);
         btn_answer1 = findViewById(R.id.answer_1);
@@ -184,7 +198,24 @@ public class MainActivity extends AppCompatActivity {
         });
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
+
+
+
+        /*
+        FirebaseApp.initializeApp(this)
+        ApiFuture<QuerySnapshot> future =
+                db.collection("cities").whereEqualTo("capital", true).get();
+// future.get() blocks on response
+        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+        for (DocumentSnapshot document : documents) {
+            System.out.println(document.getId() + " => " + document.toObject(City.class));
+        }
+
+         */
+
     }
+
+
 
     private void setQuestionScreen(QuestionItem questionItem) {
 

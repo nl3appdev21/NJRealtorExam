@@ -8,7 +8,19 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -78,7 +90,25 @@ public class MenuActivity extends AppCompatActivity {
                 showCopyRight();
             }
         });
+
+        // TODO : firebase test code
+
+        //asynchronously retrieve multiple documents
+        CollectionReference boardRef = FirebaseFirestore.getInstance().collection("leaderboard");
+        boardRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                List<LeaderboardItem> scores = new ArrayList<>();
+                if(task.isSuccessful()){
+                    for(QueryDocumentSnapshot document : task.getResult()){
+                        scores.add(document.toObject(LeaderboardItem.class));
+                    }
+                }
+                int f= 6;
+            }
+        });
     }
+
 
     private void showInstructions() {
 

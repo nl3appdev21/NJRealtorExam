@@ -30,7 +30,11 @@ public class QuestionManager{
     public void loadQuestions(Context context,String category) {
         Set<String> singleCat = new HashSet<>();
         singleCat.add(category);
-        loadAllQuestion(context,singleCat);
+        if(category.equals("")){
+            loadAllQuestion(context,null);
+        }else {
+            loadAllQuestion(context, singleCat);
+        }
     }
 
     // TODO : note changed last question from law to mortgage for test, replace with real mortgage
