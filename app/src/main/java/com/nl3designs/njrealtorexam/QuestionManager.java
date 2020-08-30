@@ -58,6 +58,20 @@ public class QuestionManager{
         }
     }
 
+    public void loadFromStoredCat(Context context){
+        //get categories from StorageManager
+
+        StorageManager store = new StorageManager(context);
+        String[] selected = store.load("customCards").split(",");
+        Set<String> categories = null;
+
+        // convert to Set
+        // add new code here
+        // load new split array into a set / list
+
+        loadAllQuestion(context, categories);
+    }
+
     public boolean isEmpty(){
         return questionitems == null || questionitems.size() == 0;
     }

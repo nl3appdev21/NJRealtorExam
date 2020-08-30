@@ -66,14 +66,48 @@ public class Settings extends AppCompatActivity {
             sw1.setChecked(sw1State);
 
             switchesSetup();
+
+            //TODO convert to method
+            String selected = store.load("customCards");
+            for(CategoryItem ci : switches){
+                if(selected.contains(ci.name)){
+                    ci.uiSwitch.setChecked(true);
+                }
+            }
+
         }
 
     @Override
     protected void onPause() {
         super.onPause();
         QuestionManager.getInstance().loadAllQuestion(this,selectedCat);
-    }
 
+        //TODO convert to method
+        /*
+        1 - newtype
+        2 - mortgage
+        3 - law
+        4 - commission
+        5 - advirtising
+        6 - ownership
+         */
+
+        // -> newtype, mortgage, law, commision, advirtising, ownership
+
+        String finalCatString = "";
+        int c = 0;
+        for(String name  : selectedCat) {
+            if (c == 0) {
+                finalCatString += name;
+            } else {
+                finalCatString += "," + name;
+            }
+            c+=1;
+            Log.d("skip", finalCatString + "  " + (c));
+        }
+
+        store.save(finalCatString, "customCards");
+    }
 
     @Override
         public void onBackPressed() {
