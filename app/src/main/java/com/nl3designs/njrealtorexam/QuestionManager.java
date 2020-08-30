@@ -59,7 +59,7 @@ public class QuestionManager{
     }
 
     public boolean isEmpty(){
-        return questionitems == null;
+        return questionitems == null || questionitems.size() == 0;
     }
 
 
