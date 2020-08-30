@@ -76,9 +76,17 @@
         android:paddingLeft="21dp"
         android:textStyle="normal"
         android:layout_gravity="center"
-        android:text="Save Customize Card Settings"
+        android:text="Save Customize Card Settings  "
         android:textColor="@color/White"
         android:textSize="21dp" />
+
+        <Switch android:id="@+id/customizeCards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

@@ -58,6 +58,11 @@ public class QuestionManager{
         }
     }
 
+    public boolean isEmpty(){
+        return questionitems == null;
+    }
+
+
     public void reset(){
         currentIndex = -1;
     }
@@ -101,6 +106,7 @@ public class QuestionManager{
 
         if(currentIndex >= 0 && (currentIndex < questionitems.size())){
             return questionitems.get(currentIndex);
+
         }else{
             return null;
         }
