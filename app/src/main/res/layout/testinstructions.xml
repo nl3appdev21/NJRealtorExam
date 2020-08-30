@@ -45,7 +45,9 @@ In setting you have two switchs \n
 1 - Randomize Flashcards, will \n
 randomize the flashcards order \n
 2 - Skip A Flashcard, will let you \n
-skip a flashcard if you want too "
+skip a flashcard if you want too \n
+3 - Select 1 or more catagorizes \n
+to customize the flashcards "
 
             android:textStyle="bold"
             android:textColor="@color/White"
@@ -72,7 +74,9 @@ This is your basic Flashcards, you will \n
 get a question, click show answer to \n
 see the answer and next to get next \n
 card, you can use setting to change \n
-the order of the cards or skip cards"
+the order of the cards or skip cards \n
+click the customize swith to save your \n
+catagorizes selected in settings screen"
 
             android:textStyle="bold"
             android:textColor="@color/White"
