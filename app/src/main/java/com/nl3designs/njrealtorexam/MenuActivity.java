@@ -42,6 +42,9 @@ public class MenuActivity extends AppCompatActivity {
         QuestionManager questionManager = QuestionManager.getInstance();
         questionManager.reset();  // resets question index
 
+
+        // TODO : change names to camel case
+
         BtnFlashCards = findViewById(R.id.btn_flashcards);
         BtnFlashCards.setOnClickListener(new View.OnClickListener() {
             @Override

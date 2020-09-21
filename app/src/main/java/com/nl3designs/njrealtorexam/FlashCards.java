@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class FlashCards extends AppCompatActivity {
 
@@ -43,9 +48,9 @@ public class FlashCards extends AppCompatActivity {
         //  new code to load questionmgt 8-23-20
         questionManager = QuestionManager.getInstance();
 
-        if (questionManager.isEmpty()) {
-            questionManager.loadQuestions(this, "");
-        }
+
+        questionManager.loadQuestions(this, "");
+
 
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
@@ -69,6 +74,19 @@ public class FlashCards extends AppCompatActivity {
         if(results.equals("")){
             results = storageManager.load("results");
         }
+
+        //  custom card switch
+        Switch sw = findViewById(R.id.customCards);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    loadCustomQuestions();
+                } else {
+                    loadAllQuestions();
+                }
+            }
+        });
 
         btn_prev.setOnClickListener(new View.OnClickListener() {  //  ??  onclick listener for next button
 
@@ -142,6 +160,40 @@ public class FlashCards extends AppCompatActivity {
         setQuestionScreen(questionItem);
     }
 
+    // new method 9/20/20
+    private void loadCustomQuestions() {
+        Log.d("skip", "load custom cards");
+        String selected = storageManager.load("customCards");
+        String[] selectedArray = selected.split(",");
+        //for(int i = 0 ;i<selectedArray.length;i++){
+        //    selectedCat = selectedArray[i]
+        // }
+        Set<String> selectedCat = new HashSet<>();
+        for(String cat : selectedArray){
+            selectedCat.add(cat);
+        }
+        questionManager.loadAllQuestion(this,selectedCat);
+        updateList();
+
+    }
+
+    // new method 9/20/20
+    private void loadAllQuestions() {
+        Log.d("skip", "load all cards");
+        questionManager.loadAllQuestion(this,null);
+        updateList();
+    }
+
+    // new code 9/20/20
+    private void updateList() {
+        QuestionItem questionItem = questionManager.getNext();
+        setQuestionScreen(questionItem);
+        Log.d("skip",String.valueOf(questionManager.questionitems.size()));
+        numQuestions = questionManager.questionitems.size();
+        tries = 1;
+        updateScoreCount();
+    }
+
     private void setQuestionScreen(QuestionItem questionItem) {
 
         if (sw1State == true) {
@@ -168,7 +220,7 @@ public class FlashCards extends AppCompatActivity {
         }
 
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
-        scoreCount();
+        updateScoreCount();
         tv_question.setText(questionItem.question);
         sArray[0] = (questionItem.answers[0]);  // answer0 use to show for all of the above
         sArray[1] = (questionItem.answers[1]);  // answer1 use to show for all of the above
@@ -200,7 +252,7 @@ public class FlashCards extends AppCompatActivity {
             }
         }
 
-        private void scoreCount() {
+        private void updateScoreCount() {
 
             tv_tries.setText(String.valueOf(tries)+" / "+numQuestions);
         }

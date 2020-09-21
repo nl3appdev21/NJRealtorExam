@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -31,6 +32,28 @@ public class Settings extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.settings);
             store = new StorageManager(Settings.this);
+
+
+            // new test code
+
+            HashMap<String, String> myMap = new HashMap<>();
+            myMap.put("emp1", "skip");
+            myMap.put("emp2", "nash");
+            myMap.put("emp3", "dex");
+            myMap.put("emp4", "fred");
+            myMap.put("emp5", "dean");
+            myMap.put("emp6", "bob");
+
+            myMap.put("emp4", "skip");  //  will over write emp4 from fred to skip
+            myMap.remove("emp4");
+            Log.d("skip", myMap.get("emp3") + "  mmm");
+
+            for(String value : myMap.values()){
+                Log.d("skip", value);
+            }
+
+            // new test code
+
 
             IbtnCopyRight = findViewById(R.id.ibtn_logo);
             //TvMontra = findViewById(R.id.tv_montra);
@@ -128,7 +151,7 @@ public class Settings extends AppCompatActivity {
         switches.add(new CategoryItem("newtype",(Switch)findViewById(R.id.newTypeSwitch)));
         switches.add(new CategoryItem("mortgage",(Switch)findViewById(R.id.mortgageSwitch)));
         switches.add(new CategoryItem("law",(Switch)findViewById(R.id.lawSwitch)));
-        switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.mathSwitch)));
+        switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.commissionSwitch)));
         switches.add(new CategoryItem("advirtising",(Switch)findViewById(R.id.advirtisingSwitch)));
         switches.add(new CategoryItem("ownership",(Switch)findViewById(R.id.ownershipSwitch)));
 

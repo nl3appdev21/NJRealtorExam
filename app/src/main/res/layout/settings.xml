@@ -112,7 +112,7 @@
                     android:layout_gravity="center"
                     android:text=" Law Cards  "/>
 
-                <Switch android:id="@+id/mathSwitch"
+                <Switch android:id="@+id/commissionSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -120,7 +120,7 @@
                     android:textColor="@color/White"
                     android:textSize="15dp"
                     android:layout_gravity="center"
-                    android:text=" Math Cards  "/>
+                    android:text=" Commission Cards  "/>
 
                 <Switch android:id="@+id/advirtisingSwitch"
                     android:layout_width="wrap_content"

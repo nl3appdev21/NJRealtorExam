@@ -56,9 +56,10 @@ public class QuestionManager{
         }else{
             isRandom = false;
         }
+        currentIndex = -1;
     }
 
-    public void loadFromStoredCat(Context context){
+    public void loadFromStoredCat(Context context){   // method is not used or called !!
         //get categories from StorageManager
 
         StorageManager store = new StorageManager(context);
