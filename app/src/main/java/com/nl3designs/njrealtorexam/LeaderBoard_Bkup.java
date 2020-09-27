@@ -6,19 +6,31 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class LeaderBoard_Bkup extends AppCompatActivity{
 
-        ListView results;
-        DataAdapter adapter;
+        private ListView results;
+        private DataAdapter adapter;
         private Button btn_menu;
-        ListView listView;
+        private ListView listView;
 
-        List<TestScoreData> myData = new ArrayList<TestScoreData>();
-        StorageManager store;
+        private List<TestScoreData> myData = new ArrayList<TestScoreData>();
+        private StorageManager store;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +39,7 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
             setContentView(R.layout.leaderboard_bkup);
 
             store = new StorageManager(this);
-            getScore();
+            fetchScore();
 
             btn_menu = findViewById(R.id.menu);
             btn_menu.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +51,24 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
         }
 
-        private void getScore(){
-            String leaderBoardData = store.load("leaderboard");
+        private void fetchScore(){
+            store.load("leaderboard", new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if(task.isSuccessful()) {
+                        DocumentSnapshot snapshot = task.getResult();
+                        Object obj = snapshot.get("scores");
+                        if(obj != null) {
+                            getScore(snapshot.get("scores").toString());
+                        }
+                    }else{
+                        getScore("");
+                    }
+                }
+            });
+        }
+
+        private void getScore(String leaderBoardData){
             results = findViewById(R.id.results);
 
         listView = findViewById(R.id.results);

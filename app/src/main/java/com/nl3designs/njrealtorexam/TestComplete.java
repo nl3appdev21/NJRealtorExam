@@ -9,9 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 public class TestComplete extends AppCompatActivity {
 
@@ -96,6 +102,37 @@ public class TestComplete extends AppCompatActivity {
     }
 
     private void saveScore(){
+
+        store.load("leaderboard", new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String leaderBoardData = "";
+                if(task.isSuccessful()) {
+                    DocumentSnapshot snapshot = task.getResult();
+                    Object obj = snapshot.get("scores");
+                    if(obj != null) {
+                        leaderBoardData = snapshot.get("scores").toString();
+                    }
+                }
+                agentName = agent.getText().toString();
+
+                //   String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+                String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+                score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
+
+                leaderBoardData += score;
+                store.save(leaderBoardData,"leaderboard");
+            }
+        });
+
+
+
+
+
+    }
+
+
+    private void saveScoreOldCode(){
 
         String leaderBoardData = store.load("leaderboard");
         agentName = agent.getText().toString();
