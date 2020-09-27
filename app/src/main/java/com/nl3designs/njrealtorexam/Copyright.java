@@ -8,15 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CopyRight extends AppCompatActivity {
 
-    private Button BtnBack2Menu;
+    private Button btnBack2Menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.copyright);
 
-        BtnBack2Menu = findViewById(R.id.btn_back2Menu);
-        BtnBack2Menu.setOnClickListener(new View.OnClickListener() {
+        btnBack2Menu = findViewById(R.id.btn_back2Menu);
+        btnBack2Menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 back2Menu();

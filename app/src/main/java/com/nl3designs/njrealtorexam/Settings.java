@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Switch;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -20,7 +18,7 @@ import java.util.Set;
 
 public class Settings extends AppCompatActivity {
 
-    private ImageButton IbtnCopyRight;
+    private ImageButton ibtnCopyRight;
     List<CategoryItem> switches = new ArrayList<>();
     Set<String> selectedCat = new HashSet<>();
 
@@ -55,9 +53,9 @@ public class Settings extends AppCompatActivity {
             // new test code
 
 
-            IbtnCopyRight = findViewById(R.id.ibtn_logo);
+            ibtnCopyRight = findViewById(R.id.ibtn_logo);
             //TvMontra = findViewById(R.id.tv_montra);
-            IbtnCopyRight.setOnClickListener(new View.OnClickListener() {
+            ibtnCopyRight.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showCopyRight();

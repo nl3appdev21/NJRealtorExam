@@ -2,7 +2,6 @@ package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,15 +23,15 @@ import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button BtnTakeTest;
-    private ImageButton IbtnCopyRight;
+    private Button btnTakeTest;
+    private ImageButton ibtnCopyRight;
     private TextView TvMontra;
-    private Button BtnTestInstuctions;
-    private Button BtnFlashCards;
-    private Button BtnSettings;
-    private Button BtnLb;
-    private ImageView IvDirections;
-    private ImageView IvImage;
+    private Button btnTestInstuctions;
+    private Button btnFlashCards;
+    private Button btnSettings;
+    private Button btnLb;
+    private ImageView ivDirections;
+    private ImageView ivImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,49 +44,49 @@ public class MenuActivity extends AppCompatActivity {
 
         // TODO : change names to camel case
 
-        BtnFlashCards = findViewById(R.id.btn_flashcards);
-        BtnFlashCards.setOnClickListener(new View.OnClickListener() {
+        btnFlashCards = findViewById(R.id.btn_flashcards);
+        btnFlashCards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startFlashCards();
             }
         });
 
-        BtnSettings = findViewById(R.id.btn_settings);
-        BtnSettings.setOnClickListener(new View.OnClickListener() {
+        btnSettings = findViewById(R.id.btn_settings);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showSettings();
             }
         });
 
-        BtnTakeTest = findViewById(R.id.btn_takeTest);
-        BtnTakeTest.setOnClickListener(new View.OnClickListener() {
+        btnTakeTest = findViewById(R.id.btn_takeTest);
+        btnTakeTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startTest();
             }
         });
 
-        BtnTestInstuctions = findViewById(R.id.btn_testInstructions);
-        BtnTestInstuctions.setOnClickListener(new View.OnClickListener() {
+        btnTestInstuctions = findViewById(R.id.btn_testInstructions);
+        btnTestInstuctions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showInstructions();
             }
         });
 
-        BtnLb = findViewById(R.id.btn_lb);
-        BtnLb.setOnClickListener(new View.OnClickListener() {
+        btnLb = findViewById(R.id.btn_lb);
+        btnLb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showLb();
             }
         });
 
-        IbtnCopyRight = findViewById(R.id.ibtn_logo);
+        ibtnCopyRight = findViewById(R.id.ibtn_logo);
         TvMontra = findViewById(R.id.tv_montra);
-        IbtnCopyRight.setOnClickListener(new View.OnClickListener() {
+        ibtnCopyRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showCopyRight();
