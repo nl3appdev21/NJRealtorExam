@@ -35,13 +35,19 @@ public class StorageManager {
     }
 
     public void save(String text, String tag){
-        //SharedPreferences.Editor editor = pref.edit();
-        //editor.putString(tag,text);
-        //editor.apply();
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(tag,text);
+        editor.apply();
+
+    }
+
+    public void save(String text, String tag, OnCompleteListener listener){
         Map<String,String> score = new HashMap<>();
         score.put("scores",text);
-        firestore.collection(tag).document("data").set(score);
+        firestore.collection(tag).document("data").set(score).addOnCompleteListener(listener);
+
     }
+
 
     public String load(String tag){
         return pref.getString(tag,"");

@@ -69,7 +69,7 @@ public class TestComplete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveScore();
-                showLb();
+                //  showLb();
             }
         });
     }
@@ -101,7 +101,7 @@ public class TestComplete extends AppCompatActivity {
         }
     }
 
-    private void saveScore(){
+    private void saveScore(){  // TODO : savescore and reload lb
 
         store.load("leaderboard", new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -121,13 +121,16 @@ public class TestComplete extends AppCompatActivity {
                 score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
 
                 leaderBoardData += score;
-                store.save(leaderBoardData,"leaderboard");
+                store.save(leaderBoardData, "leaderboard", new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+                        showLb();
+                    }
+                });
+
+                // add code for oncomplete
             }
         });
-
-
-
-
 
     }
 
