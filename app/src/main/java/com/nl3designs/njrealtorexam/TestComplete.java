@@ -116,8 +116,11 @@ public class TestComplete extends AppCompatActivity {
                 }
                 agentName = agent.getText().toString();
 
-                //   String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
-                String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+                //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+                //  0123456789012345 – 10/12 correct, scoring 100%  font 14 bold len of  16
+                //  Ddddddddnnndd :    got 10 of 12 correct, scoring 100%
+                //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + "%" + "\n";
+                String score = "\n" + agentName + correct + "/" + tries + " correct " + testScore + "%" + "\n";
                 score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
 
                 leaderBoardData += score;
@@ -131,22 +134,20 @@ public class TestComplete extends AppCompatActivity {
                 // add code for oncomplete
             }
         });
-
     }
-
 
     private void saveScoreOldCode(){
 
         String leaderBoardData = store.load("leaderboard");
         agentName = agent.getText().toString();
 
-        //   String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
-        String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+        //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+        //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
+        String score = "\n" + agentName + correct + "/" + tries + " correct " + testScore + "%" + "\n";
         score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
 
         leaderBoardData+= score;
         store.save(leaderBoardData,"leaderboard");
-
     }
 
     private void takeTest(){  //  ????  deleted button  ????
