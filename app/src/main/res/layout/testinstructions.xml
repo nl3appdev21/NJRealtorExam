@@ -41,12 +41,12 @@
             android:text=
                 " NJ Realtor App Settings \n \n
 
-In setting you have two switchs \n
-1 - Randomize Flashcards, will \n
-randomize the flashcards order \n
-2 - Skip A Flashcard, will let you \n
-skip a flashcard if you want too \n
-3 - Select 1 or more catagorizes \n
+You can set up to three settings \n
+1 - Randomize flashcards, will \n
+randomize the flashcards \n
+2 - Skip a flashcard, will let you \n
+skip a flashcard if you want to \n
+3 - Select 1 to 5 catagorizes \n
 to customize the flashcards "
 
             android:textStyle="bold"
@@ -70,13 +70,11 @@ to customize the flashcards "
             android:text=
                 " NJ Realtor App Flashcards \n \n
 
-This is your basic Flashcards, you will \n
+These are basic flashcards, you will \n
 get a question, click show answer to \n
-see the answer and next to get next \n
-card, you can use setting to change \n
-the order of the cards or skip cards \n
-click the customize swith to save your \n
-catagorizes selected in settings screen"
+show answer click next, to get next \n
+card, you can use settings switchs to \n
+randomize, skip, customize flashcards "
 
             android:textStyle="bold"
             android:textColor="@color/White"
@@ -99,28 +97,25 @@ catagorizes selected in settings screen"
             android:text=
                 " NJ Realtor App Instructions \n \n
 
-you have a choice of using flashcards \n
-or you can take practice test \n
-
-the test works as follows \n
+You have a choice of using flashcards \n
+or you can take a practice test. \n
+The test works as follows \n \n
   99/99          99  \n
-questions     correct \n
-question \n
+ questions    correct \n \n
+question \n \n
 answer 1 \n
 answer 2 \n
 answer 3 \n
-answer 4 \n
-
-goto ment     next question \n
-
+answer 4 \n \n
+goto menu     next question \n \n
 read and answer question \n
-
 if correct, answer turns green \n
 if wrong answer turns red and \n
 correct answer turns green \n
 click next for next question \n
-at end you will now if you passed \n
-or if you failed and you score \n"
+at the end you will get fail \n
+or pass screen with your score, \n
+you can add name to leaderboard"
 
             android:textStyle="bold"
             android:textColor="@color/White"
