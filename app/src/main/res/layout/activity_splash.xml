@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@mipmap/nicehome"/>
+        android:src="@mipmap/nicehome00"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:scaleX="3"
             android:scaleY="3"
             android:adjustViewBounds="true"
-            android:src="@mipmap/gate00"/>
+            android:src="@mipmap/gate11"/>
     </LinearLayout>
 
 </FrameLayout>
