@@ -270,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
             case PASS_MODE:
 
                 iv_questionimage.setImageResource(R.mipmap.goldbulb);
+                iv_questionimage.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
                 tv_quote.setVisibility(View.VISIBLE);
                 tv_quote.setTextSize(25);
                 tv_quote.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_06));
@@ -281,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                 iv_questionimage.setImageResource(R.mipmap.newredx);
                 tv_quoteIncorrect.setVisibility(View.VISIBLE);
                 tv_quoteIncorrect.setText("Focus, use the force!");
-                tv_quoteIncorrect.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
+                tv_quoteIncorrect.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
         }
