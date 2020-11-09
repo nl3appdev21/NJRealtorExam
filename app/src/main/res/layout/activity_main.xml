@@ -15,9 +15,9 @@
             android:id="@+id/questionImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="12sp"
+            android:layout_marginTop="30sp"
             android:scaleType="fitCenter"
-            android:background="@color/Gray_07"
+            android:background="@color/Black"
             android:src="@mipmap/math" />
 
         <TextView
