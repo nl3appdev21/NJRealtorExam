@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="121dp"
         android:visibility="visible"
-        android:src="@mipmap/nl3a"
+        android:src="@mipmap/nl3a00"
         android:layout_marginBottom="12sp"/>
 
     <TextView
@@ -20,11 +20,11 @@
         android:textAlignment="center"
 
         android:text=
-            " CREDITS \n \n
+            ' CREDITS \n \n
 	CONCEPT \n
 	NJ Realtor Exam :Design Concept \n
-	Nash Skip Ingram :Lead Developer \n
-	Dex The Java Ledgend :Developer \n "
+	Nash "Skip" Ingram :Lead Developer \n
+	Dex DFX :Consultant \n '
 
         android:textStyle="bold"
         android:textSize="17dp"

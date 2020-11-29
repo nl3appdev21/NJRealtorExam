@@ -128,7 +128,7 @@
                 android:id="@+id/ibtn_logo"
                 android:layout_width="59dp"
                 android:layout_height="32dp"
-                android:src="@mipmap/nl3a" />
+                android:src="@mipmap/nl3a00" />
 
         </LinearLayout>
 
