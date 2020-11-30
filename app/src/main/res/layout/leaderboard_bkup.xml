@@ -23,9 +23,9 @@
         android:textColor="@color/DeepOrange_09"
         android:textStyle="bold"
         android:dividerHeight="12dp"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="0dp">
     </ListView>
 
     <Button
