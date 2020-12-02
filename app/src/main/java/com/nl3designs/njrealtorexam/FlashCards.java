@@ -225,7 +225,14 @@ public class FlashCards extends AppCompatActivity {
         sArray[0] = (questionItem.answers[0]);  // answer0 use to show for all of the above
         sArray[1] = (questionItem.answers[1]);  // answer1 use to show for all of the above
         sArray[2] = (questionItem.answers[2]);  // answer2 use to show for all of the above
+        TextView textview = findViewById(R.id.tv_title);
+        textview.setText(getTitleFromCategory(questionItem.catagory));
     }
+
+    private String getTitleFromCategory(String category){
+        return category;
+    }
+
 
     private void showAnswer(){
 
