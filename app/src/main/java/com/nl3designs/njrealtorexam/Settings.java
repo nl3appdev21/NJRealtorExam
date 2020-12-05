@@ -52,6 +52,9 @@ public class Settings extends AppCompatActivity {
 
             // new test code
 
+            // must delete and can delte from xml  !!!!
+            // must delete and can delte from xml  !!!!
+            // must delete and can delte from xml  !!!!
 
             ibtnCopyRight = findViewById(R.id.ibtn_logo);
             //TvMontra = findViewById(R.id.tv_montra);

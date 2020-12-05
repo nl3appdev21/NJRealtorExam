@@ -93,33 +93,8 @@ randomize, skip, customize flashcards "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:background="@mipmap/testinstruct"
 
-            android:text=
-                " NJ Realtor App Instructions \n \n
-
-You have a choice of using flashcards \n
-or you can take a practice test. \n
-The test works as follows \n \n
-  99/99          99  \n
- questions    correct \n \n
-question \n \n
-answer 1 \n
-answer 2 \n
-answer 3 \n
-answer 4 \n \n
-goto menu     next question \n \n
-read and answer question \n
-if correct, answer turns green \n
-if wrong answer turns red and \n
-correct answer turns green \n
-click next for next question \n
-at the end you will get fail \n
-or pass screen with your score, \n
-you can add name to leaderboard"
-
-            android:textStyle="bold"
-            android:textColor="@color/White"
-            android:textSize="17dp"
             android:padding="12dp"
             android:visibility="visible" />
 
