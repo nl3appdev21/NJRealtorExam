@@ -229,6 +229,14 @@ public class MainActivity extends AppCompatActivity {
         btn_answer3.setText(questionItem.answers[3]);
 
         numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
+        TextView textview = findViewById(R.id.tv_title);
+        textview.setText(getTitleFromCategory(questionItem.catagory));
+
+    }
+
+    private String getTitleFromCategory(String category){
+        category = category.substring(0, 1).toUpperCase() + category.substring(1);
+        return category;
     }
 
     private void changePictureMode(int mode){ // set picture and text for answer

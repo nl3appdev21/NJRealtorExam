@@ -230,6 +230,7 @@ public class FlashCards extends AppCompatActivity {
     }
 
     private String getTitleFromCategory(String category){
+        category = category.substring(0, 1).toUpperCase() + category.substring(1);
         return category;
     }
 

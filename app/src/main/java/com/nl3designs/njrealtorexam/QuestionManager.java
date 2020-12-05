@@ -59,6 +59,24 @@ public class QuestionManager{
         currentIndex = -1;
     }
 
+    public void loadAllQuestion(Context context, int count) {
+        String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<QuestionItem>>() {}.getType();
+        questionitems = gson.fromJson(jsonStr, type);
+        questionitems = getLimitedQuestions(count);
+        setUpCategories();
+        verifyCategories();
+        StorageManager store = new StorageManager(context);
+        String s = store.load("flashRand");
+        if(s.equals("true")){
+            isRandom = true;
+        }else{
+            isRandom = false;
+        }
+        currentIndex = -1;
+    }
+
     public void loadFromStoredCat(Context context){   // method is not used or called !!
         //get categories from StorageManager
 
@@ -178,6 +196,16 @@ public class QuestionManager{
             if(categories.contains(q.catagory)){
                 catQuestions.add(q);
             }
+        }
+        return catQuestions;
+    }
+
+    public List<QuestionItem> getLimitedQuestions(int count){
+        List<QuestionItem> catQuestions = new ArrayList<>();
+        for(QuestionItem q : questionitems) {
+            //if(categories.contains(q.catagory)){
+                catQuestions.add(q);
+            //}
         }
         return catQuestions;
     }
