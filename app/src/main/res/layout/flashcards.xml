@@ -10,7 +10,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:background="@drawable/rectangle_box"
+        android:background="@drawable/rectangle_box_gray"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -20,9 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="4dp"
-            android:text=" "
+            android:text=" 123 "
             android:textStyle="bold"
-            android:textColor="@color/White"
+            android:textColor="@color/Black"
             android:textSize="21dp"
             android:gravity="center"/>
 
