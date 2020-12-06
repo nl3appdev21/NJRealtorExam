@@ -85,7 +85,7 @@ public class QuestionManager{
         Set<String> categories = null;
 
         // convert to Set
-        // add new code hereqwq
+        // add new code here
         // load new split array into a set / list
 
         loadAllQuestion(context, categories);

@@ -33,7 +33,7 @@
 	CONCEPT \n
 	NJ Realtor Exam :Design Concept \n
 	Nash "Skip" Ingram :Lead Developer \n
-	Dex DFX :Consultant \n'
+	Dex DFX :Consultant '
 
         android:textStyle="bold"
         android:textSize="17dp"
@@ -64,7 +64,8 @@
             " Copyright © 2019 - 2020 \n \n
 	NL3 Solutions \n
 	NJ Real Estate Exam \n
-    For Support, Contact: support@nl3solutions.com \n"
+	Website: www.NL3Solutions.com \n
+    For support: support@NL3Solutions.com \n"
 
         android:textStyle="bold"
         android:textSize="17dp"

@@ -32,7 +32,8 @@ public class Settings extends AppCompatActivity {
             store = new StorageManager(Settings.this);
 
 
-            // new test code
+            // new test code  ??????????
+            // new test code  ??????????
 
             HashMap<String, String> myMap = new HashMap<>();
             myMap.put("emp1", "skip");
@@ -50,20 +51,8 @@ public class Settings extends AppCompatActivity {
                 Log.d("skip", value);
             }
 
-            // new test code
-
-            // must delete and can delte from xml  !!!!
-            // must delete and can delte from xml  !!!!
-            // must delete and can delte from xml  !!!!
-
-            ibtnCopyRight = findViewById(R.id.ibtn_logo);
-            //TvMontra = findViewById(R.id.tv_montra);
-            ibtnCopyRight.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showCopyRight();
-                }
-            });
+            // new test code  ??????????
+            // new test code  ??????????
 
             //  randswitch
             Switch sw = findViewById(R.id.randSwitch);
