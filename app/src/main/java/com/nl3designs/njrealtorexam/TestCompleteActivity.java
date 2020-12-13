@@ -15,8 +15,6 @@ public class TestCompleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
-        Log.d("skip", "test comp act");
-
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
         int tries = getIntent().getIntExtra("tries",0);

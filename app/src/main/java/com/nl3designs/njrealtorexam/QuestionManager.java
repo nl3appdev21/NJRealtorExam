@@ -2,7 +2,6 @@ package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
@@ -78,23 +77,17 @@ public class QuestionManager{
     }
 
     public void loadFromStoredCat(Context context){   // method is not used or called !!
-        //get categories from StorageManager
+                                                     //get categories from StorageManager
 
         StorageManager store = new StorageManager(context);
         String[] selected = store.load("customCards").split(",");
         Set<String> categories = null;
-
-        // convert to Set
-        // add new code here
-        // load new split array into a set / list
-
         loadAllQuestion(context, categories);
     }
 
     public boolean isEmpty(){
         return questionitems == null || questionitems.size() == 0;
     }
-
 
     public void reset(){
         currentIndex = -1;
@@ -212,7 +205,7 @@ public class QuestionManager{
 
     private void setUpCategories(){
 
-        categoryMap.put("newtype",R.mipmap.njreal01);  // use for new category if not sure ???
+        categoryMap.put("newtype",R.mipmap.njreal01);  // TODO: use for new category if not sure ???
         categoryMap.put("mortgage",R.mipmap.mortgage);
         categoryMap.put("law",R.mipmap.law);
         categoryMap.put("commission",R.mipmap.math);

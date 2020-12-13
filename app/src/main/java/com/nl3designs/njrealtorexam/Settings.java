@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Switch;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -21,8 +19,6 @@ public class Settings extends AppCompatActivity {
     private ImageButton ibtnCopyRight;
     List<CategoryItem> switches = new ArrayList<>();
     Set<String> selectedCat = new HashSet<>();
-
-    //private TextView TvMontra;
     StorageManager store;
 
         @Override
@@ -31,10 +27,8 @@ public class Settings extends AppCompatActivity {
             setContentView(R.layout.settings);
             store = new StorageManager(Settings.this);
 
-
-            // new test code  ??????????
-            // new test code  ??????????
-
+            // TODO: delete this code
+            // new test code  ????
             HashMap<String, String> myMap = new HashMap<>();
             myMap.put("emp1", "skip");
             myMap.put("emp2", "nash");
@@ -50,9 +44,7 @@ public class Settings extends AppCompatActivity {
             for(String value : myMap.values()){
                 Log.d("skip", value);
             }
-
-            // new test code  ??????????
-            // new test code  ??????????
+            // new test code  ????
 
             //  randswitch
             Switch sw = findViewById(R.id.randSwitch);
@@ -97,15 +89,13 @@ public class Settings extends AppCompatActivity {
 
         //TODO convert to method
         /*
-        1 - newtype
+        1 - newtype - is a sudo category for unknown type
         2 - mortgage
         3 - law
         4 - commission
         5 - advirtising
         6 - ownership
          */
-
-        // -> newtype, mortgage, law, commision, advirtising, ownership
 
         String finalCatString = "";
         int c = 0;

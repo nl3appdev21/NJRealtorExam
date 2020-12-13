@@ -7,17 +7,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,13 +34,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         QuestionManager questionManager = QuestionManager.getInstance();
         questionManager.reset();  // resets question index
 
-
         // TODO : change names to camel case
-
         btnFlashCards = findViewById(R.id.btn_flashcards);
         btnFlashCards.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,8 +88,8 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         // TODO : firebase test code
-
         //asynchronously retrieve multiple documents
+
         CollectionReference boardRef = FirebaseFirestore.getInstance().collection("leaderboard");
         boardRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -113,38 +107,31 @@ public class MenuActivity extends AppCompatActivity {
 
 
     private void showInstructions() {
-
         Intent intent = new Intent(MenuActivity.this, Instructions.class);
         startActivity(intent);
     }
 
     private void showLb() {
         Intent intent = new Intent(MenuActivity.this, LeaderBoard_Bkup.class);
-        //  ????????  Intent intent = new Intent(MenuActivity.this, LeaderBoard.class);
         startActivity(intent);
-
     }
 
     private void showCopyRight() {
-        //  QuestionManager.getInstance().loadAllQuestion(this, "commission");  //  ??
         Intent intent = new Intent(MenuActivity.this, CopyRight.class);
         startActivity(intent);
     }
 
     private void startTest() {
-
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     private void startFlashCards() {
-
         Intent intent = new Intent(MenuActivity.this, FlashCards.class);
         startActivity(intent);
     }
 
     private void showSettings() {
-
         Intent intent = new Intent(MenuActivity.this, Settings.class);
         startActivity(intent);
     }

@@ -9,12 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -60,16 +58,14 @@ public class TestComplete extends AppCompatActivity {
                 gotoMenu();
             }
         });
-
-        //setContentView(R.layout.inputname);
         agent = findViewById(R.id.et_agentName);
 
         Button btnlb = findViewById(R.id.btn_lb);
-        btnlb.setOnClickListener(new View.OnClickListener() {  //  ?????????? move all eot code to lb onclick //
+
+        btnlb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveScore();
-                //  showLb();
             }
         });
     }
@@ -116,10 +112,6 @@ public class TestComplete extends AppCompatActivity {
                 }
                 agentName = agent.getText().toString();
 
-                //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
-                //  0123456789012345 – 10/12 correct, scoring 100%  font 14 bold len of  16
-                //  Ddddddddnnndd :    got 10 of 12 correct, scoring 100%
-                //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + "%" + "\n";
                 String score = "\n" + agentName + correct + "/" + tries + " correct " + testScore + "%" + "\n";
                 score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
 
@@ -131,7 +123,6 @@ public class TestComplete extends AppCompatActivity {
                     }
                 });
 
-                // add code for oncomplete
             }
         });
     }
@@ -140,9 +131,6 @@ public class TestComplete extends AppCompatActivity {
 
         String leaderBoardData = store.load("leaderboard");
         agentName = agent.getText().toString();
-
-        //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
-        //  String score = "\n" + agentName + " got " + correct + " of " + tries + " correct for " + testScore + " %" + "\n";
         String score = "\n" + agentName + correct + "/" + tries + " correct " + testScore + "%" + "\n";
         score = ";" + agentName + ","  + correct + "," + tries + "," + testScore + ",";
 
@@ -150,7 +138,7 @@ public class TestComplete extends AppCompatActivity {
         store.save(leaderBoardData,"leaderboard");
     }
 
-    private void takeTest(){  //  ????  deleted button  ????
+    private void takeTest(){  // TODO: ??  deleted button  ??
 
         Intent intent = new Intent(TestComplete.this, MainActivity.class);
         startActivity(intent);

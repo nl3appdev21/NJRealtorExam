@@ -13,18 +13,17 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import java.util.HashSet;
 import java.util.Set;
 
 public class FlashCards extends AppCompatActivity {
 
     private TextView tv_question;
-    private TextView tv_answers;  // new code 8/9/20
+    private TextView tv_answers;
     private Button btn_answer;
     private Button btn_menu;
-    private String sAnswer0, sAnswer1, sAnswer02;  // new code 8/9/20
-    private String[] sArray = new String[3];  // new code 8/9/20
+    private String sAnswer0, sAnswer1, sAnswer02;
+    private String[] sArray = new String[3];
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
     public static String results = "";
@@ -44,17 +43,11 @@ public class FlashCards extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flashcards);
         storageManager = new StorageManager(this);
-
-        //  new code to load questionmgt 8-23-20
         questionManager = QuestionManager.getInstance();
-
-
         questionManager.loadQuestions(this, "");
-
-
         numQuestions = questionManager.questionitems.size();
         tv_question = findViewById(R.id.tv_question);
-        tv_answers = findViewById(R.id.tv_answers);  // new code 8/9/20
+        tv_answers = findViewById(R.id.tv_answers);
         btn_answer = findViewById(R.id.btn_answer);
         tv_tries = findViewById(R.id.tries);
         btn_menu = findViewById(R.id.btn_menu);
@@ -97,11 +90,8 @@ public class FlashCards extends AppCompatActivity {
                 myans = myQuestionAnswer;
                 enableAnswerBtn();
                 checkForEnd();
-
                 btn_next.setVisibility(View.INVISIBLE);
-
                 QuestionItem questionItem = questionManager.getPrev();
-
                 prevint = 1;
 
                 if (questionItem != null) {  // if not null
@@ -123,9 +113,7 @@ public class FlashCards extends AppCompatActivity {
                 myans = myQuestionAnswer;
                 enableAnswerBtn();
                 checkForEnd();
-
                 btn_next.setVisibility(View.INVISIBLE);
-
                 QuestionItem questionItem = questionManager.getNext();
                 prevint = 0;
 
@@ -160,31 +148,24 @@ public class FlashCards extends AppCompatActivity {
         setQuestionScreen(questionItem);
     }
 
-    // new method 9/20/20
     private void loadCustomQuestions() {
         Log.d("skip", "load custom cards");
         String selected = storageManager.load("customCards");
         String[] selectedArray = selected.split(",");
-        //for(int i = 0 ;i<selectedArray.length;i++){
-        //    selectedCat = selectedArray[i]
-        // }
         Set<String> selectedCat = new HashSet<>();
         for(String cat : selectedArray){
             selectedCat.add(cat);
         }
         questionManager.loadAllQuestion(this,selectedCat);
         updateList();
-
     }
 
-    // new method 9/20/20
     private void loadAllQuestions() {
         Log.d("skip", "load all cards");
         questionManager.loadAllQuestion(this,null);
         updateList();
     }
 
-    // new code 9/20/20
     private void updateList() {
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
@@ -200,11 +181,9 @@ public class FlashCards extends AppCompatActivity {
             btn_next.setVisibility(View.VISIBLE);
         }
 
-        tv_answers.setVisibility(View.GONE);  // new code 8/9/20
-
+        tv_answers.setVisibility(View.GONE);
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_08));
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
-
         btn_answer.setText("show answer");
 
         if (questionManager.getCurrentIndex() == 0) {
@@ -238,12 +217,11 @@ public class FlashCards extends AppCompatActivity {
     private void showAnswer(){
 
         // TODO : check json file answers "all of the above" for spaces
-        // new code 8/9/20
         if (questionManager.getCurrentAnswer().matches("All of the above")){
             tv_answers.setVisibility(View.VISIBLE);
             Log.d("skip", " yes it is all of the above ");
             //  tv_answers.setText(" yes it is all of the above ");
-            tv_answers.setText("1. " + sArray[0] + "\n" + "2. "+ sArray[1] + "\n" + "3. " + sArray[2] + "\n");  //  ??
+            tv_answers.setText("1. " + sArray[0] + "\n" + "2. "+ sArray[1] + "\n" + "3. " + sArray[2] + "\n");
         }
 
         btn_answer.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));

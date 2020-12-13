@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -20,7 +19,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         storageManager = new StorageManager(this);
         if(results.equals("")){
             results = storageManager.load("results");
@@ -75,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         tv_quoteIncorrect = findViewById(R.id.quoteIncorrect);
         btn_menu = findViewById(R.id.menu);
         iv_questionimage = findViewById(R.id.questionImage);
-
         final Button btn_next = findViewById(R.id.next);
+
         btn_next.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -87,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 btn_next.setVisibility(View.INVISIBLE);
                 enableAnswerBtn();
                 myQuestionAnswer = -0;
-
                 changePictureMode(QUESTION_MODE);
                 QuestionItem questionItem = questionManager.getNext();  //  ?? call to question manager ??
                 if (questionItem != null) {  // if not null
@@ -122,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 disableAnswerBtn();
             }
         });
+
         btn_answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 disableAnswerBtn();
             }
         });
+
         btn_answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 disableAnswerBtn();
             }
         });
+
         btn_answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -201,13 +200,11 @@ public class MainActivity extends AppCompatActivity {
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
 
-
-
         /*
         FirebaseApp.initializeApp(this)
         ApiFuture<QuerySnapshot> future =
                 db.collection("cities").whereEqualTo("capital", true).get();
-// future.get() blocks on response
+     // future.get() blocks on response
         List<QueryDocumentSnapshot> documents = future.get().getDocuments();
         for (DocumentSnapshot document : documents) {
             System.out.println(document.getId() + " => " + document.toObject(City.class));
@@ -225,11 +222,9 @@ public class MainActivity extends AppCompatActivity {
         btn_answer1.setText(questionItem.answers[1]);
         btn_answer2.setText(questionItem.answers[2]);
         btn_answer3.setText(questionItem.answers[3]);
-
         numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
         TextView textview = findViewById(R.id.tv_title);
         textview.setText(getTitleFromCategory(questionItem.catagory));
-
     }
 
     private String getTitleFromCategory(String category){
@@ -237,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
         return category;
     }
 
-    private void changePictureMode(int mode){ // set picture and text for answer
+    private void changePictureMode(int mode){
 
         setTextInt ++;
 
@@ -269,6 +264,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         switch (mode) {
+
             case QUESTION_MODE:
                 iv_questionimage.setVisibility(View.VISIBLE);
                 break;
@@ -300,7 +296,6 @@ public class MainActivity extends AppCompatActivity {
         tv_correct.setText(String.valueOf(correct));
     }
 
-    // new code new code
     private void disableAnswerBtn() {
         btn_answer0.setClickable(false);
         btn_answer1.setClickable(false);
@@ -310,7 +305,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void enableAnswerBtn() {
 
-        // new code new code
         btn_answer0.setClickable(true);
         btn_answer1.setClickable(true);
         btn_answer2.setClickable(true);
@@ -321,21 +315,18 @@ public class MainActivity extends AppCompatActivity {
         btn_answer2.setTextColor(Color.WHITE);
         btn_answer3.setTextColor(Color.WHITE);
 
-        // use colors from my colors file !
         btn_answer0.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
         btn_answer1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
         btn_answer2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
         btn_answer3.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.LtBlue_08));
     }
 
-    private void testComplete() {  // new code for end-of-test
+    private void testComplete() {
 
         Intent intent = new Intent(MainActivity.this, TestComplete.class);
-
         intent.putExtra("tries", tries);
         intent.putExtra("correct", correct);
         intent.putExtra("numQuestions", numQuestions);
-
         startActivity(intent);
     }
 

@@ -30,7 +30,6 @@ public class SplashActivity extends AppCompatActivity {
 
         mySound = MediaPlayer.create(this,R.raw.guitarjingle4);
         mySound.start();
-
         myTimer = new CountDownTimer( 24000,700 ) {
 
             public   void   onTick ( long   millisUntilFinished ) {
