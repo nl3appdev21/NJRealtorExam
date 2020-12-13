@@ -217,8 +217,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
     private void setQuestionScreen(QuestionItem questionItem) {
 
         iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
