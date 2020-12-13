@@ -149,7 +149,6 @@ public class FlashCards extends AppCompatActivity {
     }
 
     private void loadCustomQuestions() {
-        Log.d("skip", "load custom cards");
         String selected = storageManager.load("customCards");
         String[] selectedArray = selected.split(",");
         Set<String> selectedCat = new HashSet<>();
@@ -161,7 +160,6 @@ public class FlashCards extends AppCompatActivity {
     }
 
     private void loadAllQuestions() {
-        Log.d("skip", "load all cards");
         questionManager.loadAllQuestion(this,null);
         updateList();
     }
@@ -169,7 +167,6 @@ public class FlashCards extends AppCompatActivity {
     private void updateList() {
         QuestionItem questionItem = questionManager.getNext();
         setQuestionScreen(questionItem);
-        Log.d("skip",String.valueOf(questionManager.questionitems.size()));
         numQuestions = questionManager.questionitems.size();
         tries = 1;
         updateScoreCount();
@@ -219,8 +216,6 @@ public class FlashCards extends AppCompatActivity {
         // TODO : check json file answers "all of the above" for spaces
         if (questionManager.getCurrentAnswer().matches("All of the above")){
             tv_answers.setVisibility(View.VISIBLE);
-            Log.d("skip", " yes it is all of the above ");
-            //  tv_answers.setText(" yes it is all of the above ");
             tv_answers.setText("1. " + sArray[0] + "\n" + "2. "+ sArray[1] + "\n" + "3. " + sArray[2] + "\n");
         }
 

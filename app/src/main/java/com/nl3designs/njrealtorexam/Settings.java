@@ -39,7 +39,6 @@ public class Settings extends AppCompatActivity {
 
             myMap.put("emp4", "skip");  //  will over write emp4 from fred to skip
             myMap.remove("emp4");
-            Log.d("skip", myMap.get("emp3") + "  mmm");
 
             for(String value : myMap.values()){
                 Log.d("skip", value);
@@ -69,7 +68,6 @@ public class Settings extends AppCompatActivity {
 
             boolean sw1State = Boolean.parseBoolean(store.load("nextCard"));
             sw1.setChecked(sw1State);
-
             switchesSetup();
 
             //TODO convert to method
@@ -106,7 +104,6 @@ public class Settings extends AppCompatActivity {
                 finalCatString += "," + name;
             }
             c+=1;
-            Log.d("skip", finalCatString + "  " + (c));
         }
 
         store.save(finalCatString, "customCards");
