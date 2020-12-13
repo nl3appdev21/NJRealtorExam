@@ -106,11 +106,12 @@
 </ScrollView>
 
         <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="53dp"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
             android:layout_gravity="right|bottom"
             android:layout_marginLeft="10dp"
             android:layout_margin="12dp"
+            android:background="@color/Blue_13"
             android:orientation="horizontal">
 
          <TextView
@@ -120,15 +121,17 @@
              android:layout_gravity="center"
              android:text="Solutions to your development needs."
              android:layout_marginRight="12dp"
+             android:layout_marginLeft="12dp"
              android:textColor="@color/White"
-             android:textSize="13dp"
+             android:textSize="15dp"
              android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/ibtn_logo"
-                android:layout_marginTop="10dp"
-                android:layout_width="59dp"
-                android:layout_height="32dp"
+                android:background="@color/Blue_13"
+                android:layout_marginTop="7dp"
+                android:layout_width="69dp"
+                android:layout_height="42dp"
                 android:src="@mipmap/nl3a00" />
 
         </LinearLayout>
