@@ -27,7 +27,9 @@ public class Settings extends AppCompatActivity {
             setContentView(R.layout.settings);
             store = new StorageManager(Settings.this);
 
-            // TODO: delete this code
+            // TODO: delete this code  lines 30 to 51
+
+            /*
             // new test code  ????
             HashMap<String, String> myMap = new HashMap<>();
             myMap.put("emp1", "skip");
@@ -44,6 +46,8 @@ public class Settings extends AppCompatActivity {
                 Log.d("skip", value);
             }
             // new test code  ????
+
+            */
 
             //  randswitch
             Switch sw = findViewById(R.id.randSwitch);

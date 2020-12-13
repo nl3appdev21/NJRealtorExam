@@ -9,9 +9,10 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 2
-                            // update version number here for njre app
-        versionName "1.2"   // update version number here for njre app
-                            // update version number here for njre app
+                            // TODO: update version number here for njre app
+        versionName "1.2"   // TODO: update version number here for njre app
+                            // TODO: update version number here for njre app
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

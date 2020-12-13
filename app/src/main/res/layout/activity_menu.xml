@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
+                android:layout_marginTop="13dp"
                 android:text="NJ Realtor Exam"
                 android:textStyle="bold"
                 android:textColor="@color/White"
@@ -107,7 +107,7 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_height="42dp"
+            android:layout_height="53dp"
             android:layout_gravity="right|bottom"
             android:layout_marginLeft="10dp"
             android:layout_margin="12dp"
@@ -126,6 +126,7 @@
 
             <ImageButton
                 android:id="@+id/ibtn_logo"
+                android:layout_marginTop="10dp"
                 android:layout_width="59dp"
                 android:layout_height="32dp"
                 android:src="@mipmap/nl3a00" />
