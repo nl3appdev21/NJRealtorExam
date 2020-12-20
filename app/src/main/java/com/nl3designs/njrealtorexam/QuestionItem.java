@@ -3,7 +3,7 @@ package com.nl3designs.njrealtorexam;
 public class QuestionItem {
 
     int id;
-    String catagory;
+    String category;
     String question;
     String[] answers;
     int correct;

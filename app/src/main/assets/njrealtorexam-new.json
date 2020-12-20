@@ -1,7 +1,7 @@
 [
   {
     "id":0,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
     "answers":[
       "It is up to the customer.",
@@ -14,7 +14,7 @@
   },
   {
     "id":1,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
     "answers":[
       "Bill, who promised you the commission",
@@ -27,7 +27,7 @@
   },
   {
     "id":2,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
     "answers":[
       "We are members of NAR.",
@@ -40,7 +40,7 @@
   },
   {
     "id":3,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Which type of ownership can only be held by a husband and wife? ",
     "answers":[
       " Tenancy in Severality ",
@@ -53,7 +53,7 @@
   },
   {
     "id":4,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Your municipality is building a new shopping mall. In order to safely control traffic entering and leaving the mall, they will need to remove all the homes on your block to build an access road. They will pay fair compensation for the taking. What is this process called?",
     "answers":[
       " Eminent Domain ",
@@ -66,7 +66,7 @@
   },
   {
     "id":5,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" What is the function of an acceleration clause in a mortgage document?",
     "answers":[
       " It gives the borrower the ability to pay a loan off early. ",
@@ -79,7 +79,7 @@
   },
   {
     "id":6,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" What is the difference between a client and a customer? ",
     "answers":[
       " A client is someone you have a contract with to perform services for a fee and a customer is someone looking to buy something for no additional fee. ",
@@ -92,7 +92,7 @@
   },
   {
     "id":7,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Which of the following is true regarding commissions? ",
     "answers":[
       "They are due and payable to the agent within 10 days of the broker's receipt of funds. ",
@@ -105,7 +105,7 @@
   },
   {
     "id":8,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" You have been pre-qualified so you can start looking at houses for sale, but the lenders tell you that due to poor credit they cannot help you. You continue to look anyway hoping for a miracle, and you find a home for sale with seller financing. The house is an investment property for sale by owner. Your down payment is sufficient but the seller considers you a bad risk due to your credit history. Finally, he agrees to hold a mortgage but at a 19 percent interest rate. What, if anything would protect you from such high interest rates? ",
     "answers":[
       " Regulation Z ",
@@ -118,7 +118,7 @@
   },
   {
     "id":9,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" What is a latent defect? ",
     "answers":[
       " Something wrong with the property that the seller has disclosed. ",
@@ -131,7 +131,7 @@
   },
   {
     "id":10,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" When a contract is made for an illegal purpose, such as deflating the purchase price to pay lower taxes, the contract becomes:  ",
     "answers":[
       " Express ",
@@ -144,7 +144,7 @@
   },
   {
     "id":11,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" A seller is approached by a buyer who is interested in an option contact on the seller's property. They agree to a sale price, consideration and a thirty day option term. Which of the following is true regarding an option contract? ",
     "answers":[
       " It is a unilateral contract. ",
@@ -157,7 +157,7 @@
   },
   {
     "id":12,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" If a client or customer were dissatisfied with the service they received from their salesperson, they could send a written complaint to the Real Estate Commission. Once the complaint is filed, what are the investigatory powers of the commission? ",
     "answers":[
       " Issue subpoenas. ",
@@ -170,7 +170,7 @@
   },
   {
     "id":13,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" You and your family are renting a house at the Jersey Shore this summer. The landlord gave you a lease to sign explaining the terms such as move in and move out times and dates, amount of rent and other stipulations. What kind of tenancy does your rental fall under? ",
     "answers":[
       " Periodic tenancy ",
@@ -183,7 +183,7 @@
   },
   {
     "id":14,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" What does it mean to alienate title? ",
     "answers":[
       " To have a lien placed against it. ",
@@ -196,7 +196,7 @@
   },
   {
     "id":15,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Businesses with what number of employees must be compliant with the standards of the American with Disabilities Act? ",
     "answers":[
       " Less than 100 ",
@@ -209,7 +209,7 @@
   },
   {
     "id":16,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" A licensed real estate broker can refuse to rent to the following tenants: ",
     "answers":[
       " A person from a minority ethnic group with substandard credit ",
@@ -222,7 +222,7 @@
   },
   {
     "id":17,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Knowing that you have been a licensed real estate agent for some time, your neighbor asks you if you could give her an idea of what her house may be worth. She is retiring and has been thinking of downsizing. You are glad to assist her, so you go into your local multiple listing service and search for comparable homes. You chose a few homes that have the most features in common with her home. Features would include size of the house and lot, number of bedrooms and baths, condition, location, age and any other information that would be helpful. You prepare a report that shows her how these homes compare to hers and how you arrived at the value based on these comparisons. What is the report that you present called? ",
     "answers":[
       " A cost approach valuation ",
@@ -235,7 +235,7 @@
   },
   {
     "id":18,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
     "answers":[
       "$14,820 ",
@@ -248,7 +248,7 @@
   },
   {
     "id":19,
-    "catagory":"oldtype",
+    "category":"oldtype",
     "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
     "answers":[
       " Auctioning real estate ",
@@ -261,7 +261,7 @@
   },
   {
     "id":20,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" The salesperson license fee costs how much? ",
     "answers":[
       " $150. ",
@@ -274,7 +274,7 @@
   },
   {
     "id":21,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" What tenancies does New Jersey allow? ",
     "answers":[
       " Joint tenancy. ",
@@ -287,7 +287,7 @@
   },
   {
     "id":22,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A couple executes a sales contract on their home after several counter-offers with the buyer. In this case, the seller is: ",
     "answers":[
       " The Mortgagee. ",
@@ -300,7 +300,7 @@
   },
   {
     "id":23,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" The Lyons family bought a house with a lot size of .50 of an acre. This is the equivalent to: ",
     "answers":[
       " 46,560 ft. ",
@@ -313,7 +313,7 @@
   },
   {
     "id":24,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A primary residence is sold for $500,000 by a couple in the 28% tax bracket. The home was originally purchased 7 years ago for $400,000, where the family lived there the entire 7 years, How much will be paid in capital gains tax? ",
     "answers":[
       " $59,920. ",
@@ -326,7 +326,7 @@
   },
   {
     "id":25,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" An owner-occupied, 5 unit dwelling worth $600,000 generates $5,500 in income from 4 units and $200/ month from the onsite laundry. If the current owner typically yields roughly 8% annually on his investment, what is the monthly effective gross amount? ",
     "answers":[
       " $4,350. ",
@@ -339,7 +339,7 @@
   },
   {
     "id":26,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Someone’s brother is moving out of the country and decides to sell his home to his sister for $350,000, making this the latest sale in the area. The sister decides to pay cash, as she says she will later get a home equity loan for $295,000. Recent sales comps of very similar homes had values of $400,000. Based on the information provided, what is the best estimate of the market value of the subject property? ",
     "answers":[
       " $400,000. ",
@@ -352,7 +352,7 @@
   },
   {
     "id":27,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" When can a landlord choose to not rent to someone with children? ",
     "answers":[
       " Never. Children are protected under Fair Housing Act. ",
@@ -365,7 +365,7 @@
   },
   {
     "id":28,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A seller provides written permission allowing his listing broker (who has a fiduciary obligation to the seller) to work with the buyer. This relationship is known as: ",
     "answers":[
       " Dual Agency. ",
@@ -378,7 +378,7 @@
   },
   {
     "id":29,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A homeowner purchased a home for $250,000 on a 30 year FHA loan with an interest rate of 4.25%. If he wants to cash out a conventional refinance and eliminate the MIP, what is the maximum amount that the new loan balance can be based on a future home value of $300,000? ",
     "answers":[
       " $237,000. ",
@@ -391,7 +391,7 @@
   },
   {
     "id":30,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A valid contract is: A: Verbal Agreement, B: A 10 month lease. ",
     "answers":[
       " Both A and B. ",
@@ -404,7 +404,7 @@
   },
   {
     "id":31,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Mr. Jackson is moving out of the country and decides to sell his home to Mr. Bond for $300,000, making this home the latest sale in the area. Mr. Bonds puts up 25% down and finances $225,000. Recent sales comps of similar had values of $450,000. Based on the info provided, what is the market value of his house? ",
     "answers":[
       " $450,000. ",
@@ -417,7 +417,7 @@
   },
   {
     "id":32,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Which best describes an example of emblements? ",
     "answers":[
       " Cherry tree, apple tree and tomato plants. ",
@@ -430,7 +430,7 @@
   },
   {
     "id":33,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Nine states recognize this system of property ownership where the husband and wife have equal interest in property acquired during the marriage. This is: ",
     "answers":[
       " Common-law. ",
@@ -443,7 +443,7 @@
   },
   {
     "id":34,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A dad who owns his house free and clear decided to take out a HELOC and let his son make the payments. He also signs a quitclaim deed to transfer the home into his son’s name. What clause might the lender enforce? ",
     "answers":[
       " co-insurance clause. ",
@@ -456,7 +456,7 @@
   },
   {
     "id":35,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" The New Jersey Real Estate Sales Full Disclosure Act requires which of the following to register with the New Jersey Real Estate Commission Bureau of Subdivided Land Sales Control when making an offering in New Jersey? ",
     "answers":[
       " Time shares located in New Jersey. ",
@@ -469,7 +469,7 @@
   },
   {
     "id":36,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" The Federal Home Loan Mortgage Corporation primarily purchases which loan types? ",
     "answers":[
       " FHA loans. ",
@@ -482,7 +482,7 @@
   },
   {
     "id":37,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Barb works for 123 Bank. Her job duties are to gather documents, review applications for accuracy, package loans, and take each file from pre-approval to closing. What is most likely her job title? ",
     "answers":[
       " Underwriter. ",
@@ -495,7 +495,7 @@
   },
   {
     "id":38,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Which of the following does not loan money directly to borrowers? ",
     "answers":[
       " Insurance Company. ",
@@ -508,7 +508,7 @@
   },
   {
     "id":39,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" James decides that he’s ready to move out of his grandparent’s home and purchase his own home. He has a roommate who will be moving in, so he would like at least a 2 bedroom house. What should his first step be? ",
     "answers":[
       " Get pre-qualified by submitting a mortgage application. ",
@@ -521,7 +521,7 @@
   },
   {
     "id":40,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" Rick and Kate have $40,000 or 10% down to purchase their first home. Their loan officer prequalifies them for several different loan types. They decide to go with the following scenario: a purchase price of $400,000 and $6450 funding fee. What type of loan did they choose? ",
     "answers":[
       " Conventional loan. ",
@@ -534,7 +534,7 @@
   },
   {
     "id":41,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A lender offers you a very low interest of 2.25% in exchange for part of your equity. What type of mortgage is this? ",
     "answers":[
       " Balloon. ",

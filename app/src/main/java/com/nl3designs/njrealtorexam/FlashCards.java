@@ -3,11 +3,11 @@ package com.nl3designs.njrealtorexam;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
@@ -36,6 +36,7 @@ public class FlashCards extends AppCompatActivity {
     int myans = -0;
     private Button btn_prev;
     private Button btn_next;
+    private LinearLayout ll_customCards;
     private boolean sw1State;
 
     @Override
@@ -53,6 +54,7 @@ public class FlashCards extends AppCompatActivity {
         btn_menu = findViewById(R.id.btn_menu);
         btn_next = findViewById(R.id.btn_next);
         btn_prev = findViewById(R.id.btn_prev);
+        ll_customCards = findViewById(R.id.ll_customCards);
         iv_questionimage = findViewById(R.id.questionImage);
 
         // rand cards switch
@@ -66,6 +68,11 @@ public class FlashCards extends AppCompatActivity {
 
         if(results.equals("")){
             results = storageManager.load("results");
+        }
+
+        // *** new code ***
+        if (!storageManager.areCategoriesSelected()){
+            ll_customCards.setVisibility(View.GONE);
         }
 
         //  custom card switch
@@ -195,14 +202,14 @@ public class FlashCards extends AppCompatActivity {
               tries += 1;
         }
 
-        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
+        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.category));
         updateScoreCount();
         tv_question.setText(questionItem.question);
         sArray[0] = (questionItem.answers[0]);  // answer0 use to show for all of the above
         sArray[1] = (questionItem.answers[1]);  // answer1 use to show for all of the above
         sArray[2] = (questionItem.answers[2]);  // answer2 use to show for all of the above
         TextView textview = findViewById(R.id.tv_title);
-        textview.setText(getTitleFromCategory(questionItem.catagory));
+        textview.setText(getTitleFromCategory(questionItem.category));
     }
 
     private String getTitleFromCategory(String category){

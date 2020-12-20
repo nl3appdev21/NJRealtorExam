@@ -1,7 +1,7 @@
 [
   {
     "id":0,
-    "catagory":"commission",
+    "category":"commission",
     "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
     "answers":[
       "It is up to the customer.",
@@ -14,7 +14,7 @@
   },
   {
     "id":1,
-    "catagory":"advirtising",
+    "category":"advirtising",
     "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
     "answers":[
       "Bill, who promised you the commission",
@@ -27,7 +27,7 @@
   },
   {
     "id":2,
-    "catagory":"ownership",
+    "category":"ownership",
     "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
     "answers":[
       "We are members of NAR.",
@@ -40,7 +40,7 @@
   },
   {
     "id":3,
-    "catagory":"law",
+    "category":"law",
     "question":" Which type of ownership can only be held by a husband and wife? ",
     "answers":[
       " Tenancy in Severality ",
@@ -53,7 +53,7 @@
   },
   {
     "id":4,
-    "catagory":"law",
+    "category":"law",
     "question":" Your municipality is building a new shopping mall. In order to safely control traffic entering and leaving the mall, they will need to remove all the homes on your block to build an access road. They will pay fair compensation for the taking. What is this process called?",
     "answers":[
       " Eminent Domain ",
@@ -66,7 +66,7 @@
   },
   {
     "id":5,
-    "catagory":"mortgage",
+    "category":"mortgage",
     "question":" What is the function of an acceleration clause in a mortgage document?",
     "answers":[
       " It gives the borrower the ability to pay a loan off early. ",
@@ -79,7 +79,7 @@
   },
   {
     "id":6,
-    "catagory":"law",
+    "category":"law",
     "question":" What is the difference between a client and a customer? ",
     "answers":[
       " A client is someone you have a contract with to perform services for a fee and a customer is someone looking to buy something for no additional fee. ",
@@ -92,7 +92,7 @@
   },
   {
     "id":7,
-    "catagory":"commission",
+    "category":"commission",
     "question":" Which of the following is true regarding commissions? ",
     "answers":[
       "They are due and payable to the agent within 10 days of the broker's receipt of funds. ",
@@ -105,7 +105,7 @@
   },
   {
     "id":8,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" The Lyons family bought a house with a lot size of .50 of an acre. This is the equivalent to: ",
     "answers":[
       " 46,560 ft. ",
@@ -118,7 +118,7 @@
   },
   {
     "id":9,
-    "catagory":"law",
+    "category":"law",
     "question":" What is a latent defect? ",
     "answers":[
       " Something wrong with the property that the seller has disclosed. ",
@@ -131,7 +131,7 @@
   },
   {
     "id":10,
-    "catagory":"law",
+    "category":"law",
     "question":" When a contract is made for an illegal purpose, such as deflating the purchase price to pay lower taxes, the contract becomes:  ",
     "answers":[
       " Express ",
@@ -144,7 +144,7 @@
   },
   {
     "id":11,
-    "catagory":"law",
+    "category":"law",
     "question":" A seller is approached by a buyer who is interested in an option contact on the seller's property. They agree to a sale price, consideration and a thirty day option term. Which of the following is true regarding an option contract? ",
     "answers":[
       " It is a unilateral contract. ",
@@ -157,7 +157,7 @@
   },
   {
     "id":12,
-    "catagory":"law",
+    "category":"law",
     "question":" If a client or customer were dissatisfied with the service they received from their salesperson, they could send a written complaint to the Real Estate Commission. Once the complaint is filed, what are the investigatory powers of the commission? ",
     "answers":[
       " Issue subpoenas. ",
@@ -170,7 +170,7 @@
   },
   {
     "id":13,
-    "catagory":"commission",
+    "category":"commission",
     "question":" You and your family are renting a house at the Jersey Shore this summer. The landlord gave you a lease to sign explaining the terms such as move in and move out times and dates, amount of rent and other stipulations. What kind of tenancy does your rental fall under? ",
     "answers":[
       " Periodic tenancy ",
@@ -183,7 +183,7 @@
   },
   {
     "id":14,
-    "catagory":"ownership",
+    "category":"ownership",
     "question":" What does it mean to alienate title? ",
     "answers":[
       " To have a lien placed against it. ",
@@ -196,7 +196,7 @@
   },
   {
     "id":15,
-    "catagory":"law",
+    "category":"law",
     "question":" Businesses with what number of employees must be compliant with the standards of the American with Disabilities Act? ",
     "answers":[
       " Less than 100 ",
@@ -209,7 +209,7 @@
   },
   {
     "id":16,
-    "catagory":"law",
+    "category":"law",
     "question":" A licensed real estate broker can refuse to rent to the following tenants: ",
     "answers":[
       " A person from a minority ethnic group with substandard credit ",
@@ -222,7 +222,7 @@
   },
   {
     "id":17,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" When can a landlord choose to not rent to someone with children? ",
     "answers":[
       " Never. Children are protected under Fair Housing Act. ",
@@ -235,7 +235,7 @@
   },
   {
     "id":18,
-    "catagory":"newtype",
+    "category":"newtype",
     "question":" A seller provides written permission allowing his listing broker (who has a fiduciary obligation to the seller) to work with the buyer. This relationship is known as: ",
     "answers":[
       " Dual Agency. ",
@@ -248,7 +248,7 @@
   },
   {
     "id":19,
-    "catagory":"commission",
+    "category":"commission",
     "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
     "answers":[
       "$14,820 ",
@@ -261,7 +261,7 @@
   },
   {
     "id":20,
-    "catagory":"law",
+    "category":"law",
     "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
     "answers":[
       " Auctioning real estate ",

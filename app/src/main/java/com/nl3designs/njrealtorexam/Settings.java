@@ -126,7 +126,7 @@ public class Settings extends AppCompatActivity {
             startActivity(intent);
         }
 
-        //TODO: code to load array for catagory switches for settings screen
+        //TODO: code to load array for category switches for settings screen
 
     private void switchesSetup() {
         switches.add(new CategoryItem("newtype",(Switch)findViewById(R.id.newTypeSwitch)));

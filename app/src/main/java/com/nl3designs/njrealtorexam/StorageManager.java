@@ -29,6 +29,11 @@ public class StorageManager {
         // editor.clear().apply();  // use this code to clear lb array
     }
 
+    public boolean areCategoriesSelected(){
+        String selected = load("customCards");
+        return selected != "";
+    }
+
     public void save(String text, String tag){
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(tag,text);

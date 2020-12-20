@@ -1,7 +1,7 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
@@ -170,9 +170,9 @@ public class QuestionManager{
     public void verifyCategories(){
 
         for(QuestionItem q : questionitems) {
-            boolean valid = categoryMap.containsKey(q.catagory);
+            boolean valid = categoryMap.containsKey(q.category);
             if(!valid) {
-                throw new IllegalArgumentException("Error Invalid Category = " + q.catagory);
+                throw new IllegalArgumentException("Error Invalid Category = " + q.category);
             }
         }
     }
@@ -186,7 +186,7 @@ public class QuestionManager{
     public List<QuestionItem> getQuestionsForCategories(Set<String> categories){
         List<QuestionItem> catQuestions = new ArrayList<>();
         for(QuestionItem q : questionitems) {
-            if(categories.contains(q.catagory)){
+            if(categories.contains(q.category)){
                 catQuestions.add(q);
             }
         }
@@ -196,7 +196,7 @@ public class QuestionManager{
     public List<QuestionItem> getLimitedQuestions(int count){
         List<QuestionItem> catQuestions = new ArrayList<>();
         for(QuestionItem q : questionitems) {
-            //if(categories.contains(q.catagory)){
+            //if(categories.contains(q.category)){
                 catQuestions.add(q);
             //}
         }

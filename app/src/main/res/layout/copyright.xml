@@ -82,7 +82,7 @@
         android:autoLink="email"
         android:linksClickable="true"
         android:textColor="@color/White"
-        android:text="support_team@NL3Solutions.com" />
+        android:text="Nash@NL3Solutions.com" />
 
     <TextView
         android:layout_width="match_parent"

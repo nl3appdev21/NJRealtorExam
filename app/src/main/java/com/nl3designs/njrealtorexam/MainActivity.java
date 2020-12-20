@@ -1,27 +1,14 @@
 package com.nl3designs.njrealtorexam;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -216,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setQuestionScreen(QuestionItem questionItem) {
 
-        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.catagory));
+        iv_questionimage.setImageResource(questionManager.categoryMap.get(questionItem.category));
         tv_question.setText(questionItem.question);
         btn_answer0.setText(questionItem.answers[0]);
         btn_answer1.setText(questionItem.answers[1]);
@@ -224,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
         btn_answer3.setText(questionItem.answers[3]);
         numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
         TextView textview = findViewById(R.id.tv_title);
-        textview.setText(getTitleFromCategory(questionItem.catagory));
+        textview.setText(getTitleFromCategory(questionItem.category));
     }
 
     private String getTitleFromCategory(String category){
