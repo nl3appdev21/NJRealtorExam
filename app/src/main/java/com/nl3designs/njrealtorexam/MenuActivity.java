@@ -1,8 +1,13 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -36,6 +41,35 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         QuestionManager questionManager = QuestionManager.getInstance();
         questionManager.reset();  // resets question index
+
+
+        // ***********
+        // TODO : code to change menu inage based on os and screen size !!!
+
+        ivImage = findViewById(R.id.iv_testImage);
+        Point size = new Point();
+        WindowManager w = getWindowManager();
+        int sc = 0;
+        int sw = 0;
+        int sh = 0;
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            w.getDefaultDisplay().getSize(size);
+            Display d = w.getDefaultDisplay();
+            sw = size.x;
+            sh = size.y;
+            sc = sw * sh;
+            Log.d("skip", "size is: " + sc);
+            Log.d("skip", "size-x is: " + size.x);
+            Log.d("skip", "size-y is: " + size.y);
+                if(sc <= 1937525) {
+                    ivImage.setImageResource(R.mipmap.nashlogo);
+                    Log.d("skip", " help set max height to 165dp from 225dp");
+                }
+        }
+
+        // ***********
+
 
         // TODO : change names to camel case
         btnFlashCards = findViewById(R.id.btn_flashcards);
