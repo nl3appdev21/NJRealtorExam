@@ -49,7 +49,7 @@ public class MenuActivity extends AppCompatActivity {
         ivImage = findViewById(R.id.iv_testImage);
         Point size = new Point();
         WindowManager w = getWindowManager();
-        int sc = 0;
+        int sc = 0; 
         int sw = 0;
         int sh = 0;
 
@@ -59,12 +59,13 @@ public class MenuActivity extends AppCompatActivity {
             sw = size.x;
             sh = size.y;
             sc = sw * sh;
-            Log.d("skip", "size is: " + sc);
+            Log.d("skip", " x * y is: " + sc);
+            Log.d("skip", "size is: " + size);
             Log.d("skip", "size-x is: " + size.x);
             Log.d("skip", "size-y is: " + size.y);
                 if(sc <= 1937525) {
                     ivImage.setImageResource(R.mipmap.nashlogo);
-                    Log.d("skip", " help set max height to 165dp from 225dp");
+                    Log.d("skip", " menu screen help change max height from 225dp to 165dp");
                 }
         }
 

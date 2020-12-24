@@ -4,14 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ImageView ivImage;  // new code for image height change 12-23-20
     private TextView tv_question;
     private TextView tv_tries;
     private TextView tv_correct;
@@ -212,6 +218,37 @@ public class MainActivity extends AppCompatActivity {
         numQuestions = questionManager.questionitems.size(); // new code to gets num of questions
         TextView textview = findViewById(R.id.tv_title);
         textview.setText(getTitleFromCategory(questionItem.category));
+
+
+        // ***********
+        // TODO : code to change menu inage based on os and screen size !!!
+
+        ivImage = findViewById(R.id.iv_testImage);
+        Point size = new Point();
+        WindowManager w = getWindowManager();
+        int sc = 0;
+        int sw = 0;
+        int sh = 0;
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            w.getDefaultDisplay().getSize(size);
+            Display d = w.getDefaultDisplay();
+            sw = size.x;
+            sh = size.y;
+            sc = sw * sh;
+            Log.d("skip", " x * y is: " + sc);
+            Log.d("skip", "size is: " + size);
+            Log.d("skip", "size-x is: " + size.x);
+            Log.d("skip", "size-y is: " + size.y);
+            if(sc <= 1937525) {
+                iv_questionimage.setImageResource(R.mipmap.nashlogo);
+                Log.d("skip", " help change max height from 225dp to 165dp");
+            }
+        }
+
+        // ***********
+
+
     }
 
     private String getTitleFromCategory(String category){
