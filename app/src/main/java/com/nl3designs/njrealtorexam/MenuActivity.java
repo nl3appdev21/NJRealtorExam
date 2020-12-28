@@ -42,35 +42,13 @@ public class MenuActivity extends AppCompatActivity {
         QuestionManager questionManager = QuestionManager.getInstance();
         questionManager.reset();  // resets question index
 
-
         // ***********
         // TODO : code to change menu inage based on os and screen size !!!
 
         ivImage = findViewById(R.id.iv_testImage);
-        Point size = new Point();
-        WindowManager w = getWindowManager();
-        int sc = 0; 
-        int sw = 0;
-        int sh = 0;
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            w.getDefaultDisplay().getSize(size);
-            Display d = w.getDefaultDisplay();
-            sw = size.x;
-            sh = size.y;
-            sc = sw * sh;
-            Log.d("skip", " x * y is: " + sc);
-            Log.d("skip", "size is: " + size);
-            Log.d("skip", "size-x is: " + size.x);
-            Log.d("skip", "size-y is: " + size.y);
-                if(sc <= 1937525) {
-                    ivImage.setImageResource(R.mipmap.nashlogo);
-                    Log.d("skip", " menu screen help change max height from 225dp to 165dp");
-                }
-        }
+        Utils.resizeImageHeight(ivImage,this);
 
         // ***********
-
 
         // TODO : change names to camel case
         btnFlashCards = findViewById(R.id.btn_flashcards);

@@ -1,7 +1,6 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
@@ -209,7 +208,7 @@ public class QuestionManager{
         categoryMap.put("mortgage",R.mipmap.mortgage);
         categoryMap.put("law",R.mipmap.law);
         categoryMap.put("commission",R.mipmap.math);
-        categoryMap.put("advirtising",R.mipmap.advirtising);
+        categoryMap.put("advertising",R.mipmap.advertising);
         categoryMap.put("ownership",R.mipmap.ownership2);
     }
 

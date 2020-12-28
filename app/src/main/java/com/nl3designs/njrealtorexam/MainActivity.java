@@ -219,35 +219,12 @@ public class MainActivity extends AppCompatActivity {
         TextView textview = findViewById(R.id.tv_title);
         textview.setText(getTitleFromCategory(questionItem.category));
 
+        // ***********
+        // TODO : code to change menu image based on os and screen size !!!
+
+        Utils.resizeImageHeight(iv_questionimage,this);
 
         // ***********
-        // TODO : code to change menu inage based on os and screen size !!!
-
-        ivImage = findViewById(R.id.iv_testImage);
-        Point size = new Point();
-        WindowManager w = getWindowManager();
-        int sc = 0;
-        int sw = 0;
-        int sh = 0;
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            w.getDefaultDisplay().getSize(size);
-            Display d = w.getDefaultDisplay();
-            sw = size.x;
-            sh = size.y;
-            sc = sw * sh;
-            Log.d("skip", " x * y is: " + sc);
-            Log.d("skip", "size is: " + size);
-            Log.d("skip", "size-x is: " + size.x);
-            Log.d("skip", "size-y is: " + size.y);
-            if(sc <= 1937525) {
-                iv_questionimage.setImageResource(R.mipmap.nashlogo);
-                Log.d("skip", " help change max height from 225dp to 165dp");
-            }
-        }
-
-        // ***********
-
 
     }
 
@@ -277,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
                 tv_quote.setText("You are smart for a human!");
                 break;
             case 6:
-                tv_quote.setText("Hay can you see my answers?");
+                tv_quote.setText("Ha can you see my answers?");
                 break;
             case 7:
                 tv_quote.setText("The force is strong with you!");
