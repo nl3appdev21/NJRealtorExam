@@ -122,7 +122,7 @@
                     android:layout_gravity="center"
                     android:text=" Commission Cards  "/>
 
-                <Switch android:id="@+id/advirtisingSwitch"
+                <Switch android:id="@+id/advertisingSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -130,7 +130,7 @@
                     android:textColor="@color/White"
                     android:textSize="15dp"
                     android:layout_gravity="center"
-                    android:text=" Advirtising Cards  "/>
+                    android:text=" Advertising Cards  "/>
 
                 <Switch android:id="@+id/ownershipSwitch"
                     android:layout_width="wrap_content"

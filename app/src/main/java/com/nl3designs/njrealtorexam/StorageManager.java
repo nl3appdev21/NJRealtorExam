@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+//TODO - comment out all buttons in menu screen except flashcards and made new branch tempdev !
+
 public class StorageManager {
     private SharedPreferences pref;
     private FirebaseFirestore firestore;

@@ -23,6 +23,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO - comment out all buttons in menu screen except flashcards and made new branch tempdev !
+
 public class MenuActivity extends AppCompatActivity {
 
     // this is a test

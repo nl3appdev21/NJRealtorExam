@@ -16,6 +16,8 @@ import androidx.core.content.ContextCompat;
 import java.util.HashSet;
 import java.util.Set;
 
+//TODO - comment out all buttons in menu screen except flashcards and made new branch tempdev !
+
 public class FlashCards extends AppCompatActivity {
 
     private TextView tv_question;

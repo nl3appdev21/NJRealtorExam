@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+//TODO - comment out all buttons in menu screen except flashcards and made new branch tempdev !
+
 public class QuestionManager{
     private static final QuestionManager instance = new QuestionManager();
     List<QuestionItem> questionitems;

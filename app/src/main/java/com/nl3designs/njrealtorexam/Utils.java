@@ -11,7 +11,7 @@ public class Utils {
 
     static public void resizeImageHeight(ImageView ivImage, Activity actv) {
 
-        // TODO : code to change menu inage based on os and screen size !!!
+        // TODO : code to change menu image based on os and screen size !!!
 
         Point size = new Point();
         WindowManager w = actv.getWindowManager();

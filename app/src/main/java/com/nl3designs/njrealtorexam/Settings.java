@@ -95,7 +95,7 @@ public class Settings extends AppCompatActivity {
         2 - mortgage
         3 - law
         4 - commission
-        5 - advirtising
+        5 - advertising
         6 - ownership
          */
 
@@ -133,7 +133,7 @@ public class Settings extends AppCompatActivity {
         switches.add(new CategoryItem("mortgage",(Switch)findViewById(R.id.mortgageSwitch)));
         switches.add(new CategoryItem("law",(Switch)findViewById(R.id.lawSwitch)));
         switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.commissionSwitch)));
-        switches.add(new CategoryItem("advirtising",(Switch)findViewById(R.id.advirtisingSwitch)));
+        switches.add(new CategoryItem("advertising",(Switch)findViewById(R.id.advertisingSwitch)));
         switches.add(new CategoryItem("ownership",(Switch)findViewById(R.id.ownershipSwitch)));
 
         for(int c=0; c<switches.size(); c++){
