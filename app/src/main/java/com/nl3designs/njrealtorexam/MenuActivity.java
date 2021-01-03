@@ -25,6 +25,8 @@ import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
 
+    // this is a test
+
     private Button btnTakeTest;
     private ImageButton ibtnCopyRight;
     private TextView TvMontra;
