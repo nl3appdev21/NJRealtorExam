@@ -68,6 +68,7 @@
                 android:textColor="@color/White"
                 android:textSize="15dp"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 android:text="Skip A Flashcard  "/>
 
             <View
@@ -75,6 +76,7 @@
                 android:layout_height="8dp"
                 android:background="@color/Gray_08"
                 android:layout_marginBottom="8dp"
+                android:visibility="gone"
                 android:layout_marginTop="8dp"/>
 
             <LinearLayout
@@ -130,7 +132,7 @@
                     android:textColor="@color/White"
                     android:textSize="15dp"
                     android:layout_gravity="center"
-                    android:text=" Advirtising Cards  "/>
+                    android:text=" Advertising Cards  "/>
 
                 <Switch android:id="@+id/ownershipSwitch"
                     android:layout_width="wrap_content"
