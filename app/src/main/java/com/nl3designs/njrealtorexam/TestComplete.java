@@ -75,6 +75,9 @@ public class TestComplete extends AppCompatActivity {
         testScore = (int)(((correct/numOfQuestions)*100));  // cast testscore to int
     }
 
+
+    // TODO = changed code to set backgroundcolor to match the medal level, 11-gold, 10-silver or 9-bronze !
+
     private void testComplete(){
 
         if(testScore < 70) {
@@ -85,17 +88,83 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
             tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
-        }else{
+        }
+
+        if(testScore >= 90 ) {
+            agent.setVisibility(View.VISIBLE);
+            iv_passFail.setImageResource(R.mipmap.bluecert);
+            //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults1.setText("Congrats you won a GOLD MEDAL");
+            tv_testResults2.setText("Your passing score is: " + testScore + "%");
+            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults1.setBackgroundResource(R.mipmap.goldwinner);
+            tv_testResults2.setBackgroundResource(R.mipmap.goldwinner);
+        }
+
+        if(testScore >= 80 ) {
+            agent.setVisibility(View.VISIBLE);
+            iv_passFail.setImageResource(R.mipmap.bluecert);
+            //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults1.setText("Congrats you won a SILVER Medal");
+            tv_testResults2.setText("Your passing score is: " + testScore + "%");
+            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults1.setBackgroundResource(R.mipmap.silverwinner);
+            tv_testResults2.setBackgroundResource(R.mipmap.silverwinner);
+        }
+
+        if(testScore >= 70 ) {
+            agent.setVisibility(View.VISIBLE);
+            iv_passFail.setImageResource(R.mipmap.bluecert);
+            //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults1.setText("Congrats you won a Bronze Medal");
+            tv_testResults2.setText("Your passing score is: " + testScore + "%");
+            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults1.setBackgroundResource(R.mipmap.bronzewinner);
+            tv_testResults2.setBackgroundResource(R.mipmap.bronzewinner);
+        }
+    }
+
+
+    /*  this is the old and some new code
+
+    private void testComplete(){
+
+        if(testScore < 70) {
+            btnlb.setVisibility(View.INVISIBLE);
+            agent.setVisibility(View.GONE);
+            iv_passFail.setImageResource(R.mipmap.redquitbtn);
+            tv_testResults1.setText(" sorry you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
+            tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
+            tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
+        }else {
             agent.setVisibility(View.VISIBLE);
             iv_passFail.setImageResource(R.mipmap.bluecert);
             tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
             tv_testResults2.setText(" Your passing score is: " + testScore + "%");
-            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
-            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
-            tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
-            tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_08));
+            tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
+            tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.Purple_08));
+            tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.Purple_08));
+
+
+        } else if (grade >= 90) {   // make color gold
+            convertView.setBackgroundResource(R.mipmap.goldwinner);
+        } else if (grade >= 80) {   // make color silve
+            convertView.setBackgroundResource(R.mipmap.silverwinner);
+        } else if (grade >= 70) {   // make color bronze
+            convertView.setBackgroundResource(R.mipmap.bronzewinner);
+
+
         }
     }
+
+        this is the old and some of the new code
+    */
+
 
     private void saveScore(){  // TODO : savescore and reload lb
 
