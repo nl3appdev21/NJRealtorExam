@@ -17,6 +17,13 @@
         <activity android:name=".CopyRight"></activity>
         <activity android:name=".Instructions"></activity>
         <activity android:name=".Settings"></activity>
+        <activity android:name=".Resources"></activity>
+        <activity android:name=".AreaMaps"></activity>
+        <activity android:name=".BoardOffices"></activity>
+        <activity android:name=".TestingSites"></activity>
+        <activity android:name=".Trend"></activity>
+        <activity android:name=".SchoolReports"></activity>
+        <activity android:name=".Mortgages"></activity>
         <activity android:name=".FlashCards"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>

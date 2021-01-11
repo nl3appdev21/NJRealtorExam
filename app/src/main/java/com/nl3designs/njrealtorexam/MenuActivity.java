@@ -1,13 +1,8 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
-import android.graphics.Point;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -32,6 +27,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnFlashCards;
     private Button btnSettings;
     private Button btnLb;
+    private Button btnResources;
     private ImageView ivDirections;
     private ImageView ivImage;
 
@@ -91,6 +87,14 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        btnResources = findViewById(R.id.btn_resources);
+        btnResources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showResources();
+            }
+        });
+
         ibtnCopyRight = findViewById(R.id.ibtn_logo);
         TvMontra = findViewById(R.id.tv_montra);
         ibtnCopyRight.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +150,13 @@ public class MenuActivity extends AppCompatActivity {
 
     private void showSettings() {
         Intent intent = new Intent(MenuActivity.this, Settings.class);
+        startActivity(intent);
+    }
+
+    // TODO - note visability is set to gone
+
+    private void showResources() {
+        Intent intent = new Intent( MenuActivity.this, Resources.class);
         startActivity(intent);
     }
 }
