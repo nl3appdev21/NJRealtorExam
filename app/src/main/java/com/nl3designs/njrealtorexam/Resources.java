@@ -24,7 +24,7 @@ import java.util.List;
     // TODO - note visability is set to gone  **********
     // TODO - note visability is set to gone  **********
 
-    public class Resources extends AppCompatActivity {  //  ?????????????????????
+    public class Resources extends AppCompatActivity {
 
         private Button btnAreaMaps;
         private Button btnBoardOffices;
@@ -42,7 +42,7 @@ import java.util.List;
             btnAreaMaps.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showAreaMaps();  //  ?????????????????????
+                    showAreaMaps();
                 }
             });
 
@@ -90,7 +90,7 @@ import java.util.List;
 
         private void showAreaMaps() {
             Intent intent = new Intent( Resources.this, AreaMaps.class);
-            startActivity(intent);  //  ?????????????????????
+            startActivity(intent);
         }
 
         private void showtBoardOffices() {
