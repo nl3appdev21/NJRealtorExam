@@ -15,10 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:text="NJ Realtor Exam schools"
+        android:text="NJ Realtor School Rpts"
         android:textStyle="bold"
         android:textColor="@color/White"
-        android:textSize="35dp"
+        android:textSize="33dp"
         android:gravity="center"/>
 
     <View
