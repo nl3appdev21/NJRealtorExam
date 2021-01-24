@@ -1,0 +1,158 @@
+[
+  {
+    "id":0,
+    "category":"law",
+  "question":"You are working with a customer and have found the perfect property. You are getting ready to prepare an offer when they ask, \"Do we need a lawyer?\" How should you answer? ",
+  "answers":[
+  "It is up to the customer.",
+  "No, most people in this area don't use them.",
+  "Yes. You should never buy a property without an attorney.",
+  "I can help you with everything the lawyer would do and save you money."
+],
+  "correct":0,
+  "details":"Whether to retain an attorney is always the customer or client's choice. You can not tell them absolutely yes or no on whether to retain an attorney. You also cannot act as an attorney because you are not licensed to do so. Never say no, or \"yes, you must\". Explain that while some people are comfortable not using a lawyer, buying a home is a complicated process and, should any problems arise, an attorney could prove to be of significant value. This must be a decision they make themselves, with you answering their questions carefully and honestly."
+  },
+  {
+    "id":1,
+    "category":"commission",
+    "question":" You work for Broker A. Agent Bill, who also works for Broker A, asks you for help in closing a sale he is working on, and offers you 10 percent of his commission for the assistance. After the settlement, who will pay your commission to you?",
+    "answers":[
+      "Bill, who promised you the commission",
+      "Broker A",
+      " The seller ",
+      " The co-operating broker "
+    ],
+    "correct":1,
+    "details":" You can never receive any money from anyone except your employing broker. Even if a client or customer wants to give you a monetary gift to show you their gratitude, it must be given to the broker who will process it through the proper channels and then pay it to you. "
+  },
+  {
+    "id":2,
+    "category":"advertising",
+    "question":" A franchise office running an advertisement in the local newspaper must make sure the ad includes the following statement?",
+    "answers":[
+      "We are members of NAR.",
+      "This office is a Full-Service agency serving the public for 23 years.",
+      "Each office is independently owned and operated.",
+      " Ad must state the number of offices in the franchise. "
+    ],
+    "correct":2,
+    "details":" Franchise offices must let the public know that each office is under separate ownership and may differ from other offices under the same franchise name. "
+  },
+  {
+    "id":3,
+    "category":"ownership",
+    "question":" Which type of ownership can only be held by a husband and wife? ",
+    "answers":[
+      " Tenancy in Severality ",
+      " Tenancy in Common ",
+      " Tenancy by the Entireties ",
+      " Joint Tenants "
+    ],
+    "correct":2,
+    "details":" A married couple do not have to choose tenants by entireties, but they are the only property owners that can assume this form of ownership. Like joint tenants, there is the right of survivorship. In tenancy by the entireties, when one party dies the remaining party gets full ownership. In joint tenancy, when one dies, the remaining partner(s) absorb the ownership. It can not be passed by inheritance, as in tenancy in common. "
+  },
+  {
+    "id":4,
+    "category":"commission",
+    "question":" You and your family are renting a house at the Jersey Shore this summer. The landlord gave you a lease to sign explaining the terms such as move in and move out times and dates, amount of rent and other stipulations. What kind of tenancy does your rental fall under? ",
+    "answers":[
+      " Periodic tenancy ",
+      " Tenancy at will ",
+      " Estate for years ",
+      " Tenancy at sufferance "
+    ],
+    "correct":2,
+    "details":" An estate for years might sound like a long- term lease but actually it can represent any amount of time as long as it has a definite beginning and ending. It can be for an overnight stay or for two years. A periodic tenancy may sound like it would better describe your vacation, but a periodic tenancy is for a period of time, like a week to week or month to month, that carries on until one of the parties gives notice to terminate the lease. "
+  },
+  {
+    "id":5,
+    "category":"ownership",
+    "question":" What does it mean to alienate title? ",
+    "answers":[
+      " To have a lien placed against it. ",
+      " Sell the property and change ownership. ",
+      " To order an abstract of title. ",
+      " To disagree with the language in the title. "
+    ],
+    "correct":1,
+    "details":" To alienate title is simply to remove yourself from possession of the title, which is what happens when you no longer hold title to the property and have transferred ownership "
+  },
+  {
+    "id":6,
+    "category":"law",
+    "question":" Businesses with what number of employees must be compliant with the standards of the American with Disabilities Act? ",
+    "answers":[
+      " Less than 100 ",
+      " More than 14 ",
+      " More than 49 ",
+      " All businesses must be ADA compliant. "
+    ],
+    "correct":1,
+    "details":" Businesses with 15 or more employees must follow this civil rights law for people with disabilities. It covers many aspects of accommodating people who may need different assistance than others to just get around and complete ordinary tasks. Enacted in 1990, it covers transportation, communications, construction and other areas to improve the lives of others. "
+  },
+  {
+    "id":7,
+    "category":"law",
+    "question":" A licensed real estate broker can refuse to rent to the following tenants: ",
+    "answers":[
+      " A person from a minority ethnic group with substandard credit ",
+      " A single mother ",
+      " An older gentleman on social security ",
+      " A family with a section 8 voucher for the rental amount. "
+    ],
+    "correct":0,
+    "details":" A person from a minority racial or ethnic group with bad credit can be turned down - for having bad credit. Anyone can be turned down for having credit that would show them to be a risk. A single mother would be protected as long as she meets the other legal requirements. The gentleman on social security and the family with the voucher are protected for the same reason, and you cannot discriminate as to the source of the income. "
+  },
+  {
+    "id":8,
+    "category":"newtype",
+    "question":" When can a landlord choose to not rent to someone with children? ",
+    "answers":[
+      " Never. Children are protected under Fair Housing Act. ",
+      " If the unit has evidence of lead paint. ",
+      " A lease of an owner occupied, 3-family home. ",
+      " Someone on temporary lease. "
+    ],
+    "correct":0,
+    "details":" The children are generally protected under Chapter 151B (Fair Housing Act) except when an occupant request a temporary lease. "
+  },
+  {
+    "id":9,
+    "category":"newtype",
+    "question":" A seller provides written permission allowing his listing broker (who has a fiduciary obligation to the seller) to work with the buyer. This relationship is known as: ",
+    "answers":[
+      " Dual Agency. ",
+      " Sub Agency. ",
+      " Special Agency. ",
+      " Implied Agency. "
+    ],
+    "correct":1,
+    "details":" Sub agency required that the listing broker obtain written permission from the seller and that the fiduciary duties are to the seller. "
+  },
+  {
+    "id":10,
+    "category":"commission",
+    "question":" You have just completed a settlement for a home that sold for $380,000 and you are calculating your commission. It was a 6 percent commission and a co-op broker had the listing. Your employment agreement has your commission split set at 65 percent. How much will your broker retain after he has paid you? ",
+    "answers":[
+      "$14,820 ",
+      "$7,410 ",
+      "$3,990 ",
+      "$11,400 "
+    ],
+    "correct":2,
+    "details":" The house sold for $380,000 and the total commission of 6 percent of the sale price is $22,800. It is a co-op deal so that amount is split between the two brokers in the amount of $11,400 each. Your broker is going to pay you 65 percent of the $11,400 which will give you $7,410, leaving the broker with the remaining $3,990. "
+  },
+  {
+    "id":11,
+    "category":"mortgage",
+    "question":" Putting aside the rights of owners to manage their own properties, for which of the following do you need to be a licensed New Jersey real estate salesperson? ",
+    "answers":[
+      " Auctioning real estate ",
+      " Collecting rent ",
+      " Attempting to negotiate a mortgage loan ",
+      "All of the above"
+    ],
+    "correct":3,
+    "details":" Just attempting to do any of the listed activities without being licensed can land you in serious trouble. Foreclosures are first put to auction at the county courthouse and if not sold, they are foreclosed upon by the lender and can be sold in an online auction run by companies who employ licensed agents. An owner can collect rent from his own tenant, but he cannot hire someone to do it for him unless they are actively licensed by the state. An owner holding a mortgage for the buyer of his property can specify the terms he wants in the loan but the mortgage document would be drawn by an attorney. Should the buyer ask for your assistance in negotiating the loan with the seller, you need to be familiar with terms, rates and other facets of the transactions. A seller may want to discuss what rate he should charge and how long he should hold the loan. You need training and experience to render this assistance. If you are not sure of something you may have your broker assist, or have the attorney who will prepare the mortgage documents the advice. "
+  }
+]

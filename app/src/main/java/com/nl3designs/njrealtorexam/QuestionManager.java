@@ -38,7 +38,7 @@ public class QuestionManager{
     // TODO : note changed last question from law to mortgage for test, replace with real mortgage
 
     public void loadAllQuestion(Context context, Set<String> categories) {
-        String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
@@ -58,7 +58,7 @@ public class QuestionManager{
     }
 
     public void loadAllQuestion(Context context, int count) {
-        String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
