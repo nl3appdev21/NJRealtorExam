@@ -21,8 +21,10 @@ public class FlashCards extends AppCompatActivity {
     private TextView tv_question;
     private TextView tv_answers;
     private Button btn_answer;
+    private Button btn_details;
     private Button btn_menu;
     private String sAnswer0, sAnswer1, sAnswer02;
+    private String sDetails;
     private String[] sArray = new String[3];
     private ImageView iv_questionimage;
     private QuestionManager questionManager;
@@ -50,6 +52,7 @@ public class FlashCards extends AppCompatActivity {
         tv_question = findViewById(R.id.tv_question);
         tv_answers = findViewById(R.id.tv_answers);
         btn_answer = findViewById(R.id.btn_answer);
+        btn_details = findViewById(R.id.btn_details);
         tv_tries = findViewById(R.id.tries);
         btn_menu = findViewById(R.id.btn_menu);
         btn_next = findViewById(R.id.btn_next);
@@ -118,9 +121,12 @@ public class FlashCards extends AppCompatActivity {
 
                 myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                 myans = myQuestionAnswer;
+                tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_05));
+                tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black)); // ?? 1-24
                 enableAnswerBtn();
                 checkForEnd();
                 btn_next.setVisibility(View.INVISIBLE);
+                btn_details.setVisibility(View.GONE); // new code 1-24
                 QuestionItem questionItem = questionManager.getNext();
                 prevint = 0;
 
@@ -141,6 +147,16 @@ public class FlashCards extends AppCompatActivity {
                 btn_next.setVisibility(View.VISIBLE);
                 disableAnswerBtn();
                 showAnswer();
+            }
+        });
+
+        // new code 1-24
+        btn_details.setOnClickListener(new View.OnClickListener() {  //  ??  onclick listener for answer button
+            @Override
+            public void onClick(View v) {
+
+                btn_details.setVisibility(View.GONE);
+                showDetails();
             }
         });
 
@@ -230,7 +246,24 @@ public class FlashCards extends AppCompatActivity {
         btn_answer.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black));
         myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
         myans = myQuestionAnswer;
+        btn_details.setVisibility(View.VISIBLE); // new code 1-24
         btn_answer.setText(questionManager.getCurrentAnswer());
+    }
+
+    // new code 1-24
+    private void showDetails(){
+
+        // TODO : new code 1-24
+        // TODO : check json file answers "all of the above" for spaces
+        if (questionManager.getCurrentAnswer().matches("All of the above")){
+            tv_answers.setVisibility(View.GONE);
+        }
+
+        tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_04));
+        tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
+        sDetails = (questionManager.getCurrentQuestion().details);
+        btn_details.setVisibility(View.GONE);
+        tv_question.setText(sDetails);
     }
 
         private void checkForEnd(){
