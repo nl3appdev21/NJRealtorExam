@@ -98,6 +98,8 @@ public class FlashCards extends AppCompatActivity {
 
                 myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                 myans = myQuestionAnswer;
+                tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_05)); // ?? 1-24
+                tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black)); // ?? 1-24
                 enableAnswerBtn();
                 checkForEnd();
                 btn_next.setVisibility(View.INVISIBLE);
@@ -121,7 +123,7 @@ public class FlashCards extends AppCompatActivity {
 
                 myQuestionAnswer = (questionManager.getCurrentQuestion().correct);
                 myans = myQuestionAnswer;
-                tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_05));
+                tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Yellow_05)); // ?? 1-24
                 tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Black)); // ?? 1-24
                 enableAnswerBtn();
                 checkForEnd();
@@ -259,8 +261,8 @@ public class FlashCards extends AppCompatActivity {
             tv_answers.setVisibility(View.GONE);
         }
 
-        tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_04));
-        tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.White));
+        tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_02));
+        tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_10));
         sDetails = (questionManager.getCurrentQuestion().details);
         btn_details.setVisibility(View.GONE);
         tv_question.setText(sDetails);
