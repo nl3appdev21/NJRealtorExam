@@ -8,10 +8,9 @@ android {
         applicationId "com.nl3designs.njrealtorexam"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 3
-                            // TODO: update version number here for njre app
-        versionName "0.4"   // TODO: update version number here for njre app
-                            // TODO: update version number here for njre app
+        versionCode 4    // TODO updated lines 11 and 13 feb. 14th 2021
+
+        versionName "0.5"   // TODO: update version number here for njre app
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

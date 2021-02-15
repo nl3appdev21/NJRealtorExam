@@ -22,20 +22,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:text="NJ Realtor Exam"
-                android:textStyle="bold"
-                android:textColor="@color/White"
-                android:textSize="32dp"
-                android:gravity="center"/>
+            android:layout_marginTop="13dp"
+            android:text="NJ Realtor Exam"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="32dp"
+            android:gravity="center"/>
 
         <ImageView
             android:id="@+id/iv_testImage"
@@ -46,15 +41,15 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8sp"/>
 
-            <Button
-                android:id="@+id/btn_flashcards"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Flashcards"
-                android:textStyle="bold"
-                android:textSize="21dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/rounded_button" />
+        <Button
+            android:id="@+id/btn_flashcards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flashcards"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/btn_testInstructions"
@@ -77,39 +72,37 @@
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button" />
 
-            <Button
-                android:id="@+id/btn_lb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/rounded_button"
-                android:text="Leaderboard"
-                android:textSize="21dp"
-                android:textStyle="bold"
-                android:visibility="visible" />
+        <Button
+            android:id="@+id/btn_lb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="Leaderboard"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
-            <Button
-                android:id="@+id/btn_settings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Settings"
-                android:textStyle="bold"
-                android:textSize="21dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/rounded_button" />
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button" />
 
-            <Button
-                android:id="@+id/btn_resources"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Agent Resources"
-                android:textStyle="bold"
-                android:textSize="21dp"
-                android:layout_margin="10dp"
-                android:visibility="gone"
-                android:background="@drawable/rounded_button" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_resources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agent Resources"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_button" />
 
     </LinearLayout>
 

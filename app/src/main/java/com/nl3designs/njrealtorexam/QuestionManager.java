@@ -38,7 +38,12 @@ public class QuestionManager{
     // TODO : note changed last question from law to mortgage for test, replace with real mortgage
 
     public void loadAllQuestion(Context context, Set<String> categories) {
-        String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);
+
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);  // file has 12 questions
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_21.json",context);  // file has 21 questions
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_32.json",context);  // file has 32 questions
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_42.json",context);  // file has 42 questions
+
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);

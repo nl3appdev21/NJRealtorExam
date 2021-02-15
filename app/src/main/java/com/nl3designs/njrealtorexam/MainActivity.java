@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int FAIL_MODE = 2;
     int tries = 0;
     int correct = 0;
-    int setTextInt = 0;  //  ?? new new
+    int setTextInt = 0;  //  ?? new new ?? test
     int numQuestions = 0;
     int myQuestionAnswer = -0;
     public static String results = "";
