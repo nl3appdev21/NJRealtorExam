@@ -262,7 +262,7 @@ public class FlashCards extends AppCompatActivity {
         }
 
         tv_question.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_02));
-        tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_10));
+        tv_question.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.Green_13));
         sDetails = (questionManager.getCurrentQuestion().details);
         btn_details.setVisibility(View.GONE);
         tv_question.setText(sDetails);
