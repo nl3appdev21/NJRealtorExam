@@ -8,26 +8,17 @@
     android:layout_height="match_parent"
     android:scrollbars="none"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
-<ScrollView
-
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbars="none"
-        android:fillViewport="true">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
-        ?? nash ??
-
         <VideoView
+            android:id="@+id/video_player"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
         />
@@ -38,98 +29,7 @@
             android:background="@color/Gray_08"
             android:layout_marginTop="8dp"/>
 
-        ?? nash ??
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
-            android:text="NJ Realtor Exam App Instructions"
-            android:textStyle="bold"
-            android:textColor="@color/White"
-            android:textSize="35dp"
-            android:gravity="center"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/Gray_08"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:id="@+id/tv_settings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-
-            android:text=
-                " NJ Realtor App Settings \n \n
-
-You can set up to three settings \n
-1 - Randomize flashcards, will \n
-randomize the flashcards \n
-2 - Skip a flashcard, will let you \n
-skip a flashcard if you want to \n
-3 - Select 1 to 5 catagorizes \n
-to customize the flashcards "
-
-            android:textStyle="bold"
-            android:textColor="@color/White"
-            android:textSize="17dp"
-            android:padding="12dp"
-            android:visibility="visible" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/Gray_08"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:id="@+id/tv_flashcards"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-
-            android:text=
-                " NJ Realtor App Flashcards \n \n
-
-These are basic flashcards, you will \n
-get a question, click show answer to \n
-show answer click next, to get next \n
-card, you can use settings switchs to \n
-randomize, skip, customize flashcards "
-
-            android:textStyle="bold"
-            android:textColor="@color/White"
-            android:textSize="17dp"
-            android:padding="12dp"
-            android:visibility="visible" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/Gray_08"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:id="@+id/tv_instructions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:background="@mipmap/testinstruction"
-            android:padding="12dp"
-            android:visibility="visible" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/Gray_08"
-            android:layout_marginTop="8dp"/>
-
     </LinearLayout>
-
-</ScrollView>
 
     <Button
         android:id="@+id/btn_back2Menu"

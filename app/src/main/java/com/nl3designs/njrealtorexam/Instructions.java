@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Instructions extends AppCompatActivity {
@@ -21,6 +24,11 @@ public class Instructions extends AppCompatActivity {
                 back2Menu();
             }
         });
+        VideoView videoview = findViewById(R.id.video_player);
+        videoview.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.devinfovideo6);
+        MediaController mediaController = new MediaController( this);
+        mediaController.setAnchorView(videoview);
+        videoview.setMediaController(mediaController);
     }
 
     private void back2Menu() {
