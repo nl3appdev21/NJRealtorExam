@@ -25,6 +25,21 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        ?? nash ??
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/Gray_08"
+            android:layout_marginTop="8dp"/>
+
+        ?? nash ??
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

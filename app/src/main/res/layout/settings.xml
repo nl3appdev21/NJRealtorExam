@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Switch android:id="@+id/newTypeSwitch"
+                <Switch android:id="@+id/advirtisingSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -92,27 +92,7 @@
                     android:textColor="@color/White"
                     android:textSize="15dp"
                     android:layout_gravity="center"
-                    android:text=" New Type Cards  "/>
-
-                <Switch android:id="@+id/mortgageSwitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/White"
-                    android:textSize="15dp"
-                    android:layout_gravity="center"
-                    android:text=" Mortgage Cards  "/>
-
-                <Switch android:id="@+id/lawSwitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/White"
-                    android:textSize="15dp"
-                    android:layout_gravity="center"
-                    android:text=" Law Cards  "/>
+                    android:text=" Advertising Cards  "/>
 
                 <Switch android:id="@+id/commissionSwitch"
                     android:layout_width="wrap_content"
@@ -124,7 +104,7 @@
                     android:layout_gravity="center"
                     android:text=" Commission Cards  "/>
 
-                <Switch android:id="@+id/advirtisingSwitch"
+                <Switch android:id="@+id/lawSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -132,7 +112,27 @@
                     android:textColor="@color/White"
                     android:textSize="15dp"
                     android:layout_gravity="center"
-                    android:text=" Advertising Cards  "/>
+                    android:text=" Law Cards  "/>
+
+                <Switch android:id="@+id/mortgageSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/White"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:text=" Mortgage Cards  "/>
+
+                <Switch android:id="@+id/newTypeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/White"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:text=" New Type Cards  "/>
 
                 <Switch android:id="@+id/ownershipSwitch"
                     android:layout_width="wrap_content"

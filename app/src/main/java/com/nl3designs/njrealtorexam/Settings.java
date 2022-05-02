@@ -129,11 +129,12 @@ public class Settings extends AppCompatActivity {
         //TODO: code to load array for category switches for settings screen
 
     private void switchesSetup() {
-        switches.add(new CategoryItem("newtype",(Switch)findViewById(R.id.newTypeSwitch)));
-        switches.add(new CategoryItem("mortgage",(Switch)findViewById(R.id.mortgageSwitch)));
-        switches.add(new CategoryItem("law",(Switch)findViewById(R.id.lawSwitch)));
-        switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.commissionSwitch)));
+
         switches.add(new CategoryItem("advirtising",(Switch)findViewById(R.id.advirtisingSwitch)));
+        switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.commissionSwitch)));
+        switches.add(new CategoryItem("law",(Switch)findViewById(R.id.lawSwitch)));
+        switches.add(new CategoryItem("mortgage",(Switch)findViewById(R.id.mortgageSwitch)));
+        switches.add(new CategoryItem("newtype",(Switch)findViewById(R.id.newTypeSwitch)));
         switches.add(new CategoryItem("ownership",(Switch)findViewById(R.id.ownershipSwitch)));
 
         for(int c=0; c<switches.size(); c++){
