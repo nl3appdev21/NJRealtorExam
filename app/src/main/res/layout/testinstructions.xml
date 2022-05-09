@@ -10,26 +10,85 @@
     android:orientation="vertical"
     android:fillViewport="true">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="NJ Realtor Exam App Instructions"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textSize="32dp"
+        android:gravity="center"/>
 
-        <VideoView
-            android:id="@+id/video_player"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        />
+    <ImageView
+        android:id="@+id/iv_testImage"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:visibility="visible"
+        android:src="@mipmap/goldbulb"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8sp"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/Gray_08"
-            android:layout_marginTop="8dp"/>
+    <Button
+        android:id="@+id/btn_flashcards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Flachcards"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_button" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_takeTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Take Test"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_button" />
+
+    <Button
+        android:id="@+id/btn_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Leaderboard"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_button" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Settings"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_button" />
+
+    <Button
+        android:id="@+id/btn_devInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Dev Info"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_button" />
+
 
     <Button
         android:id="@+id/btn_back2Menu"

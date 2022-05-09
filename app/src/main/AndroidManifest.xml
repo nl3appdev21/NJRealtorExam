@@ -25,6 +25,7 @@
         <activity android:name=".SchoolReports"></activity>
         <activity android:name=".Mortgages"></activity>
         <activity android:name=".FlashCards"></activity>
+        <activity android:name=".VideoScreen"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
