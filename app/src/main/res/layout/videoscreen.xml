@@ -21,6 +21,7 @@
             android:id="@+id/tv_video_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:textStyle="bold"
             android:textSize="21dp"
             tools:text="Video Title Goes Here"
