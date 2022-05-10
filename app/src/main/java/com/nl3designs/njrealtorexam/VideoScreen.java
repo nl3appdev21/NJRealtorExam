@@ -37,6 +37,9 @@ public class VideoScreen extends AppCompatActivity {
         MediaController mediaController = new MediaController( this);
         mediaController.setAnchorView(videoview);
         videoview.setMediaController(mediaController);
+        // new code mon. 5-9-22
+        videoview.start();
+        //  ??  mediaController.show();
     }
 
     // TextView

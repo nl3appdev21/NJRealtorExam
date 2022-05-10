@@ -67,7 +67,7 @@ public class Instructions extends AppCompatActivity {
         btnTakeTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showFlashcard("devinfovideo6", "Take Test Not Made Video");
+                showFlashcard("splashvideo1", "Take Test Not Made Video");
             }
         });
 
