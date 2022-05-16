@@ -45,7 +45,7 @@
         android:id="@+id/btn_back2Menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Goto Menu"
+        android:text="Goto Instructions Menu"
         android:textStyle="bold"
         android:textSize="21dp"
         android:layout_margin="8dp"

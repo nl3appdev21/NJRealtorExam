@@ -42,12 +42,10 @@ public class VideoScreen extends AppCompatActivity {
         //  ??  mediaController.show();
     }
 
-    // TextView
+
 
     private void back2Menu() {
-
-        Intent intent = new Intent(com.nl3designs.njrealtorexam.VideoScreen.this, MenuActivity.class);
-        startActivity(intent);
+        finish();
     }
 }
 

@@ -23,11 +23,11 @@
     <ImageView
         android:id="@+id/iv_testImage"
         android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_height="300dp"
         android:visibility="visible"
-        android:src="@mipmap/goldbulb"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8sp"/>
+        android:src="@mipmap/videoimg11"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
 
     <Button
         android:id="@+id/btn_flashcards"

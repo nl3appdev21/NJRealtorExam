@@ -87,6 +87,13 @@ public class Instructions extends AppCompatActivity {
             }
         });
 
+        Button btn = findViewById(R.id.btn_back2Menu);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // TODO : firebase test code
         //asynchronously retrieve multiple documents
