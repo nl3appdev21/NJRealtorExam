@@ -211,7 +211,8 @@ public class QuestionManager{
 
         categoryMap.put("newtype",R.mipmap.njreal01);  // TODO: use for new category if not sure ???
         categoryMap.put("mortgage",R.mipmap.mortgage);
-        categoryMap.put("law",R.mipmap.law);
+        // categoryMap.put("law",R.mipmap.law);
+        categoryMap.put("law",R.mipmap.new_law);
         categoryMap.put("commission",R.mipmap.math);
         categoryMap.put("advertising",R.mipmap.advertising);
         categoryMap.put("ownership",R.mipmap.ownership2);
