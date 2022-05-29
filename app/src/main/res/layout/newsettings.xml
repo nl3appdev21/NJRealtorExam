@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text=" New Settings "
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:textSize="32dp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/iv_testImage"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:visibility="visible"
+                android:src="@mipmap/newsettings"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/Gray_08"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btn_flashcards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="randomize flashcards"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="@color/Black"
+                android:layout_margin="8dp"
+                android:background="@drawable/new_gray_setting_button" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/Gray_08"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <Switch android:id="@+id/nextCardSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:text="Skip A Flashcard  "/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/Gray_08"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="advertising"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="commission"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="law"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="mortgage"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="new type"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="ownership"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/new_gray_setting_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="xxgg"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/new_gray_setting_button" />
+
+                <Button
+                    android:id="@+id/btn_flashcards"
+                    android:layout_width="185dp"
+                    android:layout_height="107dp"
+                    android:text="xxhh"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/new_gray_setting_button" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/Gray_08"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
