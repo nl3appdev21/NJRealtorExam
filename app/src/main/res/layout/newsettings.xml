@@ -94,8 +94,9 @@
                     <LinearLayout
                         android:id="@+id/btn_advertising"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
@@ -119,8 +120,9 @@
                     <LinearLayout
                         android:id="@+id/btn_commission"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
@@ -150,8 +152,9 @@
                     <LinearLayout
                         android:id="@+id/btn_law"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
@@ -175,8 +178,9 @@
                     <LinearLayout
                         android:id="@+id/btn_math"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
@@ -206,8 +210,9 @@
                     <LinearLayout
                         android:id="@+id/btn_newtype"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
@@ -231,8 +236,9 @@
                     <LinearLayout
                         android:id="@+id/btn_ownership"
                         android:orientation="vertical"
-                        android:layout_width="185dp"
-                        android:layout_height="107dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
                         android:layout_margin="8dp"
                         android:background="@drawable/new_gray_setting_button" >
 
