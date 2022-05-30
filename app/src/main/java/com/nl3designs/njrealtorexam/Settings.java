@@ -1,15 +1,17 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,30 +26,10 @@ public class Settings extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.settings);
+            setContentView(R.layout.newsettings);
             store = new StorageManager(Settings.this);
 
-            // TODO: delete this code  lines 30 to 51
-
             /*
-            // new test code  ????
-            HashMap<String, String> myMap = new HashMap<>();
-            myMap.put("emp1", "skip");
-            myMap.put("emp2", "nash");
-            myMap.put("emp3", "dex");
-            myMap.put("emp4", "fred");
-            myMap.put("emp5", "dean");
-            myMap.put("emp6", "bob");
-
-            myMap.put("emp4", "skip");  //  will over write emp4 from fred to skip
-            myMap.remove("emp4");
-
-            for(String value : myMap.values()){
-                Log.d("skip", value);
-            }
-            // new test code  ????
-
-            */
 
             //  randswitch
             Switch sw = findViewById(R.id.randSwitch);
@@ -72,13 +54,16 @@ public class Settings extends AppCompatActivity {
 
             boolean sw1State = Boolean.parseBoolean(store.load("nextCard"));
             sw1.setChecked(sw1State);
+
+             */
+
             switchesSetup();
 
             //TODO convert to method
             String selected = store.load("customCards");
             for(CategoryItem ci : switches){
                 if(selected.contains(ci.name)){
-                    ci.uiSwitch.setChecked(true);
+                    ci.setChecked(true);
                 }
             }
 
@@ -130,39 +115,52 @@ public class Settings extends AppCompatActivity {
 
     private void switchesSetup() {
 
-        switches.add(new CategoryItem("advirtising",(Switch)findViewById(R.id.advirtisingSwitch)));
-        switches.add(new CategoryItem("commission",(Switch)findViewById(R.id.commissionSwitch)));
-        switches.add(new CategoryItem("law",(Switch)findViewById(R.id.lawSwitch)));
-        switches.add(new CategoryItem("mortgage",(Switch)findViewById(R.id.mortgageSwitch)));
-        switches.add(new CategoryItem("newtype",(Switch)findViewById(R.id.newTypeSwitch)));
-        switches.add(new CategoryItem("ownership",(Switch)findViewById(R.id.ownershipSwitch)));
+        switches.add(new CategoryItem("advirtising",(LinearLayout)findViewById(R.id.btn_advertising)));
+        switches.add(new CategoryItem("commission",(LinearLayout)findViewById(R.id.btn_commission)));
+        switches.add(new CategoryItem("law",(LinearLayout)findViewById(R.id.btn_law)));
+        switches.add(new CategoryItem("mortgage",(LinearLayout)findViewById(R.id.btn_math)));
+        switches.add(new CategoryItem("newtype",(LinearLayout)findViewById(R.id.btn_newtype)));
+        switches.add(new CategoryItem("ownership",(LinearLayout)findViewById(R.id.btn_ownership)));
 
         for(int c=0; c<switches.size(); c++){
             final int index = c;
-            switches.get(c).uiSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            switches.get(c).uiBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    updateSelection(index,isChecked);
+                public void onClick(View buttonView) {
+                    updateSelection(index);
                 }
             });
         }
     }
 
-    private void updateSelection(int qIndex, boolean isSelected){
+    private void updateSelection(int qIndex){
+        CategoryItem selectedCategory = switches.get(qIndex);
+        boolean isSelected = selectedCategory.isSelected;
+        isSelected = !isSelected;
+
         if(isSelected) {
-            selectedCat.add(switches.get(qIndex).name);
+            selectedCat.add(selectedCategory.name);
         }else{
-            selectedCat.remove(switches.get(qIndex).name);
+            selectedCat.remove(selectedCategory.name);
         }
+        selectedCategory.setChecked(isSelected);
     }
 
     private class CategoryItem{
-            private Switch uiSwitch;
+            private Boolean isSelected = false;
+            private LinearLayout uiBtn;
             private String name;
 
-        public CategoryItem(String name, Switch uiSwitch) {
-            this.uiSwitch = uiSwitch;
+        public CategoryItem(String name, LinearLayout uiSwitch) {
+            this.uiBtn = uiSwitch;
             this.name = name;
         }
+
+        public void setChecked (boolean selected){
+            isSelected = selected;
+            View indicator = uiBtn.getChildAt(0);
+            indicator.setBackground(ResourcesCompat.getDrawable(getResources(),selected ? R.drawable.green_circle : R.drawable.empty_circle,null));
+        }
+
     }
 }
