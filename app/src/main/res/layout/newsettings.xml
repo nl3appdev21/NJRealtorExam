@@ -43,16 +43,32 @@
                 android:background="@color/Gray_08"
                 android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/btn_flashcards"
+            <LinearLayout
+                android:id="@+id/btn_flashcard"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="randomize flashcards"
                 android:textStyle="bold"
-                android:textSize="17dp"
-                android:textColor="@color/Black"
+                android:textSize="15dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/new_gray_setting_button" />
+                android:gravity="center"
+                android:background="@drawable/new_gray_setting_button" >
+
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/empty_circle"
+                    android:layout_margin="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RANDOMIZE FLASHCARDS"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:textSize="17dp"/>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -60,17 +76,6 @@
                 android:background="@color/Gray_08"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"/>
-
-            <Switch android:id="@+id/nextCardSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:textStyle="bold"
-                android:textColor="@color/White"
-                android:textSize="15dp"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                android:text="Skip A Flashcard  "/>
 
             <View
                 android:layout_width="match_parent"

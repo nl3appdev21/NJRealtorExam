@@ -18,7 +18,7 @@ import java.util.Set;
 
 public class Settings extends AppCompatActivity {
 
-    private ImageButton ibtnCopyRight;
+    // save cat items in array list and saving space for store mgt
     List<CategoryItem> switches = new ArrayList<>();
     Set<String> selectedCat = new HashSet<>();
     StorageManager store;
@@ -28,34 +28,6 @@ public class Settings extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.newsettings);
             store = new StorageManager(Settings.this);
-
-            /*
-
-            //  randswitch
-            Switch sw = findViewById(R.id.randSwitch);
-            sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    store.save(String.valueOf(isChecked),"flashRand");
-                }
-            });
-
-            boolean swState = Boolean.parseBoolean(store.load("flashRand"));
-            sw.setChecked(swState);
-
-            //  nextcardswitch
-            Switch sw1 = findViewById(R.id.nextCardSwitch);
-            sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    store.save(String.valueOf(isChecked),"nextCard");
-                }
-            });
-
-            boolean sw1State = Boolean.parseBoolean(store.load("nextCard"));
-            sw1.setChecked(sw1State);
-
-             */
 
             switchesSetup();
 
@@ -80,7 +52,7 @@ public class Settings extends AppCompatActivity {
         2 - mortgage
         3 - law
         4 - commission
-        5 - advirtising
+        5 - advertising
         6 - ownership
          */
 
@@ -115,7 +87,9 @@ public class Settings extends AppCompatActivity {
 
     private void switchesSetup() {
 
-        switches.add(new CategoryItem("advirtising",(LinearLayout)findViewById(R.id.btn_advertising)));
+        switches.add(new CategoryItem("randomize",(LinearLayout)findViewById(R.id.btn_flashcard)));
+
+        switches.add(new CategoryItem("advertising",(LinearLayout)findViewById(R.id.btn_advertising)));
         switches.add(new CategoryItem("commission",(LinearLayout)findViewById(R.id.btn_commission)));
         switches.add(new CategoryItem("law",(LinearLayout)findViewById(R.id.btn_law)));
         switches.add(new CategoryItem("mortgage",(LinearLayout)findViewById(R.id.btn_math)));
