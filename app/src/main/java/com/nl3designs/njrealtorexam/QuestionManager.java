@@ -209,14 +209,25 @@ public class QuestionManager{
 
     private void setUpCategories(){
 
+        categoryMap.put("newtype",R.mipmap.new1newtype);  // TODO: use for new category if not sure ???
+        categoryMap.put("mortgage",R.mipmap.new1mort);
+        categoryMap.put("law",R.mipmap.new1law);
+        categoryMap.put("commission",R.mipmap.new1math);
+        categoryMap.put("advertising",R.mipmap.new1ads);
+        categoryMap.put("ownership",R.mipmap.new1owner);
+    }
+
+/*
+    private void setUpCategories(){
+
         categoryMap.put("newtype",R.mipmap.njreal01);  // TODO: use for new category if not sure ???
         categoryMap.put("mortgage",R.mipmap.mortgage);
-        // categoryMap.put("law",R.mipmap.law);
         categoryMap.put("law",R.mipmap.new_law);
         categoryMap.put("commission",R.mipmap.math);
         categoryMap.put("advertising",R.mipmap.advertising);
         categoryMap.put("ownership",R.mipmap.ownership2);
     }
+*/
 
     public boolean checkAnswer (int answerIndex){
         QuestionItem qi = questionitems.get(currentIndex);
