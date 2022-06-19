@@ -22,6 +22,7 @@ public class Settings extends AppCompatActivity {
     List<CategoryItem> switches = new ArrayList<>();
     Set<String> selectedCat = new HashSet<>();
     StorageManager store;
+    boolean randomizerState;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,21 @@ public class Settings extends AppCompatActivity {
             switchesSetup();
 
             //TODO convert to method
+
+            String flashRand = store.load("flashRand");
+
+            if (flashRand == "true") {
+                randomizerState = true;
+            }
+
             String selected = store.load("customCards");
+
             for(CategoryItem ci : switches){
                 if(selected.contains(ci.name)){
                     ci.setChecked(true);
                 }
             }
-
+            switches.get(0).setChecked(randomizerState);
         }
 
     @Override
@@ -112,10 +121,14 @@ public class Settings extends AppCompatActivity {
         boolean isSelected = selectedCategory.isSelected;
         isSelected = !isSelected;
 
-        if(isSelected) {
-            selectedCat.add(selectedCategory.name);
-        }else{
-            selectedCat.remove(selectedCategory.name);
+        if(selectedCategory.name !="randomize") {
+            if (isSelected) {
+                selectedCat.add(selectedCategory.name);
+            } else {
+                selectedCat.remove(selectedCategory.name);
+            }
+        } else {
+            store.save(String.valueOf(isSelected),"flashRand");
         }
         selectedCategory.setChecked(isSelected);
     }
