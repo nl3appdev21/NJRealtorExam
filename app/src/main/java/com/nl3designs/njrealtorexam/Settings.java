@@ -36,9 +36,13 @@ public class Settings extends AppCompatActivity {
 
             String flashRand = store.load("flashRand");
 
-            if (flashRand == "true") {
+            if (flashRand.equals("true")) {
                 randomizerState = true;
             }
+
+            //  if (flashRand == "true") {
+            //      randomizerState = true;
+            //  }
 
             String selected = store.load("customCards");
 
