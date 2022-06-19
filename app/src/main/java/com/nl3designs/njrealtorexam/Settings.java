@@ -40,15 +40,12 @@ public class Settings extends AppCompatActivity {
                 randomizerState = true;
             }
 
-            //  if (flashRand == "true") {
-            //      randomizerState = true;
-            //  }
-
             String selected = store.load("customCards");
 
             for(CategoryItem ci : switches){
                 if(selected.contains(ci.name)){
                     ci.setChecked(true);
+                    selectedCat.add(ci.name);
                 }
             }
             switches.get(0).setChecked(randomizerState);
@@ -58,16 +55,6 @@ public class Settings extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         QuestionManager.getInstance().loadAllQuestion(this,selectedCat);
-
-        //TODO convert to method
-        /*
-        1 - newtype - is a sudo category for unknown type
-        2 - mortgage
-        3 - law
-        4 - commission
-        5 - advertising
-        6 - ownership
-         */
 
         String finalCatString = "";
         int c = 0;
@@ -125,7 +112,7 @@ public class Settings extends AppCompatActivity {
         boolean isSelected = selectedCategory.isSelected;
         isSelected = !isSelected;
 
-        if(selectedCategory.name !="randomize") {
+        if(!selectedCategory.name.equals("randomize")) {
             if (isSelected) {
                 selectedCat.add(selectedCategory.name);
             } else {
