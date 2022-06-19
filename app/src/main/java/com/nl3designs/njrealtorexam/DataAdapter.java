@@ -27,15 +27,15 @@ public class DataAdapter extends ArrayAdapter {
         TestScoreData info = myData.get(position);
         int grade = info.score;
         String newScoreString;
-        newScoreString = (info.name + " : " + info.tries + "/" + info.correct + " correct, scoring " + info.score + "% ");
+        newScoreString = (info.name + " : " + info.tries + "/" + info.correct + " correct  /  " + info.score + "% ");
         lbEntry.setText(newScoreString);
 
         if (grade >= 90) {   // make color gold
             convertView.setBackgroundResource(R.mipmap.goldwinner);
         } else if (grade >= 80) {   // make color silve
-            convertView.setBackgroundResource(R.mipmap.silverwinner);
+            convertView.setBackgroundResource(R.mipmap.silverwinner1);
         } else if (grade >= 70) {   // make color bronze
-            convertView.setBackgroundResource(R.mipmap.bronzewinner);
+            convertView.setBackgroundResource(R.mipmap.bronzewinner1);
         }
 
         return convertView;

@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         android:text="LB Entry"
         android:layout_gravity="center"
-        android:padding="8dp"
+        android:paddingLeft="32dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:textStyle="bold"
-        android:textColor="@color/Black"
-        android:textSize="17dp" />
+        android:textColor="@color/White"
+        android:textSize="15dp" />
 
 </LinearLayout>

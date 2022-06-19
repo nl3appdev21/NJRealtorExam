@@ -1,18 +1,15 @@
 package com.nl3designs.njrealtorexam;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -122,8 +119,8 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setText("Your passing score is: " + testScore + "%");
             tv_testResults1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
             tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
-            tv_testResults1.setBackgroundResource(R.mipmap.goldwinner);
-            tv_testResults2.setBackgroundResource(R.mipmap.goldwinner);
+            tv_testResults1.setBackgroundResource(R.mipmap.goldwinner0);
+            tv_testResults2.setBackgroundResource(R.mipmap.goldwinner0);
         }
 
         if(testScore >= 80 ) {
