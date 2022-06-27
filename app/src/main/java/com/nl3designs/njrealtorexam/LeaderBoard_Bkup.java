@@ -16,7 +16,11 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class LeaderBoard_Bkup extends AppCompatActivity{
@@ -72,6 +76,7 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
                     setupData(entries[l]);
                 }
             }
+            Collections.sort(myData,new scoreCompared());
             adapter = new DataAdapter(this,myData);
             listView.setAdapter(adapter); // loads items into adapter
         }
@@ -92,5 +97,22 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
                     Integer.parseInt(resultData[1]),
                     Integer.parseInt(resultData[2]),
                     Integer.parseInt(resultData[3])));
+        }
+
+        private void sortDataScores(List<TestScoreData> data) {
+
+
+
+        }
+
+        private class scoreCompared implements Comparator <TestScoreData> {
+
+            @Override
+            public int compare(TestScoreData o1, TestScoreData o2) {
+
+                return o1.score - o2.score;
+
+            }
+
         }
 }
