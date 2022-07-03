@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ButtonStyle">
+        <!-- Customize your theme here. -->
+        <item name="android:color">@color/Yellow_14</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+
+    </style>
+
 </resources>

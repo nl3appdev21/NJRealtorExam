@@ -15,13 +15,10 @@ public class TestCompleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testcomplete);
-
         tv_tries = findViewById(R.id.tries);
         tv_correct = findViewById(R.id.correct);
-
         int tries = getIntent().getIntExtra("tries",0);
         int correct = getIntent().getIntExtra("correct", 0);
-
         tv_tries.setText("  # of tries = " + String.valueOf(tries));
         tv_correct.setText(" # correct = " + String.valueOf(correct));
     }

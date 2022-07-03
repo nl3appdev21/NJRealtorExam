@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "637743820913",
+    "firebase_url": "https://njrealtorexam.firebaseio.com",
+    "project_id": "njrealtorexam",
+    "storage_bucket": "njrealtorexam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637743820913:android:5475f52e23a01030eeebd0",
+        "android_client_info": {
+          "package_name": "com.nl3designs.njrealtorexam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637743820913-2nuplcd4qs4n1mu41chm2j3ldl0h0nn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlifAHK_au_s7OjuOvy7P-Lo1HignPabA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637743820913-2nuplcd4qs4n1mu41chm2j3ldl0h0nn5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

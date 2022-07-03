@@ -1,41 +1,130 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.Button;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-public class QuestionManager {
-
+public class QuestionManager{
+    private static final QuestionManager instance = new QuestionManager();
     List<QuestionItem> questionitems;
     int currentIndex = -1;
     Map<String,Integer> categoryMap = new HashMap<>();
+    boolean isRandom;
 
-    public QuestionManager(Context context){
-        loadAllQuestion(context);
+    public static QuestionManager getInstance(){
+        return instance;
     }
 
-    private void loadAllQuestion(Context context) {
-        String jsonStr = loadJSONFromNjexams("njrealtorexam.json",context);
+    public void loadQuestions(Context context,String category) {
+        Set<String> singleCat = new HashSet<>();
+        singleCat.add(category);
+        if(category.equals("")){
+            loadAllQuestion(context,null);
+        }else {
+            loadAllQuestion(context, singleCat);
+        }
+    }
+
+    // TODO : note changed last question from law to mortgage for test, replace with real mortgage
+
+    public void loadAllQuestion(Context context, Set<String> categories) {
+
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);  // file has 12 questions
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_21.json",context);  // file has 21 questions
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_32.json",context);  // file has 32 questions
+        // String jsonStr = loadJSONFromNjexams("njrealtorexam_42.json",context);  // file has 42 questions
+
         Gson gson = new Gson();
         Type type = new TypeToken<List<QuestionItem>>() {}.getType();
         questionitems = gson.fromJson(jsonStr, type);
+        if(categories!=null){
+            questionitems = getQuestionsForCategories(categories);
+        }
         setUpCategories();
         verifyCategories();
+        StorageManager store = new StorageManager(context);
+        String s = store.load("flashRand");
+        if(s.equals("true")){
+            isRandom = true;
+        }else{
+            isRandom = false;
+        }
+        currentIndex = -1;
+    }
+
+    public void loadAllQuestion(Context context, int count) {
+        String jsonStr = loadJSONFromNjexams("njrealtorexam_12.json",context);
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<QuestionItem>>() {}.getType();
+        questionitems = gson.fromJson(jsonStr, type);
+        questionitems = getLimitedQuestions(count);
+        setUpCategories();
+        verifyCategories();
+        StorageManager store = new StorageManager(context);
+        String s = store.load("flashRand");
+        if(s.equals("true")){
+            isRandom = true;
+        }else{
+            isRandom = false;
+        }
+        currentIndex = -1;
+    }
+
+    public void loadFromStoredCat(Context context){   // method is not used or called !!
+                                                     //get categories from StorageManager
+
+        StorageManager store = new StorageManager(context);
+        String[] selected = store.load("customCards").split(",");
+        Set<String> categories = null;
+        loadAllQuestion(context, categories);
+    }
+
+    public boolean isEmpty(){
+        return questionitems == null || questionitems.size() == 0;
+    }
+
+    public void reset(){
+        currentIndex = -1;
+    }
+
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
+
+    public QuestionItem getPrev(){
+        if(!isRandom) {
+            if(currentIndex > 0) {
+                currentIndex--;
+
+                if (currentIndex < questionitems.size()) {
+                    QuestionItem q = questionitems.get(currentIndex);
+                    return q;
+                } else {
+                    return null;
+                }
+            }
+            return  null;
+        }else{
+            currentIndex = (int)(Math.random()*questionitems.size());
+            QuestionItem q = questionitems.get(currentIndex);
+            return q;
+        }
     }
 
     public QuestionItem getNext(){
-        currentIndex++;
 
-        if(currentIndex < questionitems.size()) {
+        currentIndex++;
+        if (currentIndex < questionitems.size()) {
             QuestionItem q = questionitems.get(currentIndex);
             return q;
         } else {
@@ -44,8 +133,24 @@ public class QuestionManager {
     }
 
     public QuestionItem getCurrentQuestion(){
+
         if(currentIndex >= 0 && (currentIndex < questionitems.size())){
             return questionitems.get(currentIndex);
+
+        }else{
+            return null;
+        }
+    }
+
+    public void randomize () {
+        Collections.shuffle(questionitems);
+        int x = questionitems.size();
+    }
+
+    public String getCurrentAnswer(){
+        if(currentIndex >= 0 && (currentIndex < questionitems.size())){
+            QuestionItem item = questionitems.get(currentIndex);
+            return item.answers[item.correct];
         }else{
             return null;
         }
@@ -69,23 +174,60 @@ public class QuestionManager {
     public void verifyCategories(){
 
         for(QuestionItem q : questionitems) {
-            boolean valid = categoryMap.containsKey(q.catagory);
+            boolean valid = categoryMap.containsKey(q.category);
             if(!valid) {
-                throw new IllegalArgumentException("Error Invalid Category = " + q.catagory);
+                throw new IllegalArgumentException("Error Invalid Category = " + q.category);
             }
         }
     }
 
+    public List<QuestionItem> getQuestionsForCategory(String category){
+        Set<String> singleCat = new HashSet<>();
+        singleCat.add(category);
+        return getQuestionsForCategories(singleCat);
+    }
+
+    public List<QuestionItem> getQuestionsForCategories(Set<String> categories){
+        List<QuestionItem> catQuestions = new ArrayList<>();
+        for(QuestionItem q : questionitems) {
+            if(categories.contains(q.category)){
+                catQuestions.add(q);
+            }
+        }
+        return catQuestions;
+    }
+
+    public List<QuestionItem> getLimitedQuestions(int count){
+        List<QuestionItem> catQuestions = new ArrayList<>();
+        for(QuestionItem q : questionitems) {
+            //if(categories.contains(q.category)){
+                catQuestions.add(q);
+            //}
+        }
+        return catQuestions;
+    }
+
     private void setUpCategories(){
 
-        categoryMap.put("newtype",R.mipmap.njreal01);  // use for new category if not sure ???
-        categoryMap.put("mortgage",R.mipmap.mortgage);
-        categoryMap.put("law",R.mipmap.law);
-        categoryMap.put("commission",R.mipmap.math);
-        categoryMap.put("advirtising",R.mipmap.advirtising);
-        categoryMap.put("ownership",R.mipmap.ownership2);
-
+        categoryMap.put("newtype",R.mipmap.new1newtype);  // TODO: use for new category if not sure ???
+        categoryMap.put("mortgage",R.mipmap.new1mort);
+        categoryMap.put("law",R.mipmap.new1law);
+        categoryMap.put("commission",R.mipmap.new1math);
+        categoryMap.put("advertising",R.mipmap.new1ads);
+        categoryMap.put("ownership",R.mipmap.new1owner);
     }
+
+/*
+    private void setUpCategories(){
+
+        categoryMap.put("newtype",R.mipmap.njreal01);  // TODO: use for new category if not sure ???
+        categoryMap.put("mortgage",R.mipmap.mortgage);
+        categoryMap.put("law",R.mipmap.new_law);
+        categoryMap.put("commission",R.mipmap.math);
+        categoryMap.put("advertising",R.mipmap.advertising);
+        categoryMap.put("ownership",R.mipmap.ownership2);
+    }
+*/
 
     public boolean checkAnswer (int answerIndex){
         QuestionItem qi = questionitems.get(currentIndex);

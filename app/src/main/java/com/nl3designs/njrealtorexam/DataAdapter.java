@@ -1,14 +1,11 @@
 package com.nl3designs.njrealtorexam;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.List;
 
 public class DataAdapter extends ArrayAdapter {
@@ -21,29 +18,26 @@ public class DataAdapter extends ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
+
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
         }
-        TextView name = convertView.findViewById(R.id.name);
-        TextView tries = convertView.findViewById(R.id.tries);
-        TextView correct = convertView.findViewById(R.id.correct);
-        TextView passTest = convertView.findViewById(R.id.passTest);
 
+        TextView lbEntry = convertView.findViewById(R.id.leaderBoardEntry);
         TestScoreData info = myData.get(position);
-        name.setText(info.name);
-        tries.setText(String.valueOf(info.tries));
-        correct.setText(String.valueOf(info.correct));
-        passTest.setText(String.valueOf(info.passTest));
+        int grade = info.score;
+        String newScoreString;
+        newScoreString = (info.name + " : " + info.tries + "/" + info.correct + " correct  /  " + info.score + "% ");
+        lbEntry.setText(newScoreString);
 
-        if(position%2==0){
-            //  name.setBackgroundColor(0xffff0000);  // set backround color to red for odd index num
-            name.setBackgroundColor(Color.parseColor("#33FFD7"));
-            convertView.setBackgroundColor(Color.parseColor("#3498DB"));
-        }else{
-            //  name.setBackgroundColor(0xff0000ff);  // set backround color to blue for even index num
-            name.setBackgroundColor(Color.parseColor("#A0DB8E"));
-            convertView.setBackgroundColor(Color.parseColor("#66CCFF"));
+        if (grade >= 90) {   // make color gold
+            convertView.setBackgroundResource(R.mipmap.goldwinner);
+        } else if (grade >= 80) {   // make color silve
+            convertView.setBackgroundResource(R.mipmap.silverwinner1);
+        } else if (grade >= 70) {   // make color bronze
+            convertView.setBackgroundResource(R.mipmap.bronzewinner1);
         }
+
         return convertView;
     }
 }
