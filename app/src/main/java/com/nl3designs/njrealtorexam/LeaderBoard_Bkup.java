@@ -98,10 +98,8 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
                     Integer.parseInt(resultData[2]),
                     Integer.parseInt(resultData[3])));
         }
-
+        
         private void sortDataScores(List<TestScoreData> data) {
-
-
 
         }
 
@@ -109,9 +107,7 @@ public class LeaderBoard_Bkup extends AppCompatActivity{
 
             @Override
             public int compare(TestScoreData o1, TestScoreData o2) {
-
-                return o1.score - o2.score;
-
+                return o2.score - o1.score;
             }
 
         }
