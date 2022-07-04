@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:text="NJ Realtor Exam App Instructions"
+        android:text="App Instructions"
         android:textStyle="bold"
         android:textColor="@color/White"
         android:textSize="32dp"

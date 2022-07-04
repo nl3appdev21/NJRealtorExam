@@ -78,8 +78,6 @@ public class TestComplete extends AppCompatActivity {
 
     private void testComplete(){
 
-        //TODO : win or lose music
-
         if(testScore < 70) {
             mySound = MediaPlayer.create(this, R.raw.loser1);
         } else {
@@ -97,8 +95,6 @@ public class TestComplete extends AppCompatActivity {
             }
         }.start();
 
-        // win or lose music
-
         if(testScore < 70) {
             btnlb.setVisibility(View.INVISIBLE);
             agent.setVisibility(View.GONE);
@@ -107,11 +103,7 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
             tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
-        }
-
-        // TODO = changed code to set backgroundcolor to match the medal level, 11-gold, 10-silver or 9-bronze !
-
-        if(testScore >= 90 ) {
+        } else if(testScore >= 90 ) {
             agent.setVisibility(View.VISIBLE);
             iv_passFail.setImageResource(R.mipmap.bluecert);
             //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
@@ -121,9 +113,7 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
             tv_testResults1.setBackgroundResource(R.mipmap.goldwinner0);
             tv_testResults2.setBackgroundResource(R.mipmap.goldwinner0);
-        }
-
-        if(testScore >= 80 ) {
+        } else if(testScore >= 80 ) {
             agent.setVisibility(View.VISIBLE);
             iv_passFail.setImageResource(R.mipmap.bluecert);
             //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
@@ -133,9 +123,7 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Black));
             tv_testResults1.setBackgroundResource(R.mipmap.silverwinner);
             tv_testResults2.setBackgroundResource(R.mipmap.silverwinner);
-        }
-
-        if(testScore >= 70 ) {
+        } else if(testScore >= 70 ) {
             agent.setVisibility(View.VISIBLE);
             iv_passFail.setImageResource(R.mipmap.bluecert);
             //  tv_testResults1.setText(" Congrats you got " + correct + " of " + numQuestions + " correct ");
@@ -147,7 +135,6 @@ public class TestComplete extends AppCompatActivity {
             tv_testResults2.setBackgroundResource(R.mipmap.bronzewinner);
         }
 
-        // changed code to set backgroundcolor to match the medal level, 11-gold, 10-silver or 9-bronze !
     }
 
     private void saveScore(){  // TODO : savescore and reload lb
