@@ -99,8 +99,8 @@ public class TestComplete extends AppCompatActivity {
             btnlb.setVisibility(View.INVISIBLE);
             agent.setVisibility(View.GONE);
             iv_passFail.setImageResource(R.mipmap.redquitbtn);
-            tv_testResults1.setText(" sorry you got " + correct + " of " + numQuestions + " correct ");
-            tv_testResults2.setText(" your score is: " + testScore + "%" + " , retake test");
+            tv_testResults1.setText(" Sorry you got " + correct + " of " + numQuestions + " correct ");
+            tv_testResults2.setText(" Your score is: " + testScore + "%" + " , retake test");
             tv_testResults1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
             tv_testResults2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.Red_08));
         } else if(testScore >= 90 ) {
