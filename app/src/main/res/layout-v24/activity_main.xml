@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0/0"
+                android:textColor="@color/White"
+
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="  Questions"
+                android:textColor="@color/White"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="  Correct"
+                android:textColor="@color/White"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/rectangle_box_gray"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:text=" 123 "
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:textSize="21dp"
+            android:gravity="center"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/questionImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:background="@color/Black"
+            android:src="@mipmap/mortgage" />
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:paddingBottom="25dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/quoteIncorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Question"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/answer_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/LtBlue_08"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _0"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/answer_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/LtBlue_08"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _1"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/answer_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/LtBlue_08"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _2"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/answer_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/LtBlue_08"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingTop="5dp"
+        android:text="Answer _3"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text=" Go To Menu "
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text=" Next Question "
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>
